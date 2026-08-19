@@ -64,7 +64,7 @@ export default function AppLaunchPopup() {
         <p className="text-sm text-brand-gray-600 leading-relaxed mb-6">
           현재는 <b>웹 베타 버전</b>이지만,
           <br />
-          곧 <b className="text-brand-blue">SPEAKZEN 모바일 앱</b>으로 만나뵙겠습니다.
+          곧 <b className="text-brand-blue">Wonpic 모바일 앱</b>으로 만나뵙겠습니다.
           <br />
           학습 데이터는 자동 연동될 예정이에요.
         </p>

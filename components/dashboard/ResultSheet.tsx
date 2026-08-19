@@ -65,7 +65,7 @@ export default function ResultSheet({ data }: { data: ResultSheetData }) {
     <div className="bg-white rounded-3xl p-6 md:p-8 border border-brand-gray-200 shadow-lg">
       <div className="text-center mb-6">
         <div className="text-xs font-bold tracking-[0.25em] text-brand-blue mb-1">
-          SPEAKZEN OFFICIAL REPORT
+          WONPIC OFFICIAL REPORT
         </div>
         <h2 className="text-2xl md:text-3xl font-black text-brand-ink">
           <span className="text-brand-blue">SPA</span> 진단 결과지

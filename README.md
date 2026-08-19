@@ -1,4 +1,4 @@
-# SPEAKZEN
+# Wonpic
 
 원익 임직원 SPA(Speaking Proficiency Assessment) 영어 말하기 학습 웹앱.
 

@@ -33,7 +33,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-white">
       <div className="text-center">
-        <div className="font-brand text-4xl text-brand-navy mb-2">SPEAKZEN</div>
+        <div className="font-brand text-4xl text-brand-navy mb-2">Wonpic</div>
         <div className="text-sm text-brand-gray-500">by WONIK</div>
       </div>
     </main>

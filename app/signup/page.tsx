@@ -114,7 +114,7 @@ export default function SignupPage() {
             priority
             className="h-6 w-auto mx-auto mb-3"
           />
-          <h1 className="font-brand text-3xl text-brand-navy mb-1">SPEAKZEN</h1>
+          <h1 className="font-brand text-3xl text-brand-navy mb-1">Wonpic</h1>
           <p className="text-sm text-brand-gray-600">처음이신가요? 등록하고 시작해보세요</p>
         </div>
 

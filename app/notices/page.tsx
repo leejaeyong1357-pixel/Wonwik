@@ -14,7 +14,7 @@ const NOTICES = [
     body: (
       <>
         <p>
-          SPEAKZEN(SPA Training 시스템)은 학습자의 개인정보를{" "}
+          Wonpic(SPA Training 시스템)은 학습자의 개인정보를{" "}
           <b className="text-brand-blue">절대 우선</b>하여 설계되었습니다.
         </p>
         <ul className="list-disc pl-5 space-y-1 mt-3 text-brand-gray-700">
@@ -56,7 +56,7 @@ const NOTICES = [
     body: (
       <>
         <p>
-          SPEAKZEN은 사내 최초의 AI 기반 SPA 학습 서비스로,
+          Wonpic은 사내 최초의 AI 기반 SPA 학습 서비스로,
           <br />
           개발 초기 단계에서 <b>일부 렉·버그가 발생할 수 있습니다.</b>
         </p>
@@ -132,7 +132,7 @@ export default function NoticesPage() {
             priority
             className="h-7 w-auto mx-auto mb-3"
           />
-          <h1 className="font-brand text-3xl text-brand-navy mb-1">SPEAKZEN</h1>
+          <h1 className="font-brand text-3xl text-brand-navy mb-1">Wonpic</h1>
           <p className="text-sm text-brand-gray-600">시작하기 전에 꼭 읽어주세요</p>
         </div>
 

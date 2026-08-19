@@ -1,8 +1,8 @@
 @echo off
 chcp 65001 > nul
-title SPEAKZEN (WONIK) Update
+title Wonpic (WONIK) Update
 echo ===============================
-echo  SPEAKZEN 업데이트 (Cloudflare 자동 재배포)
+echo  Wonpic 업데이트 (Cloudflare 자동 재배포)
 echo ===============================
 echo.
 

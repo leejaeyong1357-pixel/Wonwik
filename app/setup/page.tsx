@@ -53,7 +53,7 @@ export default function SetupPage() {
             priority
             className="h-9 w-auto mx-auto mb-2"
           />
-          <h1 className="text-2xl font-bold text-brand-gray-900">SPA Trainer 초기 설정</h1>
+          <h1 className="text-2xl font-bold text-brand-gray-900">Wonpic 초기 설정</h1>
           <p className="text-sm text-brand-gray-600 mt-1">단계 {step} / 3</p>
         </div>
 

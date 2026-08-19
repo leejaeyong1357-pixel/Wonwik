@@ -45,7 +45,7 @@ export default function Header() {
           <Image src="/brand-logo.svg" alt="WONIK" width={92} height={22} priority className="h-5 sm:h-[22px] w-auto" />
           <span className="text-brand-gray-300 text-sm hidden sm:inline">|</span>
           <span className="font-brand text-sm sm:text-base text-brand-navy tracking-tight translate-y-[1px]">
-            SPEAKZEN
+            Wonpic
           </span>
         </Link>
 

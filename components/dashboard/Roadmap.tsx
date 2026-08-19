@@ -7,7 +7,7 @@ const STAGES = [
   {
     num: 1,
     date: "2026.6.2",
-    title: "그룹사 최초 SPA AI SPEAKZEN 탄생!",
+    title: "그룹사 최초 SPA AI 학습 서비스 Wonpic 탄생!",
     emoji: "🎉",
   },
   {
@@ -55,7 +55,7 @@ export default function Roadmap() {
 
       <div className="relative">
         <div className="text-[10px] font-bold tracking-[0.2em] text-brand-blue mb-1">
-          SPEAKZEN ROADMAP
+          WONPIC ROADMAP
         </div>
         <h3 className="font-black text-brand-ink text-lg md:text-xl mb-5">
           우리의 여정 🚀

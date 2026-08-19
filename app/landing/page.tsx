@@ -24,7 +24,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-2">
             <Image src="/brand-logo.svg" alt="WONIK" width={88} height={20} className="h-5 w-auto" />
             <span className="text-brand-gray-300">|</span>
-            <span className="font-brand text-lg text-brand-navy tracking-tight">SPEAKZEN</span>
+            <span className="font-brand text-lg text-brand-navy tracking-tight">Wonpic</span>
           </div>
           <div className="flex items-center gap-2">
             <Link
@@ -53,7 +53,7 @@ export default function LandingPage() {
             <h1 className="hero-headline text-5xl md:text-7xl text-brand-ink mb-6">
               SPA, AI가 끌어올린다.
               <br />
-              <span className="text-brand-navy">SPEAKZEN</span>.
+              <span className="text-brand-navy">Wonpic</span>.
             </h1>
             <p className="text-lg md:text-xl text-brand-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
               실시간 비대면 화상 SPA 시험.
@@ -104,7 +104,7 @@ export default function LandingPage() {
           <div className="text-center mb-16">
             <div className="text-sm font-bold text-brand-red mb-3">FEATURES</div>
             <h2 className="hero-headline text-4xl md:text-5xl text-brand-ink">
-              SPEAKZEN의 기능
+              Wonpic의 기능
             </h2>
             <p className="text-brand-gray-600 mt-3">
               학습부터 채점까지, 한 화면에서 끝내세요.
@@ -171,7 +171,7 @@ export default function LandingPage() {
             정해진 시간 안에 말로 표현해야 합니다.
             <br />
             <br />
-            <span className="text-white font-bold">SPEAKZEN</span>은 그 순간을 위해 만들어졌습니다.
+            <span className="text-white font-bold">Wonpic</span>은 그 순간을 위해 만들어졌습니다.
             <br />
             AI가 발음 외 모든 것을 24시간 평가합니다.
           </p>
@@ -214,7 +214,7 @@ export default function LandingPage() {
               made by 운영 담당자
             </div>
           </div>
-          <div>SPEAKZEN v0.3</div>
+          <div>Wonpic v0.3</div>
         </div>
       </footer>
     </main>

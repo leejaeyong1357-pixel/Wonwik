@@ -56,7 +56,7 @@ export default function LoadingSetupPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-blue-50 to-brand-gray-50 p-6">
       <div className="max-w-md w-full text-center">
-        <div className="font-brand text-3xl text-brand-navy mb-1">SPEAKZEN</div>
+        <div className="font-brand text-3xl text-brand-navy mb-1">Wonpic</div>
         <div className="text-xs text-brand-gray-500 mb-12">by WONIK</div>
 
         <h1 className="text-2xl font-black text-brand-ink mb-3 leading-tight">

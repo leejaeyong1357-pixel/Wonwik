@@ -23,7 +23,7 @@ export function isAllowedModel(model?: string): boolean {
   return !!model && ALLOWED.has(model);
 }
 
-export const APP_NAME = "SPEAKZEN";
+export const APP_NAME = "Wonpic";
 export const APP_TAGLINE = "by WONIK";
 
 /** 브랜드 표기 — 화면 문구에 사용 */

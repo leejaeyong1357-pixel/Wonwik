@@ -139,7 +139,7 @@ export default function OnboardingPage() {
     <main className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-white to-blue-50">
       <div className="max-w-2xl w-full">
         <div className="text-center mb-6">
-          <div className="font-brand text-2xl text-brand-navy mb-1">SPEAKZEN</div>
+          <div className="font-brand text-2xl text-brand-navy mb-1">Wonpic</div>
           <div className="text-sm text-brand-gray-500">시작하기 전에 꼭 확인하세요</div>
         </div>
 

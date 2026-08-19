@@ -186,7 +186,7 @@ export default function LoginPage() {
             priority
             className="h-6 w-auto mx-auto mb-3"
           />
-          <h1 className="font-brand text-3xl text-brand-navy mb-1">SPEAKZEN</h1>
+          <h1 className="font-brand text-3xl text-brand-navy mb-1">Wonpic</h1>
           <p className="text-sm text-brand-gray-600">
             {mode === "user" ? "이름·사번·비밀번호로 로그인하세요" : "관리자 인증"}
           </p>
