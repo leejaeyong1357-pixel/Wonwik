@@ -12,7 +12,7 @@ SPA 영어 말하기 학습 웹앱. 이 문서 순서대로 진행하면 처음�
 | # | 항목 | 파일 | 현재 값 |
 |---|---|---|---|
 | 1 | Anthropic API 키 | Cloudflare 환경변수 | `ANTHROPIC_API_KEY` 미설정 |
-| 2 | 관리자 계정 | `app/login/page.tsx` | `wonikadmin` / `wonik2026!` |
+| 2 | 관리자 계정 | `app/login/page.tsx` | 시연용 계정으로 교체됨 (운영 전 재교체 필요) |
 | 3 | 임직원 명부 | `data/employees.json` | 빈 배열 |
 | 4 | 시험 일정 | `data/exam_schedules.json` | 빈 객체 |
 | 5 | 로고 | `public/brand-logo.svg` | 임시 텍스트 로고 |
@@ -53,7 +53,8 @@ AI 채점은 **Claude API** 를 직접 호출합니다. 사내 게이트웨이�
 
 ## 2. 관리자 계정 변경
 
-기본 계정은 `wonikadmin` / `wonik2026!` 입니다. **반드시 바꾸세요.**
+현재는 **시연용 계정**이 들어가 있습니다. 실제 운영을 시작하기 전에 **반드시 바꾸세요.**
+계정 값은 코드에 SHA-256 해시로만 저장되므로 저장소에서 평문을 확인할 수 없습니다.
 
 새 계정의 해시를 생성합니다.
 

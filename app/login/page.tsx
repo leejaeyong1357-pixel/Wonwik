@@ -12,11 +12,11 @@ import Button from "@/components/ui/Button";
 // 코드 노출 시 평문 추출 방지를 위해 SHA-256 해시로 저장.
 // 비교 시 입력값을 동일 알고리즘으로 해시 후 (id, pw) 페어가 화이트리스트에 있는지 검증.
 const ADMINS: Array<{ idH: string; pwH: string; name: string }> = [
-  // 기본 관리자 — ID: wonikadmin / PW: wonik2026!
-  // ⚠️ 운영 시작 전 반드시 변경하세요. 변경 방법은 SETUP.md 참고.
+  // 시연용 관리자 계정.
+  // ⚠️ 실제 운영 전 반드시 강한 값으로 재발급하세요. 변경 방법은 SETUP.md 2절 참고.
   {
-    idH: "19c534326e43281cefaa8b8fced6f7a5d9eb0dad95aad46755d0e2a1af29b685",
-    pwH: "89b7ab636c036cce43dcb17cb0b1b66e80d4f1b7c6803bc7072f7568dfb74cc3",
+    idH: "a1c485429dd914fe2f82057d20c264253a751c40051efd5148119aba5250f6c7",
+    pwH: "a1c485429dd914fe2f82057d20c264253a751c40051efd5148119aba5250f6c7",
     name: "관리자",
   },
 ];
