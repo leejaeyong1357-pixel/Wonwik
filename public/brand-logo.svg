@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 44" width="200" height="44" role="img" aria-label="WONIK">
-  <text x="0" y="32" font-family="Pretendard, system-ui, sans-serif" font-size="30" font-weight="900" letter-spacing="-1" fill="#003D7A">WONIK</text>
-  <circle cx="150" cy="12" r="4" fill="#E60012"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 592 108" width="592" height="108" role="img" aria-label="WONIK HOLDINGS">
+  <title>WONIK HOLDINGS</title>
+  <!-- 심볼: 회색 링 뒤 + 네이비 링 앞으로 겹친 형태 -->
+  <circle cx="44" cy="54" r="28" fill="none" stroke="#A6A8AB" stroke-width="15"/>
+  <circle cx="62" cy="54" r="28" fill="#FFFFFF" stroke="#003D7A" stroke-width="15"/>
+  <path d="M 62.00 38.00 L 64.10 38.28 L 66.12 38.84 L 68.03 39.65 L 69.80 40.70 L 71.41 41.96 L 72.81 43.41 L 74.00 45.02 L 74.96 46.76 L 75.67 48.59 L 76.12 50.48 L 76.32 52.39 L 76.26 54.30 L 75.96 56.16 L 75.41 57.95 L 74.64 59.63 L 73.66 61.17 L 72.50 62.56 L 71.17 63.77 L 69.72 64.78 L 68.16 65.58 L 66.52 66.15 L 64.84 66.50 L 63.15 66.63 L 61.48 66.52 L 59.85 66.20 L 58.30 65.67 L 56.85 64.95 L 55.52 64.05 L 54.34 62.99 L 53.33 61.81 L 52.49 60.51 L 51.84 59.13 L 51.39 57.69 L 51.14 56.23 L 51.08 54.76 L 51.22 53.32 L 51.55 51.93 L 52.05 50.61 L 52.71 49.39 L 53.53 48.28 L 54.46 47.31 L 55.51 46.48 L 56.64 45.81 L 57.83 45.30 L 59.06 44.96 L 60.31 44.80 L 61.55 44.80 L 62.76 44.97 L 63.92 45.29 L 65.00 45.75 L 66.00 46.35 L 66.89 47.06 L 67.67 47.88 L 68.32 48.77 L 68.83 49.73 L 69.20 50.73 L 69.44 51.76 L 69.52 52.78 L 69.47 53.79 L 69.29 54.77 L 68.99 55.69 L 68.57 56.55 L 68.05 57.32 L 67.44 58.01 L 66.76 58.59 L 66.02 59.07 L 65.24 59.43 L 64.43 59.68 L 63.62 59.81 L 62.82 59.83 L 62.04 59.74 L 61.30 59.56 L 60.61 59.27 L 59.98 58.91 L 59.42 58.47 L 58.94 57.98 L 58.54 57.44 L 58.23 56.86 L 58.01 56.27 L 57.88 55.66 L 57.84 55.07 L 57.87 54.49 L 57.99 53.94 L 58.17 53.44 L 58.42 52.97 L 58.72 52.57 L 59.06 52.22 L 59.44 51.94 L 59.83 51.72 L 60.24 51.57" fill="none" stroke="#A6A8AB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- 워드마크: textLength 로 폰트 환경에 상관없이 폭을 고정 -->
+  <text x="114" y="78"
+        font-family="'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="62" font-weight="900" fill="#003D7A"
+        textLength="470" lengthAdjust="spacingAndGlyphs">WONIK HOLDINGS</text>
 </svg>

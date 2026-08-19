@@ -1,6 +1,94 @@
 {
-  "_comment": "임직원 명부. 서버(/api/auth/login)에서만 사용되며 클라이언트로 전송되지 않습니다.",
-  "_howto": "아래 employees 배열에 회사 임직원 정보를 채우세요. 주민번호 등 민감정보는 절대 넣지 마세요.",
-  "_columns": ["no", "team", "position", "employeeId", "name", "grade"],
-  "employees": []
+  "_comment": "⚠️ 시연용 가상 데이터입니다. 실제 임직원 정보가 아닙니다. 운영 전 실제 명부로 교체하세요.",
+  "_howto": "employees 배열을 실제 명부로 교체하세요. 주민번호 등 민감정보는 절대 넣지 마세요.",
+  "_columns": [
+    "no",
+    "team",
+    "position",
+    "employeeId",
+    "name",
+    "grade"
+  ],
+  "employees": [
+    {
+      "no": 1,
+      "team": "경영기획팀",
+      "position": "부장",
+      "employeeId": "90000001",
+      "name": "김민준",
+      "grade": "G5"
+    },
+    {
+      "no": 2,
+      "team": "인사팀",
+      "position": "차장",
+      "employeeId": "90000002",
+      "name": "이서연",
+      "grade": "G4"
+    },
+    {
+      "no": 3,
+      "team": "재무팀",
+      "position": "과장",
+      "employeeId": "90000003",
+      "name": "박지훈",
+      "grade": "G3"
+    },
+    {
+      "no": 4,
+      "team": "해외영업팀",
+      "position": "과장",
+      "employeeId": "90000004",
+      "name": "최수아",
+      "grade": "G3"
+    },
+    {
+      "no": 5,
+      "team": "구매팀",
+      "position": "대리",
+      "employeeId": "90000005",
+      "name": "정도현",
+      "grade": "G2"
+    },
+    {
+      "no": 6,
+      "team": "생산기술팀",
+      "position": "책임",
+      "employeeId": "90000006",
+      "name": "강예린",
+      "grade": "G3"
+    },
+    {
+      "no": 7,
+      "team": "품질보증팀",
+      "position": "선임",
+      "employeeId": "90000007",
+      "name": "조성민",
+      "grade": "G2"
+    },
+    {
+      "no": 8,
+      "team": "IT팀",
+      "position": "대리",
+      "employeeId": "90000008",
+      "name": "윤하늘",
+      "grade": "G2"
+    },
+    {
+      "no": 9,
+      "team": "법무팀",
+      "position": "사원",
+      "employeeId": "90000009",
+      "name": "임태현",
+      "grade": "G1"
+    },
+    {
+      "no": 10,
+      "team": "홍보팀",
+      "position": "사원",
+      "employeeId": "90000010",
+      "name": "한소영",
+      "grade": "G1"
+    }
+  ]
 }

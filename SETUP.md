@@ -13,9 +13,9 @@ SPA 영어 말하기 학습 웹앱. 이 문서 순서대로 진행하면 처음�
 |---|---|---|---|
 | 1 | Anthropic API 키 | Cloudflare 환경변수 | `ANTHROPIC_API_KEY` 미설정 |
 | 2 | 관리자 계정 | `app/login/page.tsx` | 시연용 계정으로 교체됨 (운영 전 재교체 필요) |
-| 3 | 임직원 명부 | `data/employees.json` | 빈 배열 |
-| 4 | 시험 일정 | `data/exam_schedules.json` | 빈 객체 |
-| 5 | 로고 | `public/brand-logo.svg` | 임시 텍스트 로고 |
+| 3 | 임직원 명부 | `data/employees.json` | **시연용 가상 10명** (운영 전 실제 명부로 교체) |
+| 4 | 시험 일정 | `data/exam_schedules.json` | **시연용 가상 일정 10건** (운영 전 교체) |
+| 5 | 로고 | `public/brand-logo.svg` | WONIK HOLDINGS 로고 (이미지 기반 재현본) |
 
 ---
 
