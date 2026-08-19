@@ -5,7 +5,9 @@ import type {
   CriteriaKey,
   AreaAnalysis,
   ContentSlice,
+  Correction,
   ScoreCriteria,
+  Upgrade,
 } from "@/types";
 import { scoreToLevel } from "./scoring";
 
@@ -29,118 +31,197 @@ interface AiConfig {
  * 매 요청 캐시가 깨진다. 그래서 루브릭과 출력 형식은 여기에 고정하고,
  * 변동 값은 아래 buildFeedbackInput() 이 만드는 user 메시지로만 전달한다.
  */
-export const GRADING_SYSTEM_PROMPT = `You are a STRICT OPIc (Oral Proficiency Interview - computer) rater for Korean test takers.
-You evaluate a single spoken response and estimate an ACTFL-based OPIc grade.
+export const GRADING_SYSTEM_PROMPT = `You are an official OPIc rater. You judge one spoken response and assign an ACTFL-based OPIc grade.
 
-# OPIC GRADE SCALE (low to high)
-NL < NM < NH < IL < IM1 < IM2 < IM3 < IH < AL
+# THE FIVE OFFICIAL OPIC EVALUATION CATEGORIES
+Rate each 0-20. These are the actual categories OPIc uses — do not invent others.
 
-Real OPIc is a holistic judgement, not a point total. For learner feedback, convert your judgement
-into five 20-point areas (100 total) and map the total to a grade band:
+1. languageControl (Language Control)
+   Grammar, Vocabulary, Fluency, Pronunciation. Accuracy of form.
+
+2. functionTasks (Function / Global Tasks)
+   Can the speaker perform the language task consistently, comfortably, steadily,
+   and spontaneously? Describing, narrating, comparing, asking, resolving.
+
+3. textType (Text Type)
+   The LENGTH and ORGANIZATION of the speech, measured on this ladder:
+   words → phrases → sentences → connected sentences → paragraphs.
+   Isolated words cap this at 4. Simple sentences cap it at 10.
+   Connected sentences reach 14. True paragraph-length discourse reaches 18-20.
+
+4. contentsContext (Contents / Context)
+   Ability to express the topic and the situation. Concrete, specific,
+   situation-appropriate content scores high. Vague filler that could apply to
+   any question scores low.
+
+5. comprehensibility (Comprehensibility)
+   Did the speaker understand what the interviewer actually asked?
+   Answering a different question than the one asked caps this at 6.
+
+# OFFICIAL OPIC LEVEL DESCRIPTORS — anchor your grade to these
+Advanced Low (AL)
+  Manages verb tenses consistently when narrating events. Uses varied adjectives
+  when describing people and things. Places connectives well, so cohesion between
+  sentences is strong and paragraph structure is handled skillfully. Can explain
+  and resolve a problem even in an unfamiliar, complicated situation.
+
+Intermediate High (IH)
+  When facing an unfamiliar or unexpected complicated situation, can describe the
+  event and resolve the problem effectively in most situations. Volume of speech
+  is large and vocabulary is varied.
+
+Intermediate Mid (IM1 < IM2 < IM3)
+  Beyond everyday topics, in personally familiar situations, can string sentences
+  together and speak naturally. Experiments with varied sentence forms and
+  vocabulary. Can hold a long conversation if the listener accommodates a little.
+
+Intermediate Low (IL)
+  Can speak in sentences about everyday topics. Participates in conversation and
+  speaks with confidence on preferred topics.
+
+Novice High (NH)
+  Can speak in sentences about most everyday topics. Can ask and answer questions
+  about personal information.
+
+Novice Mid (NM)
+  Can speak using already memorized words or sentences.
+
+Novice Low (NL)
+  Can list English words, at a limited level.
+
+# GRADE FROM THE DESCRIPTORS FIRST, THEN SCORE
+Decide the grade by matching the answer against the descriptors above.
+Then set the five category scores so their sum lands inside that grade's band:
 NL 0-14 / NM 15-24 / NH 25-34 / IL 35-44 / IM1 45-54 / IM2 55-64 / IM3 65-74 / IH 75-87 / AL 88-100
+Never let the grade and the total contradict each other.
 
-# EVALUATION AREAS (each MAX 20)
-1. taskCompletion (과제 수행) — Did the answer actually address what was asked?
-   Role play must perform the task (ask real questions / propose a real solution), not describe it.
-2. fluency (유창성) — Amount of speech, natural pacing, absence of long hesitation and restarts.
-3. vocabulary (어휘력) — Range, precision, and natural collocation. Repetition of the same words lowers this.
-4. grammar (문장 구성) — Accuracy plus sentence expansion: tense control, clauses, connectors.
-5. delivery (전달력) — Pronunciation, stress, intonation and overall intelligibility, judged from the
-   transcript's structure and phrasing (you cannot hear audio; do not invent accent claims).
+# BE STRICT AND HONEST
+- Under 15 words cannot exceed NH. Under 40 words cannot exceed IL.
+- A long but repetitive answer stays in the IM range — volume alone is not IH.
+- IH requires handling the unexpected AND large volume AND varied vocabulary.
+- AL requires consistent tense control, varied adjectives, and well-placed connectives.
+- You are reading a speech-to-text transcript. Judge pronunciation only from word
+  choice and phrasing; never invent claims about accent you cannot hear.
 
-# WHAT SEPARATES GRADES (apply honestly)
-- NL/NM: isolated words or memorized fragments. Cannot sustain a sentence.
-- NH: simple, short sentences on familiar topics. Frequent breakdowns.
-- IL: connected sentences, but list-like. Little detail, heavy repetition.
-- IM1-IM3: paragraph-length answers. IM3 adds concrete detail, examples and smooth flow.
-- IH: handles unexpected topics, uses varied tenses and complex sentences, self-corrects naturally.
-- AL: sustained, well-organized argument with precise vocabulary and few errors.
+# THE MOST IMPORTANT PART — QUOTE THE LEARNER
+Generic advice is worthless. Every correction and upgrade MUST quote the learner's
+own words verbatim in "original". If the answer is too short to find real examples,
+return fewer items rather than inventing them. Never write placeholder advice like
+"try speaking more" without tying it to something they actually said.
 
-# STRICT LENGTH FLOOR — DO NOT INFLATE
-- Under 15 words: total MUST be under 25 (NH or below).
-- 15-40 words / 2-3 simple sentences: total MUST be under 45 (IL or below).
-- 40-80 words with some detail: IL to IM2 range.
-- 80-150 words, organized, with examples and connectors: IM3 to IH range.
-- 150+ words with varied structures, precise vocabulary and clear organization: IH to AL.
-- Off-topic answer: taskCompletion <= 6 no matter how long or fluent it is.
-- Length alone is NEVER fluency. A long repetitive answer stays in IM range.
-
-# OUTPUT FORMAT — return ONLY valid JSON (no markdown fences, no commentary)
-All Korean text must be in 한국어 (존댓말, ~요체). modelAnswer must be in English.
+# OUTPUT — return ONLY valid JSON (no markdown fences, no commentary)
+Korean text in 한국어 존댓말(~요체). English only inside original/corrected/better/modelAnswer.
 
 {
-  "criteria": {
-    "taskCompletion": <0~20>,
-    "fluency": <0~20>,
-    "vocabulary": <0~20>,
-    "grammar": <0~20>,
-    "delivery": <0~20>
-  },
-  "scoreEstimate": <SUM of above, 0~100>,
   "estimatedLevel": "<NL|NM|NH|IL|IM1|IM2|IM3|IH|AL>",
-  "summaryComment": "2문장 이내 총평 (한국어)",
-  "overallComment": "3~4문장 상세 총평. 지금 등급이 왜 이 구간인지, 한 단계 올리려면 무엇이 필요한지 (한국어)",
-  "areas": {
-    "taskCompletion": {
-      "summary": "이 영역 분석 2문장 (한국어)",
-      "strengths": ["강점 1", "강점 2"],
-      "improvements": ["개선 포인트 1", "개선 포인트 2"]
-    },
-    "fluency": { "summary": "...", "strengths": ["..."], "improvements": ["..."] },
-    "vocabulary": { "summary": "...", "strengths": ["..."], "improvements": ["..."] },
-    "grammar": { "summary": "...", "strengths": ["..."], "improvements": ["..."] },
-    "delivery": { "summary": "...", "strengths": ["..."], "improvements": ["..."] }
+  "criteria": {
+    "languageControl": <0~20>,
+    "functionTasks": <0~20>,
+    "textType": <0~20>,
+    "contentsContext": <0~20>,
+    "comprehensibility": <0~20>
   },
-  "detailTips": [
+  "scoreEstimate": <sum of the five, 0~100>,
+  "gradeReason": "이 등급으로 판정한 이유. 레벨 기술서의 어떤 조건을 충족했고 어떤 조건에서 막혔는지 (한국어 2~3문장)",
+  "summaryComment": "한 줄 총평 (한국어)",
+  "overallComment": "3~4문장 총평. 답변에서 실제로 나온 내용을 언급할 것 (한국어)",
+  "corrections": [
     {
-      "area": "taskCompletion" | "fluency" | "vocabulary" | "grammar" | "delivery",
-      "label": "짧은 제목 (예: 콤보 확장, 시제 일관성, 연결어)",
-      "text": "구체적 조언 (한국어). 사용자가 실제로 쓴 단어/표현을 인용할 것",
-      "example": "영어 예시 문장 또는 교정 예시"
+      "original": "학습자가 실제로 말한 문장을 그대로 인용",
+      "corrected": "고친 문장",
+      "issue": "무엇이 왜 틀렸는지 (한국어)",
+      "rule": "시제 일치 / 관사 / 전치사 등"
     }
   ],
-  "vocabularyGroups": [
-    { "title": "묘사 표현", "items": ["spacious", "tucked away", "surrounded by"] },
-    { "title": "빈도·습관 표현", "items": ["more often than not", "every now and then"] }
+  "upgrades": [
+    {
+      "original": "학습자가 쓴 표현 그대로",
+      "better": "더 높은 등급으로 들리는 대체 표현",
+      "why": "왜 더 나은지 (한국어)"
+    }
   ],
-  "learningActions": [
-    { "label": "OPIc 콤보 3단 답변 연습", "target": 20, "unit": "세트" },
-    { "label": "연결어 넣어 문장 확장하기", "target": 30, "unit": "문장" }
-  ],
-  "contentBreakdown": [
-    { "label": "묘사", "percent": 40 },
-    { "label": "경험/근거", "percent": 35 },
-    { "label": "기타", "percent": 25 }
-  ],
-  "topicRelevance": <0~100, 질문 의도에 맞는 정도>,
-  "confidence": <0~100, 표현의 확신·자연스러움 지수>,
-  "grammarIssues": ["문법 오류와 한국어 교정"],
-  "vocabularySuggestions": ["더 나은 어휘 제안 (한국어 설명)"],
-  "betterExpressions": ["OPIc 에서 바로 쓸 수 있는 자연스러운 표현 (한국어 설명 포함)"],
-  "modelAnswer": "Target-grade English sample answer in natural spoken style",
-  "strengths": ["잘한 점 (한국어)"],
-  "improvements": ["개선점 (한국어)"]
+  "areas": {
+    "languageControl": { "summary": "이 영역 평가 (한국어, 답변 인용 포함)", "strengths": ["..."], "improvements": ["..."] },
+    "functionTasks": { "summary": "...", "strengths": ["..."], "improvements": ["..."] },
+    "textType": { "summary": "...", "strengths": ["..."], "improvements": ["..."] },
+    "contentsContext": { "summary": "...", "strengths": ["..."], "improvements": ["..."] },
+    "comprehensibility": { "summary": "...", "strengths": ["..."], "improvements": ["..."] }
+  },
+  "toNextGrade": ["다음 등급으로 올라가기 위해 필요한 구체적 행동 2~4개 (한국어)"],
+  "strengths": ["잘한 점 (한국어, 답변 인용)"],
+  "improvements": ["개선점 (한국어, 답변 인용)"],
+  "modelAnswer": "Same question answered at the learner's target grade, in natural spoken English"
 }
 
-RULES:
-- scoreEstimate MUST equal taskCompletion + fluency + vocabulary + grammar + delivery.
-- estimatedLevel MUST be the grade band that scoreEstimate falls into. Never contradict the table.
-- areas 는 5개 영역 모두 포함할 것.
-- detailTips 는 5~8개. 사용자가 실제 쓴 표현을 인용해 구체적으로.
-- vocabularyGroups 는 3~5개 그룹, 그룹당 3~5개 표현.
-- learningActions 는 3~4개.
-- contentBreakdown 의 percent 합은 100.
-- modelAnswer 는 원어민이 실제로 말하듯 자연스럽게. 문어체 에세이 금지.
-- Be honest and strict. 점수를 부풀리지 말 것.`;
+RULES
+- scoreEstimate MUST equal the sum of the five categories.
+- estimatedLevel MUST fall inside the band that scoreEstimate lands in.
+- corrections: 2~5개. 오류가 정말 없으면 빈 배열.
+- upgrades: 2~5개. 반드시 학습자가 쓴 표현에서 출발할 것.
+- areas 는 5개 영역 모두 포함.
+- modelAnswer 는 말하듯 자연스럽게. 에세이 문어체 금지.
+- 점수를 부풀리지 말 것.`;
 
 /** 유형별 채점 초점 — user 메시지에 함께 실어 보낸다 */
 const TYPE_FOCUS: Record<number, string> = {
   1: "Self-Introduction — expect name, job/school, where they live, and a few concrete details. Memorized-sounding scripts should not score above IM2 on fluency.",
   2: "Survey Topic (combo) — expect description, habit, or past experience with concrete detail. Generic answers that could apply to anyone score low on vocabulary.",
   3: "Unexpected Topic — the speaker had no chance to prepare. Reward the ability to keep going and organize on the spot; penalize long freezes and topic drift.",
-  4: "Role Play — the speaker must PERFORM the task. Asking three or four real questions, or clearly explaining a problem and proposing options. Describing what they would do instead of doing it caps taskCompletion at 10.",
+  4: "Role Play — the speaker must PERFORM the task. Asking three or four real questions, or clearly explaining a problem and proposing options. Describing what they would do instead of doing it caps functionTasks at 10.",
   5: "Advanced (comparison / issue) — expect a clear position, cause-and-effect reasoning, and contrast between past and present. Listing without analysis caps the total in the IM range.",
 };
+
+
+/** 비교용 정규화 — 대소문자·구두점·공백 차이를 무시 */
+function normalize(text: string): string {
+  return text.toLowerCase().replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
+}
+
+/**
+ * 인용 검증.
+ *
+ * 모델이 학습자가 하지도 않은 말을 인용하면 피드백이 통째로 거짓이 된다.
+ * original 이 실제 답변에 존재할 때만 통과시킨다.
+ */
+function quotedFromAnswer(original: unknown, answer: string): string | null {
+  if (typeof original !== "string") return null;
+  const q = original.trim();
+  if (q.length < 2) return null;
+  return normalize(answer).includes(normalize(q)) ? q : null;
+}
+
+function sanitizeCorrections(raw: unknown, answer: string): Correction[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const out: Correction[] = [];
+  for (const item of raw) {
+    const original = quotedFromAnswer(item?.original, answer);
+    if (!original) continue;
+    const corrected = typeof item?.corrected === "string" ? item.corrected.trim() : "";
+    const issue = typeof item?.issue === "string" ? item.issue.trim() : "";
+    if (!corrected || !issue) continue;
+    out.push({
+      original,
+      corrected,
+      issue,
+      rule: typeof item?.rule === "string" ? item.rule : undefined,
+    });
+  }
+  return out.length ? out.slice(0, 6) : undefined;
+}
+
+function sanitizeUpgrades(raw: unknown, answer: string): Upgrade[] | undefined {
+  if (!Array.isArray(raw)) return undefined;
+  const out: Upgrade[] = [];
+  for (const item of raw) {
+    const original = quotedFromAnswer(item?.original, answer);
+    if (!original) continue;
+    const better = typeof item?.better === "string" ? item.better.trim() : "";
+    const why = typeof item?.why === "string" ? item.why.trim() : "";
+    if (!better || !why) continue;
+    out.push({ original, better, why });
+  }
+  return out.length ? out.slice(0, 6) : undefined;
+}
 
 /** 요청마다 달라지는 입력부 — 캐시 경계 뒤에 오는 user 메시지 */
 function buildFeedbackInput(req: FeedbackRequest): string {
@@ -169,6 +250,7 @@ async function callProxy(
     messages: { role: string; content: string }[];
     maxTokens?: number;
     model?: string;
+    effort?: "low" | "medium" | "high";
   },
 ): Promise<{ ok: boolean; content?: string; error?: string }> {
   try {
@@ -181,6 +263,7 @@ async function callProxy(
         messages: opts.messages,
         maxTokens: opts.maxTokens ?? 2000,
         model: opts.model,
+        effort: opts.effort,
       }),
     });
     const data = await res.json();
@@ -201,7 +284,8 @@ export async function getFeedback(
     system: GRADING_SYSTEM_PROMPT,
     cacheSystem: true, // 정적 루브릭은 캐시 — 반복 채점 시 입력 비용 대폭 절감
     messages: [{ role: "user", content: buildFeedbackInput(req) }],
-    maxTokens: 3200,
+    maxTokens: 2600,
+    effort: "low",
     model: config.model,
   });
 
@@ -223,15 +307,15 @@ export async function getFeedback(
       return Math.max(0, Math.min(20, n > 20 ? Math.round((n / 100) * 20) : Math.round(n)));
     };
     const criteria: ScoreCriteria = {
-      taskCompletion: fix(c.taskCompletion),
-      fluency: fix(c.fluency),
-      vocabulary: fix(c.vocabulary),
-      grammar: fix(c.grammar),
-      delivery: fix(c.delivery),
+      languageControl: fix(c.languageControl),
+      functionTasks: fix(c.functionTasks),
+      textType: fix(c.textType),
+      contentsContext: fix(c.contentsContext),
+      comprehensibility: fix(c.comprehensibility),
     };
     const sum =
-      criteria.taskCompletion + criteria.fluency + criteria.vocabulary +
-      criteria.grammar + criteria.delivery;
+      criteria.languageControl + criteria.functionTasks + criteria.textType +
+      criteria.contentsContext + criteria.comprehensibility;
     // 모델이 보낸 총점과 영역 합이 어긋나면 영역 합을 신뢰한다 (등급이 근거와 따로 놀지 않도록)
     const reported = Number(parsed.scoreEstimate);
     const finalScore =
@@ -247,6 +331,10 @@ export async function getFeedback(
         modelAnswer: parsed.modelAnswer || "",
         estimatedLevel: scoreToLevel(finalScore),
         scoreEstimate: finalScore,
+        gradeReason: typeof parsed.gradeReason === "string" ? parsed.gradeReason : undefined,
+        toNextGrade: Array.isArray(parsed.toNextGrade) ? parsed.toNextGrade : undefined,
+        corrections: sanitizeCorrections(parsed.corrections, req.userAnswer),
+        upgrades: sanitizeUpgrades(parsed.upgrades, req.userAnswer),
         strengths: parsed.strengths || [],
         improvements: parsed.improvements || [],
         summaryComment: parsed.summaryComment,
@@ -276,109 +364,114 @@ export async function getFeedback(
 }
 
 const AREA_MAX: Record<CriteriaKey, number> = {
-  taskCompletion: 20,
-  fluency: 20,
-  vocabulary: 20,
-  grammar: 20,
-  delivery: 20,
+  languageControl: 20,
+  functionTasks: 20,
+  textType: 20,
+  contentsContext: 20,
+  comprehensibility: 20,
 };
 
 const AREA_LABEL: Record<CriteriaKey, string> = {
-  taskCompletion: "과제 수행",
-  fluency: "유창성",
-  vocabulary: "어휘력",
-  grammar: "문장 구성",
-  delivery: "전달력",
+  languageControl: "언어 정확도",
+  functionTasks: "과제 수행력",
+  textType: "발화 구성력",
+  contentsContext: "내용 표현력",
+  comprehensibility: "질문 이해도",
 };
 
-/** 영역별 점수 비율에 따른 기본 분석 문구 (AI 응답에 areas 가 없을 때 사용) */
+/**
+ * AI 응답에 areas 가 없을 때만 쓰는 최소 폴백.
+ *
+ * 여기 문구는 답변을 인용하지 못하므로 일부러 짧게 유지한다.
+ * 상세 피드백은 반드시 모델이 학습자 답변을 인용해 만들어야 한다.
+ */
 const AREA_TEMPLATES: Record<
   CriteriaKey,
   { high: AreaAnalysis; mid: AreaAnalysis; low: AreaAnalysis }
 > = {
-  taskCompletion: {
+  languageControl: {
     high: {
-      summary: "질문 의도를 정확히 파악하고 요구한 내용을 빠짐없이 답했어요.",
-      strengths: ["질문 핵심 파악", "요구 사항 모두 충족"],
-      improvements: ["구체적인 사례 한 개 더 붙이기", "답변 마무리 문장 추가"],
+      summary: "문법과 어휘 사용이 안정적이에요.",
+      strengths: ["시제 일관성", "정확한 어휘 선택"],
+      improvements: ["복문 구조 다양화", "구동사 활용 늘리기"],
     },
     mid: {
-      summary: "질문에는 답했지만 요구한 항목 중 일부가 빠졌어요. 묻는 것을 끝까지 확인해보세요.",
-      strengths: ["주제 이해", "기본 답변 구성"],
-      improvements: ["질문에서 요구한 항목 체크하기", "빠진 부분 채워 말하기"],
-    },
-    low: {
-      summary: "질문이 요구한 과제를 수행하지 못했어요. 무엇을 묻는지 먼저 정리하고 답해보세요.",
-      strengths: ["답변 시도"],
-      improvements: ["질문 키워드 파악 연습", "요구 사항대로 답하기"],
-    },
-  },
-  fluency: {
-    high: {
-      summary: "끊김 없이 자연스럽게 이어서 말했어요. 발화량도 충분합니다.",
-      strengths: ["안정적인 속도", "충분한 발화량"],
-      improvements: ["필러(um, uh) 줄이기", "긴 답변에서도 흐름 유지하기"],
-    },
-    mid: {
-      summary: "대체로 이어서 말했지만 중간에 멈추거나 다시 시작하는 부분이 있어요.",
-      strengths: ["기본 발화 유지"],
-      improvements: ["문장 사이 연결어로 시간 벌기", "말문 막힐 때 쓸 표현 준비하기"],
-    },
-    low: {
-      summary: "발화량이 부족합니다. OPIc 은 길게 말할수록 등급이 올라가는 시험이에요.",
-      strengths: ["답변 시도"],
-      improvements: ["한 문항당 최소 60초 말하기", "이유·예시를 붙여 문장 늘리기"],
-    },
-  },
-  vocabulary: {
-    high: {
-      summary: "주제에 맞는 표현을 다양하게 사용했어요. 같은 단어 반복도 적습니다.",
-      strengths: ["표현의 다양성", "자연스러운 연어(collocation)"],
-      improvements: ["구동사(phrasal verb) 추가", "감정·정도 표현 넓히기"],
-    },
-    mid: {
-      summary: "의미는 전달되지만 쉬운 단어가 반복돼요. 같은 뜻의 다른 표현을 섞어보세요.",
-      strengths: ["기본 어휘 활용"],
-      improvements: ["good/nice 대신 구체적 형용사 쓰기", "주제별 표현 5개씩 외우기"],
-    },
-    low: {
-      summary: "사용한 어휘의 범위가 좁습니다. 주제별 핵심 표현부터 채워보세요.",
-      strengths: ["기초 단어 사용"],
-      improvements: ["주제별 필수 표현 암기", "한 문장에 형용사 하나씩 넣기"],
-    },
-  },
-  grammar: {
-    high: {
-      summary: "시제가 일관되고 문장 구조도 다양해요. 복문을 안정적으로 씁니다.",
-      strengths: ["시제 일관성", "복문 활용"],
-      improvements: ["가정법·완료시제 섞기", "관계대명사로 문장 묶기"],
-    },
-    mid: {
-      summary: "기본 문장은 정확하지만 시제가 흔들리거나 단문이 많아요.",
+      summary: "의미는 전달되지만 문법 오류와 어휘 반복이 보여요.",
       strengths: ["기본 문형 구사"],
-      improvements: ["과거 경험은 과거시제로 끝까지 유지", "because/so 로 문장 잇기"],
+      improvements: ["시제 끝까지 유지하기", "같은 단어 반복 줄이기"],
     },
     low: {
-      summary: "문장이 자주 끊기고 오류가 반복됩니다. 기본 문형부터 다지는 게 빠릅니다.",
-      strengths: ["단어 전달 시도"],
+      summary: "기본 문형부터 다지는 것이 가장 빠릅니다.",
+      strengths: ["의사 전달 시도"],
       improvements: ["주어+동사 갖춘 문장 만들기", "현재/과거 구분해서 말하기"],
     },
   },
-  delivery: {
+  functionTasks: {
     high: {
-      summary: "전달이 명료하고 강세와 끊어 읽기가 자연스러워요.",
-      strengths: ["명료한 전달", "자연스러운 강세"],
-      improvements: ["연음(linking) 다듬기", "문장 끝 억양 변화 주기"],
+      summary: "요구된 과제를 끊김 없이 수행했어요.",
+      strengths: ["과제 완수", "즉흥 대응"],
+      improvements: ["예상 못한 질문까지 확장 연습"],
     },
     mid: {
-      summary: "대체로 알아들을 수 있지만 일부 단어의 강세와 끊어 읽기가 어색해요.",
-      strengths: ["기본 명료도", "적절한 속도"],
-      improvements: ["단어 강세 위치 확인", "의미 단위로 끊어 말하기"],
+      summary: "과제는 수행했지만 일부 요구 사항이 빠졌어요.",
+      strengths: ["주제 파악"],
+      improvements: ["질문이 요구한 항목 빠짐없이 답하기"],
     },
     low: {
-      summary: "전달력을 높이면 등급이 크게 오릅니다. 또박또박 말하는 것부터 시작하세요.",
-      strengths: ["말하기 시도"],
-      improvements: ["단어 강세 기초 연습", "속도 늦추고 또렷하게 발음하기"],
+      summary: "요구된 과제를 수행하지 못했어요.",
+      strengths: ["답변 시도"],
+      improvements: ["질문의 동사(describe/compare/ask)에 맞춰 답하기"],
+    },
+  },
+  textType: {
+    high: {
+      summary: "문단 단위로 연결해 말했어요.",
+      strengths: ["문단 구성", "연결어 활용"],
+      improvements: ["문단 간 전환 표현 다듬기"],
+    },
+    mid: {
+      summary: "문장은 만들지만 문단으로 이어지지 않아요.",
+      strengths: ["문장 단위 발화"],
+      improvements: ["because/so/also 로 문장 잇기", "한 주제당 4문장 이상"],
+    },
+    low: {
+      summary: "단어와 짧은 구 수준에 머물러 있어요.",
+      strengths: ["단어 전달"],
+      improvements: ["완전한 문장으로 말하기"],
+    },
+  },
+  contentsContext: {
+    high: {
+      summary: "주제와 상황에 맞는 구체적인 내용을 담았어요.",
+      strengths: ["구체적 사례", "상황 적합성"],
+      improvements: ["개인 경험 한 가지 더 붙이기"],
+    },
+    mid: {
+      summary: "내용이 일반적이에요. 나만의 구체성이 필요합니다.",
+      strengths: ["주제 관련성 유지"],
+      improvements: ["숫자·장소·이름 같은 구체적 정보 넣기"],
+    },
+    low: {
+      summary: "주제에 대한 내용이 거의 담기지 않았어요.",
+      strengths: ["답변 시도"],
+      improvements: ["질문 주제에 대해 아는 것부터 말하기"],
+    },
+  },
+  comprehensibility: {
+    high: {
+      summary: "질문 의도를 정확히 파악했어요.",
+      strengths: ["질문 이해"],
+      improvements: ["세부 조건까지 확인하기"],
+    },
+    mid: {
+      summary: "질문은 이해했지만 일부 초점이 어긋났어요.",
+      strengths: ["대체적인 이해"],
+      improvements: ["질문의 핵심 단어 먼저 짚기"],
+    },
+    low: {
+      summary: "질문 의도와 다른 답변이에요.",
+      strengths: ["발화 시도"],
+      improvements: ["문제 듣기를 한 번 더 활용하기"],
     },
   },
 };
@@ -472,10 +565,10 @@ function withReportFallbacks(fb: AiFeedback, req: FeedbackRequest): AiFeedback {
   }
 
   if (typeof out.topicRelevance !== "number") {
-    out.topicRelevance = pctOf("taskCompletion");
+    out.topicRelevance = pctOf("comprehensibility");
   }
   if (typeof out.confidence !== "number") {
-    out.confidence = Math.round((pctOf("fluency") + pctOf("grammar")) / 2);
+    out.confidence = Math.round((pctOf("languageControl") + pctOf("textType")) / 2);
   }
   if (!out.summaryComment) {
     out.summaryComment =
@@ -502,46 +595,34 @@ function strictMockFeedback(req: FeedbackRequest): AiFeedback {
   const hasConnectors = /(however|but|because|since|so|therefore|for example|first|second|finally|in my view|i think|moreover|furthermore|consequently)/i.test(req.userAnswer);
   const advancedVocab = (req.userAnswer.match(/\b(demonstrate|consider|regarding|consequently|furthermore|implement|significant|optimize|leverage|facilitate|establish|comprehensive|effective|substantial)\b/gi) || []).length;
 
-  // OPIc 5개 영역 각 20점 환산 (AI 미연결 시 로컬 추정치)
+  // 공식 5영역 각 20점 환산 (AI 미연결 시 로컬 추정치 — 인용 피드백은 불가)
   const cap = (n: number) => Math.max(0, Math.min(20, Math.round(n)));
 
-  // 1. 과제 수행 — 답변량과 문장 수로 간접 추정. 한 문장 이하면 강하게 제한
-  let taskCompletion: number;
-  if (wc < 15) taskCompletion = cap(wc * 0.4);
-  else if (wc < 40) taskCompletion = cap(7 + sentences);
-  else if (wc < 80) taskCompletion = cap(11 + sentences * 0.6);
-  else if (wc < 150) taskCompletion = cap(14 + sentences * 0.4);
-  else taskCompletion = cap(16 + (hasConnectors ? 2 : 0));
-  if (sentences < 2) taskCompletion = Math.min(taskCompletion, 6);
+  // Language Control — 어휘 다양성과 고급 표현으로 간접 추정
+  const languageControl =
+    wc < 15 ? cap(wc * 0.3) : cap(6 + lexicalDiversity * 7 + Math.min(4, advancedVocab));
 
-  // 2. 유창성 — OPIc 은 발화량이 등급을 크게 좌우
-  let fluency: number;
-  if (wc < 15) fluency = cap(wc * 0.25);
-  else if (wc < 40) fluency = cap(6 + (hasConnectors ? 1 : 0));
-  else if (wc < 80) fluency = cap(10 + (hasConnectors ? 2 : 0) + (sentences >= 5 ? 1 : 0));
-  else if (wc < 150) fluency = cap(13 + (hasConnectors ? 2 : 0) + (sentences >= 7 ? 1 : 0));
-  else fluency = cap(16 + (hasConnectors ? 2 : 0));
+  // Function / Global Tasks — 과제를 지속적으로 수행했는지: 문장 수와 연결어
+  const functionTasks =
+    wc < 15 ? cap(wc * 0.35) : cap(6 + sentences * 0.9 + (hasConnectors ? 2 : 0));
 
-  // 3. 어휘력 — 다양성 + 고급 표현
-  let vocabulary: number;
-  if (wc < 15) vocabulary = cap(wc * 0.3);
-  else vocabulary = cap(6 + lexicalDiversity * 8 + Math.min(4, advancedVocab));
+  // Text Type — 단어 → 구 → 문장 → 접합 문장 → 문단 사다리
+  let textType: number;
+  if (wc < 15 || sentences < 2) textType = cap(4);
+  else if (wc < 40) textType = cap(9);
+  else if (wc < 80) textType = cap(hasConnectors ? 14 : 12);
+  else if (wc < 150) textType = cap(hasConnectors ? 17 : 15);
+  else textType = cap(hasConnectors ? 19 : 16);
 
-  // 4. 문장 구성 — 문장 수와 연결어로 확장 정도 추정
-  let grammar: number;
-  if (wc < 15) grammar = cap(wc * 0.35);
-  else if (wc < 40) grammar = cap(7 + (sentences >= 3 ? 2 : 0));
-  else if (wc < 80) grammar = cap(11 + (hasConnectors ? 2 : 0) + (sentences >= 5 ? 1 : 0));
-  else grammar = cap(14 + (hasConnectors ? 3 : 0) + (sentences >= 7 ? 1 : 0));
+  // Contents / Context — 발화량과 어휘 다양성으로 구체성 추정
+  const contentsContext =
+    wc < 15 ? cap(wc * 0.3) : cap(5 + wc / 12 + lexicalDiversity * 4);
 
-  // 5. 전달력 — 텍스트만으로는 추정 한계가 커서 보수적으로 산정
-  let delivery: number;
-  if (wc < 15) delivery = cap(wc * 0.3);
-  else if (wc < 40) delivery = cap(8);
-  else if (wc < 80) delivery = cap(11 + (sentences >= 5 ? 1 : 0));
-  else delivery = cap(13 + (hasConnectors ? 2 : 0));
+  // Comprehensibility — 텍스트만으로는 판정 불가. 최소한의 형태만 확인
+  const comprehensibility = sentences < 2 ? cap(6) : cap(wc < 40 ? 10 : 13);
 
-  const score = taskCompletion + fluency + vocabulary + grammar + delivery;
+  const score =
+    languageControl + functionTasks + textType + contentsContext + comprehensibility;
 
   const errors: string[] = [];
   if (wc < 60) errors.push(`발화량 부족 (${wc}단어) — OPIc 은 문항당 80단어 이상을 권장합니다`);
@@ -549,7 +630,13 @@ function strictMockFeedback(req: FeedbackRequest): AiFeedback {
   if (!hasConnectors) errors.push("논리 연결어 부재 — However / Because / For example 등 추가");
   if (advancedVocab === 0 && wc > 30) errors.push("표현이 단조로움 — actually, honestly, more often than not 같은 구어 표현 추가");
 
-  const criteria: ScoreCriteria = { taskCompletion, fluency, vocabulary, grammar, delivery };
+  const criteria: ScoreCriteria = {
+    languageControl,
+    functionTasks,
+    textType,
+    contentsContext,
+    comprehensibility,
+  };
 
   return withReportFallbacks({
     grammarIssues: ["(Mock - AI 미연결) 문법 자동 검사를 사용할 수 없습니다"],

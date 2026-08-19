@@ -52,39 +52,55 @@ export interface StudyRecord {
 }
 
 /**
- * OPIc 평가 영역.
+ * OPIc 공식 평가 영역 5가지.
  *
- * OPIc 공식 등급은 총점 합산이 아니라 ACTFL 기준의 종합 판정이다.
- * 다만 학습자가 약점을 파악할 수 있어야 하므로, 이 앱에서는 5개 영역을
- * 각 20점으로 환산해 100점 만점으로 보여주고 그 총점을 등급 구간에 매핑한다.
+ * 실제 OPIc 은 이 5개 축을 종합해 ACTFL 등급을 판정하며 점수를 산출하지 않는다.
+ * 이 앱은 학습자가 약점을 짚을 수 있도록 각 영역을 20점으로 환산해 보여주지만,
+ * 화면에서는 어디까지나 등급이 주인공이고 점수는 보조 지표다.
  */
 export interface ScoreCriteria {
-  /** 과제 수행 — 질문 의도에 맞게 답했는가 */
-  taskCompletion: number;
-  /** 유창성 — 발화량·속도·끊김 */
-  fluency: number;
-  /** 어휘력 — 표현의 다양성과 정확성 */
-  vocabulary: number;
-  /** 문장 구성 — 문법 정확도와 문장 확장 */
-  grammar: number;
-  /** 전달력 — 발음·강세·명료도 */
-  delivery: number;
+  /** Language Control — 문법·어휘·유창성·발음의 정확도 */
+  languageControl: number;
+  /** Function / Global Tasks — 일관되고 즉흥적으로 언어 과제를 수행하는 능력 */
+  functionTasks: number;
+  /** Text Type — 발화의 길이와 구성 (단어 → 구 → 문장 → 접합 문장 → 문단) */
+  textType: number;
+  /** Contents / Context — 주제와 상황에 맞는 표현 능력 */
+  contentsContext: number;
+  /** Comprehensibility — 질문 의도를 제대로 파악했는가 */
+  comprehensibility: number;
 }
 
 export const CRITERIA_MAX = {
-  taskCompletion: 20,
-  fluency: 20,
-  vocabulary: 20,
-  grammar: 20,
-  delivery: 20,
+  languageControl: 20,
+  functionTasks: 20,
+  textType: 20,
+  contentsContext: 20,
+  comprehensibility: 20,
 } as const;
 
 export const CRITERIA_LABEL: Record<CriteriaKey, string> = {
-  taskCompletion: "과제 수행",
-  fluency: "유창성",
-  vocabulary: "어휘력",
-  grammar: "문장 구성",
-  delivery: "전달력",
+  languageControl: "Language Control",
+  functionTasks: "Function / Global Tasks",
+  textType: "Text Type",
+  contentsContext: "Contents / Context",
+  comprehensibility: "Comprehensibility",
+};
+
+export const CRITERIA_KO: Record<CriteriaKey, string> = {
+  languageControl: "언어 정확도",
+  functionTasks: "과제 수행력",
+  textType: "발화 구성력",
+  contentsContext: "내용 표현력",
+  comprehensibility: "질문 이해도",
+};
+
+export const CRITERIA_DESC: Record<CriteriaKey, string> = {
+  languageControl: "문법 · 어휘 · 유창성 · 발음",
+  functionTasks: "일관되고 꾸준하게, 즉흥적으로 대처하는 능력",
+  textType: "단어 → 구 → 문장 → 접합된 문장 → 문단",
+  contentsContext: "주제와 상황에 대한 표현 능력",
+  comprehensibility: "질문 의도를 제대로 이해했는가",
 };
 
 export type CriteriaKey = keyof ScoreCriteria;
@@ -117,6 +133,28 @@ export interface LearningAction {
   unit: string;
 }
 
+/** 학습자가 실제로 말한 문장에 대한 교정 */
+export interface Correction {
+  /** 학습자 답변에서 그대로 인용한 부분 */
+  original: string;
+  /** 고친 문장 */
+  corrected: string;
+  /** 무엇이 왜 틀렸는지 (한국어) */
+  issue: string;
+  /** 관련 문법 항목 (예: 시제 일치, 관사) */
+  rule?: string;
+}
+
+/** 틀리지는 않았지만 더 높은 등급으로 들리게 만드는 표현 교체 */
+export interface Upgrade {
+  /** 학습자가 쓴 표현 */
+  original: string;
+  /** 대체 표현 */
+  better: string;
+  /** 왜 더 나은지 (한국어) */
+  why: string;
+}
+
 /** 발화 내용 구성 비율 */
 export interface ContentSlice {
   label: string;
@@ -146,6 +184,14 @@ export interface AiFeedback {
   // ── 확장 리포트용 필드 (AI 응답에 없으면 로컬 폴백으로 채움) ──
   summaryComment?: string;
   overallComment?: string;
+  /** 이 등급으로 판정한 근거 (OPIc 레벨 기술서 기준) */
+  gradeReason?: string;
+  /** 다음 등급으로 올라가려면 무엇이 필요한지 */
+  toNextGrade?: string[];
+  /** 답변 원문을 인용한 문법 교정 */
+  corrections?: Correction[];
+  /** 답변 원문을 인용한 표현 업그레이드 */
+  upgrades?: Upgrade[];
   areas?: Partial<Record<CriteriaKey, AreaAnalysis>>;
   detailTips?: DetailTip[];
   vocabularyGroups?: VocabGroup[];

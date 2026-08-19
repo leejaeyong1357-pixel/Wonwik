@@ -11,11 +11,11 @@ import Button from "@/components/ui/Button";
 import ResultSheet from "@/components/dashboard/ResultSheet";
 
 const AREA_ROWS: { key: keyof ScoreCriteria; label: string }[] = [
-  { key: "taskCompletion", label: "과제 수행" },
-  { key: "fluency", label: "유창성" },
-  { key: "vocabulary", label: "어휘력" },
-  { key: "grammar", label: "문장 구성" },
-  { key: "delivery", label: "전달력" },
+  { key: "languageControl", label: "언어 정확도" },
+  { key: "functionTasks", label: "과제 수행력" },
+  { key: "textType", label: "발화 구성력" },
+  { key: "contentsContext", label: "내용 표현력" },
+  { key: "comprehensibility", label: "질문 이해도" },
 ];
 
 interface Props {
@@ -32,11 +32,11 @@ export default function MockSummary({ totalScore, answers, durationMs }: Props) 
   const allFeedbacks = graded.map((a) => a.feedback!) as AiFeedback[];
 
   const criteriaAvg: ScoreCriteria = {
-    taskCompletion: avg(allFeedbacks.map((f) => f.criteria?.taskCompletion ?? 0)),
-    fluency: avg(allFeedbacks.map((f) => f.criteria?.fluency ?? 0)),
-    vocabulary: avg(allFeedbacks.map((f) => f.criteria?.vocabulary ?? 0)),
-    grammar: avg(allFeedbacks.map((f) => f.criteria?.grammar ?? 0)),
-    delivery: avg(allFeedbacks.map((f) => f.criteria?.delivery ?? 0)),
+    languageControl: avg(allFeedbacks.map((f) => f.criteria?.languageControl ?? 0)),
+    functionTasks: avg(allFeedbacks.map((f) => f.criteria?.functionTasks ?? 0)),
+    textType: avg(allFeedbacks.map((f) => f.criteria?.textType ?? 0)),
+    contentsContext: avg(allFeedbacks.map((f) => f.criteria?.contentsContext ?? 0)),
+    comprehensibility: avg(allFeedbacks.map((f) => f.criteria?.comprehensibility ?? 0)),
   };
 
   /** 유형별 평균 점수 — 한 유형에 여러 문항이 배정되므로 평균으로 집계 */
@@ -115,11 +115,11 @@ export default function MockSummary({ totalScore, answers, durationMs }: Props) 
             totalScore,
             level: scoreToLevel(totalScore),
             criteria: {
-              taskCompletion: Math.round(criteriaAvg.taskCompletion),
-              fluency: Math.round(criteriaAvg.fluency),
-              vocabulary: Math.round(criteriaAvg.vocabulary),
-              grammar: Math.round(criteriaAvg.grammar),
-              delivery: Math.round(criteriaAvg.delivery),
+              languageControl: Math.round(criteriaAvg.languageControl),
+              functionTasks: Math.round(criteriaAvg.functionTasks),
+              textType: Math.round(criteriaAvg.textType),
+              contentsContext: Math.round(criteriaAvg.contentsContext),
+              comprehensibility: Math.round(criteriaAvg.comprehensibility),
             },
           }}
         />

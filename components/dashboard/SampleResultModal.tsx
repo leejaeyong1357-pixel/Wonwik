@@ -11,11 +11,11 @@ const SAMPLE: ResultSheetData = {
   totalScore: 67,
   level: "IM3",
   criteria: {
-    taskCompletion: 15,
-    fluency: 13,
-    vocabulary: 12,
-    grammar: 14,
-    delivery: 13,
+    languageControl: 13,
+    functionTasks: 14,
+    textType: 14,
+    contentsContext: 13,
+    comprehensibility: 13,
   },
 };
 

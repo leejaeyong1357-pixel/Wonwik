@@ -13,11 +13,11 @@ export interface ResultSheetData {
 }
 
 const AREAS = [
-  { key: "taskCompletion", label: "과제 수행", max: 20, desc: "Task Completion · 질문 의도 충족" },
-  { key: "fluency", label: "유창성", max: 20, desc: "Fluency · 발화량·끊김 없는 흐름" },
-  { key: "vocabulary", label: "어휘력", max: 20, desc: "Vocabulary · 다양성·정확한 연어" },
-  { key: "grammar", label: "문장 구성", max: 20, desc: "Grammar · 시제·복문·연결어" },
-  { key: "delivery", label: "전달력", max: 20, desc: "Delivery · 발음·강세·명료도" },
+  { key: "languageControl", label: "언어 정확도", max: 20, desc: "Language Control · 문법·어휘·유창성·발음" },
+  { key: "functionTasks", label: "과제 수행력", max: 20, desc: "Function / Global Tasks · 즉흥적 과제 수행" },
+  { key: "textType", label: "발화 구성력", max: 20, desc: "Text Type · 단어 → 문장 → 문단" },
+  { key: "contentsContext", label: "내용 표현력", max: 20, desc: "Contents / Context · 주제와 상황 표현" },
+  { key: "comprehensibility", label: "질문 이해도", max: 20, desc: "Comprehensibility · 질문 의도 파악" },
 ] as const;
 
 function recommendation(lv: Level) {
@@ -99,7 +99,7 @@ export default function ResultSheet({ data }: { data: ResultSheetData }) {
       <div className="mb-6">
         <h3 className="font-black text-brand-ink text-base mb-1">📊 평가 영역별 점수</h3>
         <p className="text-xs text-brand-gray-500 mb-4">
-          과제수행 · 유창성 · 어휘력 · 문장구성 · 전달력 (각 20점, 합계 100점)
+          OPIc 공식 5개 평가 영역 (각 20점 환산, 합계 100점)
         </p>
         <div className="space-y-3">
           {areas.map((a) => {

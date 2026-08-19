@@ -20,6 +20,8 @@ interface ProxyRequest {
   messages: { role: string; content: string }[];
   maxTokens?: number;
   model?: string;
+  /** 추론 깊이. 채점처럼 루브릭이 명확한 작업은 낮출수록 응답이 빨라진다 */
+  effort?: "low" | "medium" | "high";
 }
 
 /**
@@ -50,7 +52,7 @@ export async function POST(req: Request) {
     });
   }
 
-  const { system, cacheSystem, messages, maxTokens = 2000 } = body;
+  const { system, cacheSystem, messages, maxTokens = 2000, effort } = body;
   if (!Array.isArray(messages) || messages.length === 0) {
     return NextResponse.json({ ok: false, error: "messages 가 비어 있습니다" });
   }
@@ -61,6 +63,9 @@ export async function POST(req: Request) {
   const payload: Record<string, unknown> = {
     model,
     max_tokens: maxTokens,
+    // Claude Opus 5 는 thinking 이 기본으로 켜져 있어, 루브릭이 고정된 채점에서는
+    // 추론 깊이를 낮추는 것만으로 체감 응답 시간이 크게 줄어든다.
+    output_config: { effort: effort === "high" || effort === "medium" ? effort : "low" },
     messages: messages
       .filter((m) => m.role === "user" || m.role === "assistant")
       .map((m) => ({ role: m.role, content: m.content })),
