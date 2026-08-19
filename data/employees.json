@@ -1,0 +1,6 @@
+{
+  "_comment": "임직원 명부. 서버(/api/auth/login)에서만 사용되며 클라이언트로 전송되지 않습니다.",
+  "_howto": "아래 employees 배열에 회사 임직원 정보를 채우세요. 주민번호 등 민감정보는 절대 넣지 마세요.",
+  "_columns": ["no", "team", "position", "employeeId", "name", "grade"],
+  "employees": []
+}

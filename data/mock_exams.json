@@ -1,0 +1,1027 @@
+{
+  "name": "Mock Exams",
+  "description": "실제 SPA 시험 형식의 모의고사 세트. 각 세트는 유형1~4의 문제가 1개씩 포함되어 약 13분 분량으로 구성됨. 난이도와 주제가 다양하게 분포.",
+  "total": 50,
+  "format": {
+    "type1_time": "약 3분",
+    "type2_time": "약 3분",
+    "type3_time": "약 3분",
+    "type4_time": "약 3분",
+    "total_time": "약 13분"
+  },
+  "scoring": {
+    "max_score": 96,
+    "levels": {
+      "Lv1": "0-15",
+      "Lv2": "16-24",
+      "Lv3": "25-34",
+      "Lv4": "35-49",
+      "Lv5": "50-64",
+      "Lv6": "65-74",
+      "Lv7": "75-84",
+      "Lv8": "85-96"
+    }
+  },
+  "exams": [
+    {
+      "id": "mock_001",
+      "title": "모의고사 1회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "daily life",
+        "lifestyle",
+        "trends",
+        "business"
+      ],
+      "questions": {
+        "type1_id": "t1_001",
+        "type2_id": "t2_001",
+        "type3_id": "t3_001",
+        "type4_id": "t4_001"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_002",
+      "title": "모의고사 2회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "routine",
+        "city life",
+        "demographics",
+        "AI"
+      ],
+      "questions": {
+        "type1_id": "t1_005",
+        "type2_id": "t2_002",
+        "type3_id": "t3_002",
+        "type4_id": "t4_011"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_003",
+      "title": "모의고사 3회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "hobby",
+        "money",
+        "household spending",
+        "health"
+      ],
+      "questions": {
+        "type1_id": "t1_011",
+        "type2_id": "t2_005",
+        "type3_id": "t3_003",
+        "type4_id": "t4_021"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_004",
+      "title": "모의고사 4회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "food",
+        "fashion",
+        "energy",
+        "environment"
+      ],
+      "questions": {
+        "type1_id": "t1_021",
+        "type2_id": "t2_006",
+        "type3_id": "t3_004",
+        "type4_id": "t4_031"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_005",
+      "title": "모의고사 5회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "family",
+        "work-life",
+        "education",
+        "exercise"
+      ],
+      "questions": {
+        "type1_id": "t1_031",
+        "type2_id": "t2_011",
+        "type3_id": "t3_005",
+        "type4_id": "t4_030"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_006",
+      "title": "모의고사 6회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "work",
+        "EV",
+        "sales",
+        "education"
+      ],
+      "questions": {
+        "type1_id": "t1_041",
+        "type2_id": "t2_024",
+        "type3_id": "t3_006",
+        "type4_id": "t4_041"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_007",
+      "title": "모의고사 7회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "travel",
+        "online learning",
+        "industry comparison",
+        "online learning"
+      ],
+      "questions": {
+        "type1_id": "t1_051",
+        "type2_id": "t2_025",
+        "type3_id": "t3_007",
+        "type4_id": "t4_041"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_008",
+      "title": "모의고사 8회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "weekend",
+        "smartphone",
+        "consumer market",
+        "social media"
+      ],
+      "questions": {
+        "type1_id": "t1_061",
+        "type2_id": "t2_023",
+        "type3_id": "t3_008",
+        "type4_id": "t4_014"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_009",
+      "title": "모의고사 9회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "exercise",
+        "screen time",
+        "EV market",
+        "telemedicine"
+      ],
+      "questions": {
+        "type1_id": "t1_071",
+        "type2_id": "t2_027",
+        "type3_id": "t3_009",
+        "type4_id": "t4_025"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_010",
+      "title": "모의고사 10회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "entertainment",
+        "online dating",
+        "tourism",
+        "reading habits"
+      ],
+      "questions": {
+        "type1_id": "t1_081",
+        "type2_id": "t2_096",
+        "type3_id": "t3_010",
+        "type4_id": "t4_044"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_011",
+      "title": "모의고사 11회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "preferences",
+        "language",
+        "language stats",
+        "language learning"
+      ],
+      "questions": {
+        "type1_id": "t1_091",
+        "type2_id": "t2_033",
+        "type3_id": "t3_011",
+        "type4_id": "t4_043"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_012",
+      "title": "모의고사 12회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "daily routine",
+        "diet",
+        "workplace turnover",
+        "vaccines"
+      ],
+      "questions": {
+        "type1_id": "t1_002",
+        "type2_id": "t2_054",
+        "type3_id": "t3_012",
+        "type4_id": "t4_067"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_013",
+      "title": "모의고사 13회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "hobbies",
+        "books",
+        "AI usage",
+        "online learning"
+      ],
+      "questions": {
+        "type1_id": "t1_017",
+        "type2_id": "t2_086",
+        "type3_id": "t3_013",
+        "type4_id": "t4_041"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_014",
+      "title": "모의고사 14회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "food",
+        "vegetarian",
+        "leisure",
+        "food culture"
+      ],
+      "questions": {
+        "type1_id": "t1_023",
+        "type2_id": "t2_054",
+        "type3_id": "t3_014",
+        "type4_id": "t4_074"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_015",
+      "title": "모의고사 15회",
+      "difficulty": "easy",
+      "target_score": "6-7",
+      "topics": [
+        "commute",
+        "WFH preference",
+        "Seoul transport",
+        "remote work"
+      ],
+      "questions": {
+        "type1_id": "t1_004",
+        "type2_id": "t2_097",
+        "type3_id": "t3_015",
+        "type4_id": "t4_001"
+      },
+      "target_level": "Lv 4~5",
+      "target_score_range": "35~64점"
+    },
+    {
+      "id": "mock_016",
+      "title": "모의고사 16회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "time management",
+        "loyalty",
+        "GDP",
+        "supply chain"
+      ],
+      "questions": {
+        "type1_id": "t1_006",
+        "type2_id": "t2_015",
+        "type3_id": "t3_016",
+        "type4_id": "t4_002"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_017",
+      "title": "모의고사 17회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "sleep",
+        "balance vs career",
+        "birth rate",
+        "Korea demographics"
+      ],
+      "questions": {
+        "type1_id": "t1_003",
+        "type2_id": "t2_011",
+        "type3_id": "t3_017",
+        "type4_id": "t4_054"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_018",
+      "title": "모의고사 18회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "new hobby",
+        "AI jobs",
+        "EV growth",
+        "autonomous vehicles"
+      ],
+      "questions": {
+        "type1_id": "t1_018",
+        "type2_id": "t2_022",
+        "type3_id": "t3_018",
+        "type4_id": "t4_013"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_019",
+      "title": "모의고사 19회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "food habits",
+        "fast food tax",
+        "Seoul housing",
+        "inflation"
+      ],
+      "questions": {
+        "type1_id": "t1_025",
+        "type2_id": "t2_053",
+        "type3_id": "t3_019",
+        "type4_id": "t4_010"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_020",
+      "title": "모의고사 20회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "family roles",
+        "social media",
+        "internet usage",
+        "cyber security"
+      ],
+      "questions": {
+        "type1_id": "t1_040",
+        "type2_id": "t2_010",
+        "type3_id": "t3_020",
+        "type4_id": "t4_016"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_021",
+      "title": "모의고사 21회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "family influence",
+        "income inequality",
+        "minimum wage",
+        "skills hiring"
+      ],
+      "questions": {
+        "type1_id": "t1_037",
+        "type2_id": "t2_042",
+        "type3_id": "t3_021",
+        "type4_id": "t4_045"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_022",
+      "title": "모의고사 22회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "career path",
+        "specialization",
+        "Samsung vs Apple",
+        "subscription business"
+      ],
+      "questions": {
+        "type1_id": "t1_043",
+        "type2_id": "t2_012",
+        "type3_id": "t3_022",
+        "type4_id": "t4_003"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_023",
+      "title": "모의고사 23회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "international colleagues",
+        "long hours",
+        "Korea vs OECD work",
+        "burnout"
+      ],
+      "questions": {
+        "type1_id": "t1_045",
+        "type2_id": "t2_056",
+        "type3_id": "t3_023",
+        "type4_id": "t4_092"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_024",
+      "title": "모의고사 24회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "achievement",
+        "stakeholder business",
+        "Hyundai revenue",
+        "M&A"
+      ],
+      "questions": {
+        "type1_id": "t1_046",
+        "type2_id": "t2_071",
+        "type3_id": "t3_024",
+        "type4_id": "t4_005"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_025",
+      "title": "모의고사 25회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "skills",
+        "EV environment",
+        "vehicle transition",
+        "battery technology"
+      ],
+      "questions": {
+        "type1_id": "t1_047",
+        "type2_id": "t2_024",
+        "type3_id": "t3_025",
+        "type4_id": "t4_019"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_026",
+      "title": "모의고사 26회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "stress management",
+        "free college",
+        "workforce education",
+        "lifelong learning"
+      ],
+      "questions": {
+        "type1_id": "t1_049",
+        "type2_id": "t2_037",
+        "type3_id": "t3_026",
+        "type4_id": "t4_050"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_027",
+      "title": "모의고사 27회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "career goals",
+        "company support",
+        "semiconductor exports",
+        "M&A"
+      ],
+      "questions": {
+        "type1_id": "t1_050",
+        "type2_id": "t2_072",
+        "type3_id": "t3_027",
+        "type4_id": "t4_005"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_028",
+      "title": "모의고사 28회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "travel preference",
+        "loneliness",
+        "single households",
+        "loneliness"
+      ],
+      "questions": {
+        "type1_id": "t1_054",
+        "type2_id": "t2_091",
+        "type3_id": "t3_028",
+        "type4_id": "t4_051"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_029",
+      "title": "모의고사 29회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "travel memorable",
+        "climate urgency",
+        "Seoul temperature",
+        "climate change"
+      ],
+      "questions": {
+        "type1_id": "t1_058",
+        "type2_id": "t2_061",
+        "type3_id": "t3_029",
+        "type4_id": "t4_032"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_030",
+      "title": "모의고사 30회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "perspective",
+        "censorship",
+        "study correlation",
+        "AI in research"
+      ],
+      "questions": {
+        "type1_id": "t1_060",
+        "type2_id": "t2_044",
+        "type3_id": "t3_030",
+        "type4_id": "t4_064"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_031",
+      "title": "모의고사 31회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "planning vs spontaneity",
+        "loyalty",
+        "employee dept",
+        "performance review"
+      ],
+      "questions": {
+        "type1_id": "t1_063",
+        "type2_id": "t2_015",
+        "type3_id": "t3_031",
+        "type4_id": "t4_095"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_032",
+      "title": "모의고사 32회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "weekly wishes",
+        "social media impact",
+        "vacation",
+        "tourism rebound"
+      ],
+      "questions": {
+        "type1_id": "t1_065",
+        "type2_id": "t2_010",
+        "type3_id": "t3_032",
+        "type4_id": "t4_081"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_033",
+      "title": "모의고사 33회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "balance",
+        "screen time",
+        "social media usage",
+        "social media broadly"
+      ],
+      "questions": {
+        "type1_id": "t1_067",
+        "type2_id": "t2_027",
+        "type3_id": "t3_033",
+        "type4_id": "t4_059"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_034",
+      "title": "모의고사 34회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "Sunday evening",
+        "online learning",
+        "savings by age",
+        "investment vs savings"
+      ],
+      "questions": {
+        "type1_id": "t1_069",
+        "type2_id": "t2_025",
+        "type3_id": "t3_034",
+        "type4_id": "t4_077"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_035",
+      "title": "모의고사 35회",
+      "difficulty": "medium",
+      "target_score": "7-8",
+      "topics": [
+        "exercise importance",
+        "competition",
+        "exchange rate",
+        "inflation"
+      ],
+      "questions": {
+        "type1_id": "t1_073",
+        "type2_id": "t2_050",
+        "type3_id": "t3_035",
+        "type4_id": "t4_010"
+      },
+      "target_level": "Lv 5~6",
+      "target_score_range": "50~74점"
+    },
+    {
+      "id": "mock_036",
+      "title": "모의고사 36회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "motivation",
+        "UBI",
+        "online shopping",
+        "fashion consumerism"
+      ],
+      "questions": {
+        "type1_id": "t1_076",
+        "type2_id": "t2_045",
+        "type3_id": "t3_036",
+        "type4_id": "t4_075"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_037",
+      "title": "모의고사 37회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "lifestyle change",
+        "society",
+        "marketing budget",
+        "M&A trends"
+      ],
+      "questions": {
+        "type1_id": "t1_078",
+        "type2_id": "t2_046",
+        "type3_id": "t3_037",
+        "type4_id": "t4_005"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_038",
+      "title": "모의고사 38회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "fitness goals",
+        "self-driving",
+        "Korean exports",
+        "supply chain"
+      ],
+      "questions": {
+        "type1_id": "t1_080",
+        "type2_id": "t2_026",
+        "type3_id": "t3_038",
+        "type4_id": "t4_002"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_039",
+      "title": "모의고사 39회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "movie preference",
+        "religion society",
+        "Jeju tourism",
+        "heritage tourism"
+      ],
+      "questions": {
+        "type1_id": "t1_083",
+        "type2_id": "t2_058",
+        "type3_id": "t3_039",
+        "type4_id": "t4_090"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_040",
+      "title": "모의고사 40회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "music daily",
+        "renewables tech",
+        "foreign residents",
+        "Korea multicultural"
+      ],
+      "questions": {
+        "type1_id": "t1_085",
+        "type2_id": "t2_070",
+        "type3_id": "t3_040",
+        "type4_id": "t4_053"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_041",
+      "title": "모의고사 41회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "video games",
+        "AI worry",
+        "GDP comparison",
+        "global economy"
+      ],
+      "questions": {
+        "type1_id": "t1_087",
+        "type2_id": "t2_099",
+        "type3_id": "t3_086",
+        "type4_id": "t4_002"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_042",
+      "title": "모의고사 42회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "recent books",
+        "world improvement",
+        "manufacturing",
+        "innovation"
+      ],
+      "questions": {
+        "type1_id": "t1_089",
+        "type2_id": "t2_100",
+        "type3_id": "t3_087",
+        "type4_id": "t4_068"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_043",
+      "title": "모의고사 43회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "planning life",
+        "passion vs job market",
+        "Hyundai growth",
+        "EV transition"
+      ],
+      "questions": {
+        "type1_id": "t1_095",
+        "type2_id": "t2_035",
+        "type3_id": "t3_088",
+        "type4_id": "t4_037"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_044",
+      "title": "모의고사 44회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "WFH preference",
+        "ESG corporate",
+        "car buying factors",
+        "ESG reporting"
+      ],
+      "questions": {
+        "type1_id": "t1_097",
+        "type2_id": "t2_019",
+        "type3_id": "t3_089",
+        "type4_id": "t4_008"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_045",
+      "title": "모의고사 45회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "online shopping",
+        "modern consumption",
+        "Korean spending",
+        "income inequality"
+      ],
+      "questions": {
+        "type1_id": "t1_099",
+        "type2_id": "t2_075",
+        "type3_id": "t3_090",
+        "type4_id": "t4_052"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_046",
+      "title": "모의고사 46회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "routine planning",
+        "leadership",
+        "office productivity",
+        "leadership development"
+      ],
+      "questions": {
+        "type1_id": "t1_010",
+        "type2_id": "t2_020",
+        "type3_id": "t3_085",
+        "type4_id": "t4_096"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_047",
+      "title": "모의고사 47회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "hobby contribution",
+        "leadership age",
+        "robot tech",
+        "AI tech"
+      ],
+      "questions": {
+        "type1_id": "t1_016",
+        "type2_id": "t2_017",
+        "type3_id": "t3_084",
+        "type4_id": "t4_011"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_048",
+      "title": "모의고사 48회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "memorable meal",
+        "AI children",
+        "renewable energy",
+        "fusion"
+      ],
+      "questions": {
+        "type1_id": "t1_029",
+        "type2_id": "t2_040",
+        "type3_id": "t3_081",
+        "type4_id": "t4_065"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_049",
+      "title": "모의고사 49회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "pets",
+        "AI replacing jobs",
+        "smart home",
+        "AI usage"
+      ],
+      "questions": {
+        "type1_id": "t1_096",
+        "type2_id": "t2_022",
+        "type3_id": "t3_099",
+        "type4_id": "t4_011"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    },
+    {
+      "id": "mock_050",
+      "title": "모의고사 50회",
+      "difficulty": "hard",
+      "target_score": "8+",
+      "topics": [
+        "live concert",
+        "having it all",
+        "robot servers",
+        "automation jobs"
+      ],
+      "questions": {
+        "type1_id": "t1_086",
+        "type2_id": "t2_090",
+        "type3_id": "t3_084",
+        "type4_id": "t4_022"
+      },
+      "target_level": "Lv 7~8",
+      "target_score_range": "75~96점"
+    }
+  ]
+}

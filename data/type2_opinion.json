@@ -1,0 +1,1208 @@
+{
+  "type": 2,
+  "name": "Opinion",
+  "description": "특정 주제에 대해 본인의 의견을 논리적 근거와 함께 표현. 찬반이 갈리는 주제, 선호도 비교, 가치 판단 등이 출제됨. 답변 시 명확한 입장 표명 + 2~3개의 근거 + 마무리 구조가 중요.",
+  "total": 100,
+  "questions": [
+    {
+      "id": "t2_001",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "question": "Do you prefer eating at home or eating out?",
+      "follow_ups": ["What do you consider most when choosing a restaurant?", "How often do you eat out?"],
+      "arguments": {
+        "for_eating_in": ["healthier ingredients", "more economical", "comfortable atmosphere", "control over portions"],
+        "for_eating_out": ["save time", "professional taste", "social occasion", "try new cuisines"]
+      },
+      "sample_answer": "I generally prefer eating at home, though I enjoy eating out occasionally. There are three main reasons. First, eating at home is much healthier because I control the ingredients — less salt, less oil, more vegetables. Second, it's significantly cheaper, which adds up over time. Third, I find cooking and sharing a home-cooked meal more meaningful than restaurant dining. That said, I do eat out about twice a week, mainly for social occasions or to try cuisines I can't easily make at home, like authentic Indian food."
+    },
+    {
+      "id": "t2_002",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "question": "Do you prefer living in a big city or a small town?",
+      "follow_ups": ["What are the trade-offs?", "Has your preference changed?"],
+      "arguments": {
+        "for_city": ["job opportunities", "convenience", "diversity", "entertainment"],
+        "for_town": ["lower cost", "less stress", "community", "nature"]
+      },
+      "sample_answer": "I prefer living in a big city, mainly because of career opportunities and convenience. In a city like Seoul, I can find almost any product or service within walking distance, and the public transportation is excellent. There's also greater cultural variety — museums, concerts, international food. The downside is the cost and stress, but for my current life stage, the benefits outweigh the costs. Maybe when I'm older I'll appreciate small-town life more, but right now the city suits me."
+    },
+    {
+      "id": "t2_003",
+      "category": "lifestyle",
+      "difficulty": "medium",
+      "question": "Is it better to own a home or to rent?",
+      "follow_ups": ["What's the financial perspective?", "What about lifestyle?"],
+      "arguments": {
+        "for_owning": ["building equity", "stability", "freedom to modify", "long-term investment"],
+        "for_renting": ["flexibility", "lower upfront cost", "no maintenance", "easier to move for jobs"]
+      },
+      "sample_answer": "I think it depends on life circumstances, but renting makes more sense for people in their twenties and early thirties. The main reason is flexibility — you can move easily for career opportunities or life changes. Buying a home ties up huge amounts of capital and creates location constraints. However, once you're settled with family and stable career, owning becomes more attractive because of stability and the long-term financial benefit. I'm currently renting because I value flexibility, but I plan to buy in a few years."
+    },
+    {
+      "id": "t2_004",
+      "category": "lifestyle",
+      "difficulty": "medium",
+      "question": "Are people happier today than they were 50 years ago?",
+      "follow_ups": ["What's improved?", "What's gotten worse?"],
+      "arguments": {
+        "happier_now": ["medical advances", "more opportunities", "more comfort", "global connection"],
+        "less_happy_now": ["social media stress", "loneliness", "expectations", "pressure"]
+      },
+      "sample_answer": "I don't think people are necessarily happier today than 50 years ago. We have more material comfort and technology, but we also face new problems. Social media creates constant comparison, work expectations are higher, and traditional community bonds have weakened. Older generations had less convenience but stronger relationships and more realistic expectations. Happiness comes more from relationships and purpose than from material progress, and on those fronts, I'm not sure we've improved."
+    },
+    {
+      "id": "t2_005",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "question": "Do you think money buys happiness?",
+      "follow_ups": ["Up to what point?", "What else matters?"],
+      "arguments": {
+        "money_matters": ["security", "freedom", "opportunities", "healthcare access"],
+        "money_limited": ["relationships", "health", "purpose", "experience"]
+      },
+      "sample_answer": "Money contributes to happiness up to a certain point, but it's not the whole story. When you don't have enough for basic needs, money definitely improves happiness — security, healthcare, education all matter. However, beyond a comfortable middle-class income, additional money brings diminishing returns. Relationships, health, and a sense of purpose matter more for long-term happiness. So my answer is yes, money buys happiness up to a point, but no, it doesn't beyond that."
+    },
+    {
+      "id": "t2_006",
+      "category": "lifestyle",
+      "difficulty": "medium",
+      "question": "Is it important to follow trends in fashion or technology?",
+      "follow_ups": ["What are the benefits?", "What are the downsides?"],
+      "arguments": {
+        "follow_trends": ["social connection", "modern image", "new experiences", "professional image"],
+        "ignore_trends": ["save money", "personal style", "avoid waste", "focus on quality"]
+      },
+      "sample_answer": "I think it's important to be aware of trends but not necessarily to follow them. Awareness helps you stay relevant — in business especially, understanding new technology and social trends matters. But blindly following trends often leads to wasted money and lack of personal identity. My approach is to selectively adopt trends that genuinely improve my life — like switching to a foldable phone — while ignoring fads that don't add real value, like daily fashion changes."
+    },
+    {
+      "id": "t2_007",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "question": "Do you prefer a fast-paced or slow-paced lifestyle?",
+      "follow_ups": ["What's the impact on your health?", "Can you balance both?"],
+      "arguments": {
+        "fast": ["productivity", "excitement", "achievement", "energy"],
+        "slow": ["mental health", "relationships", "enjoyment", "presence"]
+      },
+      "sample_answer": "I prefer a slow-paced lifestyle, especially as I get older. In my twenties, I was always rushing — fast career growth, busy social life, packed weekends. It led to burnout. Now I deliberately slow down: longer meals, real conversations, time without screens. The result is I'm more focused at work and feel more present in personal life. There's still ambition, but the pace is sustainable. I think Korean culture's fast pace is impressive but often unhealthy."
+    },
+    {
+      "id": "t2_008",
+      "category": "lifestyle",
+      "difficulty": "medium",
+      "question": "Should people retire early if they can afford to?",
+      "follow_ups": ["What are the risks?", "What would you do?"],
+      "arguments": {
+        "retire_early": ["health while young", "pursue passions", "spend time with family", "less stress"],
+        "keep_working": ["purpose", "mental stimulation", "social connection", "financial security"]
+      },
+      "sample_answer": "Personally, I don't believe in early retirement in the traditional sense — completely stopping work. People who fully retire often lose purpose and decline physically and mentally. However, transitioning to less demanding or more meaningful work makes sense if you can afford it. For example, switching from corporate to teaching or consulting part-time. Work provides purpose and structure, but not all work needs to be high-intensity. My plan is to eventually shift, not stop."
+    },
+    {
+      "id": "t2_009",
+      "category": "lifestyle",
+      "difficulty": "medium",
+      "question": "Is it better to have many friends or just a few close ones?",
+      "follow_ups": ["Why?", "Can you have both?"],
+      "arguments": {
+        "many_friends": ["diverse perspectives", "more opportunities", "social safety net", "fun variety"],
+        "few_close": ["deeper connection", "less drama", "real support", "less effort"]
+      },
+      "sample_answer": "I strongly believe in having fewer but deeper friendships. With only so much time, you can either spread thin or invest deeply. I have about five truly close friends I've known for over a decade, and they're the people I call in real moments — good or bad. With many acquaintances, the relationships stay surface-level. Quality matters more than quantity in friendships, especially as work and family demands increase with age."
+    },
+    {
+      "id": "t2_010",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "question": "Do you think social media has a positive or negative impact on our lives?",
+      "follow_ups": ["What's the biggest benefit?", "What's the biggest harm?"],
+      "arguments": {
+        "positive": ["connection", "information", "business opportunity", "self-expression"],
+        "negative": ["comparison", "addiction", "misinformation", "less real interaction"]
+      },
+      "sample_answer": "I think social media has a more negative than positive impact, although it depends on use. The benefits — connecting with friends, finding information — could be achieved through other means. But the unique harms are significant: constant comparison damages self-esteem, algorithms manipulate attention, and information silos polarize society. I deleted Instagram two years ago and feel happier and more focused. I still use messaging apps for genuine connection, which is what social media should be."
+    },
+    {
+      "id": "t2_011",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Is work-life balance more important than career success?",
+      "follow_ups": ["Can you have both?", "Has this changed over generations?"],
+      "arguments": {
+        "balance_first": ["sustainability", "health", "relationships", "long-term productivity"],
+        "career_first": ["financial security", "achievement", "skill development", "impact"]
+      },
+      "sample_answer": "I believe work-life balance is more important in the long run. Career success without balance often leads to burnout, health problems, and damaged relationships — making the success itself less meaningful. I've seen senior colleagues with great titles but no friends or family time, and they don't seem fulfilled. That said, I think there are intense periods early in career where you need to push hard. The key is making intensity a season, not a lifetime."
+    },
+    {
+      "id": "t2_012",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Is it better to specialize in one field or have diverse skills?",
+      "follow_ups": ["What does the market value?", "How do you decide?"],
+      "arguments": {
+        "specialist": ["deep expertise", "higher pay", "recognition", "clear identity"],
+        "generalist": ["adaptability", "broader perspective", "career flexibility", "leadership"]
+      },
+      "sample_answer": "I think it depends on career stage. In the first 10 years, specialization is more valuable — you need to develop deep expertise to be taken seriously and have a strong foundation. After that, breadth becomes important, especially for leadership roles. The best people I know are 'T-shaped' — deep in one area but broad enough to connect dots across fields. I'm working on this now: deep in product engineering but learning about business and design."
+    },
+    {
+      "id": "t2_013",
+      "category": "work",
+      "difficulty": "easy",
+      "question": "Should companies allow employees to work from home?",
+      "follow_ups": ["Are there downsides?", "What's the ideal arrangement?"],
+      "arguments": {
+        "yes_WFH": ["productivity", "work-life balance", "wider hiring pool", "reduced commute"],
+        "no_WFH": ["collaboration", "company culture", "mentorship", "discipline"]
+      },
+      "sample_answer": "Yes, companies should allow remote work, but ideally in a hybrid model. Fully remote work hurts collaboration, mentorship, and culture — especially for junior employees. But forcing five days in office ignores the benefits remote offers — fewer commute hours, deeper focus time. A 2-3 day hybrid model captures both benefits. Companies that refused any remote work post-pandemic are losing talent. Flexibility shows trust in employees, which builds loyalty."
+    },
+    {
+      "id": "t2_014",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Is it more important to enjoy your job or earn a high salary?",
+      "follow_ups": ["Can these align?", "Which would you prioritize?"],
+      "arguments": {
+        "enjoyment": ["mental health", "engagement", "long-term sustainability", "purpose"],
+        "salary": ["financial freedom", "security", "options", "respect"]
+      },
+      "sample_answer": "I think enjoyment matters more than salary, though both matter. We spend roughly a third of our lives working, so doing something miserable is a high price even for great pay. That said, you need enough income to live comfortably — extreme poverty makes everything harder. My personal threshold is: enough salary to live well, then maximize enjoyment and meaning. I've turned down higher-paying offers that didn't excite me, and I haven't regretted it."
+    },
+    {
+      "id": "t2_015",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Should employees stay loyal to one company or change jobs frequently?",
+      "follow_ups": ["What's the typical pattern now?", "What are the trade-offs?"],
+      "arguments": {
+        "stay": ["deep relationships", "promotions", "expertise", "trust"],
+        "change": ["higher pay raises", "diverse experience", "new challenges", "perspective"]
+      },
+      "sample_answer": "I think moderate movement is healthiest — staying long enough to build deep skills, but not so long that you stop growing. Roughly 3-7 years per company is a good range. Staying decades in one place can lead to stagnation and limited perspective. But job-hopping every year shows lack of commitment and prevents deep learning. The era of lifetime loyalty is gone, but rapid hopping is also problematic. I'm currently at year seven in my company and starting to think about new challenges."
+    },
+    {
+      "id": "t2_016",
+      "category": "work",
+      "difficulty": "easy",
+      "question": "Is it important to be passionate about your work?",
+      "follow_ups": ["What if you're not?", "Can passion develop over time?"],
+      "arguments": {
+        "passion_important": ["engagement", "creativity", "perseverance", "fulfillment"],
+        "passion_overrated": ["practical needs", "competence", "developable", "myth"]
+      },
+      "sample_answer": "I think passion is helpful but overrated. The idea that you must 'find your passion' before working is mostly false. In my experience, passion develops as you become competent at something. When I started engineering, I wasn't passionate — I was just curious. After years of building skill and seeing impact, passion grew. So instead of waiting for passion, get competent, look for purpose, and passion often follows. That said, doing work you hate is unsustainable."
+    },
+    {
+      "id": "t2_017",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Should leadership positions require a certain age or experience?",
+      "follow_ups": ["What about young leaders?", "What qualities matter most?"],
+      "arguments": {
+        "experience_required": ["wisdom", "credibility", "broader perspective", "trust"],
+        "no_age_requirement": ["fresh ideas", "energy", "merit-based", "diversity"]
+      },
+      "sample_answer": "I think experience matters but specific age requirements are unnecessary. The reason is that good judgment comes from quality of experience, not quantity. A 35-year-old who has led complex projects can be a better leader than a 50-year-old who avoided responsibility. What matters is demonstrated ability — managing through difficult situations, making good calls, developing others. That said, certain things really do take time — pattern recognition across decades is hard to fake."
+    },
+    {
+      "id": "t2_018",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Is it better to work alone or as part of a team?",
+      "follow_ups": ["What kind of work suits each?", "Do you have a preference?"],
+      "arguments": {
+        "alone": ["focus", "speed", "autonomy", "ownership"],
+        "team": ["diverse ideas", "shared load", "learning", "fun"]
+      },
+      "sample_answer": "Most meaningful work requires teams these days. Even individual experts need to work with others — sales, marketing, customers. Pure solo work is limited in scope. However, teamwork doesn't mean constant meetings — the best teams give individuals focused solo time and come together for collaboration. Personally, I work best with about 70% solo focus and 30% team interaction. The challenge in modern work is too many meetings, which kills the solo focus needed for deep thinking."
+    },
+    {
+      "id": "t2_019",
+      "category": "work",
+      "difficulty": "easy",
+      "question": "Should companies focus more on profits or social responsibility?",
+      "follow_ups": ["Can they do both?", "Is greenwashing real?"],
+      "arguments": {
+        "profits_first": ["survival", "investor returns", "growth", "job creation"],
+        "social_first": ["long-term sustainability", "reputation", "ethical duty", "talent attraction"]
+      },
+      "sample_answer": "Companies need both, but social responsibility shouldn't be sacrificed for short-term profits. The argument that they conflict is increasingly false — companies with good values attract talent, customers, and investors. Hyundai's investments in EVs are a good example: it's both profitable and socially responsible. The companies that purely chase profits often suffer reputational damage and regulatory backlash. The smart approach is integrating responsibility into strategy, not treating it as a separate side project."
+    },
+    {
+      "id": "t2_020",
+      "category": "work",
+      "difficulty": "medium",
+      "question": "Is leadership a natural talent or can it be learned?",
+      "follow_ups": ["What can be taught?", "What's innate?"],
+      "arguments": {
+        "natural": ["charisma", "instinct", "presence", "courage"],
+        "learned": ["skills", "habits", "frameworks", "practice"]
+      },
+      "sample_answer": "I believe leadership is mostly learned, though some natural traits help. The myth of 'born leaders' is overstated — most great leaders developed through experience, mentorship, and deliberate practice. Skills like communication, strategic thinking, and people management can definitely be taught. However, certain temperamental qualities — like staying calm under pressure or genuine care for others — are harder to develop later in life. The good news is anyone with effort can become a competent leader."
+    },
+    {
+      "id": "t2_021",
+      "category": "technology",
+      "difficulty": "easy",
+      "question": "Has technology made our lives better or worse?",
+      "follow_ups": ["What's the biggest improvement?", "What's the biggest concern?"],
+      "arguments": {
+        "better": ["convenience", "medical advances", "communication", "education access"],
+        "worse": ["addiction", "isolation", "privacy loss", "attention damage"]
+      },
+      "sample_answer": "Overall, technology has made our lives better, but with real costs we need to address. The benefits are enormous — medical advances save lives, the internet democratizes knowledge, video calls keep families connected across continents. But we've also created problems: smartphone addiction, social isolation despite constant connection, privacy erosion. The technology itself isn't the problem — it's how we use it. Better digital habits and stronger regulations could help us keep the benefits while reducing harm."
+    },
+    {
+      "id": "t2_022",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Will AI replace human jobs?",
+      "follow_ups": ["Which jobs are most at risk?", "How should we prepare?"],
+      "arguments": {
+        "will_replace": ["automation history", "rapid AI improvement", "cost savings", "specific tasks"],
+        "wont_replace": ["new jobs created", "human judgment", "emotional work", "creativity"]
+      },
+      "sample_answer": "AI will replace many specific tasks, but full job replacement is more nuanced. Routine cognitive work — basic coding, simple analysis, customer service scripts — will likely be automated. But new jobs will emerge, and many roles will be augmented rather than replaced. For example, doctors won't disappear, but they'll use AI diagnostic tools. The danger is the transition speed — workers need time to retrain. We should invest heavily in education and lifelong learning to manage this shift."
+    },
+    {
+      "id": "t2_023",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Should children's smartphone use be limited?",
+      "follow_ups": ["At what age should they get one?", "Who should set limits?"],
+      "arguments": {
+        "limit": ["development", "attention", "real social skills", "sleep"],
+        "no_limit": ["education", "communication", "modern reality", "self-regulation"]
+      },
+      "sample_answer": "Yes, children's smartphone use should definitely be limited. Research consistently shows negative effects on attention, mental health, and social development. I think children shouldn't have personal smartphones before middle school, and even then with strict limits. The argument that they need smartphones for education is mostly false — schools provide computers when needed. Parents should set clear rules: no phones at meals, no phones in bedrooms, limited daily use. The early years shape the brain, so this matters."
+    },
+    {
+      "id": "t2_024",
+      "category": "technology",
+      "difficulty": "easy",
+      "question": "Are electric cars really better for the environment?",
+      "follow_ups": ["What about battery production?", "What's the future?"],
+      "arguments": {
+        "yes_better": ["zero emissions", "renewable energy compatible", "less air pollution", "improving"],
+        "complicated": ["battery mining", "electricity source", "manufacturing impact", "disposal"]
+      },
+      "sample_answer": "Yes, electric cars are better for the environment than gas cars, even accounting for the full lifecycle. While battery production has environmental costs, studies consistently show EVs produce less total emissions over their lifetime — typically 30-70% less depending on the electricity source. As the electricity grid gets cleaner, the gap grows. Critics often focus on a single issue like battery mining, but ignore the massive ongoing pollution from internal combustion engines. EVs aren't perfect, but they're clearly better."
+    },
+    {
+      "id": "t2_025",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Is online learning as effective as in-person learning?",
+      "follow_ups": ["For what subjects?", "What about social aspects?"],
+      "arguments": {
+        "effective": ["flexibility", "access", "personalized pace", "global teachers"],
+        "less_effective": ["engagement", "discipline", "social skills", "discussion"]
+      },
+      "sample_answer": "Online learning is highly effective for some things but inferior for others. For technical or content-based learning — coding, languages, business courses — online can be excellent and even better than classroom. But for skills involving discussion, debate, collaboration, or hands-on practice, in-person is clearly better. The best approach is hybrid — use online for content delivery and in-person for practice and discussion. The pandemic showed both the possibilities and the limits of pure online learning."
+    },
+    {
+      "id": "t2_026",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Should self-driving cars be allowed on public roads?",
+      "follow_ups": ["What are the safety concerns?", "Who is responsible in accidents?"],
+      "arguments": {
+        "allow": ["safer than human drivers", "elderly access", "productivity", "less traffic"],
+        "restrict": ["unproven technology", "liability questions", "job loss", "hacking risks"]
+      },
+      "sample_answer": "Yes, self-driving cars should be allowed, but with appropriate regulation. The data already shows autonomous vehicles cause fewer accidents per mile than human drivers, especially in highway conditions. The potential benefits are enormous — independence for elderly and disabled people, reduced congestion, productivity during commutes. However, regulation must address liability, cybersecurity, and gradual rollout. I'd start with restricted environments — highways, dedicated lanes — before full urban use. Hyundai is investing heavily in this for good reason."
+    },
+    {
+      "id": "t2_027",
+      "category": "technology",
+      "difficulty": "easy",
+      "question": "Is too much screen time harmful?",
+      "follow_ups": ["How much is too much?", "How do you manage your own?"],
+      "arguments": {
+        "harmful": ["eye strain", "sleep disruption", "sedentary lifestyle", "mental health"],
+        "depends": ["content matters", "active vs passive", "necessary for work", "moderation"]
+      },
+      "sample_answer": "Yes, excessive screen time is harmful, though the type of use matters more than the total hours. Passive scrolling on social media for hours is much worse than working on documents or video calling family. The specific harms include disrupted sleep when used at night, increased anxiety, sedentary behavior, and eye problems. Personally, I manage by setting phone-free hours after 10 PM and keeping social media off my phone. Awareness is the first step."
+    },
+    {
+      "id": "t2_028",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Should governments regulate big tech companies more strictly?",
+      "follow_ups": ["What specifically?", "Won't this slow innovation?"],
+      "arguments": {
+        "regulate": ["monopoly power", "privacy", "misinformation", "consumer protection"],
+        "minimal_regulation": ["innovation", "user choice", "complexity", "global competition"]
+      },
+      "sample_answer": "Yes, governments need to regulate big tech more strictly, but smartly. The current dominance of a few companies creates real problems — monopolistic behavior, privacy violations, misinformation spreading. Self-regulation has failed because business models reward engagement over wellbeing. Specific regulations should target: data privacy, antitrust action against anticompetitive behavior, algorithmic transparency, and content moderation responsibility. The EU's approach with GDPR shows it's possible. Yes, innovation may slow slightly, but human wellbeing matters more."
+    },
+    {
+      "id": "t2_029",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Will cash disappear completely in the future?",
+      "follow_ups": ["Is it already happening?", "Are there downsides?"],
+      "arguments": {
+        "will_disappear": ["digital convenience", "younger generations", "Korea trend", "lower costs"],
+        "wont_disappear": ["privacy", "elderly users", "outages risk", "anonymity needs"]
+      },
+      "sample_answer": "Cash will become very rare but probably won't disappear entirely. Korea is already moving rapidly toward cashless — many small businesses don't accept cash. The trend is clear: digital payments are more convenient, faster, and traceable. However, cash serves important purposes — privacy, accessibility for elderly, backup during system failures. Smart societies will move toward primarily digital but maintain cash as an option. The Swedish experience shows full elimination causes problems for vulnerable groups."
+    },
+    {
+      "id": "t2_030",
+      "category": "technology",
+      "difficulty": "medium",
+      "question": "Is privacy still possible in the digital age?",
+      "follow_ups": ["What can individuals do?", "Should we just accept it?"],
+      "arguments": {
+        "possible": ["encryption", "good practices", "regulations", "less sharing"],
+        "impossible": ["data collection", "facial recognition", "tracking", "convenience trade-off"]
+      },
+      "sample_answer": "Some privacy is still possible, but it requires effort and is much harder than before. Most people have effectively given up privacy in exchange for convenience — free apps in exchange for data, social media in exchange for content. Complete digital privacy is nearly impossible without sacrificing modern life. However, you can significantly improve privacy through specific tools — encrypted messaging, VPNs, careful permissions, less data sharing. The bigger fix needs to come from regulation forcing companies to default to privacy."
+    },
+    {
+      "id": "t2_031",
+      "category": "education",
+      "difficulty": "easy",
+      "question": "Is a college degree still necessary today?",
+      "follow_ups": ["What alternatives exist?", "How is your industry?"],
+      "arguments": {
+        "necessary": ["signal to employers", "knowledge", "network", "credentials"],
+        "less_necessary": ["online learning", "skills-based hiring", "cost", "outdated"]
+      },
+      "sample_answer": "A college degree is becoming less necessary but still has value. Many industries are moving toward skills-based hiring — tech companies often accept bootcamp graduates or self-taught engineers. The credential matters less than demonstrated ability. However, for many fields — medicine, law, engineering, research — formal degrees remain essential. Additionally, the network and credibility from a degree still matters in many cultures. So my answer is: necessary for some paths, replaceable for others. The trend is clear though — pure credentials are losing power to demonstrated skills."
+    },
+    {
+      "id": "t2_032",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Should schools focus more on academic skills or life skills?",
+      "follow_ups": ["What life skills are missing?", "How can both be taught?"],
+      "arguments": {
+        "academic": ["foundation", "discipline", "credentialing", "intellectual"],
+        "life_skills": ["practical", "money", "relationships", "wellbeing"]
+      },
+      "sample_answer": "Schools should teach more life skills, while keeping academic foundations strong. Currently, students learn calculus but not personal finance, learn history but not how to communicate well, learn chemistry but not basic cooking or health. These life skills matter daily. The solution isn't replacing academic content but integrating life skills — practical math taught through real budgets, communication taught through real projects. Singapore and Finland do this well. Korea's heavy academic focus produces excellent test-takers but sometimes weak life management."
+    },
+    {
+      "id": "t2_033",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Should learning a foreign language be mandatory in schools?",
+      "follow_ups": ["Which language?", "From what age?"],
+      "arguments": {
+        "mandatory": ["global economy", "cognitive benefits", "cultural understanding", "early best"],
+        "not_mandatory": ["personal choice", "AI translation", "limited use", "burden"]
+      },
+      "sample_answer": "Yes, learning a foreign language should be mandatory through middle school, then optional. The benefits extend beyond language itself — cognitive flexibility, cultural awareness, and career opportunities. Korea's mandatory English education has clear economic benefits. AI translation reduces but doesn't eliminate the need — real connection requires actual language skills. I'd suggest English as core, plus one other language exposure (Chinese, Japanese, Spanish) so students develop language-learning ability itself. Early start matters because pronunciation gets harder after puberty."
+    },
+    {
+      "id": "t2_034",
+      "category": "education",
+      "difficulty": "easy",
+      "question": "Is private tutoring helpful or harmful?",
+      "follow_ups": ["What's the situation in Korea?", "Are there alternatives?"],
+      "arguments": {
+        "helpful": ["personalized attention", "fill gaps", "advance fast learners", "supplement"],
+        "harmful": ["inequality", "burnout", "killed creativity", "exam-focused"]
+      },
+      "sample_answer": "Private tutoring in Korea has become more harmful than helpful at the system level, though it helps individual students. The fundamental problem is inequality — students from wealthy families get massive advantages, and middle-class families spend ruinous amounts to compete. It also leads to overwhelming hours that damage students' health and creativity. The Korean private education industry now exceeds 30 trillion won annually, which is unsustainable. The solution requires reforming public education quality, not just banning tutoring."
+    },
+    {
+      "id": "t2_035",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Should students choose their major based on passion or job market?",
+      "follow_ups": ["What if they conflict?", "Can you switch later?"],
+      "arguments": {
+        "passion": ["sustained effort", "excellence", "happiness", "find a way"],
+        "job_market": ["practical", "financial security", "options", "stability"]
+      },
+      "sample_answer": "Students should balance both, leaning slightly toward practical considerations. Pure passion-following is romantic but often leads to financial struggle. Pure job-market chasing produces unhappy professionals doing mediocre work. The smart approach: identify the overlap between what interests you and what's economically viable. Most fields have decent job options if you become genuinely skilled. Also remember major doesn't determine career — many people work outside their major. Choose a field you can excel in, then find specific roles you enjoy."
+    },
+    {
+      "id": "t2_036",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Is homeschooling a good alternative to traditional schools?",
+      "follow_ups": ["What are the benefits?", "What's missing?"],
+      "arguments": {
+        "good_alternative": ["personalized", "values aligned", "no bullying", "flexible"],
+        "limited": ["social skills", "parent skill", "isolation", "limited resources"]
+      },
+      "sample_answer": "Homeschooling can work in specific situations but isn't ideal for most families. The benefits are real — customized pace, family values, escape from bullying. However, the cost is significant: parents must be capable teachers, children miss diverse social interaction, and they lose access to facilities like labs and sports. It works best when parents are educated and dedicated, when communities have homeschool networks, and when special circumstances make schools unsuitable. For most families, working to improve regular schools is better than opting out."
+    },
+    {
+      "id": "t2_037",
+      "category": "education",
+      "difficulty": "easy",
+      "question": "Should universities be free?",
+      "follow_ups": ["Who would pay?", "What about quality?"],
+      "arguments": {
+        "free": ["equality", "investment in future", "European model", "more graduates"],
+        "not_free": ["personal value", "tax burden", "quality control", "wasted seats"]
+      },
+      "sample_answer": "I support free or low-cost university education, but with conditions. Countries with free university — Germany, Norway — show it's possible without destroying quality. The benefits are huge — equal opportunity, no student debt, more skilled workers. However, completely free education with no accountability can lead to wasted enrollment. My ideal: low-cost tuition (not zero) with strong admissions standards, generous aid for those who need it. Korea's tuition is moderate but living costs are crushing — both need addressing."
+    },
+    {
+      "id": "t2_038",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Is studying abroad worth it?",
+      "follow_ups": ["What are the benefits?", "What about the cost?"],
+      "arguments": {
+        "worth_it": ["language immersion", "cultural perspective", "network", "growth"],
+        "not_worth": ["expense", "homesickness", "career uncertainty", "alternatives"]
+      },
+      "sample_answer": "Yes, studying abroad is worth it for most people who can afford it, but cost-benefit matters. The benefits go far beyond academics — fluent language ability, deep cultural understanding, lifelong international friends, and increased adaptability. I studied for six months in Germany during college, and it remains one of the most formative experiences. However, the cost is significant — both financial and emotional. I'd recommend it especially for people who haven't traveled much, and for fields where international perspective matters."
+    },
+    {
+      "id": "t2_039",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Are standardized tests a fair way to evaluate students?",
+      "follow_ups": ["What are alternatives?", "What's your experience?"],
+      "arguments": {
+        "fair": ["objective", "consistent", "scalable", "comparable"],
+        "unfair": ["one-shot", "test-taking ability", "tutoring effect", "narrow"]
+      },
+      "sample_answer": "Standardized tests are partially fair but inadequate alone. They efficiently measure certain abilities — reading comprehension, math, basic reasoning — across millions of students. That's valuable. However, they miss crucial qualities like creativity, leadership, persistence, and emotional intelligence. They also favor students with expensive test preparation. The solution isn't eliminating tests but using them as one factor among several — grades, projects, interviews, portfolios. Pure test-based admissions, like Korea's CSAT, create excessive pressure and miss talented people."
+    },
+    {
+      "id": "t2_040",
+      "category": "education",
+      "difficulty": "medium",
+      "question": "Should children be allowed to use AI tools like ChatGPT for homework?",
+      "follow_ups": ["What's the harm?", "How can teachers adapt?"],
+      "arguments": {
+        "allow": ["future skill", "modern tool", "creativity helper", "learning aid"],
+        "ban": ["cheating", "dependence", "less learning", "skill erosion"]
+      },
+      "sample_answer": "Children should be allowed to use AI tools, but with clear guidelines and gradual introduction. Banning AI is unrealistic — it's the future, and students will use it anyway. The question is teaching them to use it well. For younger children, I'd limit AI use because foundational skills matter — handwriting, basic math, reading. For older students, AI can be a tutor and creative partner. The key is teaching critical thinking — AI gives answers, but students must evaluate them. Teachers need to redesign assignments accordingly."
+    },
+    {
+      "id": "t2_041",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Is it the government's responsibility to take care of the elderly?",
+      "follow_ups": ["Or families'?", "How is Korea handling this?"],
+      "arguments": {
+        "government": ["systematic care", "fair distribution", "professional", "universal"],
+        "family": ["traditional value", "personal connection", "less cost", "stronger bonds"]
+      },
+      "sample_answer": "Both government and families share responsibility, but in different ways. The government should provide basic infrastructure — healthcare, pensions, professional care facilities for those without family. Families provide emotional care and decision-making. Pure government care can feel impersonal; pure family care burns out caregivers and isn't possible for all situations. Korea's rapidly aging population requires strong government support — current systems aren't enough. We need more investment in elderly care infrastructure, especially for the growing single elderly population."
+    },
+    {
+      "id": "t2_042",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Should rich people pay higher taxes?",
+      "follow_ups": ["What's the right rate?", "Won't they leave?"],
+      "arguments": {
+        "yes_higher": ["fair share", "society benefited them", "fund services", "reduce inequality"],
+        "no_higher": ["job creation", "innovation incentive", "capital flight", "punishment"]
+      },
+      "sample_answer": "Yes, wealthy people should pay higher tax rates, but in a smart way. Extreme inequality damages societies — research consistently links it to social problems. Progressive taxation has worked historically without destroying economies. However, tax design matters — too aggressive rates push capital and talent away. I support higher marginal rates on incomes above certain thresholds, closing loopholes that allow the wealthy to pay less than middle class, and taxing capital gains similarly to wages. The wealthy benefited disproportionately from society, so contributing more is fair."
+    },
+    {
+      "id": "t2_043",
+      "category": "society",
+      "difficulty": "easy",
+      "question": "Should marriage and having children be encouraged in society?",
+      "follow_ups": ["What's the situation in Korea?", "How could it change?"],
+      "arguments": {
+        "encourage": ["population", "social stability", "family value", "future workforce"],
+        "personal_choice": ["freedom", "modern life", "financial reality", "happiness"]
+      },
+      "sample_answer": "Society should support those who choose marriage and children, but encouragement should not become pressure. Korea's birth rate crisis comes from making family life too expensive and stressful, not from people not wanting families. The solution isn't lecturing young people — it's removing barriers: affordable housing, real parental leave, accessible childcare, lower education costs. People who want families can't have them. Meanwhile, those who genuinely don't want children should be respected. The focus should be enabling, not pressuring."
+    },
+    {
+      "id": "t2_044",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Is censorship ever justified?",
+      "follow_ups": ["What about hate speech?", "Who decides?"],
+      "arguments": {
+        "sometimes": ["protect vulnerable", "national security", "child safety", "incitement"],
+        "rarely": ["free speech", "slippery slope", "power abuse", "marketplace of ideas"]
+      },
+      "sample_answer": "Censorship is occasionally justified but should be very limited. Clear cases include child exploitation content, direct incitement to violence, and certain national security matters. Beyond that, censorship is usually more harmful than the speech it restricts. Hate speech is a difficult middle case — I lean toward strong cultural condemnation rather than legal prohibition, except for direct incitement. The danger of censorship is who decides what's acceptable — that power tends to expand and be abused. Free speech with social pushback works better than government controls."
+    },
+    {
+      "id": "t2_045",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Should there be a universal basic income?",
+      "follow_ups": ["How would it be funded?", "Won't people stop working?"],
+      "arguments": {
+        "yes_UBI": ["automation response", "safety net", "creativity freed", "tested positive"],
+        "no_UBI": ["work disincentive", "huge cost", "inflation", "unrealistic"]
+      },
+      "sample_answer": "I think universal basic income deserves serious consideration as AI displaces more workers, but full implementation is premature. The pilot studies — in Finland and Kenya — show mixed but generally positive results. People don't stop working; they make better choices. However, UBI faces real challenges: funding requires massive tax changes, and effects on inflation and work incentives need more research. My preferred approach is gradual expansion of social safety nets — better unemployment insurance, expanded earned income tax credits — while studying UBI carefully in larger trials."
+    },
+    {
+      "id": "t2_046",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Is volunteering important in modern society?",
+      "follow_ups": ["Why don't more people volunteer?", "What's your experience?"],
+      "arguments": {
+        "important": ["community", "personal growth", "fills gaps", "social fabric"],
+        "limited": ["time constraint", "paid work better", "professional services", "obligation"]
+      },
+      "sample_answer": "Yes, volunteering is increasingly important. Modern society's specialization means many people feel disconnected from their community. Volunteering rebuilds that connection while addressing real needs that markets and governments miss. It also benefits volunteers themselves — reduced isolation, sense of purpose, new skills. Personally, I help at a coding camp for kids twice a month, and it's genuinely fulfilling. The reason more people don't volunteer is mainly time and not knowing how to start. Companies should support employee volunteering with paid time."
+    },
+    {
+      "id": "t2_047",
+      "category": "society",
+      "difficulty": "easy",
+      "question": "Should everyone be required to vote?",
+      "follow_ups": ["What about countries that do this?", "What are alternatives?"],
+      "arguments": {
+        "mandatory": ["full representation", "moderate politics", "engagement", "Australia model"],
+        "voluntary": ["informed voters better", "right to abstain", "freedom", "forced participation"]
+      },
+      "sample_answer": "I lean toward voluntary voting but with strong encouragement and easy access. Mandatory voting, as in Australia, has some advantages — better representation of all groups, less extreme politics. But forcing uninformed people to vote produces poor decisions. My preferred approach is removing barriers — voting holidays, easy registration, mail ballots — and strong civic education so more people choose to vote informedly. Korea's voter turnout has been good in recent elections, suggesting cultural commitment rather than legal requirements is the better path."
+    },
+    {
+      "id": "t2_048",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Are men and women treated equally in Korean workplaces?",
+      "follow_ups": ["What progress has been made?", "What still needs to change?"],
+      "arguments": {
+        "improving": ["legal protections", "women in leadership", "awareness", "policies"],
+        "still_unequal": ["gender pay gap", "harassment", "career penalty", "expectations"]
+      },
+      "sample_answer": "Korean workplaces have improved but still aren't equal. Compared to 20 years ago, more women hold senior positions and there are better legal protections. However, real gaps remain — Korea has one of the largest gender pay gaps in OECD, women face career penalties from marriage and children, and harassment issues continue. The deep cause is cultural expectations about who handles family responsibilities. Real progress requires changing those expectations — paternity leave normalization, equal childcare, addressing presenteeism culture. Corporate policies help but cultural change is harder."
+    },
+    {
+      "id": "t2_049",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Should we trust news from social media?",
+      "follow_ups": ["How can we verify?", "What's the impact?"],
+      "arguments": {
+        "trust": ["citizen journalism", "diverse views", "fast", "uncensored"],
+        "dont_trust": ["misinformation", "algorithmic bias", "no verification", "manipulation"]
+      },
+      "sample_answer": "No, we shouldn't trust news from social media without verification. Social media spreads information fast but with little quality control — anyone can post anything. Algorithms amplify emotional content over accurate content. The recent rise of AI-generated images and videos makes it even worse. However, social media is useful for discovering stories, accessing diverse perspectives, and seeing breaking events. The right approach: use social media for discovery, but verify important information through established journalism with editorial standards. Develop habits of cross-checking before sharing."
+    },
+    {
+      "id": "t2_050",
+      "category": "society",
+      "difficulty": "medium",
+      "question": "Is competition healthy or harmful for individuals?",
+      "follow_ups": ["What about Korean education?", "Can we have less competition?"],
+      "arguments": {
+        "healthy": ["motivation", "growth", "innovation", "selection"],
+        "harmful": ["stress", "comparison", "unhealthy obsession", "kills cooperation"]
+      },
+      "sample_answer": "Moderate competition is healthy, but excessive competition becomes harmful. Some competition drives improvement — sports, business, creative fields benefit from it. However, when everything becomes competition — every test ranks you, every job interview is comparative — it produces anxiety, breaks down cooperation, and reduces creativity. Korea has reached unhealthy levels in education and career competition. The solution isn't eliminating competition but expanding paths to success. When there's only one ladder, everyone must climb it. When there are many ladders, people can succeed differently."
+    },
+    {
+      "id": "t2_051",
+      "category": "health",
+      "difficulty": "easy",
+      "question": "Is sleep more important than exercise?",
+      "follow_ups": ["What if you have to choose?", "How much sleep do you need?"],
+      "arguments": {
+        "sleep_more": ["mental health", "recovery", "immune system", "decision making"],
+        "exercise_more": ["physical health", "energy", "mood", "longevity"]
+      },
+      "sample_answer": "If forced to choose, I'd say sleep is slightly more important, but ideally you don't choose. Sleep deprivation has more immediate negative effects than missing exercise — bad judgment, weakened immunity, mood problems within days. You can survive a week without exercise; sleep deprivation seriously damages you in just three days. However, the two work together — good sleep enables effective exercise, and exercise improves sleep quality. The healthy goal is both: 7-8 hours of sleep and 30+ minutes of movement most days."
+    },
+    {
+      "id": "t2_052",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Is mental health as important as physical health?",
+      "follow_ups": ["Is Korea good at addressing this?", "What can change?"],
+      "arguments": {
+        "equal": ["affects functioning", "interconnected", "quality of life", "real illness"],
+        "different": ["physical visible", "treatments differ", "harder to measure"]
+      },
+      "sample_answer": "Yes, mental health is just as important as physical health, possibly more so because it affects everything else. Depression and anxiety impact work performance, relationships, and even physical health through stress. Korea has historically underemphasized mental health — there's still stigma about seeing therapists, and corporate culture often denies mental strain. This is changing, especially among younger people, but slowly. We need: more mental health professionals, insurance coverage parity, workplace policies recognizing burnout, and breaking the stigma through open conversation."
+    },
+    {
+      "id": "t2_053",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Should fast food be heavily taxed?",
+      "follow_ups": ["Does this work?", "What about freedom?"],
+      "arguments": {
+        "tax": ["public health", "lower consumption", "raise revenue", "external costs"],
+        "no_tax": ["personal choice", "regressive", "limited effect", "paternalism"]
+      },
+      "sample_answer": "Yes, I support moderate taxes on extremely unhealthy foods — high sugar drinks especially. Evidence from Mexico and several U.S. cities shows soda taxes do reduce consumption. The reasoning isn't punishment — it's that obesity and diabetes create massive healthcare costs society pays for, so consumers should bear more of those costs upfront. However, taxes shouldn't be so high they're regressive against low-income families. Targeted taxes on sugary drinks make sense; broader 'fast food' taxes are harder to implement fairly."
+    },
+    {
+      "id": "t2_054",
+      "category": "health",
+      "difficulty": "easy",
+      "question": "Are vegetarian diets healthier than meat-based diets?",
+      "follow_ups": ["Have you considered it?", "What about cultural foods?"],
+      "arguments": {
+        "vegetarian_healthier": ["less heart disease", "lower cancer risk", "longevity", "environmental"],
+        "meat_okay": ["protein quality", "B12 etc", "cultural traditions", "balanced needed"]
+      },
+      "sample_answer": "A well-planned vegetarian diet can be healthier than a typical meat-heavy diet, but it depends on execution. Pure vegetarian or vegan diets reduce risks of heart disease and certain cancers. However, poorly planned vegetarian diets can lack key nutrients — B12, iron, omega-3s. Meanwhile, moderate meat consumption with lots of vegetables can also be very healthy — Mediterranean diet is a good example. I personally eat meat about three times a week, not daily, which seems to be a good balance for me. The bigger issue is processed foods, not meat itself."
+    },
+    {
+      "id": "t2_055",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Should sugary drinks be banned in schools?",
+      "follow_ups": ["What's the impact?", "Where do we draw the line?"],
+      "arguments": {
+        "ban": ["childhood obesity", "habit formation", "captive audience", "responsibility"],
+        "no_ban": ["personal choice", "school's role", "kids find ways", "freedom"]
+      },
+      "sample_answer": "Yes, sugary drinks should be eliminated from schools. Children consume too much sugar — leading to obesity, diabetes, and dental problems. Schools shouldn't enable that. When food is provided at school, it should support health, not undermine it. This isn't about banning sugar in life — kids can drink soda at home if parents allow it. But schools providing sugary drinks is hypocritical when we're trying to teach health. Many countries have already done this with positive results. Including good alternatives — water, milk, fruit — works."
+    },
+    {
+      "id": "t2_056",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Is working long hours bad for your health?",
+      "follow_ups": ["What's Korean reality?", "How can it change?"],
+      "arguments": {
+        "yes_bad": ["stress", "less sleep", "sedentary", "mental health"],
+        "depends": ["work type", "enjoyment", "compensation", "phases"]
+      },
+      "sample_answer": "Yes, consistently working long hours is clearly bad for health. Research links 50+ hour weeks to increased heart disease, depression, and earlier death. The mechanisms include chronic stress, less sleep, no time for exercise or cooking, and broken relationships. Korea has one of the highest working hours in the OECD, and the health impact shows. Recent reforms — 52-hour week law — were good but enforcement is weak. Real change requires cultural shift: rewarding output not presence, normalizing leaving on time, leadership modeling balance."
+    },
+    {
+      "id": "t2_057",
+      "category": "health",
+      "difficulty": "easy",
+      "question": "Are medical check-ups important?",
+      "follow_ups": ["How often?", "Are they covered?"],
+      "arguments": {
+        "important": ["early detection", "prevention", "peace of mind", "track changes"],
+        "limited": ["over-diagnosis", "anxiety", "cost", "false positives"]
+      },
+      "sample_answer": "Yes, regular medical check-ups are important, but excess testing has its own problems. Annual basic check-ups — blood pressure, cholesterol, blood sugar — make sense for adults, catching conditions early when treatment works best. Korea's national health screening every 1-2 years is generally good policy. However, more isn't always better — too many scans and tests can detect things that wouldn't have caused problems, leading to anxiety and unnecessary treatment. The key is following evidence-based guidelines from medical professionals rather than chasing every possible test."
+    },
+    {
+      "id": "t2_058",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Should employers provide gym memberships?",
+      "follow_ups": ["What's the benefit?", "Or just better hours?"],
+      "arguments": {
+        "yes": ["wellness", "lower healthcare", "retention", "productivity"],
+        "no": ["paternalism", "individual choice", "money better elsewhere", "low utilization"]
+      },
+      "sample_answer": "I think it's a nice benefit but not essential. Gym memberships are appreciated by some employees, but utilization is typically low — maybe 20-30% actually use them. A more impactful approach would be: shorter work hours so employees have time to exercise, in-office wellness rooms, ergonomic workspaces. If a company provides gym access, integrated on-site facilities have higher use than off-site memberships. Real wellness comes from culture — psychological safety, manageable workload, real vacation time. Without those, free gym access won't fix employee health."
+    },
+    {
+      "id": "t2_059",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Is stress the biggest health problem of our time?",
+      "follow_ups": ["What causes stress?", "How can society reduce it?"],
+      "arguments": {
+        "yes_biggest": ["affects everything", "increasing", "underlying many issues", "modern lifestyle"],
+        "other_bigger": ["aging", "obesity", "inactivity", "pollution"]
+      },
+      "sample_answer": "Stress is one of the most important health problems, though I'd argue it's tied with sedentary lifestyle and aging. Chronic stress contributes to heart disease, mental health problems, immune dysfunction, and unhealthy behaviors like overeating. Modern life — constant connectivity, financial pressure, social comparison — generates more stress than past generations faced. Korean society has particularly high stress levels — long work hours, education pressure, housing costs. Reducing stress requires both individual coping skills and societal changes — fewer working hours, better safety nets, less competitive pressure."
+    },
+    {
+      "id": "t2_060",
+      "category": "health",
+      "difficulty": "medium",
+      "question": "Should plastic surgery be regulated more?",
+      "follow_ups": ["What's the Korean situation?", "Where do we draw lines?"],
+      "arguments": {
+        "more_regulation": ["safety", "minors", "advertising", "psychological"],
+        "current_enough": ["adult choice", "doctor judgment", "competition", "freedom"]
+      },
+      "sample_answer": "Yes, plastic surgery in Korea needs more regulation, particularly around minors and advertising. Current issues include surgery on teenagers without proper psychological evaluation, misleading before/after marketing, low quality clinics doing serious procedures, and pressure on women through pervasive ads. I support restrictions on minor surgery, mandatory psychological evaluation for major procedures, advertising restrictions, and stricter clinic standards. Adults choosing safe procedures from qualified doctors is their right, but the current environment manufactures insecurity for profit, especially targeting young women."
+    },
+    {
+      "id": "t2_061",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Is climate change the most urgent issue we face?",
+      "follow_ups": ["What can individuals do?", "Are we doing enough?"],
+      "arguments": {
+        "most_urgent": ["affects everything", "time limited", "irreversible", "scale"],
+        "others": ["poverty", "inequality", "health", "manageable"]
+      },
+      "sample_answer": "Yes, climate change is the most urgent issue because it's irreversible and compounds. Other problems — poverty, conflict — are serious but solvable within years or decades. Climate damage from missing the next 10-20 years cannot be undone. We're seeing impacts already: extreme weather, fires, displaced populations. The challenge is the slow nature of the threat doesn't trigger urgent response. Individual actions help — but only systemic change matters at scale. We need clean energy investment, carbon pricing, and international cooperation. Korea is improving but still heavily fossil-fuel dependent."
+    },
+    {
+      "id": "t2_062",
+      "category": "environment",
+      "difficulty": "easy",
+      "question": "Should plastic bags be banned?",
+      "follow_ups": ["What about alternatives?", "Is it enough?"],
+      "arguments": {
+        "ban": ["pollution", "ocean", "long-lasting", "wildlife"],
+        "alternative_approaches": ["fees better", "real impact small", "exceptions needed"]
+      },
+      "sample_answer": "Yes, single-use plastic bags should be eliminated through bans or strong fees. They're used for minutes but pollute for centuries, ending up in oceans where they harm marine life. Many countries have banned them with no real economic impact — people simply bring reusable bags. Korea's fee system has reduced consumption but stronger action is needed. Beyond bags, we should target other single-use plastics — straws, take-out containers, packaging. Yes, plastic is convenient, but the environmental cost is too high for things we use for a few minutes."
+    },
+    {
+      "id": "t2_063",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Should developed countries pay more for climate damage?",
+      "follow_ups": ["What's fair?", "Why don't they?"],
+      "arguments": {
+        "yes_pay": ["caused most pollution", "have resources", "moral debt", "global stability"],
+        "complicated": ["current consumers", "China India now", "complex fairness", "accountability"]
+      },
+      "sample_answer": "Yes, developed countries should contribute more to climate damage costs, though implementation is complex. Historically, the US, Europe, and Japan emitted most of the CO2 currently in the atmosphere — they industrialized using fossil fuels for over a century. Developing countries now suffer climate impacts they didn't cause. Fairness suggests developed nations should fund adaptation in vulnerable countries. However, current emissions matter too — China is now the largest emitter, so they need to contribute. The Paris Agreement framework is right; the implementation needs strengthening."
+    },
+    {
+      "id": "t2_064",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Is nuclear power a good solution for clean energy?",
+      "follow_ups": ["What about disasters?", "Korean policy debate?"],
+      "arguments": {
+        "good_solution": ["low carbon", "reliable", "high output", "improving safety"],
+        "problematic": ["accident risk", "waste storage", "cost", "long build time"]
+      },
+      "sample_answer": "Yes, nuclear power should be part of clean energy transition, despite its risks. Modern nuclear plants are extremely safe — Chernobyl-style accidents are essentially impossible with current designs. Compared to fossil fuels, even older nuclear has caused far fewer deaths and emissions. The waste problem is real but manageable with current technology. Korea has good nuclear expertise and shouldn't abandon it. However, nuclear alone isn't enough — combined with renewables, it provides baseload reliability that solar and wind lack. The previous policy debate in Korea reflected legitimate concerns but ignored the climate urgency."
+    },
+    {
+      "id": "t2_065",
+      "category": "environment",
+      "difficulty": "easy",
+      "question": "Should people eat less meat for the environment?",
+      "follow_ups": ["What about culture?", "Have you reduced?"],
+      "arguments": {
+        "yes": ["land use", "water use", "emissions", "biodiversity"],
+        "depends": ["all needed", "moderate okay", "personal", "cultural"]
+      },
+      "sample_answer": "Yes, most people should eat less meat for environmental reasons, though I'm not advocating for complete vegetarianism. Cattle alone contribute significant greenhouse gases — about 14% of human emissions. Beef requires enormous land and water compared to protein from chicken or plants. Moderate reduction — 'meatless Mondays,' choosing chicken or plant proteins, smaller portions — has real impact at scale without requiring complete diet change. I've reduced my meat consumption to about three times a week, which feels sustainable. Cultural foods can be honored while reducing volume."
+    },
+    {
+      "id": "t2_066",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Is recycling actually effective?",
+      "follow_ups": ["What about plastic recycling?", "What's better?"],
+      "arguments": {
+        "effective": ["reduces waste", "saves resources", "habit", "essential"],
+        "limited": ["plastic isn't recycled", "energy cost", "contamination", "reduce better"]
+      },
+      "sample_answer": "Recycling is effective for some materials but oversold for others. Aluminum, glass, paper, and cardboard recycle well and clearly reduce environmental impact. Plastic recycling is mostly a myth — only about 9% of plastic produced is recycled, and most 'recycling' just downgrades or ships waste to developing countries. The bigger lesson is the hierarchy: reduce, reuse, then recycle. We've focused too much on the last step. Real progress requires reducing consumption — fewer single-use items, longer-lasting products, refillable containers. Korea's recycling system is good but production should reduce too."
+    },
+    {
+      "id": "t2_067",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Should cities ban cars from downtown areas?",
+      "follow_ups": ["What about delivery?", "European examples?"],
+      "arguments": {
+        "ban": ["less pollution", "safer", "more pleasant", "more business"],
+        "no_ban": ["accessibility", "business needs", "elderly disabled", "delivery"]
+      },
+      "sample_answer": "Yes, downtown car restrictions work well, as shown by many European cities. Cities like Amsterdam, Copenhagen, and Stockholm have made centers largely car-free, leading to better air quality, more pedestrian space, and surprisingly more business activity. The fears about killing commerce proved unfounded — pedestrian streets attract more people. Seoul should expand car restrictions in Myeong-dong and other areas. Of course, exceptions for delivery, residents, and accessibility are needed. The key is providing excellent public transit alternatives, which Seoul already has."
+    },
+    {
+      "id": "t2_068",
+      "category": "environment",
+      "difficulty": "easy",
+      "question": "Are individual actions enough to fight climate change?",
+      "follow_ups": ["Then what?", "Should we still try?"],
+      "arguments": {
+        "not_enough": ["systemic problem", "corporate emissions", "policy needed", "feel-good only"],
+        "matter": ["adds up", "shift demand", "vote with money", "cultural change"]
+      },
+      "sample_answer": "No, individual actions alone are not enough, but they matter as part of broader change. Personal choices — driving less, eating less meat, reducing flights — make a small direct impact, but more importantly they shift cultural norms and consumer demand. The biggest emission sources are systemic — energy grids, industry, transportation systems — requiring policy and corporate change. The danger of focusing only on individual action is it distracts from systemic solutions and creates guilt without impact. Both matter: do what you can personally, but also vote and advocate for policy."
+    },
+    {
+      "id": "t2_069",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Should air travel be limited because of emissions?",
+      "follow_ups": ["What about business travel?", "Are alternatives realistic?"],
+      "arguments": {
+        "limit": ["high emissions", "luxury for few", "alternatives exist", "fairness"],
+        "no_limit": ["important connections", "tech improving", "tourism", "personal choice"]
+      },
+      "sample_answer": "Air travel should be reduced, especially for short distances where alternatives exist. Aviation is about 2-3% of global emissions but growing fast, and a small number of frequent flyers cause most of it. For short hops — within Korea, or to nearby countries — high-speed rail is a better alternative when available. Business travel should reduce through video calls — the pandemic proved many trips were unnecessary. However, total elimination isn't realistic for international connection, cultural exchange, and long-distance family. Sustainable aviation fuels and electric short-haul are the long-term solutions."
+    },
+    {
+      "id": "t2_070",
+      "category": "environment",
+      "difficulty": "medium",
+      "question": "Will technology solve environmental problems?",
+      "follow_ups": ["What about lifestyle?", "Where does it fall short?"],
+      "arguments": {
+        "technology_solves": ["renewables", "carbon capture", "innovation", "scalable"],
+        "lifestyle_needed": ["overconsumption", "tech rebound", "social change", "wisdom"]
+      },
+      "sample_answer": "Technology will solve much of the problem, but lifestyle changes are also necessary. The transition to renewable energy is already happening — solar is now cheaper than coal in many places. Electric vehicles, better batteries, carbon capture are progressing. However, technology alone has limits — efficiency gains often lead to more consumption (rebound effect). Also, some changes require behavior shifts — eating less meat, traveling less, buying less. The realistic solution combines both: technological transformation of energy and industry, with cultural shifts toward sustainability."
+    },
+    {
+      "id": "t2_071",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Is it ethical for companies to maximize profits?",
+      "follow_ups": ["Are there limits?", "What about stakeholders?"],
+      "arguments": {
+        "ethical": ["serves investors", "creates jobs", "competition disciplines", "wealth generation"],
+        "limits": ["worker treatment", "environment", "community", "long-term thinking"]
+      },
+      "sample_answer": "Profit maximization is ethical within ethical boundaries, but pure profit-only thinking has gone too far. Companies legitimately need to be profitable — they serve investors, employ workers, and provide products. However, the modern shareholder-supreme model often produces harmful outcomes: layoffs to boost short-term stock prices, environmental damage externalized to society, worker exploitation in supply chains. The better model is stakeholder capitalism — considering customers, workers, communities, and environment alongside shareholders. This isn't anti-business; it's recognition that long-term profits require sustainable practices."
+    },
+    {
+      "id": "t2_072",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Should small businesses be supported by the government?",
+      "follow_ups": ["At what cost?", "What works?"],
+      "arguments": {
+        "support": ["jobs", "innovation", "fair competition", "community"],
+        "free_market": ["market decides", "subsidy inefficiency", "fairness", "consolidation natural"]
+      },
+      "sample_answer": "Yes, governments should provide moderate support to small businesses, though not subsidies. Effective support includes: simplifying regulations and tax filing, ensuring fair access to credit, antitrust enforcement against monopolies, and infrastructure that helps all businesses. Direct subsidies often go to weak businesses that should fail, creating dependency. The right role is leveling the playing field — preventing big companies from using market power unfairly, ensuring small businesses can compete on quality and service. Korea's recent attempts to protect small businesses have been mixed — some help small shops, others just slow down progress."
+    },
+    {
+      "id": "t2_073",
+      "category": "business",
+      "difficulty": "easy",
+      "question": "Is brand loyalty important to you when buying products?",
+      "follow_ups": ["Which brands?", "Has it changed?"],
+      "arguments": {
+        "loyal": ["consistent quality", "trust", "easier decision", "values aligned"],
+        "not_loyal": ["best value", "competition benefit", "open mind", "changing brands"]
+      },
+      "sample_answer": "I have some brand loyalty but I'm not blindly loyal. For products where quality matters and I've had good experiences — certain electronics, specific clothing brands — I tend to stick with what works. For commodity products — basic groceries, household items — I focus on value over brand. My loyalty is conditional — if a trusted brand declines in quality, I switch. Younger consumers are generally less loyal to brands than my parents' generation, and I think that's healthy market competition."
+    },
+    {
+      "id": "t2_074",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Should advertising be more regulated?",
+      "follow_ups": ["Especially what?", "Who decides?"],
+      "arguments": {
+        "regulate": ["misleading", "vulnerable groups", "children", "manipulation"],
+        "less_regulation": ["free speech", "information", "competition", "consumer wise"]
+      },
+      "sample_answer": "Yes, advertising should be more regulated in specific areas. Strong regulations should exist for: misleading health claims, advertising to children (especially food and gambling), influencer disclosure of paid promotions, and political advertising on social media. The current self-regulation is insufficient — many ads make claims that wouldn't survive scientific scrutiny. Korea's regulations on cosmetic and medical ads are reasonable; broader product advertising could improve. However, regulation should be precise and evidence-based, not broad. The goal is honest commerce, not eliminating advertising."
+    },
+    {
+      "id": "t2_075",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Is consumerism a problem in modern society?",
+      "follow_ups": ["What's the alternative?", "Have you changed habits?"],
+      "arguments": {
+        "problem": ["waste", "debt", "values", "environment"],
+        "okay": ["economic growth", "personal choice", "innovation", "happiness"]
+      },
+      "sample_answer": "Yes, excessive consumerism is a real problem on multiple levels. Environmentally, we consume more than the planet can sustain. Personally, research shows beyond basics, accumulating stuff doesn't increase happiness — often decreases it through clutter and debt. Socially, marketing creates artificial wants and status competition. The solution isn't anti-business or anti-consumption — it's more intentional consumption. Buy fewer but better things, prioritize experiences over stuff, repair instead of replace. I've adopted this approach gradually and find I'm happier with less."
+    },
+    {
+      "id": "t2_076",
+      "category": "business",
+      "difficulty": "easy",
+      "question": "Are CEOs paid too much?",
+      "follow_ups": ["What's the right ratio?", "What about Korea?"],
+      "arguments": {
+        "too_much": ["worker pay flat", "inequality", "hard to justify", "lottery effect"],
+        "okay": ["market rate", "responsibility", "performance", "rare talent"]
+      },
+      "sample_answer": "Yes, top CEO compensation has reached excessive levels in many cases. The gap between CEO and worker pay has grown dramatically — about 350x in the US — while worker wages have stagnated. While CEOs deserve high pay for responsibility and rare skills, the current levels aren't justified by performance evidence. Studies show CEO pay doesn't strongly correlate with company performance. Korea's chaebol leaders often have outrageous pay disconnected from results. Solutions include: more independent board oversight, more shareholder voting power on executive pay, and considering worker pay ratios in tax policy."
+    },
+    {
+      "id": "t2_077",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Is it better to invest or save money?",
+      "follow_ups": ["What about real estate?", "How do you balance?"],
+      "arguments": {
+        "invest": ["beat inflation", "compound growth", "long-term", "wealth building"],
+        "save": ["safety", "liquid", "emergency", "no risk"]
+      },
+      "sample_answer": "Both are necessary but for different purposes. You need savings — 3-6 months of expenses in accessible accounts — for emergencies and short-term goals. Beyond that, investing is essential because inflation erodes savings. With Korean inflation around 2-3%, money sitting in low-interest accounts loses value. Long-term, diversified stock investments have historically returned much more. My personal split is about 25% in savings/emergency fund, 70% in stocks (mostly index funds), and 5% in alternative investments. The key is matching the timeline — short-term needs in savings, long-term goals invested."
+    },
+    {
+      "id": "t2_078",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Will physical stores survive in the e-commerce era?",
+      "follow_ups": ["Which kinds?", "What will change?"],
+      "arguments": {
+        "survive": ["experience", "immediate", "social", "categories"],
+        "decline": ["convenience", "selection", "price", "young consumers"]
+      },
+      "sample_answer": "Some physical stores will survive, others won't, depending on what they offer. Stores selling commodity items — basic electronics, books, standard goods — are losing rapidly to e-commerce. They can't compete on price or selection. However, stores that offer experiences, immediate need, or sensory engagement will survive — grocery, restaurants, fitting clothing, cars you want to test drive. The future is fewer but more experience-focused stores. Korea's department stores have evolved this way — adding food, art, entertainment. Pure transaction-focused retail is dying; experiential retail can thrive."
+    },
+    {
+      "id": "t2_079",
+      "category": "business",
+      "difficulty": "easy",
+      "question": "Should small businesses compete with large corporations?",
+      "follow_ups": ["How?", "Or focus differently?"],
+      "arguments": {
+        "compete": ["niche advantage", "personal service", "local", "agility"],
+        "different_play": ["different market", "service", "community", "specialty"]
+      },
+      "sample_answer": "Small businesses shouldn't try to compete head-on with large corporations — that's a losing strategy. They can't match prices, selection, or marketing budgets. Instead, small businesses should compete on factors where they have natural advantages: personalized service, deep expertise, local relationships, unique products, faster adaptation. A neighborhood coffee shop can't beat Starbucks on price or consistency, but can offer better coffee, knows regulars by name, supports local community, and creates atmosphere big chains can't. Find the niche, then dominate it."
+    },
+    {
+      "id": "t2_080",
+      "category": "business",
+      "difficulty": "medium",
+      "question": "Should the workweek be reduced to four days?",
+      "follow_ups": ["Would productivity drop?", "Trial results?"],
+      "arguments": {
+        "yes_four_day": ["productivity", "well-being", "balance", "test results"],
+        "no_change": ["complexity", "industries vary", "cost", "competition"]
+      },
+      "sample_answer": "Yes, the four-day workweek deserves serious adoption based on trial results. Studies in UK, Iceland, and pilot programs in Japan show productivity stays the same or improves with four days, while employee satisfaction and health improve significantly. The key is true four-day work — same pay, fewer hours — not just compressed hours. This forces companies to cut wasted meetings and inefficiency. Implementation needs flexibility — some industries will need staggered schedules. Korea would benefit greatly given our long hours culture, but cultural change is hard. Pilot programs would be a good start."
+    },
+    {
+      "id": "t2_081",
+      "category": "personal_growth",
+      "difficulty": "easy",
+      "question": "Is it important to keep learning throughout life?",
+      "follow_ups": ["How do you keep learning?", "What's worth learning?"],
+      "arguments": {
+        "important": ["changing world", "stay sharp", "career", "curiosity"],
+        "moderate": ["stability good", "expertise focus", "burnout", "rest needed"]
+      },
+      "sample_answer": "Yes, continuous learning is essential, especially given how quickly the world changes. Skills that were valuable 20 years ago are obsolete now, and this acceleration will continue. Beyond career relevance, learning keeps the mind sharp — there's strong evidence that intellectual engagement reduces cognitive decline. I dedicate about 5-10 hours weekly to learning — books, online courses, podcasts. Recently I'm learning about machine learning and improving my English. The key is that learning should be joy, not just obligation. Curiosity-driven learning sticks; forced learning fades."
+    },
+    {
+      "id": "t2_082",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Are mistakes valuable or should they be avoided?",
+      "follow_ups": ["When can mistakes be bad?", "What's your approach?"],
+      "arguments": {
+        "valuable": ["learning", "innovation", "growth", "humility"],
+        "avoid": ["consequences", "wasted time", "reputation", "stress"]
+      },
+      "sample_answer": "Mistakes are valuable when they're new mistakes from trying to grow — but repeating the same mistakes is just carelessness. New mistakes in low-stakes situations are how we learn. The fear of mistakes prevents growth and innovation. However, certain mistakes are too costly to make — safety errors, ethical failures, breaking trust. The skill is matching mistake tolerance to stakes: experiment widely with low-risk things, but be careful where mistakes truly hurt. Also, learn from others' mistakes when possible — you don't need to make every mistake yourself."
+    },
+    {
+      "id": "t2_083",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Is it better to set big goals or focus on daily habits?",
+      "follow_ups": ["Why?", "How do they connect?"],
+      "arguments": {
+        "habits": ["consistency", "compound", "no burnout", "process"],
+        "big_goals": ["direction", "motivation", "stretching", "achievement"]
+      },
+      "sample_answer": "Daily habits are more important than big goals, though both have value. Goals provide direction, but habits create progress. Many people set big goals — lose 20 pounds, learn a language — then give up when they don't see fast results. With habits, you focus on the daily action — going to the gym, studying 20 minutes — and the goal becomes natural outcome. Goals can also create stress and an all-or-nothing mindset. The book Atomic Habits explains this well. I now focus mostly on systems and habits, with goals just as occasional checkpoints."
+    },
+    {
+      "id": "t2_084",
+      "category": "personal_growth",
+      "difficulty": "easy",
+      "question": "Is self-confidence more important than skill?",
+      "follow_ups": ["Can confidence replace skill?", "How do they relate?"],
+      "arguments": {
+        "confidence": ["opportunities", "presentation", "leadership", "perception"],
+        "skill": ["substance", "results", "long-term", "real value"]
+      },
+      "sample_answer": "Skill matters more long-term, but confidence is needed to demonstrate skill. Pure confidence without skill is bluffing — eventually you're exposed. However, the most skilled person in the world fails if they can't communicate or step forward. The healthiest combination is competence-based confidence — confidence that comes from genuine skill. I've worked with technically brilliant people who couldn't speak up and were overlooked, and also with overconfident people who couldn't deliver. The ideal is keep building real skills while practicing the courage to show them."
+    },
+    {
+      "id": "t2_085",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Should you specialize early or stay broad?",
+      "follow_ups": ["Risks of each?", "What worked for you?"],
+      "arguments": {
+        "specialize_early": ["mastery", "expert pay", "deep skill", "advantage"],
+        "stay_broad": ["adaptable", "creative connections", "explore", "options open"]
+      },
+      "sample_answer": "Most people should explore broadly first, then specialize once they understand themselves and the world. Specializing too early — sometimes pushed by parents or pressure — often leads to wrong choices and dissatisfaction. People in their 20s should try different things to discover their genuine interests and strengths. After about age 30, focused specialization tends to pay off — deep expertise in a chosen area. The 'late specializer' often has unique strengths because broad experience gives perspective specialists lack. David Epstein's book Range explores this well."
+    },
+    {
+      "id": "t2_086",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Is reading books better than watching videos?",
+      "follow_ups": ["For what?", "Has this changed?"],
+      "arguments": {
+        "books_better": ["depth", "focus", "attention", "imagination"],
+        "videos_okay": ["visual", "engagement", "accessibility", "demonstration"]
+      },
+      "sample_answer": "Books are generally better for deep learning, while videos work better for specific things. For complex topics requiring sustained thinking — philosophy, history, business strategy — books are unmatched. Reading exercises focus muscles that video viewing doesn't. However, videos excel at things like demonstrations, language pronunciation, and visual concepts. YouTube has made certain learning easier than ever. The danger is that we increasingly substitute videos for books when books would serve better, because videos are easier and more entertaining. I aim for at least one book finished per month, despite video temptations."
+    },
+    {
+      "id": "t2_087",
+      "category": "personal_growth",
+      "difficulty": "easy",
+      "question": "Should everyone learn how to code?",
+      "follow_ups": ["Is it useful?", "Will AI change this?"],
+      "arguments": {
+        "yes": ["digital literacy", "career", "thinking", "future"],
+        "no": ["not everyone needs", "specialization", "AI helps", "other skills matter"]
+      },
+      "sample_answer": "Not everyone needs to code, but basic computational thinking is increasingly important. Code itself is one skill among many, and many careers don't need it. However, understanding how technology works at a basic level — what algorithms do, how data is processed, what's possible — is becoming as fundamental as basic math. I'd recommend everyone learn enough programming to automate simple tasks and understand digital systems, then specialize from there if interested. AI tools are making basic coding easier, but understanding the logic is still important for using AI well."
+    },
+    {
+      "id": "t2_088",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Is travel the best way to learn?",
+      "follow_ups": ["What kind of learning?", "Cheaper alternatives?"],
+      "arguments": {
+        "travel_best": ["immersive", "perspective", "experience", "memorable"],
+        "other_ways": ["books", "people locally", "online", "cost"]
+      },
+      "sample_answer": "Travel is excellent for some types of learning — cultural understanding, perspective shifts, language practice — but isn't the best for everything. For academic content, books and courses are more efficient. For technical skills, structured learning works better. What travel uniquely teaches is hard to get otherwise: real understanding of how different societies work, the limits of your own assumptions, adaptability when things don't go as planned. So I'd say travel is irreplaceable for certain learning, but not 'the best way' overall. The ideal is combining travel with other forms of learning."
+    },
+    {
+      "id": "t2_089",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Are mentors necessary for success?",
+      "follow_ups": ["How do you find one?", "What if you don't have one?"],
+      "arguments": {
+        "necessary": ["guidance", "network", "perspective", "shortcuts"],
+        "helpful_not_required": ["self-taught works", "many sources", "books", "experiences"]
+      },
+      "sample_answer": "Mentors are tremendously helpful but not strictly necessary. Good mentors can dramatically accelerate growth by sharing experience, opening doors, and providing honest feedback. They help you avoid common mistakes and see your blind spots. However, many successful people built their careers without formal mentors, learning through books, observation, and direct experience. The best approach is gathering wisdom from multiple sources — informal mentors, books, peer feedback, professional networks. Rather than waiting for the perfect mentor, learn from everyone around you. Most experienced people will help if you ask thoughtfully."
+    },
+    {
+      "id": "t2_090",
+      "category": "personal_growth",
+      "difficulty": "medium",
+      "question": "Is it possible to have it all - career, family, hobbies, health?",
+      "follow_ups": ["What's the secret?", "What gets sacrificed?"],
+      "arguments": {
+        "possible": ["good planning", "phases", "support", "boundaries"],
+        "impossible": ["limited time", "always trade-offs", "perfectionism trap"]
+      },
+      "sample_answer": "Having it all simultaneously is largely a myth, but having it sequentially is realistic. At any given time, something has to be deprioritized — when career intensifies, hobbies suffer; when kids are young, hobbies and intense career might pause. The key is recognizing different life phases. The healthier framing is: define what 'enough' looks like for each area and accept it. I'm not at peak career or peak fitness simultaneously, but I'm okay in all areas. Perfection in everything is impossible; quiet satisfaction across multiple areas is achievable. Social media creates illusion that people 'have it all.'"
+    },
+    {
+      "id": "t2_091",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Are we more lonely than previous generations?",
+      "follow_ups": ["Why?", "What can help?"],
+      "arguments": {
+        "lonelier": ["urbanization", "social media", "smaller families", "competitive"],
+        "less_lonely": ["digital connection", "more friends globally", "choice", "communities"]
+      },
+      "sample_answer": "Yes, modern life has created more loneliness despite more connection options. The numbers show this — surveys consistently find growing loneliness, especially among young people. Causes include weakened traditional communities, smaller families, urbanization separating us from extended family, and social media providing shallow connection that doesn't satisfy deep needs. We're constantly connected but rarely deeply connected. Solutions require intentional rebuilding of community — joining groups, prioritizing in-person time, having fewer but deeper friendships. Korean society particularly needs this — high social comparison combined with individual isolation."
+    },
+    {
+      "id": "t2_092",
+      "category": "modern_life",
+      "difficulty": "easy",
+      "question": "Is multitasking effective?",
+      "follow_ups": ["What can you actually multitask?", "What's the alternative?"],
+      "arguments": {
+        "ineffective": ["context switching", "errors", "stress", "slower"],
+        "okay_sometimes": ["routine tasks", "passive listening", "necessary"]
+      },
+      "sample_answer": "True multitasking on cognitive work is ineffective — research consistently shows that. What we call multitasking is rapid switching, and each switch costs attention and time. The result is more mistakes, lower quality, and actually slower work despite feeling busy. However, certain combinations work — listening to a podcast while walking, light cleaning while on a casual call. The difference is whether tasks require focused thinking. For important work, single-tasking with focused blocks is far more effective. I try to do important work in 90-minute focused blocks with no distractions."
+    },
+    {
+      "id": "t2_093",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Should we be available for work 24/7 in the digital age?",
+      "follow_ups": ["What's the impact?", "Should it be regulated?"],
+      "arguments": {
+        "available": ["global business", "team needs", "career advantage", "modern reality"],
+        "not_available": ["burnout", "boundary", "right to disconnect", "quality life"]
+      },
+      "sample_answer": "No, constant availability is harmful and unnecessary. Research shows always-on culture damages health, family, and ironically work performance. Boundaries between work and life enable deep rest, real recovery, and creativity that constant work prevents. France's 'right to disconnect' law is a good model. Companies that demand 24/7 availability create unsustainable cultures that lose talent. Of course, some roles legitimately require occasional emergency response. But the default should be clear boundaries with rare exceptions, not constant availability with rare disconnection."
+    },
+    {
+      "id": "t2_094",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Has our attention span gotten shorter?",
+      "follow_ups": ["Whose fault?", "Can it be restored?"],
+      "arguments": {
+        "shorter": ["short videos", "notifications", "fragmented", "research"],
+        "different": ["adapted to new world", "filters info", "context dependent"]
+      },
+      "sample_answer": "Yes, our attention spans have demonstrably shortened, and that's a problem. Heavy use of short-form content — TikTok, reels, constant notifications — trains the brain to expect rapid stimulation. The result is difficulty with sustained focus required for deep work, reading books, or meaningful conversation. The good news is attention can be retrained. I've personally improved my attention by limiting short-form content, doing regular reading, and using focus techniques like Pomodoro. The bigger societal concern is that algorithms are designed to fragment attention — making this an environmental problem, not just personal weakness."
+    },
+    {
+      "id": "t2_095",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Is digital detox necessary for modern people?",
+      "follow_ups": ["Have you tried?", "What's a good approach?"],
+      "arguments": {
+        "necessary": ["mental reset", "perspective", "real connection", "creativity"],
+        "extreme": ["unrealistic", "moderation better", "tools needed", "daily life"]
+      },
+      "sample_answer": "Yes, regular digital breaks are necessary, though full 'detox' weekends are more about habit reset than ongoing solution. Brief periodic disconnection — a phone-free weekend, a vacation without work email, evenings without scrolling — has measurable benefits: better sleep, reduced anxiety, improved attention. However, complete digital abstinence isn't realistic in modern life. The sustainable approach is building digital boundaries into daily life: no phone in bedroom, phone-free meals, scheduled work disconnection. I do a fully phone-free day once a month, and weekly evening disconnects. It really helps."
+    },
+    {
+      "id": "t2_096",
+      "category": "modern_life",
+      "difficulty": "easy",
+      "question": "Is online dating better than meeting in person?",
+      "follow_ups": ["What are the pros and cons?", "Has your view changed?"],
+      "arguments": {
+        "online": ["wider pool", "efficient", "preferences", "shy people"],
+        "in_person": ["natural chemistry", "deeper signals", "spontaneous", "less superficial"]
+      },
+      "sample_answer": "Online dating has advantages but isn't 'better' than in-person — it's different. Online expands options dramatically and helps people who struggle to meet new people through normal life. However, it often emphasizes superficial first impressions — photos and quick judgments — over real chemistry that develops in person. The best approach is probably both — meeting people through life (work, friends, activities) and supplementing through online platforms. Many successful relationships now start online, but the in-person meeting still matters. Apps work better as introductions than as relationship management."
+    },
+    {
+      "id": "t2_097",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Are influencers a positive or negative phenomenon?",
+      "follow_ups": ["Who is responsible?", "Should it be regulated?"],
+      "arguments": {
+        "positive": ["accessible content", "diverse voices", "economic opportunity", "community"],
+        "negative": ["unrealistic standards", "consumerism", "misinformation", "mental health"]
+      },
+      "sample_answer": "Influencers have both positive and negative effects, but the negatives currently outweigh positives in many cases. The positive side: diverse voices have platforms, niche communities form, useful content reaches people. The negative side: unrealistic beauty and lifestyle standards damage mental health especially in young women, undisclosed paid promotions deceive followers, and the influencer economy promotes endless consumption. Regulations should require clear disclosure of paid content and restrict targeting of children. Platforms should reduce promotion of harmful content. Audiences should be media literate — understanding that what they see is curated and often paid."
+    },
+    {
+      "id": "t2_098",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Will physical books disappear in the future?",
+      "follow_ups": ["Why or why not?", "What's lost?"],
+      "arguments": {
+        "disappear": ["digital convenience", "environment", "space", "search"],
+        "survive": ["sensory experience", "memory", "no screen", "permanence"]
+      },
+      "sample_answer": "Physical books won't disappear, though their market share will decrease. The decline of physical books has been predicted for years but they remain popular. Reasons: physical books offer a sensory experience digital can't match, they're better for reading focus, they don't drain batteries or distract, and they retain visual presence on shelves. Many readers, especially serious ones, prefer physical for important reading. E-books will dominate convenience reading — beach reading, commute reading — but physical will remain valued for depth. Both will coexist, like vinyl and digital music."
+    },
+    {
+      "id": "t2_099",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Should we worry about AI becoming too powerful?",
+      "follow_ups": ["Is it imminent?", "What can we do?"],
+      "arguments": {
+        "worry": ["alignment", "speed", "control", "displacement"],
+        "less_worry": ["limited intelligence", "tool", "controllable", "exaggerated"]
+      },
+      "sample_answer": "Yes, we should worry but in a constructive way that drives action, not paralysis. Current AI risks include: misuse for deception, displacement of jobs faster than retraining, algorithmic bias affecting important decisions, and concentration of power in companies controlling AI. Longer-term, more powerful AI brings alignment problems — ensuring AI systems do what we actually want. These aren't science fiction concerns; they're current research priorities. The solution isn't stopping AI but: investing in safety research, sensible regulation, supporting workers through transition, and broader access to AI benefits."
+    },
+    {
+      "id": "t2_100",
+      "category": "modern_life",
+      "difficulty": "medium",
+      "question": "Is the world becoming a better or worse place?",
+      "follow_ups": ["What's improved?", "What's worse?"],
+      "arguments": {
+        "better": ["less poverty", "longer lives", "more education", "more rights"],
+        "worse": ["climate", "inequality", "polarization", "mental health"]
+      },
+      "sample_answer": "Overall, the world is becoming better on most measurable dimensions, though new problems emerge. Global poverty has dropped dramatically, life expectancy has risen, literacy and education have expanded, and many forms of discrimination have decreased. However, new challenges grow: climate change, political polarization, mental health issues, inequality within rich countries. Steven Pinker's data shows long-term positive trends despite our pessimistic news media. The key is acknowledging both — celebrating progress while addressing new problems. Pure pessimism prevents action; pure optimism prevents urgency. Realistic hope is the right stance."
+    }
+  ]
+}

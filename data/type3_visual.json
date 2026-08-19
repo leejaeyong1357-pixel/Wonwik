@@ -1,0 +1,2546 @@
+{
+  "type": 3,
+  "name": "Visual Description",
+  "description": "그래프(파이/막대/선/가로막대 등) 또는 사진을 보고 영어로 묘사/비교/분석. 그래프는 데이터로 동적 렌더링 가능. 사진은 풍경, 인물, 비즈니스, 일상 등 다양한 상황.",
+  "total": 57,
+  "chart_count": 60,
+  "photo_count": 40,
+  "items": [
+    {
+      "id": "t3_001",
+      "subtype": "pie_chart",
+      "category": "market_share",
+      "difficulty": "easy",
+      "title": "Global Smartphone Market Share (2024)",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Samsung",
+            "value": 22
+          },
+          {
+            "label": "Apple",
+            "value": 20
+          },
+          {
+            "label": "Xiaomi",
+            "value": 13
+          },
+          {
+            "label": "Oppo",
+            "value": 9
+          },
+          {
+            "label": "Vivo",
+            "value": 8
+          },
+          {
+            "label": "Others",
+            "value": 28
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the pie chart and explain the main trends in the smartphone market.",
+      "key_vocabulary": [
+        "account for",
+        "make up",
+        "the largest share",
+        "followed by",
+        "the remaining"
+      ],
+      "sample_answer": "This pie chart shows the global smartphone market share in 2024. Samsung holds the largest share at 22%, followed closely by Apple at 20%. Together, these two companies account for over 40% of the global market. Chinese brands also play a significant role, with Xiaomi at 13%, Oppo at 9%, and Vivo at 8%, totaling 30%. The remaining 28% is divided among smaller manufacturers. Overall, the market is dominated by a few major players, with Samsung and Apple leading and Chinese brands collectively challenging them."
+    },
+    {
+      "id": "t3_002",
+      "subtype": "pie_chart",
+      "category": "demographics",
+      "difficulty": "easy",
+      "title": "Korean Population by Age Group (2024)",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "0-19",
+            "value": 16
+          },
+          {
+            "label": "20-39",
+            "value": 26
+          },
+          {
+            "label": "40-59",
+            "value": 31
+          },
+          {
+            "label": "60-79",
+            "value": 22
+          },
+          {
+            "label": "80+",
+            "value": 5
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe this pie chart and what it reveals about Korea's demographics.",
+      "key_vocabulary": [
+        "aging population",
+        "demographic",
+        "proportion",
+        "concerning trend"
+      ],
+      "sample_answer": "This pie chart illustrates the age distribution of the Korean population in 2024. The 40-59 age group makes up the largest segment at 31%, followed by people aged 20-39 at 26%. Notably, those aged 60 and above account for 27% combined, while those under 20 represent only 16%. This reveals Korea's aging population trend — the older groups significantly outnumber the younger ones. The small proportion of children combined with the large elderly population suggests serious demographic challenges ahead, including labor shortages and pension system pressure."
+    },
+    {
+      "id": "t3_003",
+      "subtype": "pie_chart",
+      "category": "spending",
+      "difficulty": "medium",
+      "title": "Average Korean Household Monthly Spending",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Housing",
+            "value": 28
+          },
+          {
+            "label": "Food",
+            "value": 18
+          },
+          {
+            "label": "Transportation",
+            "value": 14
+          },
+          {
+            "label": "Education",
+            "value": 12
+          },
+          {
+            "label": "Healthcare",
+            "value": 8
+          },
+          {
+            "label": "Entertainment",
+            "value": 7
+          },
+          {
+            "label": "Other",
+            "value": 13
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the chart and identify the main spending categories.",
+      "key_vocabulary": [
+        "the bulk of",
+        "expenditure",
+        "allocate",
+        "consume"
+      ],
+      "sample_answer": "This pie chart breaks down the monthly spending of an average Korean household. Housing represents the largest expense at 28%, which reflects the high cost of accommodation in Korea, particularly in urban areas. Food comes second at 18%, followed by transportation at 14% and education at 12%. Healthcare and entertainment account for 8% and 7% respectively. The remaining 13% covers other expenses. It's striking that housing and food together consume nearly half of household budgets, suggesting these essential needs put significant pressure on Korean families."
+    },
+    {
+      "id": "t3_004",
+      "subtype": "pie_chart",
+      "category": "energy",
+      "difficulty": "medium",
+      "title": "Korea's Electricity Generation by Source (2024)",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Coal",
+            "value": 32
+          },
+          {
+            "label": "Natural Gas",
+            "value": 27
+          },
+          {
+            "label": "Nuclear",
+            "value": 29
+          },
+          {
+            "label": "Renewables",
+            "value": 9
+          },
+          {
+            "label": "Oil",
+            "value": 3
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe this energy chart and discuss environmental implications.",
+      "key_vocabulary": [
+        "fossil fuels",
+        "renewable energy",
+        "carbon emissions",
+        "transition"
+      ],
+      "sample_answer": "This pie chart shows Korea's electricity generation mix in 2024. Coal remains the largest source at 32%, followed by nuclear at 29% and natural gas at 27%. Together, these three sources generate 88% of Korea's electricity. Notably, renewables account for only 9%, while oil contributes a minor 3%. From an environmental perspective, the heavy reliance on fossil fuels — coal, gas, and oil totaling 62% — is concerning given climate change goals. The low share of renewables suggests Korea has significant room to improve its clean energy transition compared to many other developed countries."
+    },
+    {
+      "id": "t3_005",
+      "subtype": "pie_chart",
+      "category": "education",
+      "difficulty": "medium",
+      "title": "University Major Distribution in Korea",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Engineering",
+            "value": 24
+          },
+          {
+            "label": "Humanities",
+            "value": 14
+          },
+          {
+            "label": "Business",
+            "value": 18
+          },
+          {
+            "label": "Natural Sciences",
+            "value": 11
+          },
+          {
+            "label": "Social Sciences",
+            "value": 15
+          },
+          {
+            "label": "Arts",
+            "value": 8
+          },
+          {
+            "label": "Medicine",
+            "value": 6
+          },
+          {
+            "label": "Other",
+            "value": 4
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the distribution of university majors and what it suggests.",
+      "key_vocabulary": [
+        "popularity",
+        "preference",
+        "career-oriented",
+        "field"
+      ],
+      "sample_answer": "This chart shows the distribution of university majors in Korea. Engineering is the most popular field at 24%, followed by Business at 18% and Social Sciences at 15%. Humanities accounts for 14%, while Natural Sciences and Arts make up 11% and 8% respectively. Medicine, which is highly competitive, takes a smaller share at 6%. This distribution reflects Korean students' preference for career-oriented fields — engineering and business together account for 42%. The relatively low share of humanities and pure sciences suggests practical considerations heavily influence major choice, likely due to the competitive job market."
+    },
+    {
+      "id": "t3_006",
+      "subtype": "bar_chart",
+      "category": "sales",
+      "difficulty": "easy",
+      "title": "Quarterly Sales Revenue 2024 (Million USD)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "Q1",
+            "value": 120
+          },
+          {
+            "label": "Q2",
+            "value": 145
+          },
+          {
+            "label": "Q3",
+            "value": 165
+          },
+          {
+            "label": "Q4",
+            "value": 195
+          }
+        ],
+        "unit": "Million USD"
+      },
+      "question": "Describe the trend shown in this bar chart.",
+      "key_vocabulary": [
+        "increase",
+        "steady growth",
+        "peak",
+        "year-over-year"
+      ],
+      "sample_answer": "This bar chart presents quarterly sales revenue for 2024 in million USD. The data shows consistent upward growth throughout the year. Q1 started at 120 million USD, increased to 145 million in Q2, then climbed to 165 million in Q3. Q4 reached the highest point at 195 million USD. This represents an overall growth of about 62% from Q1 to Q4, indicating strong business momentum. The acceleration in growth from Q3 to Q4 suggests either successful holiday season sales or new product launches contributed to the strong finish."
+    },
+    {
+      "id": "t3_007",
+      "subtype": "bar_chart",
+      "category": "comparison",
+      "difficulty": "easy",
+      "title": "Average Salary by Industry in Korea (Million KRW/Year)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "Finance",
+            "value": 85
+          },
+          {
+            "label": "IT",
+            "value": 78
+          },
+          {
+            "label": "Pharmacy",
+            "value": 72
+          },
+          {
+            "label": "Manufacturing",
+            "value": 60
+          },
+          {
+            "label": "Education",
+            "value": 45
+          },
+          {
+            "label": "Retail",
+            "value": 38
+          }
+        ],
+        "unit": "Million KRW"
+      },
+      "question": "Describe the salary differences across industries.",
+      "key_vocabulary": [
+        "highest",
+        "lowest",
+        "gap",
+        "outpace"
+      ],
+      "sample_answer": "This bar chart compares average annual salaries across major industries in Korea. Finance leads at 85 million KRW per year, followed closely by IT at 78 million and Pharmacy at 72 million. Manufacturing comes in the middle at 60 million. At the lower end, Education averages 45 million and Retail is the lowest at 38 million. The gap between the highest and lowest is significant — finance workers earn more than twice what retail workers earn. This reflects how knowledge-intensive industries like Finance and IT command premium salaries, while traditional service industries pay considerably less."
+    },
+    {
+      "id": "t3_008",
+      "subtype": "bar_chart",
+      "category": "consumer",
+      "difficulty": "medium",
+      "title": "Top 5 Coffee Chains by Number of Stores in Korea",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "Starbucks",
+            "value": 1900
+          },
+          {
+            "label": "Mega Coffee",
+            "value": 2700
+          },
+          {
+            "label": "Ediya",
+            "value": 3500
+          },
+          {
+            "label": "Compose",
+            "value": 2400
+          },
+          {
+            "label": "Twosome",
+            "value": 1500
+          }
+        ],
+        "unit": "stores"
+      },
+      "question": "Describe the data and what it tells us about the Korean coffee market.",
+      "key_vocabulary": [
+        "dominant",
+        "expansion",
+        "outlets",
+        "market presence"
+      ],
+      "sample_answer": "This bar chart shows the top five coffee chains in Korea by number of stores. Ediya leads with 3,500 stores, followed by Mega Coffee at 2,700 and Compose at 2,400. Starbucks, despite being one of the most recognized brands globally, has 1,900 outlets, while Twosome operates 1,500. Interestingly, the low-price Korean chains — Mega, Ediya, and Compose — have expanded more rapidly than premium brands like Starbucks. This reflects a market shift toward affordable coffee options, particularly among younger consumers who value price-conscious convenience over premium coffee experience."
+    },
+    {
+      "id": "t3_009",
+      "subtype": "bar_chart",
+      "category": "ev_market",
+      "difficulty": "medium",
+      "title": "Top EV Manufacturers Global Sales 2024 (Thousand Units)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "BYD",
+            "value": 3200
+          },
+          {
+            "label": "Tesla",
+            "value": 1820
+          },
+          {
+            "label": "Geely",
+            "value": 980
+          },
+          {
+            "label": "VW Group",
+            "value": 750
+          },
+          {
+            "label": "Hyundai-Kia",
+            "value": 670
+          }
+        ],
+        "unit": "thousand units"
+      },
+      "question": "Describe the EV market and discuss Hyundai-Kia's position.",
+      "key_vocabulary": [
+        "surge",
+        "dominate",
+        "competitor",
+        "market position"
+      ],
+      "sample_answer": "This bar chart presents the top five EV manufacturers globally by 2024 sales. BYD dominates the market with 3.2 million units sold, far ahead of Tesla at 1.82 million — a significant shift from previous years when Tesla led. Chinese brand Geely follows at 980,000 units, with Volkswagen Group at 750,000 and Hyundai-Kia at 670,000. Hyundai-Kia ranks fifth globally, which is respectable given the intense competition, but there's clearly room to grow. The data shows Chinese manufacturers, especially BYD, are now leading the EV transition, while traditional automakers including Hyundai-Kia need to accelerate their electrification efforts."
+    },
+    {
+      "id": "t3_010",
+      "subtype": "bar_chart",
+      "category": "tourism",
+      "difficulty": "easy",
+      "title": "International Tourists in Korea by Country (2024, Millions)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "China",
+            "value": 4.2
+          },
+          {
+            "label": "Japan",
+            "value": 2.8
+          },
+          {
+            "label": "USA",
+            "value": 1.5
+          },
+          {
+            "label": "Taiwan",
+            "value": 1.1
+          },
+          {
+            "label": "Vietnam",
+            "value": 0.9
+          }
+        ],
+        "unit": "million"
+      },
+      "question": "Describe the data and identify Korea's main tourist markets.",
+      "key_vocabulary": [
+        "inbound tourism",
+        "visitor",
+        "originate from",
+        "regional"
+      ],
+      "sample_answer": "This bar chart shows international visitor numbers to Korea in 2024. Chinese tourists form the largest group at 4.2 million, followed by Japanese visitors at 2.8 million. American tourists totaled 1.5 million, while Taiwanese and Vietnamese visitors numbered 1.1 million and 0.9 million respectively. Together, these top five markets account for the majority of inbound tourism. The data shows Korea's tourism heavily depends on Asian markets, with China and Japan combined representing nearly 70% of these top five. This concentration suggests Korea could benefit from diversifying its tourist source markets to reduce risk from regional political tensions."
+    },
+    {
+      "id": "t3_011",
+      "subtype": "horizontal_bar",
+      "category": "language",
+      "difficulty": "easy",
+      "title": "Most Spoken Languages in the World (Million Speakers)",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "English",
+            "value": 1500
+          },
+          {
+            "label": "Mandarin",
+            "value": 1100
+          },
+          {
+            "label": "Hindi",
+            "value": 600
+          },
+          {
+            "label": "Spanish",
+            "value": 550
+          },
+          {
+            "label": "French",
+            "value": 320
+          },
+          {
+            "label": "Arabic",
+            "value": 270
+          }
+        ],
+        "unit": "million speakers"
+      },
+      "question": "Describe the data and explain the dominance of certain languages.",
+      "key_vocabulary": [
+        "widespread",
+        "native speaker",
+        "lingua franca",
+        "global reach"
+      ],
+      "sample_answer": "This horizontal bar chart displays the most spoken languages globally by total number of speakers. English leads with 1.5 billion speakers, including both native and second-language users, which explains its dominance as the international language of business and science. Mandarin Chinese ranks second with 1.1 billion speakers, mostly concentrated in China. Hindi has 600 million speakers, followed by Spanish at 550 million. French and Arabic round out the top six. The data illustrates how language reach correlates with historical influence — English from colonialism, Mandarin from China's population, and Spanish from colonial expansion in the Americas."
+    },
+    {
+      "id": "t3_012",
+      "subtype": "horizontal_bar",
+      "category": "employment",
+      "difficulty": "medium",
+      "title": "Reasons People Quit Their Jobs (Survey, %)",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "Low salary",
+            "value": 38
+          },
+          {
+            "label": "Poor management",
+            "value": 32
+          },
+          {
+            "label": "No growth",
+            "value": 28
+          },
+          {
+            "label": "Work-life balance",
+            "value": 25
+          },
+          {
+            "label": "Toxic culture",
+            "value": 22
+          },
+          {
+            "label": "Better offer",
+            "value": 19
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the reasons people leave their jobs based on this chart.",
+      "key_vocabulary": [
+        "resignation",
+        "turnover",
+        "primary reason",
+        "address"
+      ],
+      "sample_answer": "This horizontal bar chart shows the main reasons employees quit their jobs based on survey data. Low salary tops the list at 38%, indicating compensation remains the primary driver of turnover. Poor management follows closely at 32%, showing the significant impact bad leadership has on retention. Lack of growth opportunities affects 28% of leavers, while work-life balance concerns drive 25%. Toxic culture and receiving better offers account for 22% and 19% respectively. Companies wanting to reduce turnover should focus on three main areas: competitive compensation, leadership development, and providing career growth paths."
+    },
+    {
+      "id": "t3_013",
+      "subtype": "horizontal_bar",
+      "category": "tech_adoption",
+      "difficulty": "medium",
+      "title": "AI Tool Usage Among Korean Workers (%)",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "ChatGPT",
+            "value": 68
+          },
+          {
+            "label": "Translation tools",
+            "value": 55
+          },
+          {
+            "label": "Image generation",
+            "value": 32
+          },
+          {
+            "label": "Coding assistants",
+            "value": 28
+          },
+          {
+            "label": "Voice/transcription",
+            "value": 22
+          },
+          {
+            "label": "Data analysis",
+            "value": 18
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the AI adoption patterns and discuss what this tells us.",
+      "key_vocabulary": [
+        "adopt",
+        "utilize",
+        "productivity tools",
+        "emerging"
+      ],
+      "sample_answer": "This horizontal bar chart illustrates AI tool usage among Korean workers. ChatGPT or similar chatbots are used by 68%, making it the most widely adopted AI tool. Translation tools follow at 55%, which makes sense given Korea's increasingly international business environment. Image generation tools are used by 32%, while coding assistants are adopted by 28% — primarily by IT workers. Voice transcription and data analysis tools have lower adoption at 22% and 18%. The data reveals that conversational AI has reached mainstream adoption, while specialized tools remain limited to specific professions. This suggests organizations should focus initial AI training on general-purpose tools."
+    },
+    {
+      "id": "t3_014",
+      "subtype": "horizontal_bar",
+      "category": "leisure",
+      "difficulty": "easy",
+      "title": "Top Weekend Activities Among Koreans",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "Watch TV/streaming",
+            "value": 72
+          },
+          {
+            "label": "Online shopping",
+            "value": 55
+          },
+          {
+            "label": "Eat out",
+            "value": 48
+          },
+          {
+            "label": "Exercise",
+            "value": 42
+          },
+          {
+            "label": "Hiking",
+            "value": 35
+          },
+          {
+            "label": "Reading",
+            "value": 22
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe weekend activity preferences in Korea.",
+      "key_vocabulary": [
+        "leisure activities",
+        "favored",
+        "majority",
+        "indoor vs outdoor"
+      ],
+      "sample_answer": "This horizontal bar chart shows how Koreans spend their weekends. Watching TV or streaming services is by far the most popular activity at 72%, suggesting screen-based entertainment dominates leisure time. Online shopping comes second at 55%, reflecting the country's strong e-commerce culture. Eating out is enjoyed by 48%, while exercise and hiking are pursued by 42% and 35% respectively. Reading lags significantly at just 22%. The data shows a preference for passive, indoor activities, though hiking and exercise still attract significant participation. This may reflect the busy work week — many Koreans need rest more than additional activity on weekends."
+    },
+    {
+      "id": "t3_015",
+      "subtype": "horizontal_bar",
+      "category": "transportation",
+      "difficulty": "medium",
+      "title": "Daily Commute Method in Seoul (%)",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "Subway",
+            "value": 38
+          },
+          {
+            "label": "Bus",
+            "value": 22
+          },
+          {
+            "label": "Car",
+            "value": 24
+          },
+          {
+            "label": "Walking",
+            "value": 8
+          },
+          {
+            "label": "Bicycle",
+            "value": 3
+          },
+          {
+            "label": "Other",
+            "value": 5
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe commuting patterns in Seoul.",
+      "key_vocabulary": [
+        "public transit",
+        "commute",
+        "infrastructure",
+        "alternative"
+      ],
+      "sample_answer": "This horizontal bar chart shows how Seoul residents commute to work. The subway is the most common method at 38%, reflecting Seoul's extensive metro network. Cars come second at 24%, slightly higher than buses at 22%. Combined public transit usage — subway and bus — accounts for 60% of commutes, showing strong reliance on public infrastructure. Walking represents 8%, mostly for short commutes, while bicycle use remains low at just 3% despite the city's bike paths. The high public transit usage demonstrates Seoul's success in providing efficient alternatives to driving, though there's clearly room to grow active transportation like cycling."
+    },
+    {
+      "id": "t3_016",
+      "subtype": "line_chart",
+      "category": "trend",
+      "difficulty": "easy",
+      "title": "Korea's GDP Growth Rate (2019-2024)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2019",
+            "value": 2.2
+          },
+          {
+            "label": "2020",
+            "value": -0.7
+          },
+          {
+            "label": "2021",
+            "value": 4.3
+          },
+          {
+            "label": "2022",
+            "value": 2.6
+          },
+          {
+            "label": "2023",
+            "value": 1.4
+          },
+          {
+            "label": "2024",
+            "value": 2.5
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the GDP growth trend and significant changes.",
+      "key_vocabulary": [
+        "growth rate",
+        "recession",
+        "rebound",
+        "fluctuation"
+      ],
+      "sample_answer": "This line chart tracks Korea's GDP growth rate from 2019 to 2024. The data shows significant fluctuation. The growth was steady at 2.2% in 2019 before dropping sharply to -0.7% in 2020, reflecting the pandemic's economic impact. A strong rebound followed in 2021 at 4.3% as economic activity resumed. Growth then moderated to 2.6% in 2022 and slowed further to 1.4% in 2023 amid global headwinds and high interest rates. In 2024, growth recovered to 2.5%. Overall, the trend shows the economy weathered the pandemic shock and has stabilized, though it hasn't returned to the rapid growth of earlier decades."
+    },
+    {
+      "id": "t3_017",
+      "subtype": "line_chart",
+      "category": "demographics",
+      "difficulty": "medium",
+      "title": "Korea's Birth Rate Trend (2010-2024)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2010",
+            "value": 1.23
+          },
+          {
+            "label": "2012",
+            "value": 1.3
+          },
+          {
+            "label": "2014",
+            "value": 1.21
+          },
+          {
+            "label": "2016",
+            "value": 1.17
+          },
+          {
+            "label": "2018",
+            "value": 0.98
+          },
+          {
+            "label": "2020",
+            "value": 0.84
+          },
+          {
+            "label": "2022",
+            "value": 0.78
+          },
+          {
+            "label": "2024",
+            "value": 0.72
+          }
+        ],
+        "unit": "births per woman"
+      },
+      "question": "Describe Korea's birth rate trend and discuss implications.",
+      "key_vocabulary": [
+        "declining",
+        "fertility rate",
+        "demographic crisis",
+        "below replacement"
+      ],
+      "sample_answer": "This line chart shows Korea's birth rate from 2010 to 2024 in births per woman. The trend is alarming — birth rates have declined steadily from 1.23 to just 0.72 over 14 years, a drop of more than 40%. The decline accelerated after 2016, falling below 1.0 in 2018, which is critically low. The 2024 figure of 0.72 is the lowest in the developed world. Since the replacement rate to maintain population is 2.1, Korea's population is now rapidly shrinking. This creates severe long-term challenges: aging workforce, pension system pressure, military recruitment, and potential economic stagnation. Government policies so far have not reversed the trend."
+    },
+    {
+      "id": "t3_018",
+      "subtype": "line_chart",
+      "category": "ev_growth",
+      "difficulty": "medium",
+      "title": "Global EV Sales Growth (2019-2024, Million Units)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2019",
+            "value": 2.2
+          },
+          {
+            "label": "2020",
+            "value": 3.1
+          },
+          {
+            "label": "2021",
+            "value": 6.6
+          },
+          {
+            "label": "2022",
+            "value": 10.5
+          },
+          {
+            "label": "2023",
+            "value": 14.0
+          },
+          {
+            "label": "2024",
+            "value": 17.5
+          }
+        ],
+        "unit": "million units"
+      },
+      "question": "Describe the EV market growth trend.",
+      "key_vocabulary": [
+        "explosive growth",
+        "exponential",
+        "transition",
+        "adoption"
+      ],
+      "sample_answer": "This line chart illustrates the explosive growth of global EV sales from 2019 to 2024. Sales started at 2.2 million units in 2019, increased modestly to 3.1 million in 2020 despite the pandemic, then doubled to 6.6 million in 2021. Growth accelerated further, reaching 10.5 million in 2022, 14 million in 2023, and 17.5 million in 2024 — an eight-fold increase over five years. While growth is moderating slightly in percentage terms, absolute numbers continue rising. This rapid transition shows EVs are no longer a niche market but mainstream automotive products. For traditional automakers like Hyundai, electrification strategy is now essential for survival, not optional."
+    },
+    {
+      "id": "t3_019",
+      "subtype": "line_chart",
+      "category": "real_estate",
+      "difficulty": "medium",
+      "title": "Seoul Apartment Average Price (Million KRW per sqm)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2018",
+            "value": 8.5
+          },
+          {
+            "label": "2019",
+            "value": 9.2
+          },
+          {
+            "label": "2020",
+            "value": 11.8
+          },
+          {
+            "label": "2021",
+            "value": 16.2
+          },
+          {
+            "label": "2022",
+            "value": 15.5
+          },
+          {
+            "label": "2023",
+            "value": 13.8
+          },
+          {
+            "label": "2024",
+            "value": 14.5
+          }
+        ],
+        "unit": "million KRW/sqm"
+      },
+      "question": "Describe the housing price trend in Seoul.",
+      "key_vocabulary": [
+        "surge",
+        "peak",
+        "correction",
+        "volatility"
+      ],
+      "sample_answer": "This line chart shows Seoul apartment prices per square meter from 2018 to 2024. Prices were relatively stable at around 8.5-9.2 million KRW from 2018 to 2019, then surged dramatically. From 11.8 million in 2020, prices jumped to a peak of 16.2 million in 2021 — a nearly doubling in three years. After this peak, prices corrected, dropping to 15.5 million in 2022 and further to 13.8 million in 2023. A modest recovery brought prices to 14.5 million in 2024. This pattern shows extreme volatility — the rapid surge during the pandemic period followed by a correction. Despite the recent decline, prices remain about 70% higher than 2018 levels."
+    },
+    {
+      "id": "t3_020",
+      "subtype": "line_chart",
+      "category": "internet",
+      "difficulty": "easy",
+      "title": "Average Daily Internet Usage in Korea (Hours)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2010",
+            "value": 2.1
+          },
+          {
+            "label": "2014",
+            "value": 2.8
+          },
+          {
+            "label": "2018",
+            "value": 3.5
+          },
+          {
+            "label": "2020",
+            "value": 4.8
+          },
+          {
+            "label": "2022",
+            "value": 5.4
+          },
+          {
+            "label": "2024",
+            "value": 5.8
+          }
+        ],
+        "unit": "hours"
+      },
+      "question": "Describe internet usage trends and discuss implications.",
+      "key_vocabulary": [
+        "increase",
+        "screen time",
+        "digital lifestyle",
+        "concern"
+      ],
+      "sample_answer": "This line chart shows the steady increase in average daily internet usage in Korea from 2010 to 2024. Usage was 2.1 hours per day in 2010, gradually increasing to 2.8 hours by 2014 and 3.5 hours by 2018. Usage spiked sharply during the pandemic, jumping from 3.5 to 4.8 hours between 2018 and 2020. The increase has continued since, reaching 5.8 hours by 2024 — nearly three times the 2010 level. This means Koreans now spend about a quarter of their waking hours online. While this enables many positive activities like learning and connecting, it also raises concerns about reduced physical activity, sleep quality, and real-world social interaction."
+    },
+    {
+      "id": "t3_021",
+      "subtype": "line_chart",
+      "category": "wages",
+      "difficulty": "medium",
+      "title": "Korea Minimum Wage History (KRW/hour)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2018",
+            "value": 7530
+          },
+          {
+            "label": "2019",
+            "value": 8350
+          },
+          {
+            "label": "2020",
+            "value": 8590
+          },
+          {
+            "label": "2021",
+            "value": 8720
+          },
+          {
+            "label": "2022",
+            "value": 9160
+          },
+          {
+            "label": "2023",
+            "value": 9620
+          },
+          {
+            "label": "2024",
+            "value": 9860
+          },
+          {
+            "label": "2025",
+            "value": 10030
+          }
+        ],
+        "unit": "KRW/hour"
+      },
+      "question": "Describe the minimum wage trend.",
+      "key_vocabulary": [
+        "increase",
+        "incremental",
+        "milestone",
+        "labor cost"
+      ],
+      "sample_answer": "This line chart shows Korea's minimum wage progression from 2018 to 2025. The wage rose significantly from 7,530 KRW in 2018 to 8,350 KRW in 2019 — an 11% jump. The pace of increase slowed considerably from 2019 to 2021, with smaller annual increases of 240-130 KRW. Growth resumed at a moderate pace from 2022 onwards. Notably, the minimum wage crossed the 10,000 KRW milestone in 2025 at 10,030 KRW. Overall, the wage has increased about 33% over seven years. The slower growth in recent years reflects efforts to balance worker support with concerns about small business costs and inflation."
+    },
+    {
+      "id": "t3_022",
+      "subtype": "comparison_bar",
+      "category": "comparison",
+      "difficulty": "medium",
+      "title": "Smartphone Sales: Samsung vs Apple in Korea (Million Units)",
+      "chart": {
+        "type": "comparison_bar",
+        "data": [
+          {
+            "label": "2020",
+            "samsung": 8.5,
+            "apple": 1.6
+          },
+          {
+            "label": "2021",
+            "samsung": 7.8,
+            "apple": 2.4
+          },
+          {
+            "label": "2022",
+            "samsung": 6.9,
+            "apple": 3.2
+          },
+          {
+            "label": "2023",
+            "samsung": 6.2,
+            "apple": 4.0
+          },
+          {
+            "label": "2024",
+            "samsung": 5.8,
+            "apple": 4.6
+          }
+        ],
+        "unit": "million units"
+      },
+      "question": "Compare Samsung and Apple sales trends in the Korean market.",
+      "key_vocabulary": [
+        "domestic brand",
+        "gain market share",
+        "shrink",
+        "narrow the gap"
+      ],
+      "sample_answer": "This comparison bar chart shows smartphone sales in Korea by Samsung and Apple from 2020 to 2024. Samsung, the dominant local brand, has been steadily losing ground — declining from 8.5 million units in 2020 to 5.8 million in 2024, a 32% decrease. Meanwhile, Apple has consistently gained, rising from 1.6 million to 4.6 million in the same period — nearly tripling its sales. The gap between the two brands has narrowed dramatically, from 6.9 million units in 2020 to just 1.2 million in 2024. This shift reflects younger Koreans' growing preference for iPhones, particularly for status and ecosystem reasons. If trends continue, Apple could surpass Samsung in Korea within a few years."
+    },
+    {
+      "id": "t3_023",
+      "subtype": "comparison_bar",
+      "category": "comparison",
+      "difficulty": "medium",
+      "title": "Work Hours per Week: Korea vs OECD Average (2024)",
+      "chart": {
+        "type": "comparison_bar",
+        "data": [
+          {
+            "label": "Korea",
+            "weekly_hours": 41.4,
+            "vacation_days": 15
+          },
+          {
+            "label": "OECD avg",
+            "weekly_hours": 36.2,
+            "vacation_days": 25
+          },
+          {
+            "label": "Germany",
+            "weekly_hours": 34.0,
+            "vacation_days": 30
+          },
+          {
+            "label": "USA",
+            "weekly_hours": 37.5,
+            "vacation_days": 10
+          },
+          {
+            "label": "Japan",
+            "weekly_hours": 38.8,
+            "vacation_days": 20
+          }
+        ],
+        "unit": "hours/days"
+      },
+      "question": "Compare Korea's working hours with other countries.",
+      "key_vocabulary": [
+        "work-life balance",
+        "compared to",
+        "vacation policy",
+        "average"
+      ],
+      "sample_answer": "This comparison chart shows weekly work hours and vacation days across countries. Koreans work the most at 41.4 hours per week with only 15 vacation days. This significantly exceeds the OECD average of 36.2 hours and 25 vacation days. Germany works the fewest hours at 34 and has the most vacation at 30 days, representing the strongest work-life balance. The USA has relatively long work hours at 37.5 but the fewest vacation days at 10. Japan, often associated with overwork, actually works fewer hours than Korea at 38.8 with 20 vacation days. The data clearly shows Korea has the most demanding work culture among these developed countries, suggesting room for improvement in worker wellbeing."
+    },
+    {
+      "id": "t3_024",
+      "subtype": "stacked_bar",
+      "category": "industry",
+      "difficulty": "hard",
+      "title": "our group Revenue by Region (Trillion KRW)",
+      "chart": {
+        "type": "stacked_bar",
+        "data": [
+          {
+            "label": "2020",
+            "korea": 35,
+            "north_america": 28,
+            "europe": 18,
+            "asia": 15,
+            "other": 7
+          },
+          {
+            "label": "2021",
+            "korea": 40,
+            "north_america": 38,
+            "europe": 22,
+            "asia": 20,
+            "other": 10
+          },
+          {
+            "label": "2022",
+            "korea": 45,
+            "north_america": 47,
+            "europe": 25,
+            "asia": 22,
+            "other": 11
+          },
+          {
+            "label": "2023",
+            "korea": 48,
+            "north_america": 55,
+            "europe": 28,
+            "asia": 24,
+            "other": 12
+          },
+          {
+            "label": "2024",
+            "korea": 50,
+            "north_america": 62,
+            "europe": 30,
+            "asia": 26,
+            "other": 14
+          }
+        ],
+        "unit": "trillion KRW"
+      },
+      "question": "Describe Hyundai's regional revenue breakdown and trends.",
+      "key_vocabulary": [
+        "geographic distribution",
+        "expand",
+        "key market",
+        "diversification"
+      ],
+      "sample_answer": "This stacked bar chart shows our group revenue by region from 2020 to 2024. Total revenue has grown substantially from 103 trillion KRW to 182 trillion KRW over five years — a 77% increase. North America has become the largest market, growing from 28 to 62 trillion KRW and surpassing Korea in 2022. The domestic Korean market has grown moderately from 35 to 50 trillion. Europe doubled from 15 to 30 trillion, while Asia and other regions also showed steady growth. The data reveals successful international expansion — North America now contributes over a third of total revenue. This geographic diversification reduces dependence on any single market and reflects strong global brand acceptance."
+    },
+    {
+      "id": "t3_025",
+      "subtype": "stacked_bar",
+      "category": "energy_transition",
+      "difficulty": "hard",
+      "title": "Vehicle Type Sales in Korea (Thousand Units)",
+      "chart": {
+        "type": "stacked_bar",
+        "data": [
+          {
+            "label": "2019",
+            "gasoline": 850,
+            "diesel": 380,
+            "hybrid": 120,
+            "ev": 35
+          },
+          {
+            "label": "2020",
+            "gasoline": 820,
+            "diesel": 320,
+            "hybrid": 160,
+            "ev": 55
+          },
+          {
+            "label": "2021",
+            "gasoline": 780,
+            "diesel": 280,
+            "hybrid": 190,
+            "ev": 100
+          },
+          {
+            "label": "2022",
+            "gasoline": 720,
+            "diesel": 230,
+            "hybrid": 240,
+            "ev": 165
+          },
+          {
+            "label": "2023",
+            "gasoline": 690,
+            "diesel": 180,
+            "hybrid": 280,
+            "ev": 165
+          },
+          {
+            "label": "2024",
+            "gasoline": 650,
+            "diesel": 140,
+            "hybrid": 320,
+            "ev": 195
+          }
+        ],
+        "unit": "thousand units"
+      },
+      "question": "Describe the vehicle market transition in Korea.",
+      "key_vocabulary": [
+        "transition",
+        "electrification",
+        "phase out",
+        "shift"
+      ],
+      "sample_answer": "This stacked bar chart shows the evolution of vehicle type sales in Korea from 2019 to 2024. The transition is striking. Gasoline vehicle sales have declined from 850 thousand to 650 thousand units, while diesel has dropped sharply from 380 to 140 thousand — a decline of over 60%. Meanwhile, hybrid vehicles have nearly tripled from 120 to 320 thousand units, and pure EVs have surged from 35 thousand to 195 thousand, a 5.5-fold increase. The combined share of hybrids and EVs has grown from about 10% to over 30% of sales. This rapid electrification reflects environmental policies, fuel cost concerns, and improved EV options from Korean manufacturers like Hyundai."
+    },
+    {
+      "id": "t3_026",
+      "subtype": "stacked_bar",
+      "category": "employment",
+      "difficulty": "medium",
+      "title": "Workforce Distribution by Education Level (%)",
+      "chart": {
+        "type": "stacked_bar",
+        "data": [
+          {
+            "label": "2000",
+            "high_school": 45,
+            "college": 25,
+            "bachelor": 22,
+            "graduate": 8
+          },
+          {
+            "label": "2010",
+            "high_school": 38,
+            "college": 22,
+            "bachelor": 30,
+            "graduate": 10
+          },
+          {
+            "label": "2020",
+            "high_school": 28,
+            "college": 18,
+            "bachelor": 40,
+            "graduate": 14
+          },
+          {
+            "label": "2024",
+            "high_school": 23,
+            "college": 17,
+            "bachelor": 43,
+            "graduate": 17
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the change in workforce education levels.",
+      "key_vocabulary": [
+        "education attainment",
+        "qualification",
+        "shift",
+        "white-collar"
+      ],
+      "sample_answer": "This stacked bar chart shows the educational composition of the Korean workforce from 2000 to 2024. The trend toward higher education is clear. High school graduates as a share of workers dropped from 45% in 2000 to just 23% in 2024 — a halving in 24 years. Junior college graduates also declined slightly from 25% to 17%. Meanwhile, bachelor's degree holders nearly doubled from 22% to 43%, becoming the largest single group. Graduate degree holders also more than doubled from 8% to 17%. This dramatic shift reflects Korea's massive investment in higher education. While it has produced a highly educated workforce, it has also contributed to credential inflation and difficulties for non-university workers."
+    },
+    {
+      "id": "t3_027",
+      "subtype": "area_chart",
+      "category": "tech",
+      "difficulty": "medium",
+      "title": "Korea's Semiconductor Exports (Billion USD)",
+      "chart": {
+        "type": "area",
+        "data": [
+          {
+            "label": "2018",
+            "value": 126
+          },
+          {
+            "label": "2019",
+            "value": 93
+          },
+          {
+            "label": "2020",
+            "value": 99
+          },
+          {
+            "label": "2021",
+            "value": 128
+          },
+          {
+            "label": "2022",
+            "value": 129
+          },
+          {
+            "label": "2023",
+            "value": 99
+          },
+          {
+            "label": "2024",
+            "value": 142
+          }
+        ],
+        "unit": "billion USD"
+      },
+      "question": "Describe Korea's semiconductor export trend.",
+      "key_vocabulary": [
+        "cyclical",
+        "fluctuation",
+        "recovery",
+        "key export"
+      ],
+      "sample_answer": "This area chart shows Korea's semiconductor exports from 2018 to 2024 in billion USD. The data shows significant cyclical behavior, characteristic of the semiconductor industry. Exports peaked at 126 billion USD in 2018, then dropped sharply to 93 billion in 2019 due to oversupply. After a modest recovery in 2020 at 99 billion, exports surged to 128 billion in 2021 and remained strong at 129 billion in 2022. 2023 saw another sharp decline to 99 billion before rebounding strongly to 142 billion in 2024 — a new record. This volatility reflects the boom-bust nature of the semiconductor market, where Korea's leadership in memory chips makes the economy particularly sensitive to global tech demand."
+    },
+    {
+      "id": "t3_028",
+      "subtype": "area_chart",
+      "category": "social",
+      "difficulty": "medium",
+      "title": "Korea's Single-Person Household Percentage",
+      "chart": {
+        "type": "area",
+        "data": [
+          {
+            "label": "2000",
+            "value": 15.5
+          },
+          {
+            "label": "2005",
+            "value": 20.0
+          },
+          {
+            "label": "2010",
+            "value": 23.9
+          },
+          {
+            "label": "2015",
+            "value": 27.2
+          },
+          {
+            "label": "2020",
+            "value": 31.7
+          },
+          {
+            "label": "2024",
+            "value": 35.5
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the trend in single-person households.",
+      "key_vocabulary": [
+        "living arrangement",
+        "increase",
+        "social change",
+        "implication"
+      ],
+      "sample_answer": "This area chart shows the percentage of single-person households in Korea from 2000 to 2024. The growth has been remarkable. Single-person households made up 15.5% in 2000, but this has more than doubled to 35.5% by 2024 — meaning over one in three households now have just one person. The increase has been steady, with roughly 4 percentage points added every five years. This reflects major social changes: later marriages, more divorces, longer lifespans creating more elderly alone, and changing values around independence. The trend has significant implications — for housing markets favoring smaller units, food industry adapting to single portions, and social services needing to address increased isolation."
+    },
+    {
+      "id": "t3_029",
+      "subtype": "area_chart",
+      "category": "climate",
+      "difficulty": "hard",
+      "title": "Seoul Average Annual Temperature (Celsius)",
+      "chart": {
+        "type": "area",
+        "data": [
+          {
+            "label": "1990",
+            "value": 12.2
+          },
+          {
+            "label": "1995",
+            "value": 12.4
+          },
+          {
+            "label": "2000",
+            "value": 12.6
+          },
+          {
+            "label": "2005",
+            "value": 13.0
+          },
+          {
+            "label": "2010",
+            "value": 13.2
+          },
+          {
+            "label": "2015",
+            "value": 13.6
+          },
+          {
+            "label": "2020",
+            "value": 13.8
+          },
+          {
+            "label": "2024",
+            "value": 14.2
+          }
+        ],
+        "unit": "°C"
+      },
+      "question": "Describe the temperature trend and its implications.",
+      "key_vocabulary": [
+        "warming",
+        "climate change",
+        "gradual",
+        "long-term"
+      ],
+      "sample_answer": "This area chart shows Seoul's average annual temperature from 1990 to 2024 in Celsius. The trend is unmistakable: temperatures have risen steadily from 12.2°C to 14.2°C over 34 years — a 2°C increase. While this may seem small, it's significant in climate terms. The warming has been gradual but consistent, with roughly 0.3-0.4°C increase per decade. This local warming aligns with global climate change trends. The implications are real: hotter summers with more heat-related illness, milder winters affecting agriculture and ecology, more frequent extreme weather events, and increased energy demand for cooling. Seoul, like other major cities, faces real climate adaptation challenges in coming decades."
+    },
+    {
+      "id": "t3_030",
+      "subtype": "scatter_plot",
+      "category": "education",
+      "difficulty": "hard",
+      "title": "Study Hours vs Test Scores (Sample of 12 Students)",
+      "chart": {
+        "type": "scatter",
+        "data": [
+          {
+            "x": 2,
+            "y": 65,
+            "label": "Student A"
+          },
+          {
+            "x": 3,
+            "y": 70,
+            "label": "Student B"
+          },
+          {
+            "x": 4,
+            "y": 75,
+            "label": "Student C"
+          },
+          {
+            "x": 5,
+            "y": 80,
+            "label": "Student D"
+          },
+          {
+            "x": 6,
+            "y": 78,
+            "label": "Student E"
+          },
+          {
+            "x": 7,
+            "y": 85,
+            "label": "Student F"
+          },
+          {
+            "x": 8,
+            "y": 88,
+            "label": "Student G"
+          },
+          {
+            "x": 8,
+            "y": 92,
+            "label": "Student H"
+          },
+          {
+            "x": 9,
+            "y": 90,
+            "label": "Student I"
+          },
+          {
+            "x": 10,
+            "y": 95,
+            "label": "Student J"
+          },
+          {
+            "x": 11,
+            "y": 93,
+            "label": "Student K"
+          },
+          {
+            "x": 12,
+            "y": 97,
+            "label": "Student L"
+          }
+        ],
+        "x_label": "Study Hours per Day",
+        "y_label": "Test Score"
+      },
+      "question": "Describe the relationship shown in this scatter plot.",
+      "key_vocabulary": [
+        "correlation",
+        "positive relationship",
+        "data point",
+        "cluster"
+      ],
+      "sample_answer": "This scatter plot shows the relationship between daily study hours and test scores for 12 students. There's a clear positive correlation — as study hours increase, test scores generally rise. Students studying only 2-3 hours scored 65-70, while those studying 10-12 hours scored 93-97. However, the relationship isn't perfectly linear. Some students who studied similar amounts achieved quite different scores — for example, students G and H both studied 8 hours but scored 88 and 92 respectively. This suggests other factors beyond study time matter, such as study quality, prior knowledge, and natural aptitude. Overall, the data confirms that more study time typically leads to better results, but not always proportionally."
+    },
+    {
+      "id": "t3_031",
+      "subtype": "donut_chart",
+      "category": "company",
+      "difficulty": "medium",
+      "title": "Wonik Employee Distribution by Department",
+      "chart": {
+        "type": "donut",
+        "data": [
+          {
+            "label": "R&D",
+            "value": 35
+          },
+          {
+            "label": "Manufacturing",
+            "value": 28
+          },
+          {
+            "label": "Sales/Marketing",
+            "value": 15
+          },
+          {
+            "label": "Quality",
+            "value": 10
+          },
+          {
+            "label": "Admin",
+            "value": 7
+          },
+          {
+            "label": "Other",
+            "value": 5
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the workforce composition and what it indicates.",
+      "key_vocabulary": [
+        "composition",
+        "department",
+        "function",
+        "balance"
+      ],
+      "sample_answer": "This donut chart shows Wonik's employee distribution by department. R&D forms the largest group at 35%, reflecting the company's focus on innovation and technical development. Manufacturing follows at 28%, supporting the company's production operations. Sales and Marketing accounts for 15%, while Quality assurance employs 10%. Administrative staff make up 7% and other support roles 5%. The data indicates Wonik is a technology-driven company — R&D and Manufacturing together account for 63% of employees, showing where the company's primary value creation happens. The relatively modest sales force suggests B2B relationships rather than mass-market sales, which is typical for an industrial group affiliate."
+    },
+    {
+      "id": "t3_032",
+      "subtype": "donut_chart",
+      "category": "lifestyle",
+      "difficulty": "easy",
+      "title": "How Koreans Spend Their Vacation",
+      "chart": {
+        "type": "donut",
+        "data": [
+          {
+            "label": "Travel domestic",
+            "value": 32
+          },
+          {
+            "label": "Travel abroad",
+            "value": 25
+          },
+          {
+            "label": "Stay home",
+            "value": 22
+          },
+          {
+            "label": "Visit family",
+            "value": 13
+          },
+          {
+            "label": "Work overtime",
+            "value": 8
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe how Koreans use their vacation time.",
+      "key_vocabulary": [
+        "leisure",
+        "destination",
+        "preference",
+        "staycation"
+      ],
+      "sample_answer": "This donut chart shows how Koreans spend their vacation time. Domestic travel is the most popular at 32%, followed by international travel at 25%. Together, travel accounts for over half of vacation activities. Interestingly, 22% choose to stay home — what's sometimes called a 'staycation' — likely seeking rest after busy work periods. Visiting family during vacation accounts for 13%, while a concerning 8% report still working overtime during their vacation days. The data shows Koreans value travel but also need genuine rest. The 8% working through vacation reflects the persistent culture of overwork, even when official time off is provided."
+    },
+    {
+      "id": "t3_033",
+      "subtype": "pie_chart",
+      "category": "social_media",
+      "difficulty": "easy",
+      "title": "Most Used Social Media in Korea (% of users)",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Kakao Talk",
+            "value": 38
+          },
+          {
+            "label": "Instagram",
+            "value": 22
+          },
+          {
+            "label": "YouTube",
+            "value": 18
+          },
+          {
+            "label": "Naver Cafe",
+            "value": 8
+          },
+          {
+            "label": "Facebook",
+            "value": 6
+          },
+          {
+            "label": "TikTok",
+            "value": 5
+          },
+          {
+            "label": "Other",
+            "value": 3
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the social media landscape in Korea.",
+      "key_vocabulary": [
+        "platform",
+        "user base",
+        "messaging",
+        "engagement"
+      ],
+      "sample_answer": "This pie chart shows the most used social media platforms in Korea. Kakao Talk dominates at 38%, which is unique to Korea — it functions as the country's primary messaging platform with strong social features. Instagram comes second at 22%, popular especially among younger users for photo and video sharing. YouTube follows at 18%, reflecting strong video consumption habits. Naver Cafe — Korea's community platform — holds 8%, while global platforms Facebook and TikTok have smaller shares at 6% and 5%. The data reveals Korea's distinct social media landscape, where local platforms like Kakao Talk and Naver Cafe remain strong against global competitors, unlike many other markets where Western platforms dominate."
+    },
+    {
+      "id": "t3_034",
+      "subtype": "bar_chart",
+      "category": "savings",
+      "difficulty": "medium",
+      "title": "Monthly Savings by Age Group in Korea (KRW)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "20s",
+            "value": 500000
+          },
+          {
+            "label": "30s",
+            "value": 1200000
+          },
+          {
+            "label": "40s",
+            "value": 1500000
+          },
+          {
+            "label": "50s",
+            "value": 1300000
+          },
+          {
+            "label": "60s",
+            "value": 600000
+          }
+        ],
+        "unit": "KRW"
+      },
+      "question": "Describe savings patterns across different age groups.",
+      "key_vocabulary": [
+        "life stage",
+        "earnings peak",
+        "financial preparation",
+        "retirement"
+      ],
+      "sample_answer": "This bar chart shows average monthly savings by age group in Korea. The pattern follows a typical life-cycle curve. People in their 20s save the least at 500,000 KRW monthly, likely due to lower starting salaries and student debt. Savings nearly triple in the 30s to 1.2 million KRW as careers advance. The 40s show peak savings at 1.5 million KRW, reflecting career peak earnings and intense focus on children's education and home purchase. The 50s see slight decline to 1.3 million, perhaps due to peak education expenses. Savings drop significantly in the 60s to 600,000 KRW as retirement begins. This pattern shows how earnings and life circumstances interact across decades."
+    },
+    {
+      "id": "t3_035",
+      "subtype": "line_chart",
+      "category": "exchange",
+      "difficulty": "medium",
+      "title": "USD/KRW Exchange Rate (Monthly Average, 2024)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "Jan",
+            "value": 1330
+          },
+          {
+            "label": "Feb",
+            "value": 1325
+          },
+          {
+            "label": "Mar",
+            "value": 1345
+          },
+          {
+            "label": "Apr",
+            "value": 1370
+          },
+          {
+            "label": "May",
+            "value": 1365
+          },
+          {
+            "label": "Jun",
+            "value": 1380
+          },
+          {
+            "label": "Jul",
+            "value": 1385
+          },
+          {
+            "label": "Aug",
+            "value": 1355
+          },
+          {
+            "label": "Sep",
+            "value": 1340
+          },
+          {
+            "label": "Oct",
+            "value": 1370
+          },
+          {
+            "label": "Nov",
+            "value": 1390
+          },
+          {
+            "label": "Dec",
+            "value": 1420
+          }
+        ],
+        "unit": "KRW per USD"
+      },
+      "question": "Describe the exchange rate trend.",
+      "key_vocabulary": [
+        "appreciation",
+        "depreciation",
+        "volatility",
+        "weaken"
+      ],
+      "sample_answer": "This line chart shows the USD/KRW exchange rate by month in 2024. The Korean Won weakened steadily against the dollar throughout the year. Starting at 1,330 KRW per USD in January, the rate fluctuated between 1,325 and 1,385 during the first three quarters, showing moderate volatility. The most significant weakening occurred in late 2024, with the rate jumping from 1,370 in October to 1,420 in December — a 4% depreciation in just two months. Over the full year, the Won lost about 7% against the dollar. This depreciation can boost Korean exports by making them cheaper internationally, but it also increases import costs and may contribute to inflation, particularly for fuel and food."
+    },
+    {
+      "id": "t3_036",
+      "subtype": "horizontal_bar",
+      "category": "consumer",
+      "difficulty": "easy",
+      "title": "Top Online Shopping Categories in Korea (%)",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "Food",
+            "value": 35
+          },
+          {
+            "label": "Fashion",
+            "value": 28
+          },
+          {
+            "label": "Beauty",
+            "value": 22
+          },
+          {
+            "label": "Electronics",
+            "value": 18
+          },
+          {
+            "label": "Home goods",
+            "value": 15
+          },
+          {
+            "label": "Books",
+            "value": 8
+          }
+        ],
+        "unit": "% of buyers"
+      },
+      "question": "Describe online shopping habits in Korea.",
+      "key_vocabulary": [
+        "e-commerce",
+        "category",
+        "consumer behavior",
+        "popular"
+      ],
+      "sample_answer": "This chart shows the most popular online shopping categories in Korea. Food leads at 35%, reflecting Korea's advanced grocery delivery services like Coupang Eats and Market Kurly. Fashion is second at 28%, followed by Beauty products at 22% — both benefiting from Korea's strong fashion and K-beauty industries. Electronics account for 18%, with home goods at 15% and books at just 8%. The data shows that even traditional in-person categories like food and beauty have shifted significantly online in Korea. The relatively low share for books reflects both lower overall reading rates and the fact that physical bookstores have largely been replaced by online sales."
+    },
+    {
+      "id": "t3_037",
+      "subtype": "pie_chart",
+      "category": "marketing",
+      "difficulty": "medium",
+      "title": "Marketing Budget Allocation in Korean Companies",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Digital advertising",
+            "value": 42
+          },
+          {
+            "label": "TV/Broadcast",
+            "value": 18
+          },
+          {
+            "label": "Influencer marketing",
+            "value": 15
+          },
+          {
+            "label": "Events/PR",
+            "value": 10
+          },
+          {
+            "label": "Print",
+            "value": 5
+          },
+          {
+            "label": "Outdoor",
+            "value": 6
+          },
+          {
+            "label": "Other",
+            "value": 4
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe how marketing budgets are allocated in Korea.",
+      "key_vocabulary": [
+        "allocate",
+        "digital shift",
+        "traditional media",
+        "channel"
+      ],
+      "sample_answer": "This pie chart shows marketing budget allocation among Korean companies. Digital advertising dominates at 42%, reflecting the shift to online channels for reaching consumers. TV and broadcast media follow at 18%, still significant but much smaller than a decade ago. Influencer marketing has emerged as a major category at 15%, showing how social media personalities have become important for brand promotion. Events and PR account for 10%, while traditional media like print holds just 5% and outdoor advertising 6%. The data clearly illustrates digital transformation in marketing — digital and influencer marketing combined make up nearly 60%, while traditional media has shrunk substantially. This trend will likely continue as consumer attention moves further online."
+    },
+    {
+      "id": "t3_038",
+      "subtype": "bar_chart",
+      "category": "manufacturing",
+      "difficulty": "medium",
+      "title": "Korea's Top Export Items 2024 (Billion USD)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "Semiconductors",
+            "value": 142
+          },
+          {
+            "label": "Cars",
+            "value": 73
+          },
+          {
+            "label": "Petrochemicals",
+            "value": 48
+          },
+          {
+            "label": "Steel",
+            "value": 36
+          },
+          {
+            "label": "Ships",
+            "value": 28
+          }
+        ],
+        "unit": "billion USD"
+      },
+      "question": "Describe Korea's export composition and discuss strengths.",
+      "key_vocabulary": [
+        "export economy",
+        "strategic industry",
+        "competitive",
+        "rely on"
+      ],
+      "sample_answer": "This bar chart shows Korea's top five export items in 2024. Semiconductors dominate at 142 billion USD — nearly double the value of the second-place item. Cars are the second largest export at 73 billion USD, including substantial contributions from our group. Petrochemicals follow at 48 billion, steel at 36 billion, and ships at 28 billion. Together, these top five represent the backbone of Korea's export economy. The dominance of semiconductors creates both strength and vulnerability — Korea is a global leader in memory chips, but heavily dependent on this volatile market. The diverse mix of high-tech, industrial, and traditional manufacturing reflects Korea's broad industrial capability."
+    },
+    {
+      "id": "t3_039",
+      "subtype": "line_chart",
+      "category": "tourism",
+      "difficulty": "medium",
+      "title": "Visitors to Jeju Island (Millions)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2018",
+            "value": 14.3
+          },
+          {
+            "label": "2019",
+            "value": 15.3
+          },
+          {
+            "label": "2020",
+            "value": 10.3
+          },
+          {
+            "label": "2021",
+            "value": 12.0
+          },
+          {
+            "label": "2022",
+            "value": 13.9
+          },
+          {
+            "label": "2023",
+            "value": 13.7
+          },
+          {
+            "label": "2024",
+            "value": 14.5
+          }
+        ],
+        "unit": "million"
+      },
+      "question": "Describe visitor trends to Jeju Island.",
+      "key_vocabulary": [
+        "domestic tourism",
+        "rebound",
+        "recovery",
+        "appeal"
+      ],
+      "sample_answer": "This line chart shows visitor numbers to Jeju Island from 2018 to 2024. Visitors peaked at 15.3 million in 2019 before the pandemic. The pandemic caused a sharp drop to 10.3 million in 2020 — a 33% decline due to travel restrictions and concerns. Recovery began in 2021 with 12 million visitors, mostly domestic Korean travelers since international travel was limited. Numbers continued climbing to 13.9 million in 2022, slightly dipped to 13.7 million in 2023, and reached 14.5 million in 2024. While still below the 2019 peak, Jeju has substantially recovered. The pattern reflects Jeju's strong appeal as a domestic destination during international travel restrictions, and its ongoing popularity as international tourism normalizes."
+    },
+    {
+      "id": "t3_040",
+      "subtype": "pie_chart",
+      "category": "demographics",
+      "difficulty": "easy",
+      "title": "Korea Foreign Population by Origin (2024)",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "Chinese (incl Korean-Chinese)",
+            "value": 42
+          },
+          {
+            "label": "Vietnamese",
+            "value": 12
+          },
+          {
+            "label": "Thai",
+            "value": 8
+          },
+          {
+            "label": "American",
+            "value": 6
+          },
+          {
+            "label": "Filipino",
+            "value": 6
+          },
+          {
+            "label": "Uzbek",
+            "value": 5
+          },
+          {
+            "label": "Japanese",
+            "value": 4
+          },
+          {
+            "label": "Other",
+            "value": 17
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe the foreign resident composition in Korea.",
+      "key_vocabulary": [
+        "immigrant",
+        "foreign resident",
+        "multicultural",
+        "diversity"
+      ],
+      "sample_answer": "This pie chart shows the composition of foreign residents in Korea by country of origin. Chinese nationals form the largest group at 42%, which includes ethnic Korean-Chinese workers. Vietnamese residents make up 12%, followed by Thai at 8%, Americans at 6%, and Filipinos at 6%. Uzbek and Japanese nationals account for 5% and 4% respectively, with other nationalities making up the remaining 17%. The data shows that despite Korea's traditionally homogeneous society, the foreign population is becoming increasingly diverse. Asian neighbors dominate, reflecting both economic migration and growing international marriages. Korea now has over 2.5 million foreign residents, making the country significantly more multicultural than a decade ago."
+    },
+    {
+      "id": "t3_086",
+      "subtype": "bar_chart",
+      "category": "global_economy",
+      "difficulty": "medium",
+      "title": "GDP per Capita Comparison 2024 (USD)",
+      "chart": {
+        "type": "bar",
+        "data": [
+          {
+            "label": "USA",
+            "value": 85000
+          },
+          {
+            "label": "Germany",
+            "value": 55000
+          },
+          {
+            "label": "South Korea",
+            "value": 35000
+          },
+          {
+            "label": "Japan",
+            "value": 40000
+          },
+          {
+            "label": "China",
+            "value": 13000
+          },
+          {
+            "label": "Vietnam",
+            "value": 4500
+          }
+        ],
+        "unit": "USD"
+      },
+      "question": "Compare GDP per capita across these countries.",
+      "key_vocabulary": [
+        "economic development",
+        "per capita",
+        "standard of living",
+        "developing"
+      ],
+      "sample_answer": "This bar chart compares GDP per capita across several countries in 2024. The USA leads at 85,000 USD, reflecting its position as the world's largest economy with high productivity. Germany follows at 55,000 USD, demonstrating European economic strength. Japan ranks third at 40,000 USD, slightly above South Korea at 35,000 USD. China, despite being the world's second-largest economy by total GDP, has only 13,000 USD per capita due to its huge population. Vietnam, as a developing economy, is at 4,500 USD. This data reveals the gap between developed and developing economies — the US has nearly 20 times Vietnam's per capita GDP. South Korea's position in the upper range reflects its successful industrialization from the 1960s onward, transforming from poverty to one of the world's most advanced economies in roughly 50 years."
+    },
+    {
+      "id": "t3_087",
+      "subtype": "pie_chart",
+      "category": "global_economy",
+      "difficulty": "medium",
+      "title": "World Manufacturing Output by Country (2024)",
+      "chart": {
+        "type": "pie",
+        "data": [
+          {
+            "label": "China",
+            "value": 31
+          },
+          {
+            "label": "USA",
+            "value": 16
+          },
+          {
+            "label": "Japan",
+            "value": 7
+          },
+          {
+            "label": "Germany",
+            "value": 6
+          },
+          {
+            "label": "India",
+            "value": 4
+          },
+          {
+            "label": "South Korea",
+            "value": 3
+          },
+          {
+            "label": "Others",
+            "value": 33
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Describe global manufacturing distribution.",
+      "key_vocabulary": [
+        "manufacturing hub",
+        "industrial output",
+        "production",
+        "share"
+      ],
+      "sample_answer": "This pie chart shows global manufacturing output share by country in 2024. China dominates at 31%, having become the world's manufacturing center over the past three decades. The USA holds 16%, maintaining its position as the second-largest manufacturer. Japan and Germany follow at 7% and 6% respectively, both known for high-quality, technology-intensive manufacturing. India has grown to 4% as it develops its industrial base, while South Korea at 3% punches above its weight given its small population. The remaining 33% is distributed among other countries. The data reveals two key trends: China's manufacturing dominance has reshaped global trade, and despite outsourcing trends, traditional manufacturing powers like the US, Japan, and Germany still maintain significant industrial capacity, particularly in advanced products."
+    },
+    {
+      "id": "t3_088",
+      "subtype": "line_chart",
+      "category": "company_growth",
+      "difficulty": "medium",
+      "title": "our group Annual Revenue (Trillion KRW)",
+      "chart": {
+        "type": "line",
+        "data": [
+          {
+            "label": "2018",
+            "value": 96
+          },
+          {
+            "label": "2019",
+            "value": 105
+          },
+          {
+            "label": "2020",
+            "value": 103
+          },
+          {
+            "label": "2021",
+            "value": 117
+          },
+          {
+            "label": "2022",
+            "value": 142
+          },
+          {
+            "label": "2023",
+            "value": 161
+          },
+          {
+            "label": "2024",
+            "value": 175
+          }
+        ],
+        "unit": "trillion KRW"
+      },
+      "question": "Describe Hyundai's revenue growth.",
+      "key_vocabulary": [
+        "growth trajectory",
+        "revenue",
+        "expansion",
+        "milestone"
+      ],
+      "sample_answer": "This line chart shows our group's annual revenue from 2018 to 2024 in trillion KRW. The trend is impressive growth, particularly in recent years. Revenue was 96 trillion KRW in 2018 and grew modestly to 105 trillion by 2019. The pandemic caused a slight dip to 103 trillion in 2020, but recovery was strong, reaching 117 trillion in 2021. Growth accelerated significantly from 2022, jumping to 142 trillion, then 161 trillion in 2023, and 175 trillion in 2024. This represents 82% growth over six years. The acceleration reflects successful product launches, strong international expansion especially in the US market, the transition to electric and hybrid vehicles, and effective management of supply chain challenges. As a global automotive giant, Hyundai's growth has been a key driver of Korea's export economy."
+    },
+    {
+      "id": "t3_089",
+      "subtype": "horizontal_bar",
+      "category": "consumer",
+      "difficulty": "easy",
+      "title": "Most Important Factors When Buying a Car",
+      "chart": {
+        "type": "horizontal_bar",
+        "data": [
+          {
+            "label": "Safety",
+            "value": 72
+          },
+          {
+            "label": "Price",
+            "value": 68
+          },
+          {
+            "label": "Fuel efficiency",
+            "value": 62
+          },
+          {
+            "label": "Brand reputation",
+            "value": 45
+          },
+          {
+            "label": "Design",
+            "value": 42
+          },
+          {
+            "label": "Technology features",
+            "value": 38
+          }
+        ],
+        "unit": "% of buyers"
+      },
+      "question": "Describe what consumers value when buying cars.",
+      "key_vocabulary": [
+        "consumer priority",
+        "purchase decision",
+        "preference",
+        "feature"
+      ],
+      "sample_answer": "This chart shows what factors car buyers consider most important. Safety is the top priority at 72%, reflecting growing consumer awareness of crash protection, driver assistance features, and overall vehicle safety ratings. Price follows closely at 68% — most buyers are budget-conscious. Fuel efficiency ranks third at 62%, especially relevant given rising fuel costs and environmental awareness. Brand reputation matters to 45%, while design appeals to 42% and technology features to 38%. The data reveals consumers are practical — safety, price, and efficiency dominate over aesthetic factors. For automakers like Hyundai, this means investing in safety technology, providing competitive pricing, and offering fuel-efficient options matters more than premium design alone. However, since multiple factors are considered together, success requires balancing all aspects."
+    },
+    {
+      "id": "t3_090",
+      "subtype": "stacked_bar",
+      "category": "lifestyle",
+      "difficulty": "hard",
+      "title": "How Koreans Spend Their Income (% of Monthly Income)",
+      "chart": {
+        "type": "stacked_bar",
+        "data": [
+          {
+            "label": "20s",
+            "housing": 30,
+            "food": 22,
+            "transport": 12,
+            "savings": 15,
+            "leisure": 12,
+            "other": 9
+          },
+          {
+            "label": "30s",
+            "housing": 32,
+            "food": 18,
+            "transport": 11,
+            "savings": 18,
+            "leisure": 10,
+            "other": 11
+          },
+          {
+            "label": "40s",
+            "housing": 25,
+            "food": 17,
+            "transport": 10,
+            "savings": 22,
+            "leisure": 8,
+            "other": 18
+          },
+          {
+            "label": "50s",
+            "housing": 22,
+            "food": 16,
+            "transport": 9,
+            "savings": 28,
+            "leisure": 9,
+            "other": 16
+          }
+        ],
+        "unit": "%"
+      },
+      "question": "Compare spending patterns across age groups.",
+      "key_vocabulary": [
+        "expenditure",
+        "lifestyle",
+        "savings rate",
+        "life stage"
+      ],
+      "sample_answer": "This stacked bar chart compares how Koreans of different ages allocate their income. The patterns reveal interesting life-stage differences. Housing costs are highest for those in their 30s at 32%, reflecting the period when many buy first homes. Food expenses decrease with age — from 22% for 20s down to 16% for 50s. Most strikingly, savings rates increase dramatically with age: from 15% in 20s to 28% in 50s. This reflects awareness of retirement preparation. The 'other' category — including education for children — peaks in the 40s at 18%, the prime childcare years. Leisure spending stays relatively stable across ages at 8-12%. Overall, the data shows financial maturity over time — better balanced spending in older groups with stronger savings habits, but the burden of children's education expenses in the 40s."
+    },
+    {
+      "id": "t3_photo_001",
+      "category": "office",
+      "image_url": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=900&h=600&fit=crop",
+      "image_description": "회의실에서 비즈니스 정장을 입은 4~5명의 사람들이 큰 테이블 주위에 모여 회의하고 있다. 한 사람이 노트북 화면을 가리키며 설명하고, 다른 사람들은 메모를 하거나 경청한다.",
+      "key_vocabulary": [
+        "meeting",
+        "colleagues",
+        "presentation",
+        "discuss",
+        "office",
+        "team"
+      ],
+      "sample_answer": "In this picture, I can see four or five people having a business meeting in a modern conference room. They are sitting around a large table, and one person is pointing at a laptop screen, possibly explaining a project or report. The others are listening attentively — some are taking notes while others are watching the screen. Everyone is dressed in professional attire, suggesting this is an important workplace discussion.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_002",
+      "category": "cafe",
+      "image_url": "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=900&h=600&fit=crop",
+      "image_description": "분주한 카페 내부. 약 6~8명의 손님들이 여러 테이블에 앉아 커피를 마시거나 노트북으로 일하고 있다. 카운터에서는 바리스타가 음료를 만들고, 한 손님이 주문을 기다리며 휴대폰을 보고 있다.",
+      "key_vocabulary": [
+        "cafe",
+        "customers",
+        "barista",
+        "laptop",
+        "coffee",
+        "chatting"
+      ],
+      "sample_answer": "This picture shows a busy cafe scene with around six to eight customers. Some people are sitting alone, focused on their laptops, while others are chatting with friends over coffee. At the counter, a barista is preparing drinks for a customer who is checking their phone while waiting. The atmosphere looks warm and lively, suggesting this is a popular spot for both work and socializing.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_003",
+      "category": "restaurant",
+      "image_url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&h=600&fit=crop",
+      "image_description": "저녁 시간 식당 내부. 여러 테이블에서 친구나 가족들이 음식을 나누며 대화하고 있다. 한 테이블에는 4명이 와인잔을 들고 건배하고 있고, 다른 테이블에는 한 가족이 어린 자녀와 함께 식사 중이다. 직원이 트레이를 들고 테이블 사이를 지나간다.",
+      "key_vocabulary": [
+        "restaurant",
+        "diners",
+        "waiter",
+        "toast",
+        "meal",
+        "atmosphere"
+      ],
+      "sample_answer": "This picture shows a restaurant scene during dinner time. Several groups of people are enjoying their meals at different tables. At one table, four friends are raising their wine glasses to make a toast, looking happy and animated. At another table, a family with young children is having dinner together. A waiter is moving between tables carrying a tray. The overall atmosphere is lively and convivial.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_004",
+      "category": "transport",
+      "image_url": "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=900&h=600&fit=crop",
+      "image_description": "지하철 객차 안의 출퇴근 시간 모습. 의자가 거의 다 차 있고, 일부 승객은 손잡이를 잡고 서 있다. 대부분이 휴대폰을 보거나 이어폰을 끼고 있고, 일부는 가방·서류를 들고 있어 비즈니스 통근자임을 알 수 있다.",
+      "key_vocabulary": [
+        "subway",
+        "passengers",
+        "commuters",
+        "rush hour",
+        "phones",
+        "standing"
+      ],
+      "sample_answer": "In this picture, I can see passengers inside a crowded subway train during rush hour. All the seats are taken, and several people are standing while holding onto the handrails. Most of the commuters are looking at their phones or wearing earphones, completely absorbed in their own worlds. Some are carrying briefcases and bags, suggesting they are office workers on their way to work. The scene captures a typical busy morning commute in a big city.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_005",
+      "category": "shopping",
+      "image_url": "https://images.unsplash.com/photo-1481437156560-3205f6a55735?w=900&h=600&fit=crop",
+      "image_description": "대형 마트 통로. 여러 쇼핑객이 카트를 밀며 진열대 사이를 다니고 있다. 한 어머니는 어린 자녀와 함께 과일을 고르고 있고, 다른 손님은 가격표를 확인 중이다. 한 직원은 매대를 정리하고 있다.",
+      "key_vocabulary": [
+        "supermarket",
+        "shoppers",
+        "cart",
+        "aisle",
+        "products",
+        "selecting"
+      ],
+      "sample_answer": "This picture shows people shopping at a large supermarket. Several customers are pushing carts down the aisles, looking at the products on the shelves. A mother is helping her young child pick out fresh fruit, while another shopper is carefully checking a price tag. An employee is busy restocking items on the shelves. The bright lighting and wide aisles suggest this is a modern, well-organized store.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_006",
+      "category": "park",
+      "image_url": "https://images.unsplash.com/photo-1473445730015-841f29a9490b?w=900&h=600&fit=crop",
+      "image_description": "맑은 날의 도시 공원. 가족과 친구들이 잔디밭에서 피크닉을 하거나 산책하고 있다. 한 부부는 강아지와 산책 중이고, 두 어린이가 공놀이를 하고 있다. 벤치에는 노부부가 앉아 책을 읽고 있다.",
+      "key_vocabulary": [
+        "park",
+        "picnic",
+        "walking",
+        "children",
+        "playing",
+        "relaxing"
+      ],
+      "sample_answer": "This picture captures a peaceful day at a city park. Many people are enjoying the pleasant weather. One couple is walking their dog along the path, while two young children are playing with a ball on the grass. An elderly couple is sitting on a bench reading books together. A few families have set up picnic blankets and are sharing food. The atmosphere is relaxed and family-friendly.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_007",
+      "category": "office",
+      "image_url": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&h=600&fit=crop",
+      "image_description": "오픈 오피스에서 3명의 동료가 한 모니터를 함께 보며 협업하고 있다. 한 사람은 마우스로 화면을 가리키고, 다른 한 사람은 노트에 적고 있다. 배경에는 다른 직원들도 각자 자리에서 일하는 모습이 보인다.",
+      "key_vocabulary": [
+        "coworkers",
+        "collaboration",
+        "monitor",
+        "discussing",
+        "open office",
+        "teamwork"
+      ],
+      "sample_answer": "In this picture, three coworkers are collaborating closely in front of a computer monitor at a modern open office. One person is pointing at the screen with a mouse, explaining something, while another is taking notes. They appear engaged and focused on solving a problem together. In the background, other employees can be seen working at their own desks. The scene illustrates a collaborative workplace culture.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_008",
+      "category": "market",
+      "image_url": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=900&h=600&fit=crop",
+      "image_description": "야외 농산물 시장. 여러 상인과 손님으로 붐비고 있다. 한 노점 앞에는 두 여성이 야채를 고르며 상인과 흥정 중이고, 다른 노점에서는 아버지가 아이에게 과일을 사주고 있다. 가게마다 다채로운 농산물이 진열되어 있다.",
+      "key_vocabulary": [
+        "market",
+        "vendors",
+        "customers",
+        "fresh produce",
+        "bargaining",
+        "colorful"
+      ],
+      "sample_answer": "This picture shows a lively outdoor farmers' market filled with vendors and customers. Two women are at a vegetable stall, carefully selecting produce and chatting with the vendor about prices. At another stall, a father is buying fruit for his young child. Each stall displays colorful, fresh produce. The market has a strong community feel, with people stopping to talk to each other as they shop.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_009",
+      "category": "classroom",
+      "image_url": "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=900&h=600&fit=crop",
+      "image_description": "대학 강의실. 약 20명의 학생들이 책상에 앉아 강의를 듣고 있다. 일부는 노트북으로, 일부는 종이 노트에 필기 중이다. 앞쪽 강단에서는 강사가 화면을 가리키며 설명하고 있다. 한 학생이 손을 들어 질문하려 한다.",
+      "key_vocabulary": [
+        "classroom",
+        "students",
+        "lecture",
+        "professor",
+        "taking notes",
+        "question"
+      ],
+      "sample_answer": "This picture shows a university classroom during a lecture. About twenty students are sitting at desks, listening attentively. Some are typing notes on their laptops while others prefer to write in paper notebooks. At the front, the professor is pointing at the screen, explaining a concept. One student in the middle row has raised her hand, ready to ask a question. The atmosphere suggests an engaged and active learning environment.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_010",
+      "category": "home",
+      "image_url": "https://images.unsplash.com/photo-1609220136736-443140cffec6?w=900&h=600&fit=crop",
+      "image_description": "거실에 모인 가족 4명. 부모와 두 자녀가 소파에 함께 앉아 보드게임을 즐기고 있다. 아버지는 카드를 들고 웃고 있고, 어머니는 자녀에게 게임 규칙을 설명한다. 어린 아들은 점수판을 가리키며 흥분한 표정이다.",
+      "key_vocabulary": [
+        "family",
+        "living room",
+        "board game",
+        "bonding",
+        "laughing",
+        "weekend"
+      ],
+      "sample_answer": "This picture shows a family of four spending quality time together in their living room. The parents and two children are sitting on the sofa playing a board game. The father is holding cards in his hand with a big smile, while the mother is explaining the rules to one of the children. The young son is excitedly pointing at the score sheet. The scene captures a warm, joyful family bonding moment, probably on a weekend evening.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_011",
+      "category": "gym",
+      "image_url": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&h=600&fit=crop",
+      "image_description": "헬스장에서 여러 사람들이 운동 중이다. 한 남성은 덤벨로 어깨 운동을 하고, 다른 여성은 트레드밀에서 달리고 있다. 트레이너는 한 회원의 자세를 교정해 주고 있다. 모두 운동복 차림.",
+      "key_vocabulary": [
+        "gym",
+        "workout",
+        "trainer",
+        "treadmill",
+        "weights",
+        "fitness"
+      ],
+      "sample_answer": "In this picture, I can see several people working out at a busy gym. One man is doing shoulder exercises with dumbbells, focused on his form. A woman is running on the treadmill, looking energetic. On the other side, a personal trainer is correcting a member's posture during squats. Everyone is wearing athletic clothing and looks focused on their workouts. The gym has modern equipment and a motivating atmosphere.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_012",
+      "category": "library",
+      "image_url": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=900&h=600&fit=crop",
+      "image_description": "도서관 열람실. 여러 학생들이 긴 테이블에 앉아 책을 읽거나 노트북으로 공부하고 있다. 한 학생은 두꺼운 책을 펴놓고 메모를 하고 있고, 다른 학생은 헤드폰을 끼고 영상 강의를 듣는다. 사서가 책을 정리하며 지나간다.",
+      "key_vocabulary": [
+        "library",
+        "students",
+        "studying",
+        "books",
+        "concentration",
+        "quiet"
+      ],
+      "sample_answer": "This picture shows a quiet library reading room with many students hard at work. Some are reading thick textbooks and taking detailed notes, while others are studying on their laptops. One student is wearing headphones, possibly watching an online lecture. A librarian is walking past, returning books to the tall shelves. The atmosphere is serious and focused, perfect for deep concentration before exams.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_013",
+      "category": "airport",
+      "image_url": "https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=900&h=600&fit=crop",
+      "image_description": "공항 출국 게이트 앞 대기 구역. 여러 여행객이 캐리어를 옆에 두고 의자에 앉아 휴대폰을 보거나 책을 읽고 있다. 한 가족은 어린 아이와 함께 게임을 하고, 양복 차림 사업가는 통화 중이다.",
+      "key_vocabulary": [
+        "airport",
+        "travelers",
+        "luggage",
+        "boarding gate",
+        "waiting",
+        "departure"
+      ],
+      "sample_answer": "This picture is taken at an airport boarding area. Many travelers are sitting in the rows of chairs with their luggage beside them. Some are checking their phones or reading books to pass the time. One family is keeping their young child entertained with a game. A businessman in a suit is on his phone, likely making a last call before boarding. The departure board on the wall shows multiple international flights, creating a busy travel atmosphere.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_014",
+      "category": "construction",
+      "image_url": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&h=600&fit=crop",
+      "image_description": "건설 현장. 안전모를 쓴 5~6명의 건설 작업자들이 일하고 있다. 두 명은 도면을 함께 보며 의논하고, 다른 작업자들은 자재를 운반하거나 측정을 한다. 배경에는 크레인과 건축 중인 건물이 보인다.",
+      "key_vocabulary": [
+        "construction site",
+        "workers",
+        "helmets",
+        "blueprints",
+        "building",
+        "crane"
+      ],
+      "sample_answer": "This picture shows a construction site with five or six workers actively engaged in their jobs. All of them are wearing safety helmets and bright reflective vests. Two workers are looking at blueprints together, pointing at details and discussing the plan. Other workers are carrying materials and measuring sections of the structure. In the background, a large crane is lifting steel beams, and the framework of a new building is taking shape. The scene captures a busy and well-organized work environment.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_015",
+      "category": "event",
+      "image_url": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07?w=900&h=600&fit=crop",
+      "image_description": "콘서트 현장. 수많은 관객이 무대 앞에 모여 손을 들고 환호하고 있다. 많은 사람들이 휴대폰으로 공연을 촬영 중이고, 일부는 어깨에 친구를 태우고 있다. 무대에서는 강한 조명과 연기 효과가 분위기를 띄운다.",
+      "key_vocabulary": [
+        "concert",
+        "crowd",
+        "audience",
+        "cheering",
+        "stage",
+        "lights"
+      ],
+      "sample_answer": "This picture captures the energy of a live concert. A huge crowd of people is gathered in front of the stage, with many raising their hands and cheering enthusiastically. A lot of audience members are holding up their phones to record the performance, and some friends are sitting on each other's shoulders for a better view. The stage is lit with bright colorful lights and smoke effects. The atmosphere is electric and emotional, suggesting a beloved artist is performing.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_016",
+      "category": "transport",
+      "image_url": "https://images.unsplash.com/photo-1473445730015-841f29a9490b?w=900&h=600&fit=crop",
+      "image_description": "기차역 플랫폼의 출퇴근 시간. 수십 명의 통근자들이 빠른 걸음으로 이동하고 있다. 일부는 휴대폰을 보고, 일부는 커피를 들고, 일부는 가방을 메고 있다. 한 가족은 큰 캐리어를 끌고 서로 어디로 갈지 의논 중이다.",
+      "key_vocabulary": [
+        "station",
+        "platform",
+        "commuters",
+        "rush hour",
+        "crowd",
+        "hurrying"
+      ],
+      "sample_answer": "This picture shows a train station platform during the morning rush hour. Dozens of commuters are walking quickly in different directions. Some are checking their phones for the time, others are holding coffee cups, and many are carrying briefcases. In the middle, a family with large suitcases is standing and discussing where to go next, perhaps tourists who are confused by the busy station. The motion blur in the image emphasizes how fast everyone is moving.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_017",
+      "category": "office",
+      "image_url": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&h=600&fit=crop",
+      "image_description": "현대적인 오픈 오피스. 10여 명의 직원들이 책상에서 일하고 있다. 일부는 모니터를 보며 타이핑 중이고, 두 동료는 일어서서 화이트보드 앞에서 토론하고 있다. 한 직원은 헤드셋을 끼고 화상회의 중인 듯하다.",
+      "key_vocabulary": [
+        "open office",
+        "employees",
+        "monitors",
+        "whiteboard",
+        "video call",
+        "modern"
+      ],
+      "sample_answer": "This picture shows a modern open-plan office filled with employees. About ten people are working at their desks, with most focused on their monitors and typing. Two coworkers are standing in front of a whiteboard, having an animated discussion — one of them is drawing a diagram. Another employee is wearing a headset and looks engaged in a video call. The office has clean modern design with plenty of natural light, suggesting a productive and collaborative tech-company atmosphere.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_018",
+      "category": "restaurant",
+      "image_url": "https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=900&h=600&fit=crop",
+      "image_description": "분주한 카페테리아 내부. 거의 모든 테이블이 손님으로 차 있다. 한 그룹은 노트북으로 함께 일하고 있고, 두 친구는 마주 앉아 활기차게 대화 중이다. 카운터에서는 바리스타가 음료를 만들고 손님들이 줄을 서 있다.",
+      "key_vocabulary": [
+        "cafe",
+        "customers",
+        "barista",
+        "queue",
+        "chatting",
+        "busy"
+      ],
+      "sample_answer": "This picture shows a busy cafe with most tables occupied. One group is gathered around a laptop, possibly working on a project together. Two friends are facing each other and chatting energetically over their drinks. At the counter, a barista is preparing drinks while three customers wait in line to order. The cafe has a warm and inviting atmosphere with wooden furniture, and it clearly serves as a popular neighborhood gathering spot.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_019",
+      "category": "shopping",
+      "image_url": "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&h=600&fit=crop",
+      "image_description": "쇼핑몰 내부. 여러 쇼핑객이 다층 통로를 따라 움직이며 매장 사이를 구경하고 있다. 어머니와 십대 딸이 함께 옷가게에서 옷을 보고, 한 그룹의 친구들은 쇼핑백을 들고 웃으며 에스컬레이터를 타고 올라간다.",
+      "key_vocabulary": [
+        "mall",
+        "shoppers",
+        "storefronts",
+        "escalator",
+        "shopping bags",
+        "friends"
+      ],
+      "sample_answer": "This picture shows the inside of a large multi-level shopping mall full of shoppers. A mother and her teenage daughter are looking at clothes together at a fashion store, with the daughter holding up a shirt. Nearby, a group of friends carrying multiple shopping bags is laughing as they ride the escalator up to the next floor. The brightly lit stores and wide walkways make the mall feel exciting and busy, likely a weekend shopping day.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    },
+    {
+      "id": "t3_photo_020",
+      "category": "sports",
+      "image_url": "https://images.unsplash.com/photo-1459865264687-595d652de67e?w=900&h=600&fit=crop",
+      "image_description": "축구 경기장 관중석. 수많은 관중이 좌석을 가득 메우고 응원을 하고 있다. 앞줄 팬들은 단체로 같은 색 유니폼을 입고 있고, 한 그룹은 큰 깃발을 흔들고 있다. 일부는 핸드폰으로 사진을 찍고 있다.",
+      "key_vocabulary": [
+        "stadium",
+        "fans",
+        "spectators",
+        "cheering",
+        "jerseys",
+        "match"
+      ],
+      "sample_answer": "This picture shows a packed sports stadium during an important match. Thousands of fans fill every seat in the stands, creating a sea of color. In the front rows, supporters are dressed in matching team jerseys, and one group is waving a huge flag enthusiastically. Several fans are holding up their phones to take photos of the action on the field. The atmosphere looks intense and exciting — clearly an important game between popular rival teams.",
+      "subtype": "photo",
+      "difficulty": "medium",
+      "question": "Describe this picture in detail. Focus on the people — who they are, what they are doing, and what the overall atmosphere is."
+    }
+  ],
+  "statistics": {
+    "total": 65,
+    "charts": 45,
+    "photos": 20
+  }
+}

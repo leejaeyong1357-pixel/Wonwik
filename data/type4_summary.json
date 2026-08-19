@@ -1,0 +1,813 @@
+{
+  "type": 4,
+  "name": "Passage Summary",
+  "description": "시험관이 3-5문장의 짧은 지문을 2회 읽어준 후, 응시자는 60초 이내에 핵심 내용을 영어로 요약. 도입과 결론을 파악하고 주요 내용을 본인의 표현으로 재구성하는 것이 핵심.",
+  "total": 100,
+  "format": {
+    "passage_length": "3-5 sentences, 70-100 words",
+    "summary_target": "2-3 sentences, 30-50 words",
+    "time_limit": "60 seconds"
+  },
+  "passages": [
+    {
+      "id": "t4_001",
+      "category": "business",
+      "difficulty": "easy",
+      "passage": "Many companies are now adopting a hybrid work model, where employees split their time between the office and home. Research shows this arrangement improves productivity and employee satisfaction, while reducing commuting time. However, some companies have found that fully remote teams struggle with collaboration and company culture. As a result, most large corporations are settling on a balance of two to three days in the office each week.",
+      "key_points": ["hybrid work model becoming popular", "improves productivity and satisfaction", "fully remote has collaboration issues", "2-3 office days common"],
+      "sample_summary": "Companies are increasingly adopting hybrid work models, combining office and home work, which improves productivity but balances the collaboration problems of fully remote work. Most large companies now require two to three days in the office weekly."
+    },
+    {
+      "id": "t4_002",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "Global supply chains have become increasingly complex over the past two decades, with companies sourcing parts from dozens of countries. While this approach reduces costs, recent disruptions caused by the pandemic and geopolitical tensions have exposed major vulnerabilities. Many companies are now shifting toward regional supply chains, even if it means higher costs. This shift is changing where factories are built and how products are manufactured worldwide.",
+      "key_points": ["global supply chains expanded for cost savings", "pandemic and politics exposed weaknesses", "shift to regional supply chains", "changing global manufacturing"],
+      "sample_summary": "Global supply chains became complex to reduce costs, but recent disruptions revealed major weaknesses. Companies are now shifting to regional supply chains, even at higher costs, fundamentally changing global manufacturing patterns."
+    },
+    {
+      "id": "t4_003",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "Subscription-based business models have transformed many industries, from streaming services to software and even cars. Customers pay monthly fees instead of purchasing products outright, creating predictable revenue for companies. While consumers gain access to wider variety without large upfront costs, critics argue subscription fatigue is growing as people accumulate too many monthly fees. Companies must now provide consistent value to retain subscribers in this competitive market.",
+      "key_points": ["subscriptions transformed many industries", "predictable revenue for companies", "subscription fatigue concern", "must provide consistent value"],
+      "sample_summary": "Subscription business models offer companies predictable revenue and give consumers more access, but subscription fatigue is rising as people accumulate too many monthly fees. Companies must consistently provide value to retain subscribers."
+    },
+    {
+      "id": "t4_004",
+      "category": "business",
+      "difficulty": "easy",
+      "passage": "Customer reviews on websites like Amazon and Naver have become extremely influential in purchasing decisions. Studies show over 90% of shoppers read reviews before buying, and even a small drop in average rating can significantly impact sales. This power has led some businesses to manipulate reviews through fake positive feedback or paid reviewers. As a result, platforms are using advanced AI systems to detect and remove fraudulent reviews to maintain consumer trust.",
+      "key_points": ["customer reviews highly influential", "90% read reviews", "manipulation problem", "AI detecting fake reviews"],
+      "sample_summary": "Customer reviews heavily influence buying decisions, with over 90% of shoppers reading them. This power has led to fake review manipulation, prompting platforms to use AI systems to detect and remove fraudulent reviews."
+    },
+    {
+      "id": "t4_005",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "Mergers and acquisitions in the automotive industry have accelerated as companies prepare for the electric vehicle era. Traditional automakers are partnering with technology companies and battery makers to share the massive costs of new development. Some smaller car companies have completely merged with larger rivals to survive. Industry analysts predict the number of independent automakers will significantly decrease over the next decade as consolidation continues.",
+      "key_points": ["automotive M&A accelerating", "EV transition costs", "partnerships and mergers", "fewer independent makers expected"],
+      "sample_summary": "The automotive industry is rapidly consolidating through mergers and partnerships to share the massive costs of transitioning to electric vehicles. Analysts expect the number of independent automakers to decrease significantly in the coming decade."
+    },
+    {
+      "id": "t4_006",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "The rise of remote work has fundamentally changed real estate markets in major cities. Demand for downtown office space has declined sharply, while residential property in suburbs and smaller cities has increased. Some major companies have reduced their office footprint by 30 to 50 percent, freeing up capital but creating challenges for commercial real estate landlords. Cities are now reconsidering how to use empty downtown buildings, with some being converted into housing.",
+      "key_points": ["remote work changed real estate", "office demand down, suburb demand up", "companies reducing office space", "downtown buildings being converted"],
+      "sample_summary": "Remote work has reshaped real estate markets — office space demand has dropped while suburban housing demand rose. Many companies have cut office space significantly, prompting some cities to convert empty office buildings into housing."
+    },
+    {
+      "id": "t4_007",
+      "category": "business",
+      "difficulty": "easy",
+      "passage": "Small businesses are increasingly turning to social media to compete with large corporations. Platforms like Instagram and TikTok allow them to reach customers without expensive traditional advertising. A clever video can attract millions of views in days, providing exposure that previously required huge budgets. However, success requires creating engaging content consistently, which can be time-consuming for small business owners already juggling multiple responsibilities.",
+      "key_points": ["small businesses use social media", "low-cost reach", "viral potential", "time-consuming for owners"],
+      "sample_summary": "Small businesses are using social media platforms like Instagram and TikTok to compete with large corporations through cost-effective marketing. While viral content offers huge reach, creating consistent engaging content is time-consuming for already busy owners."
+    },
+    {
+      "id": "t4_008",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "Corporate sustainability reporting has become mandatory in many countries, requiring companies to disclose their environmental and social impact. Investors increasingly use this information to make decisions, putting pressure on companies to actually improve, not just report. Companies that fail to demonstrate genuine sustainability efforts risk losing both investment and customer loyalty. This shift represents a fundamental change in how business performance is measured.",
+      "key_points": ["sustainability reporting mandatory", "investors using ESG data", "real action required", "performance measurement changing"],
+      "sample_summary": "Mandatory sustainability reporting requirements are pushing companies to demonstrate real environmental and social impact, not just produce reports. Companies failing to genuinely improve risk losing investors and customers, fundamentally changing how business performance is measured."
+    },
+    {
+      "id": "t4_009",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "Korea's chaebol companies, the large family-controlled conglomerates that dominate the economy, are facing pressure to reform their governance structures. Critics argue that these complex ownership arrangements often favor founding families over minority shareholders. Recently, some major chaebols have started simplifying their structures and improving transparency. However, change has been slow, and questions remain about whether the chaebol model is sustainable in the modern global economy.",
+      "key_points": ["chaebol reform pressure", "complex ownership criticized", "some simplification happening", "slow change overall"],
+      "sample_summary": "Korea's chaebol companies face pressure to reform their complex governance that critics say favors founding families over other shareholders. While some simplification is occurring, change has been slow and questions remain about the model's future."
+    },
+    {
+      "id": "t4_010",
+      "category": "business",
+      "difficulty": "medium",
+      "passage": "Inflation has become a major concern globally, affecting everything from grocery prices to interest rates. Central banks have raised interest rates to control inflation, but this also makes loans more expensive for businesses and consumers. As a result, some sectors like real estate and technology have slowed dramatically. Economists debate whether inflation is now under control or whether further interest rate adjustments will be needed in coming months.",
+      "key_points": ["global inflation concern", "central banks raise rates", "real estate and tech slowed", "future uncertain"],
+      "sample_summary": "Global inflation has prompted central banks to raise interest rates, which has slowed sectors like real estate and technology. Economists remain divided on whether inflation is controlled or whether further rate increases will be needed."
+    },
+    {
+      "id": "t4_011",
+      "category": "technology",
+      "difficulty": "easy",
+      "passage": "Artificial intelligence has rapidly evolved from a research topic to a tool used by hundreds of millions of people daily. Chatbots like ChatGPT can write essays, answer questions, and even help with creative projects. While these tools improve productivity, concerns are growing about their impact on jobs and education. Some workers worry about being replaced, while teachers struggle to detect AI-generated assignments.",
+      "key_points": ["AI rapidly grew in everyday use", "chatbots widely used", "productivity benefit", "concerns about jobs and education"],
+      "sample_summary": "AI tools like ChatGPT have rapidly evolved from research to daily use by millions, boosting productivity but raising concerns. Workers worry about job replacement while teachers struggle to detect AI-generated student work."
+    },
+    {
+      "id": "t4_012",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "Quantum computing, once considered far in the future, is now showing practical applications. Major tech companies and governments are investing billions in this technology, which could solve problems impossible for traditional computers. Potential applications include drug discovery, climate modeling, and breaking current encryption methods. However, practical quantum computers remain expensive and difficult to operate, limiting their use to specialized research applications for now.",
+      "key_points": ["quantum computing advancing", "huge investments", "potential breakthrough applications", "still expensive and complex"],
+      "sample_summary": "Quantum computing is rapidly advancing with massive investment, offering potential breakthroughs in drug discovery, climate modeling, and encryption. However, the technology remains expensive and complex, limiting it to specialized research uses for now."
+    },
+    {
+      "id": "t4_013",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "The development of autonomous vehicles has progressed significantly, with several companies now operating commercial self-driving taxi services in select cities. These vehicles use cameras, sensors, and AI to navigate traffic and respond to obstacles. Supporters point to potential safety improvements, as human error causes most accidents. However, regulatory questions, technical challenges in unusual conditions, and public trust remain significant obstacles to widespread adoption.",
+      "key_points": ["autonomous vehicles progressing", "commercial services starting", "safety potential", "obstacles to wide adoption"],
+      "sample_summary": "Self-driving vehicles are advancing with commercial taxi services launching in some cities. While supporters cite safety benefits over human-error accidents, regulatory issues, technical challenges, and public trust remain barriers to wide adoption."
+    },
+    {
+      "id": "t4_014",
+      "category": "technology",
+      "difficulty": "easy",
+      "passage": "Smartphone screen time has reached alarming levels, with the average person spending over four hours daily on their device. Research links excessive use to mental health problems, particularly among teenagers. Many tech companies have added features helping users monitor their usage, but critics say these tools are inadequate. Some countries are now considering regulations to limit screen time, especially for younger users.",
+      "key_points": ["excessive smartphone use", "mental health impact", "monitoring features added", "regulations being considered"],
+      "sample_summary": "Average smartphone use exceeds four hours daily, linked to mental health problems especially in teenagers. Tech companies have added usage monitoring tools, but critics call them inadequate, and some countries are considering screen time regulations."
+    },
+    {
+      "id": "t4_015",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "5G mobile networks have rolled out across most major Korean cities, offering speeds many times faster than 4G. The technology enables new applications like cloud gaming, augmented reality, and real-time vehicle communication. However, the rollout has been slower in rural areas, creating a digital divide between cities and countryside. Most users in major cities haven't noticed dramatic changes since most apps don't yet take advantage of 5G's full capabilities.",
+      "key_points": ["5G rolled out in cities", "new applications enabled", "rural areas behind", "limited current use"],
+      "sample_summary": "5G networks are widely available in Korean cities, enabling new applications, but rural areas lag behind, creating a digital divide. Most users haven't noticed major changes since current apps don't fully utilize 5G's capabilities."
+    },
+    {
+      "id": "t4_016",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "Cybersecurity threats have evolved into a major business and national security concern. Ransomware attacks, where criminals lock company data and demand payment, increased significantly in recent years. Even major corporations and hospitals have been victims, sometimes paying millions of dollars to recover. Companies are now investing heavily in security training and protection systems, recognizing that cyber attacks pose existential threats to their operations.",
+      "key_points": ["cybersecurity threats growing", "ransomware attacks rising", "major companies victimized", "heavy security investment"],
+      "sample_summary": "Cybersecurity threats, especially ransomware attacks, have become serious business and security concerns. Even major companies have paid millions to recover from attacks, leading to substantial investments in protection systems and security training."
+    },
+    {
+      "id": "t4_017",
+      "category": "technology",
+      "difficulty": "easy",
+      "passage": "Cloud computing has fundamentally changed how businesses manage technology. Instead of maintaining their own servers, companies rent computing power from providers like Amazon, Microsoft, and Google. This approach reduces costs and allows businesses to scale up or down quickly. However, concerns about data security, vendor dependency, and ongoing subscription costs have led some companies to reconsider whether moving everything to the cloud was the right decision.",
+      "key_points": ["cloud computing changed IT", "cost reduction and flexibility", "data security concerns", "some reconsidering"],
+      "sample_summary": "Cloud computing has transformed business IT by replacing expensive servers with rental computing power, reducing costs and increasing flexibility. However, concerns about security, vendor dependency, and ongoing costs are causing some companies to reconsider full cloud adoption."
+    },
+    {
+      "id": "t4_018",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "Virtual reality and augmented reality technologies have struggled to achieve mainstream adoption despite years of development. Major companies have released expensive headsets aimed at gaming, work, and entertainment, but consumer interest has been limited. The technologies suffer from issues like high cost, motion sickness, and lack of compelling content. Industry experts now believe widespread adoption may require another generation of improvements in hardware and content quality.",
+      "key_points": ["VR/AR slow adoption", "expensive headsets released", "limited interest", "more improvements needed"],
+      "sample_summary": "Virtual and augmented reality technologies have struggled with mainstream adoption due to high costs, motion sickness, and limited content. Industry experts believe widespread use requires further improvements in hardware and content quality."
+    },
+    {
+      "id": "t4_019",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "Battery technology has become critical to multiple industries, from smartphones to electric vehicles to home energy storage. Lithium-ion batteries dominate currently but face limitations in energy density, charging speed, and resource availability. Researchers worldwide are developing alternatives including solid-state batteries, which promise greater safety and capacity. Korean companies like LG Energy Solution and Samsung SDI are at the forefront of this critical industry.",
+      "key_points": ["battery tech critical", "lithium-ion limitations", "solid-state alternatives", "Korean companies leading"],
+      "sample_summary": "Battery technology is critical for industries from phones to electric vehicles. While current lithium-ion batteries have limitations, researchers are developing alternatives like solid-state batteries, with Korean companies leading this important industry."
+    },
+    {
+      "id": "t4_020",
+      "category": "technology",
+      "difficulty": "medium",
+      "passage": "Online privacy has become increasingly difficult to maintain as companies collect more data about users. Information about your browsing, purchases, and even location is tracked and used for targeted advertising. New regulations like the European GDPR and similar laws in other regions give users more control over their data. However, many users still don't fully understand what information is being collected or how to protect their privacy effectively.",
+      "key_points": ["online privacy challenging", "extensive data collection", "new regulations help", "users still unaware"],
+      "sample_summary": "Maintaining online privacy is increasingly difficult as companies collect extensive user data. New regulations like GDPR provide more user control, but many people still don't fully understand what's collected or how to protect themselves."
+    },
+    {
+      "id": "t4_021",
+      "category": "health",
+      "difficulty": "easy",
+      "passage": "Walking is one of the most underrated forms of exercise. Studies show that walking 30 minutes a day can significantly reduce the risk of heart disease, diabetes, and depression. Unlike intense workouts, walking requires no special equipment and is sustainable for people of all ages and fitness levels. Many doctors now recommend daily walking as the foundation of a healthy lifestyle, especially for office workers who sit for long hours.",
+      "key_points": ["walking underrated", "30 minutes daily", "broad health benefits", "doctors recommend"],
+      "sample_summary": "Walking is highly beneficial — just 30 minutes daily significantly reduces risks of heart disease, diabetes, and depression. Doctors recommend it as a foundation of healthy living, especially for sedentary office workers."
+    },
+    {
+      "id": "t4_022",
+      "category": "health",
+      "difficulty": "medium",
+      "passage": "Mental health awareness has grown significantly in recent years, particularly among younger generations. More people are openly discussing conditions like anxiety and depression, reducing the stigma that once kept many from seeking help. However, demand for mental health services has outpaced availability, with long waiting lists in many countries. Companies and schools are starting to provide better mental health resources, recognizing the impact on productivity and learning.",
+      "key_points": ["mental health awareness growing", "less stigma", "demand exceeds supply", "workplace and school programs"],
+      "sample_summary": "Mental health awareness has grown significantly, reducing stigma and encouraging more people to seek help. However, demand for services exceeds availability, prompting companies and schools to provide better mental health resources."
+    },
+    {
+      "id": "t4_023",
+      "category": "health",
+      "difficulty": "medium",
+      "passage": "The rise of processed food consumption has been linked to growing obesity rates globally. Processed foods often contain excessive sugar, salt, and unhealthy fats while lacking important nutrients. Many countries are implementing measures like sugar taxes and clearer food labeling to encourage healthier choices. However, processed foods remain convenient and inexpensive, making them difficult to avoid for busy families with limited time and budget.",
+      "key_points": ["processed food linked to obesity", "lack nutrients, excess bad ingredients", "government measures", "convenience hard to beat"],
+      "sample_summary": "Processed food consumption is linked to rising obesity. Governments are implementing measures like sugar taxes and clearer labeling, but processed foods remain convenient and cheap, making them difficult to avoid for busy families."
+    },
+    {
+      "id": "t4_024",
+      "category": "health",
+      "difficulty": "easy",
+      "passage": "Sleep is essential for physical and mental health, yet many adults consistently get less than the recommended seven to nine hours. Modern lifestyles with smartphones, work pressures, and entertainment options have made quality sleep increasingly rare. Sleep deprivation contributes to numerous health problems including weight gain, weakened immunity, and decreased cognitive function. Doctors increasingly emphasize that prioritizing sleep is as important as diet and exercise.",
+      "key_points": ["sleep essential", "many sleep insufficiently", "lifestyle interferes", "as important as diet/exercise"],
+      "sample_summary": "Quality sleep is essential, but many adults don't get enough due to modern lifestyle factors. Sleep deprivation causes various health problems, leading doctors to emphasize sleep as equally important as diet and exercise."
+    },
+    {
+      "id": "t4_025",
+      "category": "health",
+      "difficulty": "medium",
+      "passage": "Telemedicine, where patients consult doctors remotely via video, expanded rapidly during the pandemic and has remained popular. It provides convenient access to healthcare, especially for people in remote areas or with mobility issues. Studies show telemedicine effectively handles many routine consultations and follow-up appointments. However, some conditions still require in-person examination, and not all patients are comfortable with technology, creating ongoing challenges.",
+      "key_points": ["telemedicine grew rapidly", "convenient access", "effective for routine care", "limitations remain"],
+      "sample_summary": "Telemedicine expanded during the pandemic and remains popular, providing convenient healthcare access. It works well for routine consultations, but some conditions need in-person care and not all patients are comfortable with technology."
+    },
+    {
+      "id": "t4_026",
+      "category": "health",
+      "difficulty": "medium",
+      "passage": "Aging populations are creating significant healthcare challenges in many developed countries. Korea is aging particularly rapidly, with the proportion of people over 65 expected to double within two decades. This trend will increase demand for elderly care services, pension systems, and chronic disease management. Governments are exploring various solutions including encouraging healthier lifestyles, increasing immigration, and developing technology to assist elderly care.",
+      "key_points": ["aging populations strain healthcare", "Korea aging rapidly", "demand for services growing", "various government responses"],
+      "sample_summary": "Aging populations, especially in Korea, are creating major healthcare challenges as people over 65 double in coming decades. Governments are responding through healthier lifestyle promotion, immigration policies, and elderly care technology."
+    },
+    {
+      "id": "t4_027",
+      "category": "health",
+      "difficulty": "easy",
+      "passage": "Drinking enough water is essential for health, yet many people don't consume the recommended amount daily. Dehydration can cause headaches, fatigue, and difficulty concentrating, even when mild. Water needs vary by person, climate, and activity level, but the common guideline is about eight cups daily. Setting reminders or using water bottles with markings can help people maintain proper hydration throughout the day.",
+      "key_points": ["water essential but undervalued", "dehydration symptoms", "8 cups guideline", "tools help maintain habit"],
+      "sample_summary": "Adequate water intake is essential for health, but many people don't drink enough, causing headaches and fatigue. While individual needs vary, the general guideline is about eight cups daily, often helped by reminders or marked water bottles."
+    },
+    {
+      "id": "t4_028",
+      "category": "health",
+      "difficulty": "medium",
+      "passage": "Gut health has gained significant attention in medical research, with scientists discovering connections between gut bacteria and overall health. The bacteria in our intestines influence digestion, immune function, and even mental health. Probiotics, prebiotics, and fermented foods like kimchi and yogurt are now widely recommended for maintaining gut health. However, much remains unknown, and personalized approaches based on individual gut composition are still being developed.",
+      "key_points": ["gut health growing research area", "broad health connections", "fermented foods recommended", "personalized approach developing"],
+      "sample_summary": "Research has shown gut bacteria significantly influence digestion, immunity, and even mental health. Fermented foods like kimchi and yogurt are recommended, though personalized approaches based on individual gut composition are still being developed."
+    },
+    {
+      "id": "t4_029",
+      "category": "health",
+      "difficulty": "medium",
+      "passage": "Antibiotic resistance has become a major global health threat, with bacteria evolving to survive medications that once treated them effectively. Overuse and misuse of antibiotics in both medicine and agriculture have accelerated this problem. Some infections that were easily treatable are becoming dangerous again, especially in hospitals. The World Health Organization warns this could return us to an era where simple infections become deadly without urgent action.",
+      "key_points": ["antibiotic resistance major threat", "overuse caused problem", "infections becoming dangerous", "WHO warns of consequences"],
+      "sample_summary": "Antibiotic resistance from overuse has become a major global health threat, with previously treatable infections becoming dangerous. The WHO warns we could return to an era where simple infections are deadly without urgent action."
+    },
+    {
+      "id": "t4_030",
+      "category": "health",
+      "difficulty": "easy",
+      "passage": "Regular exercise provides benefits beyond physical fitness. Studies consistently show that physical activity improves mood, reduces anxiety, enhances sleep quality, and even improves memory. The good news is that even moderate exercise like brisk walking provides significant benefits — you don't need intense workouts. Doctors recommend at least 150 minutes of moderate exercise weekly, which can be split into shorter daily sessions to fit busy schedules.",
+      "key_points": ["exercise has many benefits", "mental and cognitive benefits", "moderate exercise enough", "150 minutes weekly target"],
+      "sample_summary": "Regular exercise offers benefits beyond fitness, improving mood, sleep, and memory. Even moderate activity like brisk walking is effective, with doctors recommending 150 minutes weekly, which can fit into busy schedules in shorter sessions."
+    },
+    {
+      "id": "t4_031",
+      "category": "environment",
+      "difficulty": "easy",
+      "passage": "Plastic pollution has become a serious global environmental problem. Millions of tons of plastic waste enter the oceans every year, harming marine life and entering the food chain. Many countries have banned single-use plastic bags and straws to reduce this problem. Consumers and companies are also exploring alternatives like reusable containers, biodegradable materials, and reduced packaging.",
+      "key_points": ["plastic pollution serious", "millions of tons in oceans", "many countries ban single-use", "alternatives developing"],
+      "sample_summary": "Plastic pollution has become a serious global problem, with millions of tons entering oceans yearly. Many countries have banned single-use plastics, while consumers and companies explore alternatives like reusable containers and biodegradable materials."
+    },
+    {
+      "id": "t4_032",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Climate change is causing more frequent extreme weather events worldwide. Heat waves, severe storms, droughts, and floods are happening with greater intensity and at unusual times. These events damage property, disrupt agriculture, and threaten human lives. Adapting to these changes requires significant investment in infrastructure, agriculture, and emergency response systems, while also working to reduce the emissions causing climate change.",
+      "key_points": ["climate change causes extreme weather", "various event types worsening", "human and economic damage", "adaptation and mitigation needed"],
+      "sample_summary": "Climate change is causing more frequent and intense extreme weather events globally, damaging property and threatening lives. Addressing this requires major investment in infrastructure and emergency response while reducing emissions causing the problem."
+    },
+    {
+      "id": "t4_033",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Renewable energy adoption is accelerating worldwide, with solar and wind power becoming cheaper than fossil fuels in many regions. Countries are setting ambitious targets to phase out coal and gas plants in favor of clean alternatives. However, challenges remain including the intermittent nature of renewables and the need for better energy storage. Innovation in batteries and grid technology is critical to managing these challenges successfully.",
+      "key_points": ["renewable energy growing", "cheaper than fossil fuels", "intermittency challenge", "innovation needed"],
+      "sample_summary": "Renewable energy is accelerating globally, with solar and wind becoming cheaper than fossil fuels. However, challenges like intermittent supply require innovation in battery storage and grid technology to successfully transition away from coal and gas."
+    },
+    {
+      "id": "t4_034",
+      "category": "environment",
+      "difficulty": "easy",
+      "passage": "Deforestation continues to destroy critical ecosystems worldwide, particularly in tropical regions like the Amazon. Forests are cleared for agriculture, cattle ranching, and logging, releasing enormous amounts of stored carbon. Beyond climate impact, deforestation eliminates habitats for countless species and disrupts water cycles. International efforts to combat deforestation include conservation funding, sustainable certification, and consumer awareness campaigns.",
+      "key_points": ["deforestation continues", "Amazon especially affected", "climate and biodiversity impact", "various combat efforts"],
+      "sample_summary": "Deforestation, especially in tropical regions like the Amazon, continues to destroy ecosystems and release stored carbon. International efforts to combat it include conservation funding, sustainable certification programs, and consumer awareness campaigns."
+    },
+    {
+      "id": "t4_035",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Air pollution remains a serious problem in many major cities, including Seoul. Fine particulate matter from vehicles, industry, and surrounding regions can damage respiratory and cardiovascular health. Korean residents now regularly check air quality apps before going outside, especially during spring when yellow dust from China increases. The government has implemented measures including emission standards and incentives for electric vehicles to address this issue.",
+      "key_points": ["air pollution affects Seoul", "health damage", "people check air quality", "government measures"],
+      "sample_summary": "Air pollution remains serious in cities like Seoul, damaging health and prompting residents to check air quality regularly. The government has implemented emission standards and EV incentives to address the problem."
+    },
+    {
+      "id": "t4_036",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Water scarcity affects billions of people globally, with the situation worsening due to climate change and population growth. Even developed countries face increasing water stress in some regions during dry seasons. Solutions include water conservation, improved irrigation efficiency, desalination, and rainwater harvesting. Korea is investing in better water management infrastructure to handle changing rainfall patterns and growing demand.",
+      "key_points": ["water scarcity global problem", "worsening from climate change", "various solutions exist", "Korea investing"],
+      "sample_summary": "Water scarcity affects billions worldwide and is worsening due to climate change and population growth. Solutions include conservation, efficient irrigation, desalination, and improved infrastructure, with Korea investing in better water management."
+    },
+    {
+      "id": "t4_037",
+      "category": "environment",
+      "difficulty": "easy",
+      "passage": "Electric vehicles are seen as a key solution to reducing transportation emissions, which account for a significant share of global pollution. Sales of EVs have grown dramatically in recent years, supported by government incentives and improving technology. However, building enough charging infrastructure remains a challenge, especially in apartments and rural areas. Korea is rapidly expanding charging networks to support the growing EV market.",
+      "key_points": ["EVs key for emissions", "rapid sales growth", "charging infrastructure challenge", "Korea expanding network"],
+      "sample_summary": "Electric vehicles are crucial for reducing transportation emissions, with sales growing rapidly thanks to incentives and better technology. Charging infrastructure remains a challenge, but Korea is rapidly expanding its charging network."
+    },
+    {
+      "id": "t4_038",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Food waste represents a major environmental and economic problem globally. About one-third of all food produced is wasted, while millions of people go hungry. Wasted food in landfills produces methane, a powerful greenhouse gas. Reducing food waste at home, in restaurants, and in food supply chains could significantly reduce environmental impact while addressing food security. Many countries are implementing programs to reduce waste at all levels.",
+      "key_points": ["one-third of food wasted", "methane from waste", "many areas to address", "programs being implemented"],
+      "sample_summary": "About one-third of food produced globally is wasted, contributing to methane emissions while millions go hungry. Reducing waste in homes, restaurants, and supply chains could significantly reduce environmental impact, prompting programs at all levels."
+    },
+    {
+      "id": "t4_039",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Microplastics — tiny plastic particles smaller than 5 millimeters — have been found everywhere from deep ocean trenches to human blood. These particles come from breakdown of larger plastics, synthetic textiles, and various industrial sources. Researchers are still studying their health impacts but believe they could be linked to various health problems. Reducing plastic production and finding alternatives are essential to address this pervasive contamination.",
+      "key_points": ["microplastics everywhere", "various sources", "health impact unclear but concerning", "reduction needed"],
+      "sample_summary": "Microplastics have been found everywhere from oceans to human blood, originating from broken-down plastics and synthetic textiles. While health impacts are still being studied, researchers believe they could cause problems, requiring reduced plastic production."
+    },
+    {
+      "id": "t4_040",
+      "category": "environment",
+      "difficulty": "medium",
+      "passage": "Korea has committed to reaching carbon neutrality by 2050, joining other major economies in setting ambitious climate goals. Achieving this requires transforming energy production, transportation, and industry. Critics argue current policies aren't sufficient to reach the goal, while industry worries about competitive impacts. The transition will require enormous investment but also create new opportunities in clean technology industries.",
+      "key_points": ["Korea's 2050 carbon neutral goal", "broad transformation needed", "criticism and concerns", "investment and opportunity"],
+      "sample_summary": "Korea has committed to carbon neutrality by 2050, requiring transformation of energy, transportation, and industry. Critics question if current policies are sufficient, while industry worries about competitiveness, though the transition creates clean technology opportunities."
+    },
+    {
+      "id": "t4_041",
+      "category": "education",
+      "difficulty": "easy",
+      "passage": "Online learning platforms have transformed education access globally. Anyone with internet can now take courses from top universities, learn new skills, or earn certificates. Platforms like Coursera, edX, and many others offer thousands of courses, often free or affordable. This democratization of education is particularly valuable for working professionals who need to update their skills regularly while balancing job and family responsibilities.",
+      "key_points": ["online platforms transformed education", "wide access", "many platforms available", "valuable for working adults"],
+      "sample_summary": "Online learning platforms like Coursera have transformed education by making courses from top universities accessible globally, often affordably. This is particularly valuable for working professionals who need to update skills while managing other responsibilities."
+    },
+    {
+      "id": "t4_042",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "Korean education has long emphasized intense academic competition, particularly preparation for the college entrance exam. While this approach has produced strong test scores, critics argue it limits creativity and causes excessive stress for students. Recent reforms aim to reduce pressure and develop more diverse skills, but progress has been slow. Many families still send children to private academies after school, maintaining the demanding study culture.",
+      "key_points": ["intense Korean education", "strong test scores but stress", "reform attempts slow", "private academies remain"],
+      "sample_summary": "Korea's intense academic competition produces high test scores but limits creativity and causes student stress. Recent reforms aim to reduce pressure, but progress has been slow and private academy culture continues despite official efforts."
+    },
+    {
+      "id": "t4_043",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "Language learning has been revolutionized by mobile apps and AI tools. Apps like Duolingo make consistent practice easy, while AI conversation partners help learners practice speaking without anxiety. However, true fluency still requires actual interaction with native speakers and immersion in the language. The best approach combines digital tools for vocabulary and grammar with real conversation practice.",
+      "key_points": ["language learning transformed", "apps and AI helpful", "real practice still needed", "combined approach best"],
+      "sample_summary": "Mobile apps and AI tools have revolutionized language learning by making practice convenient and reducing anxiety. However, true fluency still requires real conversation with native speakers, making a combined approach most effective."
+    },
+    {
+      "id": "t4_044",
+      "category": "education",
+      "difficulty": "easy",
+      "passage": "Reading habits have changed significantly with digital devices. People read more text than ever, but it's mostly short content like social media posts and news articles. Reading full books, especially fiction, has declined in many populations. Researchers worry this trend reduces deep reading abilities and the patience needed for complex texts. Encouraging book reading, especially in children, remains an important educational priority.",
+      "key_points": ["reading habits changed", "more short content less books", "deep reading concern", "encouragement important"],
+      "sample_summary": "Reading habits have shifted from books to short digital content like social media posts. Researchers worry this reduces deep reading skills and patience for complex texts, making book reading encouragement especially important for children."
+    },
+    {
+      "id": "t4_045",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "Skills-based hiring is becoming more common as employers focus less on traditional credentials. Companies like Google, IBM, and Apple have eliminated four-year degree requirements for many positions. This trend opens opportunities for people who learned through bootcamps, online courses, or self-study. However, traditional degrees still matter in many industries, and the shift toward skills-based hiring is gradual rather than universal.",
+      "key_points": ["skills-based hiring growing", "degree requirements dropped", "alternative paths valid", "still gradual change"],
+      "sample_summary": "Major companies are increasingly hiring based on skills rather than degrees, opening opportunities for those who learned through bootcamps or self-study. However, traditional degrees still matter in many fields, with this shift being gradual."
+    },
+    {
+      "id": "t4_046",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "Early childhood education has been shown to have lasting impacts on lifelong success. Children who attend quality preschool programs show better academic outcomes, social skills, and even health later in life. However, access to high-quality early education varies dramatically based on family income and location. Countries that invest more in universal early education often see better educational outcomes overall.",
+      "key_points": ["early education has lasting impact", "various benefits", "unequal access", "investment correlates with outcomes"],
+      "sample_summary": "Quality early childhood education has lasting impacts on academic success, social skills, and health. Access varies widely based on family income and location, but countries investing in universal early education generally see better outcomes."
+    },
+    {
+      "id": "t4_047",
+      "category": "education",
+      "difficulty": "easy",
+      "passage": "Studying abroad provides experiences that classroom learning cannot replicate. Students develop language skills, cultural understanding, and personal independence by living in another country. The networking opportunities and global perspective often benefit careers throughout life. However, study abroad is expensive, and many students miss the chance. Increasing scholarship opportunities could make this valuable experience available to more students.",
+      "key_points": ["study abroad unique benefits", "language and cultural learning", "career value", "cost limits access"],
+      "sample_summary": "Studying abroad provides language skills, cultural understanding, and global perspective that classroom learning cannot match. However, the high cost limits access, and increasing scholarships could make this valuable experience available to more students."
+    },
+    {
+      "id": "t4_048",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "STEM education — science, technology, engineering, and math — has been a major focus for governments worldwide. Korea has invested heavily in STEM, producing strong scientists and engineers. However, critics argue this focus has come at the expense of humanities and arts education, which develop different but equally important skills. The current discussion focuses on finding the right balance between technical skills and broader liberal arts education.",
+      "key_points": ["STEM major focus", "Korea invests heavily", "humanities concern", "balance debated"],
+      "sample_summary": "STEM education has been a major focus, producing strong scientists and engineers. However, critics argue this has reduced humanities education, prompting debate about balancing technical skills with broader liberal arts education."
+    },
+    {
+      "id": "t4_049",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "University tuition costs have risen dramatically in many countries, leading to massive student debt problems. Some countries provide free or low-cost higher education, while others rely heavily on tuition payments. The debate continues about how to fund universities while ensuring access for students from various economic backgrounds. Korea's tuition is moderate, but high living costs and education-related expenses still burden families significantly.",
+      "key_points": ["tuition rising globally", "different country approaches", "access debate", "Korea moderate but family burden"],
+      "sample_summary": "Rising university tuition has caused massive student debt, prompting debate about funding higher education. While Korea's tuition is moderate, high living costs and related expenses still significantly burden families."
+    },
+    {
+      "id": "t4_050",
+      "category": "education",
+      "difficulty": "medium",
+      "passage": "Lifelong learning has become essential as careers change rapidly throughout people's lives. The skills needed today may be obsolete in ten years, requiring continuous learning and adaptation. Many companies now provide training and development programs, recognizing that workforce skills are critical to competitiveness. Individuals must also take personal responsibility for keeping their skills current through self-directed learning.",
+      "key_points": ["lifelong learning essential", "skills become obsolete", "company training programs", "personal responsibility"],
+      "sample_summary": "Lifelong learning is essential as skills become obsolete and careers change rapidly. Companies provide training programs while individuals must also take personal responsibility for continuous self-directed learning to stay competitive."
+    },
+    {
+      "id": "t4_051",
+      "category": "society",
+      "difficulty": "easy",
+      "passage": "The aging population in Korea is creating significant social changes. Many elderly Koreans now live alone as traditional multi-generational households decline. This shift has increased loneliness and created demand for senior services and support systems. The government and private sector are developing various programs including community centers, home care services, and technology to help older citizens maintain quality of life.",
+      "key_points": ["aging Korea", "more elderly alone", "loneliness concern", "services developing"],
+      "sample_summary": "Korea's aging population has shifted away from traditional multi-generational households, leaving many elderly living alone with increased loneliness. The government and private sector are developing community centers, home care, and technology services to support seniors."
+    },
+    {
+      "id": "t4_052",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Income inequality has grown in many developed countries over recent decades. While average wealth has increased, the gap between the richest and average citizens has widened significantly. This trend creates social tension, reduces economic mobility, and contributes to political polarization. Various policies including progressive taxation, education investment, and minimum wage adjustments have been proposed, but consensus on solutions remains elusive.",
+      "key_points": ["inequality growing", "various social problems", "policy proposals", "no consensus"],
+      "sample_summary": "Income inequality has grown significantly in developed countries, creating social tension and reducing mobility. Various policies including progressive taxation and education investment have been proposed, but consensus on effective solutions remains elusive."
+    },
+    {
+      "id": "t4_053",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Korean society is becoming more multicultural as foreign residents now exceed two and a half million. Marriage migration, foreign workers, and international students have transformed many communities. Integration policies have evolved, with the government providing language education, cultural orientation, and anti-discrimination protections. However, prejudice and integration challenges remain, requiring continued effort from both immigrants and Korean society.",
+      "key_points": ["Korea more multicultural", "various foreign groups", "integration policies", "challenges remain"],
+      "sample_summary": "Korea has become more multicultural with over 2.5 million foreign residents, prompting integration policies including language education and anti-discrimination protections. However, prejudice and integration challenges still require effort from both sides."
+    },
+    {
+      "id": "t4_054",
+      "category": "society",
+      "difficulty": "easy",
+      "passage": "Korea's declining birth rate has reached critical levels, threatening long-term economic and social stability. Many young couples cite high housing costs, education expenses, and work pressure as reasons to delay or avoid having children. Government incentives including cash payments, parental leave, and childcare subsidies have been implemented, but birth rates continue falling. Comprehensive solutions addressing root causes may be needed.",
+      "key_points": ["birth rate critical", "young people cite costs and pressure", "incentives haven't worked", "deeper solutions needed"],
+      "sample_summary": "Korea's birth rate has reached critical levels with young couples citing housing costs and work pressure as reasons. Government incentives have not reversed the trend, suggesting deeper solutions addressing root causes may be needed."
+    },
+    {
+      "id": "t4_055",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Gender equality in the workplace has improved in Korea but significant gaps remain. Women now represent half of new university graduates, but face challenges in career advancement, especially after marriage and children. The gender pay gap in Korea is among the largest in developed countries. Companies are implementing more inclusive policies, but cultural and structural changes proceed slowly.",
+      "key_points": ["gender equality improved but gaps", "career advancement challenges", "large pay gap", "slow change"],
+      "sample_summary": "While gender equality has improved in Korean workplaces, significant gaps remain in career advancement and pay, especially for women with children. Companies are implementing inclusive policies, but cultural change proceeds slowly."
+    },
+    {
+      "id": "t4_056",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Urban-rural divides have grown in many countries, with economic opportunity, services, and population concentrating in major cities. Smaller communities face declining populations, school closures, and reduced healthcare access. Some countries are implementing policies to encourage rural development, including incentives for businesses and remote workers. The COVID pandemic temporarily reversed some urbanization trends, but the long-term direction remains uncertain.",
+      "key_points": ["urban-rural divide growing", "rural areas declining", "various incentive policies", "pandemic temporarily reversed"],
+      "sample_summary": "Urban-rural divides have grown with opportunities concentrating in cities while rural areas decline. Various policies attempt to encourage rural development, and the pandemic temporarily reversed urbanization trends, though long-term direction remains uncertain."
+    },
+    {
+      "id": "t4_057",
+      "category": "society",
+      "difficulty": "easy",
+      "passage": "Volunteering benefits both communities and volunteers themselves. Communities receive needed services like food distribution, mentoring, and environmental work. Volunteers often report increased life satisfaction, new friendships, and sense of purpose. In Korea, corporate volunteer programs are growing as companies recognize their social responsibility role. Even small contributions like a few hours monthly can make significant differences when many people participate.",
+      "key_points": ["volunteering mutual benefit", "community needs", "volunteer satisfaction", "corporate programs growing"],
+      "sample_summary": "Volunteering benefits both communities and volunteers themselves, providing needed services while bringing satisfaction and connections. Corporate volunteer programs are growing in Korea as companies recognize their social responsibility, with even small contributions making collective differences."
+    },
+    {
+      "id": "t4_058",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Religious affiliation has declined significantly in many developed countries, including Korea. Younger generations are less likely to identify with traditional religious institutions, though many remain spiritually inclined. This shift affects everything from holiday traditions to charitable giving patterns. Some religious groups are adapting by emphasizing community service and modern relevance to attract younger members.",
+      "key_points": ["religious affiliation declining", "spirituality remains", "various impacts", "religions adapting"],
+      "sample_summary": "Religious affiliation has declined in many countries including Korea, though spirituality often remains. This affects various social patterns, and some religious groups are adapting by emphasizing community service to attract younger members."
+    },
+    {
+      "id": "t4_059",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Social media has transformed how people connect and access information, but its impact remains debated. While it enables global connections and rapid news sharing, it has also created problems including misinformation, mental health issues, and political polarization. Many experts call for better regulation and digital literacy education. Individual users are also becoming more conscious of their social media use and its effects on wellbeing.",
+      "key_points": ["social media transformed connection", "benefits and problems", "regulation called for", "individual awareness growing"],
+      "sample_summary": "Social media has transformed communication globally but created problems like misinformation and mental health issues. Experts call for better regulation and digital literacy education, while individual users grow more conscious of usage effects."
+    },
+    {
+      "id": "t4_060",
+      "category": "society",
+      "difficulty": "medium",
+      "passage": "Korea's military service requirement remains a defining feature of male Korean life. Most young men serve approximately 18 months, creating both costs and benefits for individuals and society. Discussions about alternative service options, shortening duration, or even moving to volunteer military have continued. The security situation on the Korean peninsula makes major changes difficult, but the system continues evolving to address modern needs.",
+      "key_points": ["military service required", "18 month duration", "various reform discussions", "security context complicates change"],
+      "sample_summary": "Korea's mandatory 18-month military service for men remains a defining experience with debated costs and benefits. Various reform discussions continue, but the security situation makes major changes difficult while the system gradually evolves."
+    },
+    {
+      "id": "t4_061",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Space exploration has entered a new era with private companies playing major roles alongside government agencies. SpaceX has dramatically reduced launch costs through reusable rockets, opening possibilities for more ambitious missions. Plans for returning humans to the Moon and eventually Mars are being seriously developed. Korea is also investing in space capabilities, recently launching its own satellites using domestically developed rockets.",
+      "key_points": ["new space era with private companies", "reusable rockets cheaper", "Moon and Mars plans", "Korea joining"],
+      "sample_summary": "Space exploration has entered a new era with private companies like SpaceX dramatically reducing costs through reusable rockets. Plans for Moon and Mars missions are advancing, and Korea is joining by developing domestic launch capabilities."
+    },
+    {
+      "id": "t4_062",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Gene therapy and CRISPR technology are transforming medicine by allowing precise editing of DNA. Diseases that were previously untreatable, including some cancers and inherited conditions, are now showing promising treatments. While these advances are exciting, ethical concerns about modifying human genes, especially in embryos, continue to be debated. Regulations are evolving to balance medical benefits with potential risks of unintended consequences.",
+      "key_points": ["gene editing advancing", "treats serious diseases", "ethical concerns", "evolving regulations"],
+      "sample_summary": "Gene therapy and CRISPR technology are revolutionizing medicine by treating previously untreatable diseases. However, ethical concerns about modifying human genes drive ongoing debates and evolving regulations to balance benefits with potential risks."
+    },
+    {
+      "id": "t4_063",
+      "category": "science",
+      "difficulty": "easy",
+      "passage": "Climate scientists have observed accelerating changes in Arctic ice and global sea levels. Ice that previously remained frozen year-round is now melting in summer, while sea levels are rising at increasing rates. These changes threaten coastal cities worldwide, including parts of major Korean coastal areas. Urgent action to reduce emissions and adapt to changes is needed to protect vulnerable populations.",
+      "key_points": ["Arctic ice melting faster", "sea level rising", "coastal cities threatened", "urgent action needed"],
+      "sample_summary": "Climate scientists observe accelerating Arctic ice melting and rising sea levels, threatening coastal cities including parts of Korea. Urgent action to reduce emissions and adapt to changes is needed to protect vulnerable populations."
+    },
+    {
+      "id": "t4_064",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Artificial intelligence is being applied to scientific research, accelerating discoveries in many fields. AI systems can analyze massive datasets, identify patterns, and generate hypotheses faster than human researchers alone. Medical research, particularly drug discovery and disease diagnosis, has benefited significantly. While AI augments human researchers, scientific judgment about what questions to ask and how to interpret results still requires human expertise.",
+      "key_points": ["AI accelerating science", "good with large data", "medical research benefits", "human judgment still essential"],
+      "sample_summary": "AI is accelerating scientific research by analyzing massive datasets and identifying patterns, with significant benefits in medical research like drug discovery. While AI augments researchers, human judgment in choosing questions and interpreting results remains essential."
+    },
+    {
+      "id": "t4_065",
+      "category": "science",
+      "difficulty": "hard",
+      "passage": "Nuclear fusion, often called the ultimate clean energy source, recently achieved a major milestone with experiments producing more energy than they consumed. Unlike fission used in current nuclear plants, fusion produces no long-lived radioactive waste and has essentially unlimited fuel. However, commercial fusion power remains decades away, requiring further breakthroughs in materials and engineering. The recent progress has renewed hope for solving humanity's long-term energy needs.",
+      "key_points": ["fusion breakthrough achieved", "cleaner than fission", "commercial use distant", "hope renewed"],
+      "sample_summary": "Nuclear fusion recently achieved a milestone of producing more energy than consumed, offering a cleaner alternative to current fission with no long-lived waste. However, commercial fusion remains decades away, requiring further breakthroughs."
+    },
+    {
+      "id": "t4_066",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Research on the human brain has revealed surprising plasticity throughout life. Previously, scientists thought the adult brain was largely fixed, but newer research shows it continues to form new connections in response to learning and experience. This finding has important implications for education, rehabilitation after brain injuries, and preventing cognitive decline in aging. Activities that challenge the brain — learning new skills, social interaction, physical exercise — support healthy brain function.",
+      "key_points": ["brain plasticity throughout life", "previous assumption wrong", "implications for education and aging", "challenging activities help"],
+      "sample_summary": "Research has shown the brain remains plastic throughout life, continuing to form connections through learning and experience. This has important implications for education and aging, with challenging activities, social interaction, and exercise supporting healthy brain function."
+    },
+    {
+      "id": "t4_067",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Vaccines have been one of medicine's greatest successes, preventing diseases that once killed millions of people. mRNA technology, developed rapidly for COVID-19 vaccines, is now being applied to other diseases including cancer. This new approach allows faster vaccine development and customization for specific patients. However, vaccine hesitancy in some populations remains a concern, limiting the public health benefits these scientific advances can provide.",
+      "key_points": ["vaccines medical success", "mRNA technology breakthrough", "broader applications coming", "hesitancy concern"],
+      "sample_summary": "Vaccines have been one of medicine's greatest successes, and mRNA technology developed for COVID is now being applied to other diseases including cancer. However, vaccine hesitancy in some populations limits the public health benefits."
+    },
+    {
+      "id": "t4_068",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Materials science is enabling new technologies through advanced materials with unique properties. Graphene, perovskite, and various nano-materials are creating possibilities in electronics, energy, and medicine. Korean researchers have made significant contributions in this field, particularly in battery materials and semiconductors. As traditional materials reach their limits, these innovative substances open new technological frontiers for the next generation of products.",
+      "key_points": ["advanced materials enabling tech", "various examples", "Korean contributions", "new frontiers"],
+      "sample_summary": "Materials science is enabling new technologies through advanced materials like graphene with unique properties. Korean researchers contribute significantly to this field, particularly in batteries and semiconductors, opening new technological frontiers."
+    },
+    {
+      "id": "t4_069",
+      "category": "science",
+      "difficulty": "easy",
+      "passage": "Renewable energy storage has become as important as generation. Solar and wind energy produce power intermittently, requiring efficient storage to make them reliable. Battery technology has improved dramatically, with prices dropping while capacity increases. New approaches like pumped hydro storage and chemical batteries are also being developed. These advances are critical to fully transitioning electricity grids to renewable sources.",
+      "key_points": ["energy storage important", "battery improvements", "various approaches", "essential for renewables"],
+      "sample_summary": "Energy storage has become as important as renewable generation since solar and wind are intermittent. Battery technology has improved dramatically with various other storage approaches developing, all essential for fully transitioning to renewable electricity grids."
+    },
+    {
+      "id": "t4_070",
+      "category": "science",
+      "difficulty": "medium",
+      "passage": "Scientific publishing is undergoing major changes with the push for open access. Traditional journals required expensive subscriptions, limiting access to scientific knowledge. Open access models make research freely available to anyone, accelerating scientific progress globally. However, this shift creates new business model challenges and concerns about quality control. The transition continues with various models being tested across different research fields.",
+      "key_points": ["open access movement", "traditional model limits access", "open helps progress", "new challenges"],
+      "sample_summary": "Open access publishing is replacing expensive traditional journals, making scientific research freely available and accelerating global progress. However, this transition creates business model challenges and quality control concerns being addressed through various new approaches."
+    },
+    {
+      "id": "t4_071",
+      "category": "culture",
+      "difficulty": "easy",
+      "passage": "Korean culture has gained massive global popularity through what's called the 'Korean Wave' or Hallyu. K-pop, Korean dramas, films, and food are now widely consumed worldwide. This cultural export brings significant economic benefits and shapes how others perceive Korea. The success has prompted other countries to study Korea's approach to cultural promotion, while also creating high expectations for continued excellence.",
+      "key_points": ["Korean Wave globally popular", "various cultural products", "economic and perception benefits", "high expectations"],
+      "sample_summary": "Korean culture has gained massive global popularity through K-pop, dramas, films, and food, bringing economic benefits and shaping perceptions of Korea. The success has prompted other countries to study Korea's approach while creating high expectations."
+    },
+    {
+      "id": "t4_072",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Traditional crafts in many countries face decline as modern lifestyles change demand and fewer young people learn these skills. Korean traditional crafts like ceramics, paper making, and textiles risk being lost as masters age without successors. Governments and cultural organizations are working to preserve these traditions through education programs, exhibitions, and tourism initiatives. Connecting traditional crafts with modern design can also create new markets for traditional skills.",
+      "key_points": ["traditional crafts declining", "Korean examples", "preservation efforts", "modern adaptation"],
+      "sample_summary": "Traditional crafts including Korean ceramics and textiles face decline as masters age without successors. Governments and cultural organizations work to preserve these traditions through education and exhibitions, while connecting traditional crafts with modern design creates new markets."
+    },
+    {
+      "id": "t4_073",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Movie theaters faced existential challenges during the pandemic when many films released directly to streaming services. While theaters have recovered partially, audiences have grown comfortable watching films at home. Theaters are adapting by emphasizing premium experiences — luxury seating, better sound, exclusive content — to differentiate from home viewing. The film industry continues evolving as theatrical and streaming releases coexist.",
+      "key_points": ["theaters challenged by pandemic", "streaming alternative", "premium experience response", "industry evolving"],
+      "sample_summary": "Movie theaters faced major challenges during the pandemic as streaming offered home alternatives. Theaters are adapting by emphasizing premium experiences like luxury seating and superior sound to differentiate from home viewing as the industry evolves."
+    },
+    {
+      "id": "t4_074",
+      "category": "culture",
+      "difficulty": "easy",
+      "passage": "Food culture has become increasingly global, with cuisines from around the world available in major cities. Korean cuisine, once primarily eaten by Koreans abroad, now attracts diverse fans worldwide. Restaurant trends like Korean BBQ, kimchi-based dishes, and Korean fried chicken have spread internationally. This globalization of food cultures enriches dining experiences while sometimes raising concerns about authenticity and adaptation.",
+      "key_points": ["food culture globalizing", "Korean cuisine spreading", "specific examples", "authenticity questions"],
+      "sample_summary": "Food culture has globalized with cuisines from around the world available everywhere, and Korean food has found international popularity. While this enriches dining experiences, it sometimes raises concerns about authenticity and cultural adaptation."
+    },
+    {
+      "id": "t4_075",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Museum experiences are evolving to engage modern audiences. Traditional displays with text descriptions are being supplemented or replaced with interactive technology, virtual reality, and personalized digital guides. Korean museums are particularly innovative in this area, blending traditional collections with cutting-edge presentation. These changes help younger generations connect with historical and cultural content that might otherwise seem distant or boring.",
+      "key_points": ["museums modernizing", "interactive technology", "Korean innovation", "engaging younger audiences"],
+      "sample_summary": "Museums are evolving with interactive technology and virtual reality to engage modern audiences, with Korean museums particularly innovative. These changes help younger generations connect with historical and cultural content that might otherwise seem distant."
+    },
+    {
+      "id": "t4_076",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Reading habits vary significantly between generations and countries. While older generations often prefer physical books, younger people increasingly use e-books and audiobooks. Korean readers consume diverse content from web novels to translated international bestsellers. Public libraries are adapting to these changes by offering digital lending, modern spaces, and various community programs that go beyond traditional book lending.",
+      "key_points": ["reading habits varied", "format preferences differ", "diverse content", "libraries adapting"],
+      "sample_summary": "Reading habits vary by generation, with older readers preferring physical books while younger ones use e-books and audiobooks. Public libraries adapt by offering digital lending, modern spaces, and community programs beyond traditional book lending."
+    },
+    {
+      "id": "t4_077",
+      "category": "culture",
+      "difficulty": "easy",
+      "passage": "Music streaming has fundamentally changed the music industry. Services like Spotify and Korean platforms like Melon make virtually all recorded music available for monthly subscriptions. While consumers benefit from incredible access, artists often complain about low streaming payments. The industry continues debating how to fairly compensate creators while maintaining the convenience consumers expect from streaming services.",
+      "key_points": ["streaming transformed music", "subscription model", "artist compensation concern", "ongoing debate"],
+      "sample_summary": "Music streaming services like Spotify and Melon have transformed the industry by offering vast catalogs through subscriptions. While consumers benefit from access, artists complain about low payments, prompting ongoing debate about fair compensation."
+    },
+    {
+      "id": "t4_078",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Sports continue evolving to attract modern audiences. Traditional Korean baseball, while still popular, faces competition from esports, basketball, and various streaming entertainment options. Leagues are introducing rule changes to speed up games, enhancing technology integration for fans, and expanding international marketing. Youth sports participation patterns have shifted, with implications for which sports will thrive in coming decades.",
+      "key_points": ["sports evolving for modern audiences", "baseball faces competition", "various adaptations", "youth patterns changing"],
+      "sample_summary": "Traditional sports like Korean baseball face competition from esports and streaming entertainment, prompting rule changes and technology integration to attract modern audiences. Youth participation patterns have shifted, with implications for which sports will thrive."
+    },
+    {
+      "id": "t4_079",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Traditional family structures continue evolving, with diverse family configurations becoming more common globally. Single-person households, multi-generational families, single-parent families, and unmarried partnerships have all increased. Korea has been slower to recognize diverse family forms in policy, though gradual changes are occurring. These shifts have implications for housing, social services, and cultural traditions built around traditional nuclear families.",
+      "key_points": ["family structures diversifying", "various configurations", "Korea slower to adapt", "broad implications"],
+      "sample_summary": "Family structures are diversifying globally, with various configurations becoming common while Korea has been slower to recognize this in policy. These changes have broad implications for housing, social services, and traditions built around traditional families."
+    },
+    {
+      "id": "t4_080",
+      "category": "culture",
+      "difficulty": "medium",
+      "passage": "Religious holidays and traditions continue to influence Korean culture even as religious affiliation declines. Chuseok and Lunar New Year remain major family occasions celebrated regardless of religious belief. These holidays preserve traditional foods, rituals, and family connections. However, modern lifestyles have led to shorter family gatherings and simplified observances, with some young people preferring to travel or rest during traditional holidays.",
+      "key_points": ["holidays still important", "celebrated beyond religious lines", "tradition preservation", "modern adaptation"],
+      "sample_summary": "Korean religious holidays like Chuseok remain major family occasions celebrated regardless of belief, preserving traditional foods and connections. However, modern lifestyles have shortened gatherings, with some young people preferring travel or rest during holidays."
+    },
+    {
+      "id": "t4_081",
+      "category": "travel",
+      "difficulty": "easy",
+      "passage": "International tourism has recovered significantly after pandemic restrictions ended. Korea is welcoming millions of foreign visitors again, particularly from China, Japan, and Southeast Asia. Popular destinations include Seoul's traditional palaces, Busan beaches, and Jeju Island. The tourism industry employs many Koreans and contributes significantly to local economies, making continued growth important for many communities.",
+      "key_points": ["tourism recovered", "Korean destinations popular", "various visitor origins", "economic importance"],
+      "sample_summary": "International tourism to Korea has recovered after pandemic restrictions, with millions visiting popular sites like palaces, Busan beaches, and Jeju Island. The industry significantly contributes to local economies, making continued growth important for many communities."
+    },
+    {
+      "id": "t4_082",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Sustainable tourism has gained importance as travelers become more aware of their environmental impact. Carbon emissions from flights, overcrowding at popular destinations, and damage to natural areas concern many modern travelers. Some choose nearby destinations, slower travel methods, and local-owned accommodations. The tourism industry is adapting with carbon offset programs, certified sustainable options, and limits on visitor numbers at sensitive sites.",
+      "key_points": ["sustainable tourism rising", "various concerns", "traveler choices changing", "industry adapting"],
+      "sample_summary": "Sustainable tourism has gained importance as travelers worry about environmental impacts like emissions and overcrowding. Travelers are choosing nearer destinations and local accommodations, while the industry adapts with offset programs and visitor limits."
+    },
+    {
+      "id": "t4_083",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Solo travel has grown in popularity, particularly among young adults and women. While once seen as unusual, solo travel is now widely accepted and offers unique benefits including complete freedom and personal growth. Travel companies have created products specifically for solo travelers, from group tours that match singles to accommodations designed for one. However, safety considerations and combating loneliness remain important considerations.",
+      "key_points": ["solo travel growing", "various benefits", "industry adapting", "considerations remain"],
+      "sample_summary": "Solo travel has grown popular, especially among young adults and women, offering freedom and personal growth. Travel companies have developed specific products for solo travelers, though safety and loneliness remain important considerations."
+    },
+    {
+      "id": "t4_084",
+      "category": "travel",
+      "difficulty": "easy",
+      "passage": "Travel technology has dramatically changed how people plan and experience trips. Booking entire vacations from a smartphone, using translation apps in any country, and accessing GPS navigation anywhere have removed many traditional travel barriers. Digital nomads — people who work remotely while traveling — represent a new lifestyle enabled by technology. Despite these benefits, some travelers worry about over-reliance on phones reducing genuine cultural engagement.",
+      "key_points": ["travel tech transformed", "various examples", "digital nomads emerged", "engagement concerns"],
+      "sample_summary": "Travel technology has transformed how people plan and experience trips, enabling new lifestyles like digital nomads who work while traveling. However, some worry that over-reliance on phones reduces genuine cultural engagement."
+    },
+    {
+      "id": "t4_085",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Cruise tourism has rebounded after pandemic challenges but faces growing environmental criticism. Modern cruise ships are essentially floating cities with thousands of passengers, generating significant pollution and stress on port communities. Some popular destinations have implemented restrictions on cruise visitors. The industry is responding with newer, cleaner ships and more diverse itineraries, though fundamental questions about cruise tourism's environmental sustainability remain.",
+      "key_points": ["cruise industry recovered", "environmental concerns", "destination restrictions", "industry responses"],
+      "sample_summary": "Cruise tourism has recovered after the pandemic but faces environmental criticism due to pollution and stress on port communities. Some destinations restrict cruise visitors while the industry responds with cleaner ships, though sustainability questions remain."
+    },
+    {
+      "id": "t4_086",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Adventure tourism — activities like hiking, climbing, scuba diving, and extreme sports — has grown significantly. Travelers increasingly seek experiences rather than just sightseeing. South Korea offers various adventure options including mountain trails, surfing on the east coast, and winter sports. While adventure tourism provides excitement and personal challenge, proper safety preparation and respect for local guidelines are essential to avoid accidents.",
+      "key_points": ["adventure tourism growing", "experiences over sightseeing", "Korean options", "safety important"],
+      "sample_summary": "Adventure tourism has grown as travelers seek experiences over sightseeing, with Korea offering options from hiking to winter sports. While exciting, proper safety preparation and respect for local guidelines remain essential to avoid accidents."
+    },
+    {
+      "id": "t4_087",
+      "category": "travel",
+      "difficulty": "easy",
+      "passage": "Food tourism — traveling specifically to experience local cuisines — has become a major trend. Many people now choose destinations based on food rather than traditional sights. Cities like Seoul, Tokyo, and Bangkok attract food-focused tourists from around the world. Food tours, cooking classes, and market visits have become popular activities. This trend supports local food businesses while spreading appreciation for diverse cuisines.",
+      "key_points": ["food tourism trend", "destinations chosen by food", "various activities", "economic benefits"],
+      "sample_summary": "Food tourism has become major, with many travelers choosing destinations based on cuisine. Cities like Seoul attract food-focused visitors enjoying tours, cooking classes, and markets, supporting local businesses while spreading appreciation for diverse cuisines."
+    },
+    {
+      "id": "t4_088",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Workation — combining work and vacation — has become possible for many remote workers. Companies allow employees to work from beach destinations, mountain resorts, or other vacation spots. While appealing, workation requires careful balance to avoid working too much or vacationing too little. Some destinations are developing specialized workation infrastructure including fast internet, dedicated workspaces, and longer-term accommodations.",
+      "key_points": ["workation enabled by remote work", "balance challenge", "various destinations developing"],
+      "sample_summary": "Workation, combining work and vacation, has become possible through remote work but requires balancing work and leisure carefully. Some destinations are developing specialized infrastructure with fast internet and dedicated workspaces to attract workation visitors."
+    },
+    {
+      "id": "t4_089",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Last-minute travel deals have changed how some people plan vacations. Mobile apps offer steep discounts on unsold hotel rooms, flights, and tour packages just days before departure. This benefits both travelers seeking bargains and businesses with unsold inventory. However, the model encourages impulsive travel rather than careful planning, and may not work for travelers needing specific destinations or dates.",
+      "key_points": ["last-minute deals popular", "apps facilitate", "mutual benefit", "limitations exist"],
+      "sample_summary": "Last-minute travel apps offer steep discounts on unsold inventory, benefiting both travelers seeking deals and businesses. However, this model encourages impulsive travel and may not work for travelers needing specific destinations or dates."
+    },
+    {
+      "id": "t4_090",
+      "category": "travel",
+      "difficulty": "medium",
+      "passage": "Heritage tourism, where visitors travel to experience historical and cultural sites, has grown alongside general tourism. UNESCO World Heritage sites including Korea's Bulguksa temple and Jongmyo shrine attract international visitors. While tourism brings preservation funding and cultural exchange, popular heritage sites face crowd damage and need careful management. Balancing tourism revenue with site protection remains an ongoing challenge for many countries.",
+      "key_points": ["heritage tourism grown", "Korean UNESCO sites", "preservation funding helps", "crowd damage issues"],
+      "sample_summary": "Heritage tourism has grown alongside general tourism, with Korean UNESCO sites attracting international visitors. While tourism funds preservation, popular sites face crowd damage, making the balance of tourism revenue and site protection an ongoing challenge."
+    },
+    {
+      "id": "t4_091",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Workplace diversity has become a priority for many companies, recognizing that diverse teams produce better results. Diverse perspectives lead to more innovative solutions and better understanding of varied customer needs. However, achieving genuine diversity requires more than hiring quotas — it means creating inclusive cultures where everyone can contribute fully. Korean companies are increasingly addressing diversity, though progress varies by industry and company size.",
+      "key_points": ["diversity priority", "benefits noted", "inclusion required", "Korean progress varies"],
+      "sample_summary": "Workplace diversity has become a corporate priority due to better innovation and customer understanding, but requires inclusive cultures beyond just hiring quotas. Korean companies are increasingly addressing diversity, though progress varies by industry and size."
+    },
+    {
+      "id": "t4_092",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Employee burnout has reached concerning levels in many industries, particularly after pandemic disruptions. Long hours, blurred work-life boundaries, and constant connectivity contribute to exhaustion and reduced engagement. Companies are responding with mental health programs, mandatory time off, and clearer expectations around availability. However, fundamental changes to work culture may be needed to truly address burnout rather than just managing symptoms.",
+      "key_points": ["burnout serious", "various causes", "company responses", "deeper changes needed"],
+      "sample_summary": "Employee burnout has reached concerning levels due to long hours and blurred boundaries. Companies are responding with mental health programs and time off requirements, but fundamental changes to work culture may be needed to address root causes."
+    },
+    {
+      "id": "t4_093",
+      "category": "workplace",
+      "difficulty": "easy",
+      "passage": "The gig economy continues to grow, with more workers earning income through platform-based jobs like food delivery, ride-sharing, and freelance work. These arrangements offer flexibility but typically lack benefits like health insurance, paid leave, and retirement plans. Regulators worldwide debate how to balance worker protections with the flexibility that makes gig work attractive. Some countries are creating new worker categories that combine elements of employment and contracting.",
+      "key_points": ["gig economy growing", "flexibility but no benefits", "regulatory debate", "new categories"],
+      "sample_summary": "The gig economy has grown with workers earning through platforms like food delivery and freelancing. While flexible, gig work lacks employment benefits, prompting regulatory debates and new worker classification approaches in some countries."
+    },
+    {
+      "id": "t4_094",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Korean workplace culture is gradually changing as new generations enter the workforce with different expectations. Hierarchical traditions, late-night drinking sessions, and overtime culture face questioning from young workers prioritizing personal time. Companies that fail to adapt struggle to attract and retain talent, especially in competitive industries. Older managers are learning new approaches while younger workers respect valuable traditions worth preserving.",
+      "key_points": ["Korean workplace changing", "generational differences", "adaptation required", "intergenerational learning"],
+      "sample_summary": "Korean workplace culture is changing as younger workers question traditional hierarchies, drinking sessions, and overtime culture. Companies must adapt to attract talent, with both older and younger workers learning from each other."
+    },
+    {
+      "id": "t4_095",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Performance evaluation systems are being rethought at many companies. Traditional annual reviews are being replaced with more frequent feedback conversations and goal updates. Some companies are moving away from forced rankings that pit employees against each other. These changes recognize that ongoing development conversations are more useful than infrequent formal assessments. However, transitioning evaluation systems requires significant manager training and culture change.",
+      "key_points": ["evaluations being rethought", "more frequent feedback", "less forced ranking", "transition challenges"],
+      "sample_summary": "Performance evaluation is shifting from annual reviews to ongoing feedback conversations, with some companies eliminating forced rankings. This change recognizes the value of continuous development discussions but requires significant manager training and culture change."
+    },
+    {
+      "id": "t4_096",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Leadership development has become critical as organizations face complex challenges and rapid change. Companies invest heavily in training programs, executive coaching, and leadership rotations. However, the most effective leadership development often happens through real challenges and mentorship rather than classroom training. Companies that combine formal programs with stretch assignments and quality mentoring produce stronger leaders for the future.",
+      "key_points": ["leadership development critical", "various investment approaches", "experiential learning best", "combined approach"],
+      "sample_summary": "Leadership development is critical for organizations facing complex change, with heavy investment in formal programs. However, the most effective development combines classroom training with real challenges, mentorship, and stretch assignments."
+    },
+    {
+      "id": "t4_097",
+      "category": "workplace",
+      "difficulty": "easy",
+      "passage": "Workplace flexibility has expanded significantly beyond just remote work options. Many companies now offer flexible hours, compressed workweeks, job sharing, and unlimited paid time off. These options help employees manage personal responsibilities while maintaining productivity. Research consistently shows that flexibility improves employee satisfaction and retention, though it requires trust between employers and workers along with clear expectations about results.",
+      "key_points": ["flexibility expanded", "various options", "research shows benefits", "trust required"],
+      "sample_summary": "Workplace flexibility has expanded beyond remote work to include flexible hours, compressed weeks, and job sharing. Research shows these options improve satisfaction and retention, though they require trust between employers and workers with clear results expectations."
+    },
+    {
+      "id": "t4_098",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Career changes have become more common as people work longer and industries evolve faster. Workers may have multiple distinct careers throughout their working lives, requiring continuous learning and adaptability. Korean society has been slower to embrace mid-career changes, with stigma sometimes attached to leaving stable employment. However, attitudes are shifting as more people pursue meaningful work over traditional security, especially among younger generations.",
+      "key_points": ["career changes common", "longer working lives", "Korean adaptation slower", "attitudes shifting"],
+      "sample_summary": "Career changes have become common as people work longer and industries evolve, requiring continuous adaptability. Korean society has been slower to embrace mid-career changes due to stigma, but attitudes are shifting toward pursuing meaningful work."
+    },
+    {
+      "id": "t4_099",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Communication skills remain among the most valued workplace abilities despite technology changes. Clear writing, effective presentations, and good listening matter more than ever as work becomes more collaborative and distributed. Many professionals work to improve these skills throughout their careers. Companies invest in communication training, recognizing that even technically brilliant employees struggle without strong communication abilities.",
+      "key_points": ["communication crucial", "various forms", "lifelong development", "company investment"],
+      "sample_summary": "Communication skills remain highly valued in workplaces despite technological changes, with clear writing, presentations, and listening becoming more important in distributed work. Professionals develop these skills throughout careers, supported by company training investments."
+    },
+    {
+      "id": "t4_100",
+      "category": "workplace",
+      "difficulty": "medium",
+      "passage": "Korean companies are increasingly competing for global talent as their international operations expand. Attracting foreign professionals requires more than competitive salaries — international workers seek inclusive cultures, language support, and opportunities for advancement. Companies that successfully attract diverse talent gain competitive advantages in global markets. However, integrating diverse workforces with traditional Korean corporate culture remains a significant challenge that requires sustained effort.",
+      "key_points": ["competing for global talent", "more than salary needed", "competitive advantage", "integration challenge"],
+      "sample_summary": "Korean companies increasingly compete for global talent, requiring inclusive cultures and language support beyond competitive salaries. Successfully attracting diverse talent gives competitive advantages in global markets, though integrating diverse workforces with traditional Korean culture remains challenging."
+    }
+  ]
+}
