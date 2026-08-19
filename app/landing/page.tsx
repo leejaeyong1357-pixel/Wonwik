@@ -22,7 +22,7 @@ export default function LandingPage() {
       >
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src="/brand-logo.svg" alt="WONIK" width={88} height={20} className="h-5 w-auto" />
+            <Image src="/brand-logo.svg" alt="WONIK HOLDINGS" width={148} height={34} className="h-8 w-auto" />
             <span className="text-brand-gray-300">|</span>
             <span className="font-brand text-lg text-brand-navy tracking-tight">Wonpic</span>
           </div>
@@ -48,19 +48,19 @@ export default function LandingPage() {
           <div className="text-center animate-fadeup">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-red/10 text-brand-red text-xs font-bold rounded-full mb-6">
               <span className="w-1.5 h-1.5 bg-brand-red rounded-full animate-pulse" />
-              원익그룹 · 원익 첫 어학 솔루션
+              원익 임직원 전용 · OPIc 학습 플랫폼
             </div>
             <h1 className="hero-headline text-5xl md:text-7xl text-brand-ink mb-6">
-              SPA, AI가 끌어올린다.
+              OPIc, AI가 끌어올린다.
               <br />
               <span className="text-brand-navy">Wonpic</span>.
             </h1>
             <p className="text-lg md:text-xl text-brand-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-              실시간 비대면 화상 SPA 시험.
+              자기소개부터 롤플레이·고난도까지.
               <br />
               AI 채점, 음성 인식, 맞춤 모범답안으로
               <br />
-              <span className="font-bold text-brand-ink">한 등급 위로</span>.
+              <span className="font-bold text-brand-ink">IM2 에서 IH 로</span>.
             </p>
             <div className="flex gap-3 justify-center flex-wrap">
               <Link
@@ -85,9 +85,9 @@ export default function LandingPage() {
 
             <div className="mt-12 grid grid-cols-3 gap-6 max-w-3xl mx-auto">
               {[
-                ["400+", "유형별 문제"],
-                ["50회", "모의고사"],
-                ["AI", "실시간 채점"],
+                ["100제", "유형별 실전 문항"],
+                ["15문항", "실전 모의고사"],
+                ["9등급", "NL ~ AL 판정"],
               ].map(([n, l]) => (
                 <div key={l} className="text-center">
                   <div className="font-brand text-3xl md:text-4xl text-brand-navy">{n}</div>
@@ -115,7 +115,7 @@ export default function LandingPage() {
             {[
               {
                 t: "AI 엄격 채점",
-                d: "발화량·문법·어휘·논리 5개 축으로 96점 만점 채점. 한 문장이면 정직하게 Lv2.",
+                d: "과제수행·유창성·어휘·문장구성·전달력 5개 영역 진단 후 NL~AL 예상 등급 산정.",
                 emoji: "🎯",
               },
               {
@@ -130,12 +130,12 @@ export default function LandingPage() {
               },
               {
                 t: "맞춤 모범답안",
-                d: "본인 목표 등급(Lv 1~8)에 맞춘 모범답안 생성. 너무 어렵지도, 쉽지도 않게.",
+                d: "목표 등급(IL~AL)에 맞춘 모범답안 생성. 너무 어렵지도, 쉽지도 않게.",
                 emoji: "⭐",
               },
               {
                 t: "실전 모의고사",
-                d: "13분 4유형 연속. 점수대별 50회 세트. 종합 점수와 등급 즉시 산정.",
+                d: "실제 OPIc 과 같은 15문항 구성. 등급대별 10회 세트, 종합 등급 즉시 산정.",
                 emoji: "⏱️",
               },
               {
@@ -166,14 +166,16 @@ export default function LandingPage() {
             몇 십년씩 배워도 말하기를 어려워할까?
           </h2>
           <p className="text-blue-100 text-base md:text-lg leading-relaxed">
-            SPA는 실시간 비대면 화상 시험.
+            읽고 쓰는 건 되는데, 막상 입을 열면 한 문장에서 멈춥니다.
             <br />
-            정해진 시간 안에 말로 표현해야 합니다.
+            OPIc 은 정답을 맞히는 시험이 아니라, 얼마나 길게 자연스럽게
+            <br />
+            말할 수 있는지를 보는 시험입니다.
             <br />
             <br />
             <span className="text-white font-bold">Wonpic</span>은 그 순간을 위해 만들어졌습니다.
             <br />
-            AI가 발음 외 모든 것을 24시간 평가합니다.
+            언제 어디서든 실전처럼 말하고, AI가 바로 진단합니다.
           </p>
         </div>
       </section>
@@ -207,7 +209,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs text-brand-gray-500">
           <div className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
-              <Image src="/brand-logo.svg" alt="WONIK" width={70} height={16} className="h-4 w-auto opacity-70" />
+              <Image src="/brand-logo.svg" alt="WONIK HOLDINGS" width={110} height={26} className="h-6 w-auto opacity-70" />
               <span>© WONIK · our group</span>
             </div>
             <div className="text-[10px] text-brand-gray-400 ml-1">

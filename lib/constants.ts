@@ -24,7 +24,13 @@ export function isAllowedModel(model?: string): boolean {
 }
 
 export const APP_NAME = "Wonpic";
-export const APP_TAGLINE = "by WONIK";
+export const APP_TAGLINE = "원익 임직원 OPIc 학습";
+
+/** 설정 전 기본 목표 등급 — 사무직 일반 요구 구간 */
+export const DEFAULT_TARGET_GRADE = "IM3" as const;
+
+/** 목표 등급 선택지 — 실제로 회사에서 요구되는 구간만 노출 */
+export const SELECTABLE_GRADES = ["IL", "IM1", "IM2", "IM3", "IH", "AL"] as const;
 
 /** 브랜드 표기 — 화면 문구에 사용 */
 export const COMPANY_NAME = "원익";

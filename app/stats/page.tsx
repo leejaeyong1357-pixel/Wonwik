@@ -94,7 +94,7 @@ export default function StatsPage() {
           <Card>
             <div className="text-xs text-brand-gray-600">예상 등급</div>
             <div className="text-3xl font-black text-brand-navy">
-              {totalCount > 0 ? `Lv ${estLevel}` : "—"}
+              {totalCount > 0 ? estLevel : "—"}
             </div>
           </Card>
           <Card>

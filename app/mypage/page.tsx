@@ -6,9 +6,9 @@ import Link from "next/link";
 import { storage } from "@/lib/storage";
 import { hashPassword, getStoredPwHash, setStoredPwHash } from "@/lib/passwordStore";
 import { pushUserToServer } from "@/lib/userSync";
-import { LEVEL_RANGES, getDaysUntil, levelLabel } from "@/lib/scoring";
+import { getDaysUntil, levelLabel, levelUsage } from "@/lib/scoring";
 import { testConnection } from "@/lib/ai";
-import { AVAILABLE_MODELS, DEFAULT_MODEL } from "@/lib/constants";
+import { AVAILABLE_MODELS, DEFAULT_MODEL, DEFAULT_TARGET_GRADE, SELECTABLE_GRADES } from "@/lib/constants";
 import type { Level, UserSession, UserSettings } from "@/types";
 import Header from "@/components/layout/Header";
 import Button from "@/components/ui/Button";
@@ -18,7 +18,7 @@ export default function MyPage() {
   const [session, setSession] = useState<UserSession | null>(null);
   const [settings, setSettings] = useState<UserSettings | null>(null);
   const [examDate, setExamDate] = useState("");
-  const [targetLevel, setTargetLevel] = useState<Level>(6);
+  const [targetLevel, setTargetLevel] = useState<Level>(DEFAULT_TARGET_GRADE);
   const [aiModel, setAiModel] = useState<string>(DEFAULT_MODEL);
 
   const [currentPw, setCurrentPw] = useState("");
@@ -176,25 +176,23 @@ export default function MyPage() {
               <label className="block text-xs font-bold text-brand-gray-700 mb-1.5">
                 목표 등급: <span className="text-brand-navy">{levelLabel(targetLevel)}</span>
               </label>
-              <div className="grid grid-cols-8 gap-1.5">
-                {(Object.keys(LEVEL_RANGES) as unknown as Level[]).map((lvKey) => {
-                  const lv = Number(lvKey) as Level;
-                  return (
-                    <button
-                      key={lv}
-                      type="button"
-                      onClick={() => setTargetLevel(lv)}
-                      className={`py-2 rounded-lg text-sm font-bold transition-colors ${
-                        targetLevel === lv
-                          ? "bg-brand-navy text-white"
-                          : "bg-brand-gray-100 text-brand-gray-700 hover:bg-brand-gray-200"
-                      }`}
-                    >
-                      Lv{lv}
-                    </button>
-                  );
-                })}
+              <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
+                {SELECTABLE_GRADES.map((grade) => (
+                  <button
+                    key={grade}
+                    type="button"
+                    onClick={() => setTargetLevel(grade)}
+                    className={`py-2 rounded-lg text-sm font-bold transition-colors ${
+                      targetLevel === grade
+                        ? "bg-brand-navy text-white"
+                        : "bg-brand-gray-100 text-brand-gray-700 hover:bg-brand-gray-200"
+                    }`}
+                  >
+                    {grade}
+                  </button>
+                ))}
               </div>
+              <p className="text-xs text-brand-gray-500 mt-1.5">{levelUsage(targetLevel)}</p>
             </div>
 
             <div>
@@ -316,7 +314,7 @@ export default function MyPage() {
               }}
               className="block w-full text-left p-3 hover:bg-brand-gray-50 rounded-xl text-sm text-brand-gray-700"
             >
-              📘 SPA 시험 안내 다시 보기
+              📘 OPIc 시험 안내 다시 보기
             </button>
             <button
               onClick={async () => {

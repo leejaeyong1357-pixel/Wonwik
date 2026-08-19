@@ -8,14 +8,17 @@ export async function POST(req: Request) {
     const body = await req.json();
     const name = String(body.name || "").trim();
     const employeeId = String(body.employeeId || "").trim();
+    // 시연 계정은 사번만으로 조회한다 (이름 대조 생략)
+    const demo = body.demo === true;
 
-    if (!name || !employeeId) {
+    if (!employeeId || (!demo && !name)) {
       return NextResponse.json({ ok: false, error: "사번과 이름을 입력해주세요" });
     }
 
-    const emp = (data.employees as any[]).find(
-      (e) =>
-        e.name === name && String(e.employeeId).trim() === employeeId,
+    const emp = (data.employees as any[]).find((e) =>
+      demo
+        ? String(e.employeeId).trim() === employeeId
+        : e.name === name && String(e.employeeId).trim() === employeeId,
     );
 
     if (!emp) {

@@ -1,0 +1,409 @@
+{
+  "type": 4,
+  "name": "롤플레이",
+  "description": "상황이 주어지고 질문하기 · 문제 상황 해결 · 관련 경험 말하기로 이어지는 유형",
+  "total": 20,
+  "questions": [
+    {
+      "id": "t4_001",
+      "type": 4,
+      "category": "친구·지인",
+      "difficulty": "easy",
+      "situation": "친구가 새로 이사한 집에 초대했습니다.",
+      "question": "I'd like to give you a situation and ask you to act it out. Your friend has just moved into a new apartment and invited you over. Ask your friend three or four questions about the new place.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What else would you want to know?",
+        "What would you bring as a gift?"
+      ],
+      "keywords": [
+        "Could you tell me",
+        "I was wondering",
+        "How far is it from",
+        "Do you happen to know"
+      ],
+      "sample_answer": "Hey, congratulations on the new place! I have a few questions before I come over. First, could you tell me exactly where it is? I know it's in Mapo, but which station is closest, and how long does it take to walk from there? Second, I was wondering what day works best for you. I'm free this Saturday afternoon or Sunday evening, but let me know what's convenient. Third, is there anything you still need for the apartment? I'd like to bring a housewarming gift, so if there's something specific you haven't bought yet, just tell me. And one more thing, do you happen to have parking, or should I take the subway?"
+    },
+    {
+      "id": "t4_002",
+      "type": 4,
+      "category": "시설·서비스",
+      "difficulty": "easy",
+      "situation": "새로 등록하려는 헬스장에 전화했습니다.",
+      "question": "You want to join a new gym near your home. Call the gym and ask three or four questions to get the information you need.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What would be a deal breaker for you?",
+        "What else matters to you in a gym?"
+      ],
+      "keywords": [
+        "I'd like to ask about",
+        "What are your hours",
+        "Is there any chance",
+        "How much does it cost"
+      ],
+      "sample_answer": "Hello, I'm interested in joining your gym and I'd like to ask a few questions. First, what are your opening hours? I usually work until seven, so I need to know if you're open late on weekdays. Second, how much does membership cost, and do you have monthly and yearly options? I'd also like to know if there's a registration fee on top of that. Third, what facilities do you have? Specifically, I'm wondering whether there's a shower room and whether the machines get very crowded in the evening. And lastly, is there any chance I could come in and look around before signing up? Thank you."
+    },
+    {
+      "id": "t4_003",
+      "type": 4,
+      "category": "회사",
+      "difficulty": "medium",
+      "situation": "동료가 다음 주 해외 출장을 다녀왔습니다.",
+      "question": "Your coworker just came back from a business trip overseas. Ask him or her three or four questions about the trip.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What would you ask about the work part?",
+        "What would you ask about the city?"
+      ],
+      "keywords": [
+        "How did it go",
+        "What was it like",
+        "Did you get a chance to",
+        "Any advice for"
+      ],
+      "sample_answer": "Welcome back! How did the trip go? First of all, how were the meetings? I heard the client was pretty demanding, so I'm curious whether things went smoothly or whether there were any surprises. Second, what was the city like? Was it as expensive as people say, and how was the weather at this time of year? Third, did you get a chance to see anything outside of work, or was the schedule too tight? And finally, since I might have to go there next quarter, do you have any advice for me? I'm especially wondering about the flight and how bad the jet lag was."
+    },
+    {
+      "id": "t4_004",
+      "type": 4,
+      "category": "친구·지인",
+      "difficulty": "medium",
+      "situation": "친구가 최근에 산 노트북에 대해 이야기하고 있습니다.",
+      "question": "Your friend recently bought a new laptop. Ask three or four questions to find out whether it would suit you as well.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What is most important to you in a laptop?",
+        "Would you buy the same one?"
+      ],
+      "keywords": [
+        "Which model did you get",
+        "How's the battery",
+        "Are you happy with",
+        "Would you recommend"
+      ],
+      "sample_answer": "So you finally got a new laptop. I've been thinking about replacing mine, so let me ask you a few things. Which model did you get, and how much did it end up costing after any discounts? Second, how's the battery life in real use? The specs always say ten hours, but I want to know what you actually get. Third, is it heavy? I carry mine to the office three days a week, so weight matters a lot to me. And last, are you happy with it overall, or is there anything you'd change? Would you recommend it, or should I look at something else?"
+    },
+    {
+      "id": "t4_005",
+      "type": 4,
+      "category": "약속·모임",
+      "difficulty": "medium",
+      "situation": "예약한 식당이 갑자기 문을 닫았습니다.",
+      "question": "You reserved a restaurant for a dinner with friends, but you just found out it is closed today. Call your friend, explain the situation, and suggest two alternatives.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "Which alternative would you push for?",
+        "How would you apologize?"
+      ],
+      "keywords": [
+        "I've got some bad news",
+        "it turns out",
+        "So here's what I'm thinking",
+        "Would that work for you"
+      ],
+      "sample_answer": "Hey, I've got some bad news about tonight. I just called the restaurant to confirm our reservation, and it turns out they're closed today for maintenance. Apparently something happened with their kitchen. I'm really sorry, I know you were looking forward to it. So here's what I'm thinking. There's an Italian place about five minutes from there that I've been to before, and the food is genuinely good. I could call and see if they have a table for four at seven. The other option is to move everything to tomorrow at the same time and keep the original restaurant. Which would you prefer? Let me know soon so I can book it."
+    },
+    {
+      "id": "t4_006",
+      "type": 4,
+      "category": "쇼핑·배송",
+      "difficulty": "medium",
+      "situation": "온라인으로 주문한 물건이 잘못 배송되었습니다.",
+      "question": "You ordered an item online, but the wrong product was delivered. Call the store, explain the problem, and ask them to solve it.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "What outcome do you want?",
+        "What if they refuse?"
+      ],
+      "keywords": [
+        "I'm calling about",
+        "instead of",
+        "I'd like to request",
+        "Could you arrange"
+      ],
+      "sample_answer": "Hello, I'm calling about an order I received yesterday. My order number is 4-7-2-9-1. I ordered a pair of black running shoes in size two seventy, but what arrived was a brown pair in size two sixty. So both the color and the size are wrong. I checked my confirmation email and the order itself was correct, so it looks like a mistake on your side. I'd like to request an exchange for the correct item. Could you arrange for a courier to pick up the wrong pair, since I don't think I should pay for return shipping? Also, how long will the exchange take? I need them before this weekend if possible."
+    },
+    {
+      "id": "t4_007",
+      "type": 4,
+      "category": "회사",
+      "difficulty": "hard",
+      "situation": "회의 시간에 늦을 것 같습니다.",
+      "question": "You are stuck in traffic and will be late for an important meeting. Call your manager, explain the situation, and suggest what to do.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "What would you offer to do?",
+        "How would you follow up afterward?"
+      ],
+      "keywords": [
+        "I'm afraid",
+        "held up",
+        "at this rate",
+        "in the meantime",
+        "I'll make sure"
+      ],
+      "sample_answer": "Hello, this is Minkyung. I'm afraid I have a problem. I left early, but I'm completely held up in traffic on the expressway, there seems to have been an accident ahead. At this rate, I'll be about twenty-five minutes late for the ten o'clock meeting. I'm really sorry. Here's what I'd suggest. In the meantime, could you start with the budget section? That part doesn't need me, and I've already sent the slides to your email. Alternatively, if you'd rather not split it up, we could push the whole meeting back to ten thirty, and I'll call the client to let them know. Either way, I'll make sure the client has the updated materials before we begin."
+    },
+    {
+      "id": "t4_008",
+      "type": 4,
+      "category": "여행·숙박",
+      "difficulty": "hard",
+      "situation": "호텔 방에 문제가 있습니다.",
+      "question": "You checked into a hotel and found a serious problem with your room. Go to the front desk, explain the problem, and ask them to resolve it.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "What compensation would you ask for?",
+        "What if no rooms are available?"
+      ],
+      "keywords": [
+        "I just checked into",
+        "the issue is",
+        "I'd appreciate it if",
+        "that isn't going to work"
+      ],
+      "sample_answer": "Excuse me, I just checked into room 1508 about twenty minutes ago, and there's a problem I need to report. The air conditioning isn't working at all. I set it to twenty-two degrees, but it's just blowing warm air, and the room is honestly uncomfortably hot. I also noticed the bathroom drain is very slow. I have an early meeting tomorrow, so I really need to sleep well tonight. I'd appreciate it if you could move me to a different room, ideally on a similar floor. If no rooms are available, then I'd like a technician to come up right away, but I have to say, waiting until tomorrow isn't going to work for me. What can you do?"
+    },
+    {
+      "id": "t4_009",
+      "type": 4,
+      "category": "약속·모임",
+      "difficulty": "medium",
+      "situation": "예약이나 계획에 문제가 생겼던 경험",
+      "question": "Have you ever had a reservation or plan cancelled unexpectedly? Tell me what happened and how you dealt with it.",
+      "combo": "관련 경험",
+      "follow_ups": [
+        "How did others react?",
+        "What would you do differently?"
+      ],
+      "keywords": [
+        "It happened when",
+        "at the last minute",
+        "we had no choice but to",
+        "fortunately"
+      ],
+      "sample_answer": "It happened about a year ago when I booked a weekend trip to Gangneung with two friends. I reserved a guesthouse two months in advance, but three days before the trip, the owner called and said the place had a plumbing problem and had to close. At the last minute, everything decent in the area was already fully booked because it was a holiday weekend. We had no choice but to look at places about thirty minutes further away. Fortunately, one of my friends found a small pension that had just had a cancellation. It ended up being nicer than the original, though we had to rent a car to get around. Now I always book places that allow free cancellation."
+    },
+    {
+      "id": "t4_010",
+      "type": 4,
+      "category": "인터뷰어",
+      "difficulty": "medium",
+      "situation": "인터뷰어에게 질문하기",
+      "question": "This time, I'd like you to ask me some questions. Ask me three or four questions about where I live.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What else are you curious about?",
+        "Why did you choose those questions?"
+      ],
+      "keywords": [
+        "I'd love to know",
+        "What's it like",
+        "Do you find that",
+        "How does it compare"
+      ],
+      "sample_answer": "Sure, I'd love to know more about where you live. First, what city or town do you live in, and how big is it? I'm curious whether it's a busy place or somewhere quieter. Second, what's the weather like there throughout the year? I'm asking because the seasons here are pretty extreme, and I wonder if it's similar. Third, how do you usually get around? Do most people drive, or is public transportation good enough that you can live without a car? And finally, what's your favorite thing about living there, and is there anything you'd change if you could?"
+    },
+    {
+      "id": "t4_011",
+      "type": 4,
+      "category": "친구·지인",
+      "difficulty": "medium",
+      "situation": "친구에게 빌린 물건을 망가뜨렸습니다.",
+      "question": "You borrowed something from a friend and accidentally damaged it. Call your friend, explain what happened, and offer a solution.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "How would you make it right?",
+        "How would your friend likely react?"
+      ],
+      "keywords": [
+        "I have to tell you something",
+        "I feel terrible about",
+        "I'd like to",
+        "the least I can do"
+      ],
+      "sample_answer": "Hey, I have to tell you something and I feel terrible about it. You know the camera you lent me last week? I took it to the park on Saturday, and while I was putting it back in the bag, it slipped and hit the ground. The body is fine, but the lens is cracked, and it won't focus properly anymore. I'm so sorry, it was completely my fault for not being careful. Here's what I'd like to do. I already called a repair shop and they said replacing the lens would cost about a hundred and fifty dollars, so I'll pay for that. If you'd rather have a brand new one instead, I'll cover that too. It's the least I can do."
+    },
+    {
+      "id": "t4_012",
+      "type": 4,
+      "category": "회사",
+      "difficulty": "easy",
+      "situation": "새로 문을 연 카페에 대해 묻기",
+      "question": "A new cafe just opened near your office. Ask a coworker three or four questions about it.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What would make you go there?",
+        "What would stop you?"
+      ],
+      "keywords": [
+        "Have you been to",
+        "What's the",
+        "Is it usually",
+        "Would you say"
+      ],
+      "sample_answer": "Hey, have you been to that new cafe that opened downstairs? I walked past it yesterday but didn't go in. What's the coffee like? I'm picky about americanos, so I want to know if it's actually good or just average. Second, how are the prices compared to the place we usually go? And is it usually crowded at lunchtime? I'd rather not stand in line for fifteen minutes. Also, do they have enough seating to sit and work for a while, or is it more of a takeout place? If it's good, maybe we should go together tomorrow morning."
+    },
+    {
+      "id": "t4_013",
+      "type": 4,
+      "category": "쇼핑·A/S",
+      "difficulty": "hard",
+      "situation": "구매한 가전제품이 고장났습니다.",
+      "question": "The appliance you bought two months ago has stopped working. Call the service center, explain the problem, and request a solution.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "What if it is out of warranty?",
+        "How urgent is it for you?"
+      ],
+      "keywords": [
+        "I purchased",
+        "started making",
+        "under warranty",
+        "as soon as possible"
+      ],
+      "sample_answer": "Hello, I'm calling about a washing machine I purchased about two months ago from your store. The model number is on the receipt, I can give it to you. About a week ago it started making a loud grinding noise during the spin cycle, and since yesterday it stops completely halfway through and shows an error code, E-4. I've already tried unplugging it and restarting, which is what the manual suggests, but the problem keeps happening. Since it's only two months old, it should still be under warranty. I'd like a technician to come as soon as possible, ideally this week. If it turns out to be a manufacturing defect, I'd want a replacement rather than a repair. What's the earliest appointment you have?"
+    },
+    {
+      "id": "t4_014",
+      "type": 4,
+      "category": "외식·서비스",
+      "difficulty": "medium",
+      "situation": "서비스가 나빴던 경험",
+      "question": "Tell me about a time you received bad service somewhere. What happened and what did you do?",
+      "combo": "관련 경험",
+      "follow_ups": [
+        "Did you complain?",
+        "Did you go back?"
+      ],
+      "keywords": [
+        "I remember once",
+        "kept us waiting",
+        "ended up",
+        "never went back"
+      ],
+      "sample_answer": "I remember once going to a restaurant with three friends for a birthday dinner. We had a reservation for seven, but they kept us waiting almost forty minutes without any explanation. When we finally sat down, we ordered, and then two of the dishes never came out. Every time we asked, the server said it was coming, but nothing happened. After an hour, we asked to speak to the manager, who apologized and took those items off the bill, but by then the mood was ruined and my friend's birthday dinner was basically over. I didn't make a scene, but I did leave an honest review online. And no, we never went back, which is a shame because the food itself was decent."
+    },
+    {
+      "id": "t4_015",
+      "type": 4,
+      "category": "회사",
+      "difficulty": "medium",
+      "situation": "회사 교육 프로그램에 대해 묻기",
+      "question": "Your company announced a new training program. Ask the person in charge three or four questions about it.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What would you need to know before signing up?",
+        "What concerns would you have?"
+      ],
+      "keywords": [
+        "I'd like to know more about",
+        "Is it mandatory",
+        "How long does",
+        "Will it affect"
+      ],
+      "sample_answer": "Hi, I saw the announcement about the new training program and I'd like to know more about it before I sign up. First, is it mandatory, or is participation voluntary? Second, how long does the whole program run, and how many hours per week does it take? I'm asking because my team is pretty busy this quarter. Third, is it held during work hours or after work? And will it be online, in person, or a mix of both? Lastly, is there any kind of certificate or evaluation at the end, and does completing it affect performance reviews in any way? That would help me decide."
+    },
+    {
+      "id": "t4_016",
+      "type": 4,
+      "category": "약속·모임",
+      "difficulty": "medium",
+      "situation": "약속 시간을 변경해야 합니다.",
+      "question": "You need to change an appointment you already made. Call and explain why, then suggest a new time.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "How would you apologize?",
+        "What if they cannot reschedule?"
+      ],
+      "keywords": [
+        "I'm calling to",
+        "something came up",
+        "would it be possible",
+        "whichever works better"
+      ],
+      "sample_answer": "Hello, I'm calling to change an appointment I have with you. My name is Lee Minkyung, and I'm scheduled for this Thursday at three in the afternoon. Unfortunately, something came up at work, an urgent meeting was moved to that exact time, and I can't get out of it. I'm sorry for the short notice. Would it be possible to reschedule? I'm free on Friday afternoon, any time after two, or next Monday morning before eleven, whichever works better for you. If neither of those is available, please just tell me what slots you have and I'll try to make one of them work. Again, I apologize for the inconvenience."
+    },
+    {
+      "id": "t4_017",
+      "type": 4,
+      "category": "주거",
+      "difficulty": "hard",
+      "situation": "이사할 집을 보러 부동산에 연락했습니다.",
+      "question": "You are looking for a new apartment. Call a real estate agent and ask three or four questions about a listing.",
+      "combo": "질문하기",
+      "follow_ups": [
+        "What is your top priority?",
+        "What would be a deal breaker?"
+      ],
+      "keywords": [
+        "I saw the listing for",
+        "Could you tell me more about",
+        "Is it negotiable",
+        "How soon"
+      ],
+      "sample_answer": "Hello, I saw the listing for the two-bedroom apartment in Mapo on your website, and I'd like to ask a few questions. First, could you tell me more about the exact location? The listing says near the station, but how many minutes is it on foot? Second, what's included in the monthly cost? I want to know whether maintenance fees, water, and heating are separate. Third, what floor is it on, and does it get much sunlight? That matters a lot to me. Also, is the price negotiable at all? And finally, how soon could I move in, and would it be possible to see it this weekend?"
+    },
+    {
+      "id": "t4_018",
+      "type": 4,
+      "category": "회사",
+      "difficulty": "hard",
+      "situation": "누군가를 도왔던 경험",
+      "question": "Tell me about a time you helped someone solve a problem. What was the situation?",
+      "combo": "관련 경험",
+      "follow_ups": [
+        "How did it turn out?",
+        "Would you do the same again?"
+      ],
+      "keywords": [
+        "A colleague of mine",
+        "was struggling with",
+        "I offered to",
+        "in the end"
+      ],
+      "sample_answer": "A colleague of mine was struggling with a presentation she had to give to the executives. It was her first time presenting at that level, and two days before, she came to me almost in tears because she felt her slides were a mess. I offered to help, so we stayed late that evening and went through the whole deck together. The main problem wasn't the content, it was the order, she'd buried the most important point on slide fifteen. So we restructured it, cut about ten slides, and practiced the opening five times until she was comfortable. In the end, the presentation went really well and her director specifically praised the structure. I'd absolutely do it again, and honestly, I learned a lot myself."
+    },
+    {
+      "id": "t4_019",
+      "type": 4,
+      "category": "여행·숙박",
+      "difficulty": "medium",
+      "situation": "친구와 여행 계획을 조정해야 합니다.",
+      "question": "You and your friend planned a trip, but your schedule changed. Call your friend, explain, and propose two options.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "Which option do you prefer?",
+        "How would you compromise?"
+      ],
+      "keywords": [
+        "I need to talk to you about",
+        "it turns out",
+        "option one",
+        "option two"
+      ],
+      "sample_answer": "Hey, I need to talk to you about our trip next month. It turns out I have to attend a company workshop on the exact weekend we planned, and it's mandatory, so I can't skip it. I'm really sorry, I know we already looked at flights. So I've been thinking about two options. Option one, we push the trip back by one week. I checked and flights are actually slightly cheaper then, though the hotel we liked might be full. Option two, we keep the same dates but shorten it, I could join you from Saturday evening instead of Friday. I'd prefer option one, honestly, but tell me what you think and we'll decide together."
+    },
+    {
+      "id": "t4_020",
+      "type": 4,
+      "category": "여행·숙박",
+      "difficulty": "hard",
+      "situation": "구매한 항공권을 변경해야 합니다.",
+      "question": "You need to change a flight you already booked. Call the airline, explain your situation, and ask about your options.",
+      "combo": "문제 해결",
+      "follow_ups": [
+        "What would you accept?",
+        "What if there is a large fee?"
+      ],
+      "keywords": [
+        "I booked a flight",
+        "due to",
+        "what are my options",
+        "waive the fee"
+      ],
+      "sample_answer": "Hello, I booked a flight with you last month and I need to change the date. My booking reference is K-M-7-2-4-1, under the name Lee Minkyung. The flight is on the fifteenth to Osaka, and due to a change in my work schedule, I now need to travel on the twenty-second instead. Could you tell me what my options are? First, is there availability on the twenty-second on the same route? Second, how much is the change fee, and is there any fare difference on top of that? I bought a standard economy ticket, not the cheapest one, so I'm hoping the fee isn't too high. And if the fee is significant, would it be cheaper to cancel and rebook instead?"
+    }
+  ]
+}

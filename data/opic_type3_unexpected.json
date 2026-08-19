@@ -1,0 +1,403 @@
+{
+  "type": 3,
+  "name": "돌발 주제",
+  "description": "설문에서 선택하지 않아도 출제되는 공통 주제. 날씨·교통·은행·인터넷·명절 등",
+  "total": 20,
+  "questions": [
+    {
+      "id": "t3_001",
+      "type": 3,
+      "category": "날씨·계절",
+      "difficulty": "easy",
+      "question": "Tell me about the weather in your country. What are the seasons like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Which season do you like best?",
+        "How does the weather affect what you do?"
+      ],
+      "keywords": [
+        "four distinct seasons",
+        "humid",
+        "chilly",
+        "tends to be",
+        "varies a lot"
+      ],
+      "sample_answer": "My country has four distinct seasons, and honestly, they're all quite extreme. Spring is short and mild, maybe six weeks, and that's when the cherry blossoms come out. Summer is the hardest for me because it's hot and very humid, sometimes over thirty-five degrees, and there's a rainy season in the middle of it. Autumn is my favorite by far. The air becomes dry and cool, the sky is incredibly clear, and the leaves turn red and yellow. Winter gets pretty chilly, often below zero, with a fair amount of snow in January. The weather really affects what I do, in summer I stay indoors, and in autumn I'm outside every weekend."
+    },
+    {
+      "id": "t3_002",
+      "type": 3,
+      "category": "날씨·계절",
+      "difficulty": "medium",
+      "question": "Tell me about a time when the weather caused a problem for you.",
+      "combo": "경험",
+      "follow_ups": [
+        "How did you handle it?",
+        "Did it change your plans?"
+      ],
+      "keywords": [
+        "out of nowhere",
+        "ended up soaked",
+        "canceled",
+        "by the time"
+      ],
+      "sample_answer": "Two summers ago, I was heading to an outdoor company event we'd been planning for months. The forecast said cloudy, but about an hour before it started, it began pouring out of nowhere. I was the one in charge, so I had to decide quickly whether to cancel or move everything indoors. We ended up moving into the building lobby, which was way too small for two hundred people. Half the equipment was already outside and got completely soaked. By the time we finished, I was drenched and exhausted. It worked out in the end, people said they enjoyed it, but now I always book a backup indoor space."
+    },
+    {
+      "id": "t3_003",
+      "type": 3,
+      "category": "교통수단",
+      "difficulty": "easy",
+      "question": "What kinds of public transportation are available where you live? Describe them.",
+      "combo": "묘사",
+      "follow_ups": [
+        "Which one do you use most?",
+        "How much does it cost?"
+      ],
+      "keywords": [
+        "extensive",
+        "reliable",
+        "transfer",
+        "fare",
+        "runs every ... minutes"
+      ],
+      "sample_answer": "Where I live, public transportation is really extensive. We have subways, city buses, express buses, and taxis, plus high-speed trains for traveling between cities. The subway is the backbone of the system. There are more than twenty lines in the metro area, and trains run every three to five minutes during the day. It's clean, it's punctual, and you can transfer between lines without paying again. Buses cover the areas the subway doesn't reach, and you can use the same card for both. The fare is pretty cheap, a little over a dollar for a basic ride. I use the subway most, mainly because it's never affected by traffic."
+    },
+    {
+      "id": "t3_004",
+      "type": 3,
+      "category": "교통수단",
+      "difficulty": "hard",
+      "question": "How has public transportation in your country changed over the past decade? Compare then and now.",
+      "combo": "비교",
+      "follow_ups": [
+        "What drove those changes?",
+        "What still needs to improve?"
+      ],
+      "keywords": [
+        "ten years back",
+        "these days",
+        "significantly improved",
+        "one major change"
+      ],
+      "sample_answer": "Ten years back, taking the subway meant carrying a paper ticket or a plastic card you had to top up at a machine. These days, almost everyone just taps their phone, and the whole thing takes half a second. That's probably the most visible change. Another major one is information. Now every station has screens showing exactly when the next train arrives, and apps tell you which car to board so you're closest to the exit. New lines have also opened, so areas that used to be inconvenient are now well connected. What still needs to improve is rush hour congestion. Despite all the technology, the trains at eight in the morning are as packed as they were a decade ago."
+    },
+    {
+      "id": "t3_005",
+      "type": 3,
+      "category": "은행",
+      "difficulty": "medium",
+      "question": "Tell me about the banks in your country. What do people usually do there?",
+      "combo": "묘사",
+      "follow_ups": [
+        "How often do you visit a bank?",
+        "What services do you use most?"
+      ],
+      "keywords": [
+        "branch",
+        "teller",
+        "withdraw",
+        "transfer money",
+        "open an account"
+      ],
+      "sample_answer": "Banks in my country are still fairly common on the street, though fewer than before. A typical branch has a few tellers behind counters, a waiting area with numbered tickets, and a row of ATMs near the entrance. People go there mainly to open accounts, apply for loans, or handle anything that needs documents and a signature. Honestly, I almost never go anymore. I do about ninety-five percent of my banking on my phone, transferring money, checking balances, even opening new accounts. The last time I actually walked into a branch was to get a certificate for a housing contract, because that still required going in person."
+    },
+    {
+      "id": "t3_006",
+      "type": 3,
+      "category": "은행",
+      "difficulty": "medium",
+      "question": "Tell me about a time you had a problem at a bank or with your bank account.",
+      "combo": "경험",
+      "follow_ups": [
+        "How was it resolved?",
+        "How did you feel?"
+      ],
+      "keywords": [
+        "I noticed that",
+        "turned out to be",
+        "got it sorted out",
+        "relieved"
+      ],
+      "sample_answer": "About a year ago, I noticed a payment on my account that I definitely didn't make. It wasn't huge, maybe forty dollars, but it was to a store overseas I'd never heard of. I panicked a little and called the bank right away. They put my card on hold and walked me through filing a dispute, which took maybe twenty minutes on the phone. It turned out to be a case where someone had copied my card details online. The bank refunded the amount about two weeks later and sent me a new card. I was relieved, but it made me much more careful about which sites I save my card on."
+    },
+    {
+      "id": "t3_007",
+      "type": 3,
+      "category": "인터넷",
+      "difficulty": "easy",
+      "question": "What do you usually do on the internet? Describe your typical usage.",
+      "combo": "습관",
+      "follow_ups": [
+        "How much time do you spend online?",
+        "Which sites do you visit most?"
+      ],
+      "keywords": [
+        "browse",
+        "look up",
+        "stream",
+        "scroll through",
+        "spend hours"
+      ],
+      "sample_answer": "I'm online for most of the day, honestly. At work, I use the internet constantly for research, email, and video calls, so that's already eight hours. Outside of work, the first thing I do is check the news and messages on my phone. In the evening, I usually stream something, or scroll through social media longer than I intend to. I also look things up all the time, recipes, directions, product reviews before buying anything. If I add it all up, it's probably ten or eleven hours a day, which sounds alarming when I say it out loud. I've been trying to cut down the pointless scrolling part."
+    },
+    {
+      "id": "t3_008",
+      "type": 3,
+      "category": "인터넷",
+      "difficulty": "hard",
+      "question": "What problems do people face because of the internet? Discuss the issues.",
+      "combo": "이슈",
+      "follow_ups": [
+        "What can be done about it?",
+        "Have you experienced any of these?"
+      ],
+      "keywords": [
+        "one of the biggest concerns",
+        "misinformation",
+        "privacy",
+        "addiction",
+        "as a result"
+      ],
+      "sample_answer": "One of the biggest concerns is misinformation. Anyone can publish anything, and false information spreads faster than corrections do, so people end up making decisions based on things that simply aren't true. A second issue is privacy. Companies collect enormous amounts of data about what we search and buy, and most people have no idea how much is being stored. The third problem is addiction, especially with short video content designed to keep you scrolling. I've definitely experienced that myself. What can be done? I think platforms need stronger accountability, but realistically, education matters more, teaching people to check sources and set limits on their own usage."
+    },
+    {
+      "id": "t3_009",
+      "type": 3,
+      "category": "호텔",
+      "difficulty": "medium",
+      "question": "Describe a hotel you have stayed at. What was it like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "What facilities did it have?",
+        "Would you stay there again?"
+      ],
+      "keywords": [
+        "check in",
+        "lobby",
+        "the room itself",
+        "amenities",
+        "overlooking"
+      ],
+      "sample_answer": "The last hotel I stayed at was in Busan, right near the beach. It was a mid-range business hotel, nothing luxurious, but very clean. The lobby was small but modern, and check-in took less than five minutes. The room itself was on the fifteenth floor, overlooking the ocean, which honestly was the main reason I booked it. It had a queen bed, a desk, and a surprisingly good bathroom. The hotel had a gym and a small breakfast buffet, though the breakfast was pretty basic. What I appreciated most was that it was quiet, the walls were thick enough that I never heard the neighbors. I'd stay there again."
+    },
+    {
+      "id": "t3_010",
+      "type": 3,
+      "category": "호텔",
+      "difficulty": "medium",
+      "question": "Tell me about a problem you had while staying at a hotel and how it was solved.",
+      "combo": "경험",
+      "follow_ups": [
+        "How did the staff respond?",
+        "What would you do differently?"
+      ],
+      "keywords": [
+        "when we arrived",
+        "complained about",
+        "moved us to",
+        "made up for it"
+      ],
+      "sample_answer": "When we arrived at a hotel in Jeju a couple of years ago, they told us at the front desk that the room we booked wasn't available because of a maintenance issue. We had reserved a room with two beds, and all they had left was a single bed room. I was traveling with a friend, so that obviously wouldn't work. I complained politely but firmly, and after about fifteen minutes of the staff making calls, they moved us to a suite on a higher floor at no extra cost. So it actually ended up better than what we booked. They also gave us free breakfast vouchers, which made up for the wait. Now I always call to confirm the day before."
+    },
+    {
+      "id": "t3_011",
+      "type": 3,
+      "category": "명절·휴일",
+      "difficulty": "medium",
+      "question": "Tell me about an important holiday in your country and how people celebrate it.",
+      "combo": "묘사",
+      "follow_ups": [
+        "What do you personally do?",
+        "Has it changed over time?"
+      ],
+      "keywords": [
+        "falls on",
+        "gather",
+        "traditional",
+        "pay respects",
+        "set off"
+      ],
+      "sample_answer": "One of the most important holidays in my country is Chuseok, which is like a harvest festival and usually falls in September or early October. Traditionally, families gather at the eldest relative's home, prepare a large table of food, and hold a ceremony to pay respects to their ancestors. There's a special rice cake called songpyeon that families make together the night before. Everyone travels to their hometown, so the highways become completely jammed for two or three days. Personally, my family still gathers, but we've simplified things a lot. We buy most of the food instead of cooking for two days, and younger relatives increasingly use the holiday as a vacation instead."
+    },
+    {
+      "id": "t3_012",
+      "type": 3,
+      "category": "건강·병원",
+      "difficulty": "medium",
+      "question": "What do people in your country do to stay healthy? Describe common habits.",
+      "combo": "습관",
+      "follow_ups": [
+        "What do you personally do?",
+        "Has this changed recently?"
+      ],
+      "keywords": [
+        "health-conscious",
+        "work out",
+        "cut down on",
+        "regular checkups"
+      ],
+      "sample_answer": "People here have become much more health-conscious over the past several years. A lot of people go to the gym before or after work, and hiking is extremely popular, especially on weekends, since there are mountains near almost every city. Annual health checkups are also standard, most companies pay for them, so people catch problems early. Diet-wise, there's been a big shift toward cutting down on sugar and processed food, and you see low-sugar options everywhere now. Personally, I work out three times a week and try to walk at least eight thousand steps a day. The one habit I haven't fixed is sleep, I still stay up too late."
+    },
+    {
+      "id": "t3_013",
+      "type": 3,
+      "category": "건강·병원",
+      "difficulty": "hard",
+      "question": "Tell me about a time you or someone close to you had a health problem. What happened?",
+      "combo": "경험",
+      "follow_ups": [
+        "How did it affect your daily life?",
+        "What did you learn?"
+      ],
+      "keywords": [
+        "came down with",
+        "was diagnosed with",
+        "recovered",
+        "in the meantime",
+        "take it seriously"
+      ],
+      "sample_answer": "About two years ago, my father was diagnosed with high blood pressure during a routine checkup. He'd had no symptoms at all, so it came as a shock to everyone. The doctor told him it was serious enough that he needed medication and had to change his diet immediately. For the first month, it really affected our whole household. My mother changed how she cooked, much less salt, and my father, who used to love eating out, had to give up a lot of his favorite foods. He also started walking an hour every day. Six months later his numbers were back in the normal range. What I learned is that regular checkups genuinely matter, because he felt completely fine the whole time."
+    },
+    {
+      "id": "t3_014",
+      "type": 3,
+      "category": "재활용·환경",
+      "difficulty": "medium",
+      "question": "How do people in your country handle recycling? Describe the system.",
+      "combo": "묘사",
+      "follow_ups": [
+        "Do you find it difficult?",
+        "How could it be improved?"
+      ],
+      "keywords": [
+        "separate",
+        "designated bags",
+        "food waste",
+        "strict",
+        "fined"
+      ],
+      "sample_answer": "Recycling here is quite strict, and honestly, it takes some getting used to. Every household has to separate waste into several categories, paper, plastic, glass, cans, and food waste. General trash has to go into designated bags that you buy at convenience stores, and the price of the bag is basically the disposal fee. Food waste goes into a separate container, and in many apartments you pay by weight using a card. If you put things in the wrong bin, you can actually be fined. I found it complicated at first, especially figuring out which plastics count as recyclable. But once it becomes a habit, it's fine, and I think the system works pretty well."
+    },
+    {
+      "id": "t3_015",
+      "type": 3,
+      "category": "가구·집",
+      "difficulty": "easy",
+      "question": "Describe the furniture in your home. What pieces do you have?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Which piece is your favorite?",
+        "Have you bought anything recently?"
+      ],
+      "keywords": [
+        "a set of",
+        "wooden",
+        "fits nicely",
+        "take up space",
+        "rearrange"
+      ],
+      "sample_answer": "In the living room we have a large fabric sofa, a low wooden coffee table, and a TV stand along the wall. There's also a bookshelf that my father built himself years ago, which is probably the piece I like most, even though it's not the nicest looking. My room is pretty simple, a bed, a desk by the window, a chair, and a wardrobe. I recently bought a new desk chair because the old one was destroying my back after working from home. It was expensive but completely worth it. If anything, our apartment has too much furniture, so every few months we rearrange things to make it feel more open."
+    },
+    {
+      "id": "t3_016",
+      "type": 3,
+      "category": "패션·의복",
+      "difficulty": "medium",
+      "question": "What kind of clothes do people wear in your country? Describe typical fashion.",
+      "combo": "묘사",
+      "follow_ups": [
+        "What do you usually wear?",
+        "How does it change by season?"
+      ],
+      "keywords": [
+        "casual",
+        "dress code",
+        "layers",
+        "trendy",
+        "standard outfit"
+      ],
+      "sample_answer": "Fashion here is quite trend-conscious, and styles change fast. In general, people dress neatly even for casual occasions, you rarely see someone go out in something they'd sleep in. Office dress codes have relaxed a lot. Ten years ago suits were standard, but now business casual is normal in most companies, and some allow jeans entirely. Seasons matter a lot because the weather is extreme. In winter, everyone wears long padded coats, they're almost a uniform. In summer, it's linen shirts and light dresses because of the humidity. Personally, I wear pretty simple clothes, a shirt and slacks for work, and jeans and a sweater on weekends."
+    },
+    {
+      "id": "t3_017",
+      "type": 3,
+      "category": "외식·음식",
+      "difficulty": "medium",
+      "question": "Tell me about the restaurants people go to in your country. What are they like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "What is your favorite type?",
+        "How often do you eat out?"
+      ],
+      "keywords": [
+        "side dishes",
+        "grill",
+        "reasonably priced",
+        "delivery",
+        "packed"
+      ],
+      "sample_answer": "Restaurants here range from tiny family-run places to huge franchises. What's distinctive is that most Korean restaurants serve a set of free side dishes with every meal, and they refill them for free, which visitors always find surprising. Barbecue places are extremely popular, where you grill the meat yourself at the table. Prices are reasonable, you can eat a full meal for around eight or nine dollars at a normal place. Restaurants are also open late, and delivery is incredibly fast, sometimes under thirty minutes. My favorite is a small noodle shop near my office. It's always packed at lunch, but the line moves fast. I probably eat out three or four times a week."
+    },
+    {
+      "id": "t3_018",
+      "type": 3,
+      "category": "전화·기술",
+      "difficulty": "hard",
+      "question": "How have smartphones changed people's daily lives? Discuss the impact.",
+      "combo": "이슈",
+      "follow_ups": [
+        "What are the downsides?",
+        "Could you live without one?"
+      ],
+      "keywords": [
+        "dramatically",
+        "rely on",
+        "at our fingertips",
+        "the flip side",
+        "dependence"
+      ],
+      "sample_answer": "Smartphones have changed daily life dramatically, and I don't think most people even notice anymore. Everything is at our fingertips, payments, transportation, banking, translation, entertainment. I haven't carried cash in years, and I've completely stopped memorizing phone numbers or directions. In terms of work, it means I can respond to anything from anywhere, which is convenient but also blurs the line between work and personal time. The flip side is dependence. If I forget my phone at home, I genuinely feel anxious, which is a strange thing to admit. There's also the attention problem, it's hard to read a book for an hour without reaching for it. Could I live without one? Probably not, realistically."
+    },
+    {
+      "id": "t3_019",
+      "type": 3,
+      "category": "지형·여행지",
+      "difficulty": "medium",
+      "question": "Describe the geography of your country. What kinds of landscapes are there?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Which area do you like most?",
+        "How does geography affect daily life?"
+      ],
+      "keywords": [
+        "mountainous",
+        "peninsula",
+        "coastline",
+        "plains",
+        "surrounded by"
+      ],
+      "sample_answer": "My country is a peninsula, so it's surrounded by water on three sides, and it's about seventy percent mountainous. That means even in a big city like Seoul, you can see mountains from almost anywhere, and hiking is a normal weekend activity rather than something special. The west coast has wide tidal flats and many small islands, while the east coast has deep water and steeper cliffs. The plains are mostly in the southwest, which is where a lot of the farming happens. Jeju Island in the south is volcanic and looks completely different from the mainland. My favorite area is the east coast, mainly because you get mountains and ocean within a few kilometers of each other."
+    },
+    {
+      "id": "t3_020",
+      "type": 3,
+      "category": "약속·모임",
+      "difficulty": "medium",
+      "question": "Tell me about how you make plans with friends. What is the process?",
+      "combo": "습관",
+      "follow_ups": [
+        "Has this changed recently?",
+        "What do you do if plans fall through?"
+      ],
+      "keywords": [
+        "set a date",
+        "group chat",
+        "confirm",
+        "reschedule",
+        "last minute"
+      ],
+      "sample_answer": "Making plans usually starts in a group chat. Someone throws out an idea, then we spend about three days trying to find a date everyone can do, which is honestly the hardest part now that everyone's schedules are packed. Once we set a date, we decide the area first and then look for a restaurant, usually checking reviews and photos on an app. Whoever suggests the place makes the reservation. We confirm again the day before, because plans falling through at the last minute is pretty common. If someone cancels, we usually just reschedule rather than go without them. Compared to a few years ago, we plan much further ahead now, sometimes a month in advance."
+    }
+  ]
+}

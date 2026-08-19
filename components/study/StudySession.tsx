@@ -12,15 +12,22 @@ import Card from "@/components/ui/Card";
 import FeedbackPanel from "./FeedbackPanel";
 import { HoverText, WordHoverProvider } from "./WordHover";
 
+/** 유형별 미션 안내 — 실제 OPIc 에서 요구하는 행동 기준 */
+const MISSION: Record<QuestionType, string> = {
+  1: "본인·직장·거주지를 구체적으로 소개하세요. 이름과 직업만 말하고 끝내지 마세요.",
+  2: "고른 주제를 묘사하고, 습관과 경험까지 이어서 말하세요. 60초 이상이 목표입니다.",
+  3: "준비 없이 나오는 주제입니다. 멈추지 말고 아는 것부터 이어서 말하세요.",
+  4: "설명하지 말고 직접 수행하세요. 질문이면 3~4개를 실제로 묻고, 문제 상황이면 대안을 제시하세요.",
+  5: "입장을 먼저 정하고 근거를 붙이세요. 과거와 현재를 비교하면 등급이 올라갑니다.",
+};
+
 interface Props {
   type: QuestionType;
   questionId: string;
   question: string;
   followUps?: string[];
   sampleAnswer: string;
-  passageText?: string;
   visualContent?: React.ReactNode;
-  passageRepeats?: number;
 }
 
 export default function StudySession({
@@ -29,9 +36,7 @@ export default function StudySession({
   question,
   followUps = [],
   sampleAnswer,
-  passageText,
   visualContent,
-  passageRepeats = 2,
 }: Props) {
   const { speak, stop: stopTTS, speaking } = useTTS();
   const {
@@ -116,8 +121,7 @@ export default function StudySession({
   }, [answering]);
 
   const playQuestion = () => {
-    const text = type === 4 && passageText ? passageText : question;
-    speak(text, { rate: type === 4 ? 0.9 : 0.95 });
+    speak(question, { rate: 0.95 });
     setPlayCount((c) => c + 1);
   };
 
@@ -132,8 +136,7 @@ export default function StudySession({
     }
     setTranslating(true);
     const settings = storage.getSettings();
-    const text = type === 4 && passageText ? passageText : question;
-    const ko = await translateText(text, { model: settings.aiModel });
+    const ko = await translateText(question, { model: settings.aiModel });
     setTranslation(ko);
     setShowKorean(true);
     setTranslating(false);
@@ -167,7 +170,7 @@ export default function StudySession({
     const result = await getFeedback(
       {
         type,
-        question: type === 4 && passageText ? passageText : question,
+        question,
         userAnswer: editedAnswer,
         sampleAnswer,
         targetLevel: settings.targetLevel,
@@ -230,21 +233,14 @@ export default function StudySession({
             <div>
               <div className="text-xs font-bold text-brand-blue mb-0.5">미션</div>
               <div className="text-sm font-semibold text-brand-ink leading-snug">
-                {type === 1 &&
-                  "질문을 듣고 1분 안에 영어로 답변하세요. 본인 경험·생각을 자유롭게."}
-                {type === 2 &&
-                  "주제에 대한 본인 의견을 근거와 함께 1분 안에 영어로 답변하세요."}
-                {type === 3 &&
-                  "위 그래프/사진을 1분 안에 영어로 묘사하세요. 사진일 경우 사람과 그들의 행동을 중심으로!"}
-                {type === 4 &&
-                  "지문을 듣고 핵심 내용을 1분 안에 본인 말로 영어 요약하세요. (질문 없음 — 요약만)"}
+                {MISSION[type]}
               </div>
             </div>
           </div>
           <div className="text-xs font-semibold text-brand-red mb-2">
-            {type === 4 ? "PASSAGE (단어 위에 마우스 → 뜻)" : "QUESTION (단어 위에 마우스 → 뜻)"}
+            QUESTION (단어 위에 마우스 → 뜻)
           </div>
-          <HoverText text={type === 4 && passageText ? passageText : question} />
+          <HoverText text={question} />
 
           {showKorean && (
             <div className="mt-3 p-3 bg-blue-50 border-l-4 border-brand-blue rounded-r-lg">
@@ -272,9 +268,8 @@ export default function StudySession({
             onClick={speaking ? stopTTS : playQuestion}
             variant={speaking ? "danger" : "primary"}
             size="sm"
-            disabled={type === 4 && playCount >= passageRepeats && !speaking}
           >
-            {speaking ? "■ 정지" : type === 4 ? `▶ 듣기 (${playCount}/${passageRepeats})` : "▶ 문제 듣기"}
+            {speaking ? "■ 정지" : "▶ 문제 듣기"}
           </Button>
 
           <Button onClick={toggleKorean} variant="outline" size="sm" disabled={translating}>

@@ -1,0 +1,393 @@
+{
+  "type": 2,
+  "name": "설문 주제",
+  "description": "Background Survey 에서 선택한 주제. 묘사 → 습관 → 경험 콤보 3단 구성으로 출제",
+  "total": 20,
+  "questions": [
+    {
+      "id": "t2_001",
+      "type": 2,
+      "category": "영화보기",
+      "difficulty": "easy",
+      "question": "You indicated in the survey that you like watching movies. What kind of movies do you enjoy, and where do you usually watch them?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Who do you usually watch movies with?",
+        "How often do you watch movies?"
+      ],
+      "keywords": [
+        "I'm really into",
+        "genre",
+        "stream",
+        "on the big screen",
+        "what draws me to"
+      ],
+      "sample_answer": "I'm really into movies, especially thrillers and science fiction. What draws me to those genres is that they keep me guessing until the very end. These days I watch most movies at home on streaming services, because it's just easier after a long day at work. I have a decent TV and a sound bar, so it's actually pretty comfortable. But for big blockbuster films, I still prefer the theater. There's something about watching a movie on the big screen with the sound all around you that you just can't get at home. I usually go with a friend or my brother, maybe once or twice a month."
+    },
+    {
+      "id": "t2_002",
+      "type": 2,
+      "category": "영화보기",
+      "difficulty": "medium",
+      "question": "Tell me about the last movie you watched. What was it about, and what did you think of it?",
+      "combo": "경험",
+      "follow_ups": [
+        "Would you recommend it to others?",
+        "What was the best scene?"
+      ],
+      "keywords": [
+        "It's about",
+        "the storyline",
+        "the acting was",
+        "I'd say it was worth"
+      ],
+      "sample_answer": "The last movie I watched was a Korean crime drama I streamed at home last weekend. It's about a detective who gets pulled into a case that turns out to be connected to his own past. The storyline was pretty complicated, and honestly, I had to rewind a couple of times to follow it. But the acting was excellent, especially the lead actor, who barely says anything but conveys so much through his expression. The best scene was near the end, where everything finally comes together and you realize the clues were there the whole time. I'd definitely recommend it, though maybe not if you're tired, because you really have to pay attention."
+    },
+    {
+      "id": "t2_003",
+      "type": 2,
+      "category": "영화보기",
+      "difficulty": "hard",
+      "question": "How has the way people watch movies changed over the past ten years? Compare then and now.",
+      "combo": "비교",
+      "follow_ups": [
+        "What caused this change?",
+        "Do you think theaters will survive?"
+      ],
+      "keywords": [
+        "a decade ago",
+        "nowadays",
+        "the rise of",
+        "as a result",
+        "shifted toward"
+      ],
+      "sample_answer": "A decade ago, going to the movies was an event. You'd check what was playing, buy tickets in advance, and make a whole evening out of it. Nowadays, most people just open an app and start watching something within seconds. The rise of streaming services completely changed the habit. As a result, theaters have had a hard time, especially after the pandemic. Another difference is what people watch. Back then, a movie had to be a big hit to reach a wide audience. Now, small independent films can find viewers all over the world. I do think theaters will survive, but they'll probably focus on big spectacle films that really benefit from the big screen."
+    },
+    {
+      "id": "t2_004",
+      "type": 2,
+      "category": "공원가기",
+      "difficulty": "easy",
+      "question": "You said you like going to parks. Describe a park you visit often. What does it look like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "When do you usually go there?",
+        "What do you do at the park?"
+      ],
+      "keywords": [
+        "There's a ... in the middle",
+        "surrounded by",
+        "a walking trail",
+        "especially in the spring"
+      ],
+      "sample_answer": "The park I go to most often is about ten minutes from my apartment. It's not huge, but it's really well kept. There's a small pond in the middle with a wooden bridge over it, and the whole area is surrounded by trees. A walking trail loops around the outside, and it takes about twenty-five minutes to go all the way around. There are also basketball courts on one side and a playground where kids are always running around. I usually go in the early evening after work, when it's cooler. Especially in the spring, when the cherry blossoms are out, it gets really crowded, but it's beautiful."
+    },
+    {
+      "id": "t2_005",
+      "type": 2,
+      "category": "공원가기",
+      "difficulty": "medium",
+      "question": "What do you usually do when you go to the park? Describe your typical visit.",
+      "combo": "습관",
+      "follow_ups": [
+        "Do you go alone or with someone?",
+        "Has your routine changed?"
+      ],
+      "keywords": [
+        "The first thing I do",
+        "after that",
+        "I tend to",
+        "wind down"
+      ],
+      "sample_answer": "When I get to the park, the first thing I do is stretch a little, because I usually walk pretty fast. Then I do two laps around the trail, which takes me about fifty minutes. I always listen to a podcast while I walk, and honestly, that's become my favorite part of the day. After that, I tend to sit on a bench near the pond for ten minutes or so, just to wind down before heading home. I usually go alone because I like the quiet time, but on weekends I sometimes go with my mother, and then we walk more slowly and talk the whole way."
+    },
+    {
+      "id": "t2_006",
+      "type": 2,
+      "category": "공원가기",
+      "difficulty": "medium",
+      "question": "Tell me about a memorable experience you had at a park.",
+      "combo": "경험",
+      "follow_ups": [
+        "Who were you with?",
+        "How did you feel afterward?"
+      ],
+      "keywords": [
+        "It happened last",
+        "all of a sudden",
+        "ended up -ing",
+        "I'll never forget"
+      ],
+      "sample_answer": "It happened last spring. I went to the park with a friend for what was supposed to be a quick walk, and we ended up staying for almost four hours. There was a small outdoor concert we didn't know about, just a few musicians playing near the pond. We bought coffee from a truck nearby and sat on the grass listening. All of a sudden it started drizzling, but nobody left, people just opened umbrellas and kept listening. I'll never forget how the whole park smelled like rain and grass. It was completely unplanned, and that's exactly why it felt special."
+    },
+    {
+      "id": "t2_007",
+      "type": 2,
+      "category": "조깅·운동",
+      "difficulty": "easy",
+      "question": "You indicated that you jog or exercise. Where and when do you usually do it?",
+      "combo": "묘사",
+      "follow_ups": [
+        "What equipment do you use?",
+        "How long do you exercise?"
+      ],
+      "keywords": [
+        "three times a week",
+        "work out",
+        "warm up",
+        "keep in shape"
+      ],
+      "sample_answer": "I try to work out about three times a week. Mostly I go to a gym on the first floor of my apartment building, which is really convenient because I have no excuse not to go. I usually go in the evening, around eight, after dinner has settled. I start with ten minutes on the treadmill to warm up, then do weight training for about forty minutes. On weekends, when the weather is nice, I go jogging in the park instead. I don't use much equipment, just running shoes and my phone for music. I'm not trying to become an athlete, I just want to keep in shape and clear my head."
+    },
+    {
+      "id": "t2_008",
+      "type": 2,
+      "category": "조깅·운동",
+      "difficulty": "medium",
+      "question": "How did you start exercising? Tell me about when and why you began.",
+      "combo": "경험",
+      "follow_ups": [
+        "Was it hard at first?",
+        "What keeps you going?"
+      ],
+      "keywords": [
+        "I started about ... ago",
+        "the reason was",
+        "at first",
+        "stick with it"
+      ],
+      "sample_answer": "I started exercising regularly about three years ago. The reason was pretty simple, I had a health checkup at work and the results weren't great. My doctor told me I needed to be more active, so I signed up at the gym the same week. At first, it was really hard. I could barely run for five minutes without getting out of breath, and I was sore for days. I almost quit twice in the first month. What kept me going was tracking my progress on an app, seeing the numbers improve made it feel worth it. Now it's just part of my routine, and I actually feel strange if I skip a week."
+    },
+    {
+      "id": "t2_009",
+      "type": 2,
+      "category": "요리하기",
+      "difficulty": "easy",
+      "question": "You said you enjoy cooking. What kind of dishes do you usually make?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Who taught you to cook?",
+        "Do you cook every day?"
+      ],
+      "keywords": [
+        "I mostly cook",
+        "from scratch",
+        "a simple recipe",
+        "ingredients"
+      ],
+      "sample_answer": "I mostly cook Korean home-style food, things like soybean paste stew, stir-fried vegetables, and different kinds of side dishes. Nothing complicated. On weekends, though, I sometimes try something more ambitious, like pasta from scratch or a curry. My mother taught me most of what I know, mainly by making me stand next to her in the kitchen when I was younger. I don't cook every single day, because on weekdays I get home late and I'm too tired. But I cook at least three or four times a week. I find it relaxing, actually. Chopping vegetables is strangely calming after a stressful day."
+    },
+    {
+      "id": "t2_010",
+      "type": 2,
+      "category": "요리하기",
+      "difficulty": "medium",
+      "question": "Tell me about a time when cooking did not go well. What happened?",
+      "combo": "경험",
+      "follow_ups": [
+        "What did you do about it?",
+        "Did you try again?"
+      ],
+      "keywords": [
+        "I was trying to",
+        "it turned out",
+        "ended up burning",
+        "in the end we just"
+      ],
+      "sample_answer": "A couple of years ago I decided to make a birthday dinner for my mother, and I picked a recipe that was way too ambitious, a braised beef dish that needed about three hours. I misread the recipe and set the heat too high, so after an hour the sauce had almost completely evaporated and the bottom was burnt. The whole apartment smelled terrible. I tried to save it by adding water, but it just tasted like burnt water at that point. In the end we ordered fried chicken and laughed about it. I did try the same recipe again a few months later, and it actually came out fine, so I count that as a win."
+    },
+    {
+      "id": "t2_011",
+      "type": 2,
+      "category": "음악감상",
+      "difficulty": "easy",
+      "question": "You indicated that you like listening to music. What kind of music do you listen to, and when?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Who is your favorite artist?",
+        "Do you listen to music while working?"
+      ],
+      "keywords": [
+        "I'm into",
+        "depends on my mood",
+        "upbeat",
+        "calming",
+        "playlist"
+      ],
+      "sample_answer": "I listen to music pretty much all day, honestly. It depends on my mood. In the morning on my way to work, I put on something upbeat, usually pop or older rock, because it helps me wake up. When I'm working on something that needs concentration, I switch to instrumental music or jazz, since lyrics distract me. In the evening, I like calmer stuff, acoustic songs mostly. I have several playlists organized by mood, which sounds a little obsessive, but it works for me. My favorite artist changes every few months, but I always come back to older Korean ballads. My parents played them when I was a kid, so there's a nostalgia factor."
+    },
+    {
+      "id": "t2_012",
+      "type": 2,
+      "category": "음악감상",
+      "difficulty": "medium",
+      "question": "Tell me about a concert or live performance you attended.",
+      "combo": "경험",
+      "follow_ups": [
+        "Who did you go with?",
+        "Would you go again?"
+      ],
+      "keywords": [
+        "I went to see",
+        "the atmosphere was",
+        "the crowd",
+        "by the end"
+      ],
+      "sample_answer": "About a year ago, I went to see a band I'd been listening to since university. I bought the tickets six months in advance, which shows how excited I was. The venue was an indoor arena, and it was completely packed. The atmosphere was incredible. When the lights went down and the first song started, the whole crowd screamed at once, and I could feel the bass in my chest. I went with two friends, and we sang along to almost every song. By the end, my voice was completely gone and my legs hurt from standing for three hours, but I didn't care at all. I'd absolutely go again."
+    },
+    {
+      "id": "t2_013",
+      "type": 2,
+      "category": "국내여행",
+      "difficulty": "medium",
+      "question": "You said you enjoy domestic travel. Describe a place in your country you like to visit.",
+      "combo": "묘사",
+      "follow_ups": [
+        "How do you get there?",
+        "What is the best season to go?"
+      ],
+      "keywords": [
+        "located in the",
+        "known for",
+        "scenery",
+        "laid-back",
+        "worth visiting"
+      ],
+      "sample_answer": "One place I really like is Gangneung, on the east coast. It's about two hours from Seoul by express train, which makes it easy for a weekend trip. The city is known for its beaches and for having some of the best coffee shops in the country, which is a strange combination but it works. The scenery is beautiful, you can see the ocean on one side and mountains on the other. The pace there is much more laid-back than in Seoul, and that's exactly why I go. The best season is probably early autumn, when the weather is cool but the sea is still nice to look at."
+    },
+    {
+      "id": "t2_014",
+      "type": 2,
+      "category": "국내여행",
+      "difficulty": "medium",
+      "question": "Tell me about your most recent trip. Where did you go and what did you do?",
+      "combo": "경험",
+      "follow_ups": [
+        "Who did you travel with?",
+        "Was there anything unexpected?"
+      ],
+      "keywords": [
+        "We took the",
+        "the first thing we did",
+        "the highlight was",
+        "overall"
+      ],
+      "sample_answer": "My most recent trip was to Busan last autumn with two friends. We took the KTX on a Friday evening and arrived in about three hours. The first thing we did was go to a fish market for dinner, which is basically mandatory in Busan. The next day we walked around Gamcheon Culture Village, which is this hillside neighborhood with brightly painted houses, and took way too many photos. The highlight was the last morning, when we got up at five to watch the sunrise at the beach. It was freezing and we complained the whole time, but the view was worth it. Overall, it was a short trip but a really good one."
+    },
+    {
+      "id": "t2_015",
+      "type": 2,
+      "category": "해외여행",
+      "difficulty": "hard",
+      "question": "How is traveling abroad different from traveling within your country? Compare the two.",
+      "combo": "비교",
+      "follow_ups": [
+        "Which do you prefer?",
+        "What do you prepare differently?"
+      ],
+      "keywords": [
+        "the most obvious difference",
+        "in terms of preparation",
+        "whereas",
+        "on the other hand"
+      ],
+      "sample_answer": "The most obvious difference is preparation. For a domestic trip, I can decide on Thursday and leave on Friday. For an overseas trip, I have to think about passports, flights, currency, and sometimes visas, so I usually start planning months ahead. In terms of the experience, traveling abroad is more stimulating because everything is unfamiliar, the language, the food, even how people line up at a bus stop. On the other hand, domestic travel is much more relaxing, precisely because I don't have to think. Honestly, I prefer overseas travel when I have enough vacation days, but realistically I do domestic trips far more often."
+    },
+    {
+      "id": "t2_016",
+      "type": 2,
+      "category": "카페가기",
+      "difficulty": "easy",
+      "question": "You indicated that you go to cafes. Describe a cafe you like and why you go there.",
+      "combo": "묘사",
+      "follow_ups": [
+        "What do you usually order?",
+        "Do you go alone or with friends?"
+      ],
+      "keywords": [
+        "tucked away",
+        "cozy",
+        "the interior",
+        "regulars",
+        "hang out"
+      ],
+      "sample_answer": "There's a small cafe about five minutes from my apartment, tucked away on a side street. It's not fancy, but it's really cozy. The interior is mostly wood and there are only about eight tables, plus a long counter by the window where I usually sit. They roast their own beans, so the whole place smells amazing when you walk in. I usually order an iced americano, or a latte if it's cold. I go there maybe twice a week, sometimes alone with a book, sometimes with a friend to catch up. The owner recognizes me now, which is a small thing but it makes it feel like my place."
+    },
+    {
+      "id": "t2_017",
+      "type": 2,
+      "category": "독서",
+      "difficulty": "medium",
+      "question": "You said you like reading. What kind of books do you read, and when do you find time?",
+      "combo": "습관",
+      "follow_ups": [
+        "Where do you get your books?",
+        "Do you prefer paper books or e-books?"
+      ],
+      "keywords": [
+        "I'm drawn to",
+        "before bed",
+        "on my commute",
+        "get through a book"
+      ],
+      "sample_answer": "I'm mostly drawn to non-fiction, especially books about history and psychology, though I read novels too when I want something lighter. Finding time is the hard part. I read for about twenty minutes before bed almost every night, and I also read on my commute when I can get a seat on the subway. That's usually enough to get through maybe two books a month. I use both paper books and e-books. I prefer paper because I like turning pages and writing in the margins, but e-books are much more practical for commuting since I can carry a whole library on my phone."
+    },
+    {
+      "id": "t2_018",
+      "type": 2,
+      "category": "쇼핑",
+      "difficulty": "medium",
+      "question": "Tell me about your shopping habits. Where do you shop and how often?",
+      "combo": "습관",
+      "follow_ups": [
+        "Do you prefer online or in-store?",
+        "How do you decide what to buy?"
+      ],
+      "keywords": [
+        "I do most of my shopping",
+        "compare prices",
+        "impulse buy",
+        "end up"
+      ],
+      "sample_answer": "I do most of my shopping online these days, mainly because it's convenient and I can compare prices easily. For groceries, I order once a week and have them delivered early in the morning, which saves me a lot of time. For clothes, though, I still prefer going to a store, because sizes are so inconsistent that I want to try things on. I try not to impulse buy, so I usually put something in my cart and wait a day or two before deciding. It works maybe seventy percent of the time. The rest of the time I end up buying something I definitely didn't need."
+    },
+    {
+      "id": "t2_019",
+      "type": 2,
+      "category": "자전거·수영",
+      "difficulty": "medium",
+      "question": "Describe how you learned the activity you selected, such as cycling or swimming.",
+      "combo": "경험",
+      "follow_ups": [
+        "Who taught you?",
+        "How good are you now?"
+      ],
+      "keywords": [
+        "I picked it up",
+        "fell off",
+        "kept practicing",
+        "got the hang of it"
+      ],
+      "sample_answer": "I learned to ride a bike when I was about seven. My father took me to a parking lot near our house on a Saturday morning and held the back of the seat while I pedaled. I fell off more times than I can count, and I remember scraping my knee badly enough that I wanted to quit. But he kept bringing me back every weekend, and after maybe three weeks I suddenly got the hang of it. I still remember the exact moment I realized he'd let go and I was riding by myself. These days I ride along the river a few times a month, and I'd say I'm decent, not fast, but comfortable."
+    },
+    {
+      "id": "t2_020",
+      "type": 2,
+      "category": "영화·공연",
+      "difficulty": "hard",
+      "question": "Some people say watching movies at home is better than going to the theater. What do you think, and why?",
+      "combo": "이슈",
+      "follow_ups": [
+        "Has your own opinion changed?",
+        "What would change your mind?"
+      ],
+      "keywords": [
+        "there are arguments on both sides",
+        "personally",
+        "the main drawback",
+        "that being said"
+      ],
+      "sample_answer": "There are arguments on both sides. People who prefer watching at home usually point to cost and convenience, and they have a point. A ticket for two people plus snacks can easily cost thirty or forty dollars, while a monthly streaming subscription costs less than one ticket. You can also pause whenever you want. The main drawback is the experience itself. At home there are a hundred distractions, my phone, my family, the laundry, so I rarely give a film my full attention. Personally, I watch about ninety percent of movies at home, but I still think the theater is better for films that were designed for it. That being said, if theaters keep raising prices, even I might stop going."
+    }
+  ]
+}

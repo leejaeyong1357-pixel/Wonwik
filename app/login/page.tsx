@@ -21,6 +21,16 @@ const ADMINS: Array<{ idH: string; pwH: string; name: string }> = [
   },
 ];
 
+/**
+ * 시연용 계정.
+ *
+ * 비밀번호 등록 절차 없이 바로 들어갈 수 있도록 로그인 화면에서만 특별 처리한다.
+ * 이 계정의 신원(Culture팀 이민경)은 data/employees.json 의 사번 "wonik" 항목에서 온다.
+ * ⚠️ 실제 운영 시작 전에는 이 상수와 명부의 시연 계정을 함께 제거할 것.
+ */
+const DEMO_ID = "wonik";
+const DEMO_PW = "wonik";
+
 async function sha256Hex(s: string): Promise<string> {
   const enc = new TextEncoder().encode(s);
   const buf = await crypto.subtle.digest("SHA-256", enc);
@@ -67,6 +77,41 @@ export default function LoginPage() {
 
     const trimmedId = employeeId.trim();
     const trimmedName = name.trim();
+
+    // 시연 계정 — 사번/비밀번호만으로 즉시 입장 (이름 입력 불필요)
+    if (trimmedId === DEMO_ID && userPw === DEMO_PW) {
+      setLoading(true);
+      try {
+        const res = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ demo: true, employeeId: DEMO_ID }),
+        });
+        const data = await res.json();
+        if (!data.ok) {
+          setLoading(false);
+          setError(data.error || "시연 계정을 찾을 수 없습니다.");
+          return;
+        }
+        const u = data.user;
+        storage.saveSession({
+          name: u.name,
+          employeeId: String(u.employeeId),
+          rrnFront: "",
+          team: u.team,
+          position: u.position,
+          loggedInAt: Date.now(),
+          isAdmin: false,
+        });
+        await pullUserFromServer(String(u.employeeId));
+        setLoading(false);
+        navigateAfterLogin();
+      } catch (err: any) {
+        setLoading(false);
+        setError("서버 오류: " + (err?.message || "unknown"));
+      }
+      return;
+    }
 
     if (!trimmedName || !trimmedId) {
       setError("이름과 사번을 입력해주세요.");
@@ -180,11 +225,11 @@ export default function LoginPage() {
         <div className="text-center mb-6">
           <Image
             src="/brand-logo.svg"
-            alt="WONIK"
-            width={100}
-            height={24}
+            alt="WONIK HOLDINGS"
+            width={190}
+            height={44}
             priority
-            className="h-6 w-auto mx-auto mb-3"
+            className="h-11 w-auto mx-auto mb-4"
           />
           <h1 className="font-brand text-3xl text-brand-navy mb-1">Wonpic</h1>
           <p className="text-sm text-brand-gray-600">
@@ -258,6 +303,13 @@ export default function LoginPage() {
             <Button type="submit" fullWidth disabled={loading} size="lg">
               {loading ? "로그인 중..." : "로그인 →"}
             </Button>
+
+            <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-900 leading-relaxed">
+              <b>🎬 시연용 계정</b> — 사번 <b className="font-mono">wonik</b> / 비밀번호{" "}
+              <b className="font-mono">wonik</b>
+              <br />
+              이름은 비워두고 바로 로그인하면 Culture팀 이민경으로 접속됩니다.
+            </div>
 
             <div className="text-center text-xs text-brand-gray-500">
               처음이신가요?{" "}

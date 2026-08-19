@@ -1,0 +1,402 @@
+{
+  "type": 5,
+  "name": "고난도",
+  "description": "IH·AL 목표 구간에서 출제되는 비교·이슈 문항. 원인·영향 분석과 논리적 근거 제시가 핵심",
+  "total": 20,
+  "questions": [
+    {
+      "id": "t5_001",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "How have people's eating habits changed compared to the past? Discuss the differences and what caused them.",
+      "combo": "비교",
+      "follow_ups": [
+        "Do you think this change is positive?",
+        "How have your own habits changed?"
+      ],
+      "keywords": [
+        "a generation ago",
+        "these days",
+        "one of the driving forces",
+        "as a consequence"
+      ],
+      "sample_answer": "A generation ago, most meals were prepared at home, and families ate together at fixed times. My grandparents' generation rarely ate out except on special occasions. These days, that's almost reversed. People eat out or order delivery several times a week, and eating alone has become completely normal. One of the driving forces is simply time, both partners in most households work now, so nobody has two hours to cook. Another factor is technology, delivery apps made ordering easier than cooking. As a consequence, food has become more diverse but also less healthy on average, with more sodium and processed ingredients. I'd say the change is mixed. We have more variety and freedom, but we've lost something in terms of health and family time."
+    },
+    {
+      "id": "t5_002",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "Compare how people communicated in the past with how they communicate now. What are the main differences?",
+      "combo": "비교",
+      "follow_ups": [
+        "What has been gained and lost?",
+        "Which do you find more meaningful?"
+      ],
+      "keywords": [
+        "back in the day",
+        "in contrast",
+        "instantaneous",
+        "superficial",
+        "depth"
+      ],
+      "sample_answer": "Back in the day, communication required effort and patience. If you wanted to reach someone, you called their home phone and hoped they were there, or you wrote a letter and waited days for a reply. In contrast, communication now is instantaneous and constant. I can message ten people in a minute and expect replies within seconds. The obvious gain is convenience and reach, I stay in touch with friends who live overseas as easily as with someone next door. What we've lost, I think, is depth. Conversations have become shorter and more fragmented, and a lot of interaction is superficial, just reacting to posts. Personally, I find a one-hour phone call far more meaningful than a hundred messages."
+    },
+    {
+      "id": "t5_003",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "Many cities are becoming more crowded. What problems does this cause, and what could be done about it?",
+      "combo": "이슈",
+      "follow_ups": [
+        "Is this happening where you live?",
+        "Which solution is most realistic?"
+      ],
+      "keywords": [
+        "overpopulation",
+        "housing prices",
+        "strain on",
+        "one possible solution",
+        "in the long run"
+      ],
+      "sample_answer": "Urban crowding creates several serious problems. The most immediate one is housing. As more people move to a city, demand outstrips supply and prices rise to the point where ordinary workers can't afford to live near their jobs. That leads to the second problem, longer commutes and heavier traffic, which costs people hours every day. Third, there's the strain on infrastructure, schools, hospitals, and public transport all become overloaded. One possible solution is decentralization, moving government offices and major companies to regional cities so jobs are spread out. Another is investing in high-speed rail so people can live further away without a painful commute. In the long run, I think decentralization is the only real answer, though it's politically difficult and slow."
+    },
+    {
+      "id": "t5_004",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "What are the biggest environmental problems your country faces? Discuss the causes and possible solutions.",
+      "combo": "이슈",
+      "follow_ups": [
+        "What role should individuals play?",
+        "What is the government doing?"
+      ],
+      "keywords": [
+        "air quality",
+        "fine dust",
+        "emissions",
+        "regulations",
+        "take responsibility"
+      ],
+      "sample_answer": "The most visible environmental problem here is air quality, especially fine dust in the spring. Some days the air is bad enough that schools cancel outdoor activities and people wear masks all day. The causes are a mix of domestic emissions from vehicles and industry and pollution blown in from neighboring countries, which makes it politically complicated. A second problem is plastic waste. Delivery culture is extremely convenient, but every meal generates a pile of containers. In terms of solutions, the government has tightened emissions regulations and expanded electric vehicle subsidies, which helps. But I think individual responsibility matters too. Personally, I've started refusing disposable utensils and using a reusable cup, which sounds small, but multiplied by millions of people it isn't."
+    },
+    {
+      "id": "t5_005",
+      "type": 5,
+      "category": "기술 변화",
+      "difficulty": "hard",
+      "question": "How has technology changed the way people work? Discuss both the benefits and the drawbacks.",
+      "combo": "이슈",
+      "follow_ups": [
+        "Which change affected you most?",
+        "What do you expect in the future?"
+      ],
+      "keywords": [
+        "remote work",
+        "automation",
+        "boundaries",
+        "efficiency",
+        "at the expense of"
+      ],
+      "sample_answer": "Technology has transformed work in ways that are mostly positive but not entirely. On the benefit side, efficiency has increased enormously. Tasks that used to take a whole day, like compiling a report from several departments, can now be done in an hour with shared documents. Remote work is another huge benefit, it gave people flexibility and cut commuting time. The drawback is that boundaries have disappeared. Because I'm reachable at any hour, work spills into evenings and weekends far more than it did for my parents' generation. There's also the anxiety about automation, especially now with AI handling tasks that used to require people. My guess is that in the next decade, the jobs that survive will be the ones that require judgment rather than repetition."
+    },
+    {
+      "id": "t5_006",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "Compare the way people spend their free time now with how they did in the past.",
+      "combo": "비교",
+      "follow_ups": [
+        "Which do you think is healthier?",
+        "How do you spend yours?"
+      ],
+      "keywords": [
+        "used to",
+        "nowadays",
+        "screen time",
+        "outdoors",
+        "a shift toward"
+      ],
+      "sample_answer": "In the past, free time was mostly spent outdoors or with other people. My parents talk about playing outside until dark, visiting neighbors without calling first, and watching a single television that the whole family shared. Nowadays, leisure has become far more individual and screen-based. People watch content alone on their phones, play games online with strangers, and even exercise while following a video. There's been a clear shift toward convenience and personalization. I'd say the past was healthier in terms of physical activity and social connection, but today's options are richer, you can learn almost anything for free. Personally, I try to balance the two, I stream shows in the evening, but I also make a point of walking in the park several times a week."
+    },
+    {
+      "id": "t5_007",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "Some people say the traditional workweek should be shortened. What is your opinion?",
+      "combo": "이슈",
+      "follow_ups": [
+        "How would companies react?",
+        "Would it work in your industry?"
+      ],
+      "keywords": [
+        "proponents argue",
+        "critics point out",
+        "productivity",
+        "on balance"
+      ],
+      "sample_answer": "Proponents of a shorter workweek argue that productivity doesn't scale with hours, and there's evidence supporting that. Trials in several countries found that when companies moved to four days, output stayed the same or even improved, because people wasted less time in unnecessary meetings. There are also clear benefits for health and family life. Critics point out that this doesn't apply everywhere. In manufacturing or healthcare, output is directly tied to hours, so you'd simply need more staff, which raises costs. In my own industry, office work, I think it could work with better planning. On balance, I support the idea, but I'd want it introduced gradually and measured honestly, rather than adopted as a slogan."
+    },
+    {
+      "id": "t5_008",
+      "type": 5,
+      "category": "기술 변화",
+      "difficulty": "hard",
+      "question": "How has online shopping changed retail businesses? Discuss the impact.",
+      "combo": "이슈",
+      "follow_ups": [
+        "What happens to small shops?",
+        "How do you shop now?"
+      ],
+      "keywords": [
+        "brick-and-mortar",
+        "convenience",
+        "undercut",
+        "adapt or",
+        "the downside"
+      ],
+      "sample_answer": "Online shopping has fundamentally reshaped retail. The most obvious impact is on brick-and-mortar stores, many of which have closed because they simply can't compete on price or selection. Online sellers have lower overhead and can undercut physical stores easily. A second impact is on consumer behavior, people now go into a store to look at a product and then buy it online for less, which is devastating for small shops. Delivery expectations have also changed, next-day is now considered slow. The downside is the loss of neighborhood businesses and the experience of browsing. Some stores have adapted by becoming showrooms or focusing on service and expertise that a website can't provide. I think that's the only viable path for them."
+    },
+    {
+      "id": "t5_009",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "How has education changed compared to when you were a student?",
+      "combo": "비교",
+      "follow_ups": [
+        "Is the change an improvement?",
+        "What would you keep from the past?"
+      ],
+      "keywords": [
+        "when I was in school",
+        "these days",
+        "rote memorization",
+        "project-based",
+        "technology in the classroom"
+      ],
+      "sample_answer": "When I was in school, education was heavily focused on memorization. We copied notes from the blackboard, took frequent exams, and success was measured almost entirely by test scores. Classes were large and mostly one-directional, the teacher spoke and we listened. These days, from what I see with my younger cousins, there's much more emphasis on discussion, group projects, and presentations. Technology is also everywhere, tablets, online assignments, and video lessons. Overall, I think it's an improvement, because students learn to express their own ideas rather than just reproduce information. What I'd keep from the past, though, is the depth. There was value in memorizing certain things thoroughly, and I worry that constant access to search engines makes knowledge shallower."
+    },
+    {
+      "id": "t5_010",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "What causes stress for people in modern society, and how do they cope with it?",
+      "combo": "이슈",
+      "follow_ups": [
+        "What works best for you?",
+        "Is stress worse than in the past?"
+      ],
+      "keywords": [
+        "a major source of",
+        "competition",
+        "cope with",
+        "relieve stress",
+        "burn out"
+      ],
+      "sample_answer": "A major source of stress in modern society is competition, especially in education and employment. From a young age, people are compared and ranked, and that pressure doesn't really stop. A second source is financial insecurity, particularly housing costs, which feel out of reach for many young people no matter how hard they work. Third, the always-connected culture means people never fully disconnect from work or social comparison. As for coping, some people exercise or travel, others rely on hobbies, and unfortunately, quite a few turn to drinking. Counseling is becoming more accepted than it was, which is a positive change. What works best for me is exercise and getting enough sleep, which sounds boring, but it genuinely makes a difference."
+    },
+    {
+      "id": "t5_011",
+      "type": 5,
+      "category": "기술 변화",
+      "difficulty": "hard",
+      "question": "Some people worry that artificial intelligence will replace human jobs. What do you think?",
+      "combo": "이슈",
+      "follow_ups": [
+        "How is your own job affected?",
+        "What skills will matter most?"
+      ],
+      "keywords": [
+        "there's no denying",
+        "displace",
+        "augment",
+        "adapt",
+        "in the foreseeable future"
+      ],
+      "sample_answer": "There's no denying that AI will displace some jobs, and it's already happening with routine tasks like data entry, basic translation, and simple customer service. History suggests, though, that technology usually changes jobs more than it eliminates them entirely. When spreadsheets appeared, accountants didn't disappear, their work shifted toward analysis. I think the same pattern will hold, AI will augment more roles than it replaces, at least in the foreseeable future. In my own job, I already use AI to draft newsletters and summarize meeting notes, which saves me hours. What worries me more is the transition period. People whose jobs disappear won't automatically get the new ones, so retraining matters enormously. The skills that will hold value are judgment, communication, and knowing which questions to ask."
+    },
+    {
+      "id": "t5_012",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "Compare housing in your country now with housing in the past. What has changed?",
+      "combo": "비교",
+      "follow_ups": [
+        "What caused the change?",
+        "Is it better or worse?"
+      ],
+      "keywords": [
+        "detached houses",
+        "high-rise apartments",
+        "urbanization",
+        "affordability",
+        "in the past few decades"
+      ],
+      "sample_answer": "In the past, most families in my country lived in detached houses, often with a small yard and a shared courtyard. Neighbors knew each other, and children played outside together. Over the past few decades, high-rise apartments have become the dominant form of housing, especially in cities. Today, the majority of the population lives in apartment complexes. The main cause is urbanization combined with limited land, building upward was the only practical way to house so many people. The change brought real improvements in convenience, modern apartments have better heating, security, and facilities like gyms and parking. But affordability has gotten dramatically worse, and community ties have weakened. I've lived in the same building for ten years and I know maybe two of my neighbors."
+    },
+    {
+      "id": "t5_013",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "Do you think people today are more or less healthy than in the past? Explain your view.",
+      "combo": "이슈",
+      "follow_ups": [
+        "What is the biggest health risk now?",
+        "What should change?"
+      ],
+      "keywords": [
+        "life expectancy",
+        "sedentary",
+        "access to",
+        "on one hand",
+        "on the other"
+      ],
+      "sample_answer": "That's a complicated question because the answer goes both ways. On one hand, people today are clearly healthier in measurable terms. Life expectancy has risen substantially, medical technology catches diseases far earlier, and access to healthcare is much broader than it was fifty years ago. On the other hand, lifestyle has gotten worse in specific ways. Work has become sedentary, most of us sit for eight or nine hours a day, and diets contain far more processed food and sugar. Stress and sleep deprivation are also more common. So I'd say we live longer but not necessarily better. The biggest health risk now, in my view, is the combination of inactivity and chronic stress, and the fix isn't medical, it's about how work and cities are designed."
+    },
+    {
+      "id": "t5_014",
+      "type": 5,
+      "category": "기술 변화",
+      "difficulty": "hard",
+      "question": "How has social media affected relationships between people? Discuss the positive and negative effects.",
+      "combo": "이슈",
+      "follow_ups": [
+        "Has it affected you personally?",
+        "Would you consider quitting?"
+      ],
+      "keywords": [
+        "stay in touch",
+        "comparison",
+        "curated",
+        "genuine connection",
+        "double-edged"
+      ],
+      "sample_answer": "Social media is really a double-edged thing. On the positive side, it makes staying in touch effortless. I have friends who moved abroad, and without it we would almost certainly have drifted apart. It also helps people with niche interests find communities they'd never encounter otherwise. The negative effects are just as real, though. The biggest one is comparison. What people post is carefully curated, showing vacations, promotions, and celebrations, so you end up comparing your ordinary day to everyone else's highlights. That quietly damages self-esteem. There's also the way it replaces genuine connection with shallow interaction, liking a photo feels like keeping in touch, but it isn't. Personally, I've cut my usage in half over the past year, and I don't miss it."
+    },
+    {
+      "id": "t5_015",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "Compare how people travel now with how they traveled in the past.",
+      "combo": "비교",
+      "follow_ups": [
+        "What made travel more accessible?",
+        "What has been lost?"
+      ],
+      "keywords": [
+        "package tours",
+        "independent travel",
+        "budget airlines",
+        "research beforehand"
+      ],
+      "sample_answer": "Travel in the past was much more structured. Most people went on package tours where a guide handled everything, the itinerary, the meals, the transportation, and you followed a flag through the sights. It was also far more expensive relative to income, so overseas travel was a once-in-a-lifetime event for many families. Now, independent travel is the norm. Budget airlines made flights affordable, and platforms let anyone book accommodation and activities directly. People research obsessively beforehand, reading reviews and watching videos of places before they arrive. What's been gained is freedom and value. What's been lost, I'd argue, is a sense of discovery. When you've already seen a hundred photos of a place, actually standing there feels less surprising than it used to."
+    },
+    {
+      "id": "t5_016",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "What can companies do to help their employees maintain a good work-life balance?",
+      "combo": "이슈",
+      "follow_ups": [
+        "What does your company do?",
+        "What matters most to employees?"
+      ],
+      "keywords": [
+        "flexible hours",
+        "set boundaries",
+        "lead by example",
+        "policy versus culture"
+      ],
+      "sample_answer": "There are several things companies can do, but I think the order matters. The most effective single measure is flexible working, letting people choose their hours within a range and work remotely part of the week. That alone removes a huge amount of daily friction. Second, companies should set clear boundaries about after-hours contact. A policy of no messages after seven sounds small, but it changes expectations completely. Third, and this is the hardest, leadership has to lead by example. If the executives send emails at midnight, no policy will help, because people will imitate what they see rather than what's written. My own company introduced a hybrid system and it genuinely improved things, but the culture piece is still a work in progress."
+    },
+    {
+      "id": "t5_017",
+      "type": 5,
+      "category": "기술 변화",
+      "difficulty": "hard",
+      "question": "How have mobile payment systems changed daily life in your country?",
+      "combo": "이슈",
+      "follow_ups": [
+        "Are there any downsides?",
+        "Who is left behind?"
+      ],
+      "keywords": [
+        "cashless",
+        "tap",
+        "widespread adoption",
+        "security concerns",
+        "digital divide"
+      ],
+      "sample_answer": "Mobile payments have made daily life almost entirely cashless here. I genuinely cannot remember the last time I used a bill or a coin. You tap your phone at the subway gate, at convenience stores, at restaurants, even at street food stalls in many cases. The convenience is enormous, no wallet, no counting change, and every transaction is automatically recorded, which makes budgeting easier. There are downsides, though. Security is one, if your phone is compromised, the damage can be immediate and large. The bigger issue in my view is the digital divide. Older people who aren't comfortable with smartphones are increasingly excluded, and some stores have stopped accepting cash entirely. I think there should be a requirement to keep cash as an option."
+    },
+    {
+      "id": "t5_018",
+      "type": 5,
+      "category": "사회 이슈",
+      "difficulty": "hard",
+      "question": "Some people believe public transportation should be free. What is your opinion on this?",
+      "combo": "이슈",
+      "follow_ups": [
+        "Who would benefit most?",
+        "How would it be funded?"
+      ],
+      "keywords": [
+        "proponents claim",
+        "reduce congestion",
+        "funded through",
+        "a compromise would be"
+      ],
+      "sample_answer": "Proponents claim that free public transportation would reduce car use, cut emissions, and help low-income households the most, and those arguments are reasonable. Cities that have tried it did see ridership increase. However, I have doubts about the practical side. Transit systems are expensive to maintain, and if fare revenue disappears, the money has to come from taxes. If funding falls short, service quality drops, trains become less frequent and less clean, and then people go back to driving anyway. That would defeat the whole purpose. A compromise would be better in my view, keep fares low but not zero, and make it genuinely free for specific groups like students, the elderly, and low-income residents. That targets the benefit where it matters without gutting the budget."
+    },
+    {
+      "id": "t5_019",
+      "type": 5,
+      "category": "과거·현재 비교",
+      "difficulty": "hard",
+      "question": "How has the role of family changed in your society over the last few decades?",
+      "combo": "비교",
+      "follow_ups": [
+        "What caused the change?",
+        "How does it affect older people?"
+      ],
+      "keywords": [
+        "extended family",
+        "nuclear family",
+        "aging population",
+        "independence",
+        "support system"
+      ],
+      "sample_answer": "A few decades ago, the extended family was the norm. Three generations often lived under one roof, and grandparents were deeply involved in raising children. Family decisions, including things like careers and marriage, were made collectively. Today, the nuclear family, or even single-person households, has become dominant. In fact, single-person households are now the most common household type in my country. The causes are economic and social, people move to cities for work, women's participation in the workforce increased, and individual independence became more valued. There are real benefits, particularly more personal freedom. But the consequences for older people are serious. Many now live alone with weaker support systems, and elderly poverty and isolation have become significant social problems that the country hasn't solved."
+    },
+    {
+      "id": "t5_020",
+      "type": 5,
+      "category": "기술 변화",
+      "difficulty": "hard",
+      "question": "In the future, how do you think people's daily lives will change? Explain your prediction.",
+      "combo": "이슈",
+      "follow_ups": [
+        "What are you looking forward to?",
+        "What worries you?"
+      ],
+      "keywords": [
+        "I'd expect",
+        "it's likely that",
+        "by the time",
+        "whether or not"
+      ],
+      "sample_answer": "I'd expect the biggest changes to come from AI and automation working quietly in the background. It's likely that a lot of routine decisions, scheduling, shopping, even parts of healthcare monitoring, will be handled automatically, so people will spend less time on administration and more on whatever they actually choose to do. I also think remote and hybrid work will become permanent, which could reverse the trend of everyone crowding into a few big cities. What I'm looking forward to is better healthcare, early detection of disease through wearable devices could genuinely extend healthy lifespans. What worries me is inequality. New technology tends to benefit those who can afford it first, and if that gap widens, the social consequences could be severe. Whether or not that happens depends far more on policy than on the technology itself."
+    }
+  ]
+}

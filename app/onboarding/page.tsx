@@ -8,56 +8,61 @@ import Button from "@/components/ui/Button";
 
 const SECTIONS = [
   {
-    badge: "SPA 시험이란?",
-    title: "Speaking Proficiency Assessment",
+    badge: "OPIc 이란?",
+    title: "Oral Proficiency Interview - computer",
     body: (
       <>
         <p className="text-brand-gray-700 leading-relaxed">
-          원익그룹 임직원의 영어 말하기 능력을 평가하는 사내 표준 시험.
+          컴퓨터로 진행하는 영어 말하기 평가입니다. 정해진 정답을 맞히는 시험이 아니라,
           <br />
-          승진, 해외 주재원 선발, 글로벌 직무 배치의 기준이 됩니다.
+          <b>얼마나 자연스럽게 오래 말할 수 있는가</b>를 ACTFL 기준으로 판정합니다.
         </p>
-        <div className="mt-4 p-4 bg-brand-red/5 border border-brand-red/20 rounded-xl">
-          <div className="font-bold text-brand-red mb-1">⚠ 2026년부터 달라진 점</div>
-          <div className="text-sm text-brand-gray-800">
-            <span className="line-through text-brand-gray-500">실시간 대면 평가</span> →{" "}
-            <span className="font-bold">실시간 비대면 화상 시험</span>
-            <br />
-            카메라/마이크 환경에서 즉석으로 답변. 화면에 차트·사진이 나오면 묘사.
-          </div>
+        <div className="mt-4 p-4 bg-brand-blue/5 border border-brand-blue/20 rounded-xl">
+          <div className="font-bold text-brand-blue mb-1">💡 핵심 포인트</div>
+          <ul className="text-sm text-brand-gray-800 space-y-1">
+            <li>• 시험 시작 전 <b>배경 설문</b>으로 본인이 답할 주제를 직접 고릅니다</li>
+            <li>• 총 15문항, 약 40분. 문항당 정해진 시간 제한은 없습니다</li>
+            <li>• 짧고 완벽한 문장보다 <b>길고 자연스러운 답변</b>이 유리합니다</li>
+          </ul>
         </div>
       </>
     ),
   },
   {
     badge: "출제 유형",
-    title: "4가지 유형 · 약 13분",
+    title: "5가지 유형 · 총 15문항",
     body: (
       <div className="space-y-3">
         {[
           {
             n: 1,
-            name: "Business Casual",
-            desc: "일상·개인 관련 Q&A (취미, 주말, 출퇴근 등)",
-            time: "약 3분",
+            name: "자기소개",
+            desc: "본인·직장·거주지·가족 소개 (첫 문항 고정)",
+            time: "1문항",
           },
           {
             n: 2,
-            name: "Opinion",
-            desc: "사회/비즈니스 이슈에 대한 의견 + 근거 제시",
-            time: "약 3분",
+            name: "설문 주제",
+            desc: "배경 설문에서 고른 주제. 묘사 → 습관 → 경험 콤보",
+            time: "약 6문항",
           },
           {
             n: 3,
-            name: "Visual Description",
-            desc: "차트·그래프·사진을 보고 분석/묘사",
-            time: "약 3분",
+            name: "돌발 주제",
+            desc: "설문에 없어도 나오는 공통 주제 (날씨·교통·은행 등)",
+            time: "약 3문항",
           },
           {
             n: 4,
-            name: "Passage Summary",
-            desc: "60초 지문을 듣고 1분 안에 요약",
-            time: "약 4분",
+            name: "롤플레이",
+            desc: "상황을 주고 질문하기 · 문제 해결 요구",
+            time: "약 3문항",
+          },
+          {
+            n: 5,
+            name: "고난도",
+            desc: "과거·현재 비교, 사회 이슈 분석 (IH·AL 목표 시)",
+            time: "약 2문항",
           },
         ].map((t) => (
           <div key={t.n} className="flex items-start gap-3 p-3 bg-brand-gray-50 rounded-xl">
@@ -78,29 +83,35 @@ const SECTIONS = [
   },
   {
     badge: "등급 체계",
-    title: "8등급 · 96점 만점",
+    title: "9등급 · NL 부터 AL 까지",
     body: (
       <div className="space-y-2">
         {[
-          ["Lv 1", "0~15점", "기초 입문", "bg-brand-gray-100"],
-          ["Lv 2", "16~24점", "기본 의사소통 시작", "bg-brand-gray-100"],
-          ["Lv 3", "25~34점", "단순 일상 표현", "bg-brand-gray-100"],
-          ["Lv 4", "35~49점", "기본 비즈니스 표현", "bg-blue-50"],
-          ["Lv 5", "50~64점", "기본 비즈니스 의사소통", "bg-blue-50"],
-          ["Lv 6", "65~74점", "해외 주재원 최소 기준", "bg-blue-100"],
-          ["Lv 7", "75~84점", "유창한 업무 영어 (승진 우대)", "bg-blue-200"],
-          ["Lv 8", "85~96점", "원어민 수준 비즈니스 영어", "bg-blue-300"],
-        ].map(([lv, range, desc, bg]) => (
+          ["NL", "Novice Low", "단어 나열 수준", "bg-brand-gray-100"],
+          ["NM", "Novice Mid", "암기한 짧은 문장", "bg-brand-gray-100"],
+          ["NH", "Novice High", "익숙한 주제 단문", "bg-brand-gray-100"],
+          ["IL", "Intermediate Low", "문장을 이어서 말함", "bg-blue-50"],
+          ["IM1", "Intermediate Mid 1", "문단 수준 답변", "bg-blue-50"],
+          ["IM2", "Intermediate Mid 2", "사무직 지원 최소 구간", "bg-blue-100"],
+          ["IM3", "Intermediate Mid 3", "사무직 일반 요구 구간", "bg-blue-100"],
+          ["IH", "Intermediate High", "주요 기업·공공기관 선호", "bg-blue-200"],
+          ["AL", "Advanced Low", "해외 업무·주재원 구간", "bg-blue-300"],
+        ].map(([lv, name, desc, bg]) => (
           <div key={lv} className={`flex items-center gap-3 p-2.5 rounded-lg ${bg}`}>
             <div className="font-bold text-brand-navy w-12">{lv}</div>
-            <div className="text-sm font-mono text-brand-gray-700 w-24">{range}</div>
+            <div className="text-xs font-mono text-brand-gray-700 w-36 hidden sm:block">{name}</div>
             <div className="text-sm text-brand-gray-800 flex-1">{desc}</div>
           </div>
         ))}
+        <p className="text-[11px] text-brand-gray-500 pt-2 leading-relaxed">
+          ※ 실제 OPIc 은 총점을 매기지 않습니다. Wonpic 은 학습 진척을 보기 위해 5개 영역을
+          100점으로 환산해 예상 등급을 보여줄 뿐, 공식 점수가 아닙니다.
+        </p>
       </div>
     ),
   },
 ];
+
 
 export default function OnboardingPage() {
   const router = useRouter();

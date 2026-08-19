@@ -5,13 +5,14 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { storage } from "@/lib/storage";
-import { LEVEL_RANGES } from "@/lib/scoring";
+import { DEFAULT_TARGET_GRADE, SELECTABLE_GRADES } from "@/lib/constants";
+import { GRADE_NAMES } from "@/lib/scoring";
 import type { UserSession, Level } from "@/types";
 
 export default function Header() {
   const router = useRouter();
   const [session, setSession] = useState<UserSession | null>(null);
-  const [targetLevel, setTargetLevel] = useState<Level>(6);
+  const [targetLevel, setTargetLevel] = useState<Level>(DEFAULT_TARGET_GRADE);
   const [showLevelMenu, setShowLevelMenu] = useState(false);
   const [showUserMenu, setShowUserMenu] = useState(false);
 
@@ -42,7 +43,7 @@ export default function Header() {
     <header className="bg-white border-b border-brand-gray-200 sticky top-0 z-30">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-2">
         <Link href={isAdmin ? "/admin" : "/dashboard"} className="flex items-center gap-2 shrink-0 min-w-0">
-          <Image src="/brand-logo.svg" alt="WONIK" width={92} height={22} priority className="h-5 sm:h-[22px] w-auto" />
+          <Image src="/brand-logo.svg" alt="WONIK HOLDINGS" width={150} height={35} priority className="h-7 sm:h-8 w-auto" />
           <span className="text-brand-gray-300 text-sm hidden sm:inline">|</span>
           <span className="font-brand text-sm sm:text-base text-brand-navy tracking-tight translate-y-[1px]">
             Wonpic
@@ -69,7 +70,7 @@ export default function Header() {
                 }}
                 className="px-2 sm:px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold text-brand-navy bg-brand-navy/10 hover:bg-brand-navy/20 transition-colors flex items-center gap-1 sm:gap-1.5 whitespace-nowrap"
               >
-                🎯 Lv {targetLevel}
+                🎯 {targetLevel}
                 <span className="text-xs">▼</span>
               </button>
               {showLevelMenu && (
@@ -77,21 +78,22 @@ export default function Header() {
                   <div className="text-xs font-bold text-brand-gray-500 px-3 py-1.5">
                     목표 등급 변경 (즉시 반영)
                   </div>
-                  {(Object.entries(LEVEL_RANGES) as [string, [number, number]][]).map(([lv, [min, max]]) => {
-                    const level = Number(lv) as Level;
-                    return (
-                      <button
-                        key={lv}
-                        onClick={() => updateLevel(level)}
-                        className={`w-full text-left px-3 py-2 rounded-lg flex items-center justify-between text-sm hover:bg-brand-gray-50 transition-colors ${
-                          targetLevel === level ? "bg-brand-navy/10 text-brand-navy font-bold" : "text-brand-gray-700"
-                        }`}
-                      >
-                        <span>Lv {lv}</span>
-                        <span className="text-xs text-brand-gray-500">{min}~{max}점</span>
-                      </button>
-                    );
-                  })}
+                  {SELECTABLE_GRADES.map((grade) => (
+                    <button
+                      key={grade}
+                      onClick={() => updateLevel(grade)}
+                      className={`w-full text-left px-3 py-2 rounded-lg flex items-center justify-between text-sm hover:bg-brand-gray-50 transition-colors ${
+                        targetLevel === grade
+                          ? "bg-brand-navy/10 text-brand-navy font-bold"
+                          : "text-brand-gray-700"
+                      }`}
+                    >
+                      <span>{grade}</span>
+                      <span className="text-[11px] text-brand-gray-500">
+                        {GRADE_NAMES[grade]}
+                      </span>
+                    </button>
+                  ))}
                 </div>
               )}
             </div>

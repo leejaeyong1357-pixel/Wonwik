@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { storage } from "@/lib/storage";
-import { getDaysUntil, scoreToLevel } from "@/lib/scoring";
+import { getDaysUntil, scoreToLevel, gradeAtLeast } from "@/lib/scoring";
 import { decayedFlame, FLAME_COLORS, MAX_FLAME_LEVEL } from "@/lib/flame";
 import { getFlameTop5 } from "@/lib/flameTop5";
 import { pushFlame, fetchRanking, type RankingEntry } from "@/lib/flameSync";
@@ -16,17 +16,15 @@ import Roadmap from "@/components/dashboard/Roadmap";
 import AppLaunchPopup from "@/components/dashboard/AppLaunchPopup";
 import SampleResultModal from "@/components/dashboard/SampleResultModal";
 import ExamScheduleCard from "@/components/dashboard/ExamScheduleCard";
-import type1 from "@/data/type1_business_casual.json";
-import type2 from "@/data/type2_opinion.json";
-import type3 from "@/data/type3_visual.json";
-import type4 from "@/data/type4_summary.json";
+import { QUESTION_TYPES, TYPE_META, getQuestions } from "@/lib/questions";
 
-const TYPE_INFO = [
-  { type: 1, name: "Business Casual", desc: "일상 Q&A", total: type1.questions.length },
-  { type: 2, name: "Opinion", desc: "의견 표현", total: type2.questions.length },
-  { type: 3, name: "Visual", desc: "그래프·사진 묘사", total: type3.items.length },
-  { type: 4, name: "Summary", desc: "지문 요약", total: type4.passages.length },
-];
+const TYPE_INFO = QUESTION_TYPES.map((t) => ({
+  type: t,
+  name: TYPE_META[t].name,
+  icon: TYPE_META[t].icon,
+  desc: TYPE_META[t].description,
+  total: getQuestions(t).length,
+}));
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -73,8 +71,8 @@ export default function DashboardPage() {
   const dDay = getDaysUntil(settings.examDate);
   const totalScore = records.reduce((sum, r) => sum + (r.score || 0), 0);
   const avgScore = records.length > 0 ? Math.round(totalScore / records.length) : 0;
-  const estimatedLevel = avgScore > 0 ? scoreToLevel(avgScore) : 1;
-  const reachedTarget = estimatedLevel >= settings.targetLevel;
+  const estimatedLevel = avgScore > 0 ? scoreToLevel(avgScore) : "NL";
+  const reachedTarget = gradeAtLeast(estimatedLevel, settings.targetLevel);
 
   return (
     <>
@@ -105,12 +103,12 @@ export default function DashboardPage() {
                     onClick={() => setShowSampleResult(true)}
                     className="px-4 py-2.5 bg-white border-2 border-brand-blue text-brand-blue text-sm font-bold rounded-xl hover:bg-brand-blue/5 transition-colors whitespace-nowrap shadow-sm"
                   >
-                    📄 SPA 결과지 예시
+                    📄 결과지 예시
                   </button>
                 </div>
               </div>
               <p className="text-brand-gray-600">
-                시간·장소 구애받지 않아요. 본인 등급에 맞춘 SPA 학습.
+                시간·장소 구애받지 않아요. 목표 등급에 맞춘 OPIc 학습.
               </p>
             </div>
             <div className="flex-1">
@@ -160,14 +158,14 @@ export default function DashboardPage() {
               />
               <MetricCard
                 label="목표 등급"
-                value={`Lv ${settings.targetLevel}`}
+                value={settings.targetLevel}
                 sub="우측 상단에서 변경"
                 accent="blue"
               />
               <MetricCard
                 label="현재 예상"
-                value={records.length > 0 ? `Lv ${estimatedLevel}` : "—"}
-                sub={records.length > 0 ? `평균 ${avgScore}점 / 96` : "학습 시작 전"}
+                value={records.length > 0 ? estimatedLevel : "—"}
+                sub={records.length > 0 ? `평균 환산 ${avgScore} / 100` : "학습 시작 전"}
                 accent={reachedTarget ? "green" : "gray"}
               />
             </div>
@@ -232,7 +230,7 @@ export default function DashboardPage() {
                 <div className="absolute -right-6 -bottom-6 text-[10rem] font-black opacity-10">M</div>
                 <div className="relative">
                   <div className="text-xs font-bold text-white mb-1 tracking-wider">실전 시험 환경</div>
-                  <div className="text-3xl font-black mb-2 text-white">13분, 4유형 연속</div>
+                  <div className="text-3xl font-black mb-2 text-white">15문항, 실전과 동일</div>
                   <p className="text-sm text-white mb-4 opacity-95">점수대별 50회 세트</p>
                   <div
                     className="inline-flex items-center gap-1 px-4 py-2 bg-white text-sm font-black rounded-lg"
@@ -327,7 +325,7 @@ export default function DashboardPage() {
             <h3 className="text-2xl font-black text-brand-ink mb-2">
               <span className="highlight-blue">실전</span> 모의고사
             </h3>
-            <p className="text-brand-gray-600 mb-6">점수대별 50회 세트. 13분 4유형 연속.</p>
+            <p className="text-brand-gray-600 mb-6">등급대별 10회 세트. 실제 OPIc 과 같은 15문항 구성.</p>
             <Link
               href="/mock"
               className="inline-block px-8 py-3.5 bg-brand-blue text-white font-bold rounded-xl hover:bg-blue-700 transition-colors"

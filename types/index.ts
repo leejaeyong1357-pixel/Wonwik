@@ -1,6 +1,12 @@
-export type Level = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+/** OPIc 공식 9등급 (ACTFL 기준). 낮은 등급 → 높은 등급 순서 */
+export const OPIC_GRADES = [
+  "NL", "NM", "NH", "IL", "IM1", "IM2", "IM3", "IH", "AL",
+] as const;
 
-export type QuestionType = 1 | 2 | 3 | 4;
+export type Level = (typeof OPIC_GRADES)[number];
+
+/** OPIc 문항 유형 — 1 자기소개 / 2 설문 / 3 돌발 / 4 롤플레이 / 5 고난도 */
+export type QuestionType = 1 | 2 | 3 | 4 | 5;
 
 export type Difficulty = "easy" | "medium" | "hard";
 
@@ -45,25 +51,45 @@ export interface StudyRecord {
   createdAt: number;
 }
 
+/**
+ * OPIc 평가 영역.
+ *
+ * OPIc 공식 등급은 총점 합산이 아니라 ACTFL 기준의 종합 판정이다.
+ * 다만 학습자가 약점을 파악할 수 있어야 하므로, 이 앱에서는 5개 영역을
+ * 각 20점으로 환산해 100점 만점으로 보여주고 그 총점을 등급 구간에 매핑한다.
+ */
 export interface ScoreCriteria {
-  pronunciation: number;
-  listening: number;
-  vocabulary: number;
-  grammar: number;
+  /** 과제 수행 — 질문 의도에 맞게 답했는가 */
+  taskCompletion: number;
+  /** 유창성 — 발화량·속도·끊김 */
   fluency: number;
+  /** 어휘력 — 표현의 다양성과 정확성 */
+  vocabulary: number;
+  /** 문장 구성 — 문법 정확도와 문장 확장 */
+  grammar: number;
+  /** 전달력 — 발음·강세·명료도 */
+  delivery: number;
 }
 
 export const CRITERIA_MAX = {
-  pronunciation: 12,
-  listening: 36,
-  vocabulary: 12,
-  grammar: 24,
-  fluency: 12,
+  taskCompletion: 20,
+  fluency: 20,
+  vocabulary: 20,
+  grammar: 20,
+  delivery: 20,
 } as const;
+
+export const CRITERIA_LABEL: Record<CriteriaKey, string> = {
+  taskCompletion: "과제 수행",
+  fluency: "유창성",
+  vocabulary: "어휘력",
+  grammar: "문장 구성",
+  delivery: "전달력",
+};
 
 export type CriteriaKey = keyof ScoreCriteria;
 
-/** 영역별(발음/청취·답변/어휘/문법/유창성) 세부 분석 */
+/** 영역별(과제수행·유창성·어휘·문장구성·전달력) 세부 분석 */
 export interface AreaAnalysis {
   summary: string;
   strengths: string[];
@@ -137,14 +163,19 @@ export interface VocabEntry {
   addedAt: number;
 }
 
+export interface MockExamAnswer {
+  questionId: string;
+  type: QuestionType;
+  answer: string;
+  feedback?: AiFeedback;
+}
+
 export interface MockExamResult {
   examId: string;
   startedAt: number;
   finishedAt: number;
-  type1: { questionId: string; answer: string; feedback?: AiFeedback };
-  type2: { questionId: string; answer: string; feedback?: AiFeedback };
-  type3: { questionId: string; answer: string; feedback?: AiFeedback };
-  type4: { questionId: string; answer: string; feedback?: AiFeedback };
+  /** 실제 OPIc 과 동일하게 문항 수가 가변이라 배열로 보관 */
+  answers: MockExamAnswer[];
   totalScore: number;
   estimatedLevel: Level;
 }
@@ -166,51 +197,35 @@ export interface LearnerProfile {
   mockExamCount: number;
 }
 
-export interface Type1Question {
+export interface OpicQuestion {
   id: string;
+  type: QuestionType;
   category: string;
   difficulty: Difficulty;
   question: string;
+  /** 콤보 단계 — 묘사 / 습관 / 경험 / 비교 / 이슈 / 질문하기 / 문제해결 */
+  combo?: string;
+  /** 롤플레이에서 주어지는 한국어 상황 설명 */
+  situation?: string;
   follow_ups: string[];
   keywords: string[];
   sample_answer: string;
 }
 
-export interface Type2Question {
-  id: string;
-  category: string;
-  difficulty: Difficulty;
-  question: string;
-  follow_ups: string[];
-  arguments: Record<string, string[]>;
-  sample_answer: string;
+export interface OpicQuestionSet {
+  type: QuestionType;
+  name: string;
+  description: string;
+  total: number;
+  questions: OpicQuestion[];
 }
 
-export interface Type3Item {
+export interface OpicMockExam {
   id: string;
-  subtype: string;
-  category: string;
+  title: string;
   difficulty: Difficulty;
-  title?: string;
-  chart?: {
-    type: string;
-    data: any[];
-    unit?: string;
-    x_label?: string;
-    y_label?: string;
-  };
-  image_url?: string;
-  image_description?: string;
-  question: string;
-  key_vocabulary?: string[];
-  sample_answer: string;
-}
-
-export interface Type4Passage {
-  id: string;
-  category: string;
-  difficulty: Difficulty;
-  passage: string;
-  key_points: string[];
-  sample_summary: string;
+  targetGrade: Level;
+  description: string;
+  /** 실제 시험 순서대로 나열된 문항 id */
+  questionIds: string[];
 }

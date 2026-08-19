@@ -65,7 +65,7 @@ export default function LoadingSetupPage() {
           맞춤 커스터마이징 중
         </h1>
         <p className="text-sm text-brand-gray-600 mb-10">
-          목표 Lv {settings.targetLevel} 학습 환경을 준비하고 있습니다.
+          목표 {settings.targetLevel} 학습 환경을 준비하고 있습니다.
         </p>
 
         <div className="relative mb-3">

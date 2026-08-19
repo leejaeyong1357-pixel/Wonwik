@@ -108,11 +108,11 @@ export default function SignupPage() {
         <div className="text-center mb-6">
           <Image
             src="/brand-logo.svg"
-            alt="WONIK"
-            width={100}
-            height={24}
+            alt="WONIK HOLDINGS"
+            width={190}
+            height={44}
             priority
-            className="h-6 w-auto mx-auto mb-3"
+            className="h-11 w-auto mx-auto mb-4"
           />
           <h1 className="font-brand text-3xl text-brand-navy mb-1">Wonpic</h1>
           <p className="text-sm text-brand-gray-600">처음이신가요? 등록하고 시작해보세요</p>

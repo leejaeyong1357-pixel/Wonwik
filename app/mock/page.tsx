@@ -6,24 +6,24 @@ import { useRouter } from "next/navigation";
 import { storage } from "@/lib/storage";
 import Header from "@/components/layout/Header";
 import Card from "@/components/ui/Card";
-import mockExams from "@/data/mock_exams.json";
+import { getMockExams } from "@/lib/questions";
 import type { MockExamResult } from "@/types";
 
 const GROUPS = [
   {
     key: "easy",
-    title: "기초 (Lv 4~5)",
-    desc: "35~64점 목표 — 기본 비즈니스 의사소통 단계",
+    title: "기초 (IL ~ IM1)",
+    desc: "익숙한 주제를 문장으로 이어 말하는 단계",
   },
   {
     key: "medium",
-    title: "중급 (Lv 5~6)",
-    desc: "50~74점 목표 — 해외 주재원 최소 기준",
+    title: "중급 (IM2 ~ IM3)",
+    desc: "사무직 일반 요구 구간 — 문단 단위 답변",
   },
   {
     key: "hard",
-    title: "고급 (Lv 7~8)",
-    desc: "75~96점 목표 — 유창한 비즈니스 영어 / 승진 우대",
+    title: "고급 (IH ~ AL)",
+    desc: "돌발·고난도 대응 — 주요 기업 선호 구간",
   },
 ] as const;
 
@@ -43,8 +43,8 @@ export default function MockListPage() {
 
   if (!mounted) return null;
 
-  const exams = mockExams.exams as any[];
-  const buckets: Record<string, any[]> = {
+  const exams = getMockExams();
+  const buckets: Record<string, typeof exams> = {
     easy: exams.filter((e) => e.difficulty === "easy"),
     medium: exams.filter((e) => e.difficulty === "medium"),
     hard: exams.filter((e) => e.difficulty === "hard"),
@@ -60,7 +60,7 @@ export default function MockListPage() {
           </Link>
           <h1 className="text-3xl font-bold text-brand-gray-900 mb-1">모의고사</h1>
           <p className="text-brand-gray-600">
-            실제 시험과 동일한 13분, 4가지 유형 연속 진행. 점수대별 50회 준비.
+            실제 OPIc 과 동일한 15문항 구성. 자기소개부터 고난도까지 연속 진행합니다.
           </p>
         </div>
 
@@ -80,7 +80,7 @@ export default function MockListPage() {
                     >
                       <span className="text-brand-gray-700">{exam?.title || r.examId}</span>
                       <span className="font-bold text-brand-navy">
-                        Lv {r.estimatedLevel} ({r.totalScore}점)
+                        {r.estimatedLevel} (환산 {r.totalScore})
                       </span>
                     </div>
                   );
@@ -96,7 +96,7 @@ export default function MockListPage() {
               <p className="text-xs text-brand-gray-500">{g.desc} · {buckets[g.key].length}회</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
-              {buckets[g.key].map((exam: any) => {
+              {buckets[g.key].map((exam) => {
                 const done = results.some((r) => r.examId === exam.id);
                 const doneResult = results.find((r) => r.examId === exam.id);
                 return (
@@ -109,14 +109,14 @@ export default function MockListPage() {
                         {done && <span className="text-xs text-green-600">✓</span>}
                       </div>
                       <div className="text-xs text-brand-gray-500 mb-2">
-                        {exam.topics?.slice(0, 2).join(" · ")}
+                        {exam.questionIds.length}문항
                       </div>
                       <div className="text-xs text-brand-gray-600">
-                        목표: {exam.target_score_range || exam.target_score}
+                        목표 등급: <b className="text-brand-navy">{exam.targetGrade}</b>
                       </div>
                       {done && doneResult && (
                         <div className="text-xs text-brand-red font-semibold mt-1">
-                          {doneResult.totalScore}점
+                          {doneResult.estimatedLevel}
                         </div>
                       )}
                     </Card>

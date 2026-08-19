@@ -7,13 +7,13 @@ const STAGES = [
   {
     num: 1,
     date: "2026.6.2",
-    title: "그룹사 최초 SPA AI 학습 서비스 Wonpic 탄생!",
+    title: "원익 임직원 전용 OPIc AI 학습 서비스 Wonpic 오픈",
     emoji: "🎉",
   },
   {
     num: 2,
     date: "2026.7",
-    title: "SPA 시험 진행 및 사용률 분석",
+    title: "OPIc 응시 지원 및 사용률 분석",
     emoji: "📊",
   },
   {

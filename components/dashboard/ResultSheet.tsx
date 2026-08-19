@@ -1,6 +1,7 @@
 "use client";
 
-import type { Level } from "@/types";
+import { gradeIndex } from "@/lib/scoring";
+import type { Level, ScoreCriteria } from "@/types";
 
 export interface ResultSheetData {
   name: string;
@@ -8,49 +9,44 @@ export interface ResultSheetData {
   date?: string;
   totalScore: number;
   level: Level;
-  criteria: {
-    pronunciation: number;
-    listening: number;
-    vocabulary: number;
-    grammar: number;
-    fluency: number;
-  };
+  criteria: ScoreCriteria;
 }
 
 const AREAS = [
-  { key: "pronunciation", label: "발음", max: 12, desc: "Pronunciation · 억양·강세·속도" },
-  { key: "listening", label: "청취·답변", max: 36, desc: "Listening & Response · 이해·요약·관련성" },
-  { key: "vocabulary", label: "어휘", max: 12, desc: "Vocabulary · 정확도·고급 표현" },
-  { key: "grammar", label: "문법", max: 24, desc: "Grammar · 시제·구문·연결사" },
-  { key: "fluency", label: "유창성", max: 12, desc: "Fluency · 논리 흐름·자유로운 표현" },
+  { key: "taskCompletion", label: "과제 수행", max: 20, desc: "Task Completion · 질문 의도 충족" },
+  { key: "fluency", label: "유창성", max: 20, desc: "Fluency · 발화량·끊김 없는 흐름" },
+  { key: "vocabulary", label: "어휘력", max: 20, desc: "Vocabulary · 다양성·정확한 연어" },
+  { key: "grammar", label: "문장 구성", max: 20, desc: "Grammar · 시제·복문·연결어" },
+  { key: "delivery", label: "전달력", max: 20, desc: "Delivery · 발음·강세·명료도" },
 ] as const;
 
 function recommendation(lv: Level) {
-  if (lv <= 2) {
+  const i = gradeIndex(lv);
+  if (i <= 2) {
     return {
-      pronunciation: "발음 기초 — 단어 단위 강세부터",
-      structure: "기초 회화 패턴 (자기소개·일상)",
-      fluency: "한 문장 완성 → 2~3문장 연결",
+      delivery: "또박또박 — 단어 강세부터 잡기",
+      structure: "주어+동사 갖춘 한 문장 완성",
+      fluency: "한 문항당 3문장 이상 말하기",
     };
   }
-  if (lv <= 4) {
+  if (i <= 4) {
     return {
-      pronunciation: "강세·억양 — 의문문/서술문 패턴",
-      structure: "이유 + 근거 1개로 답변 확장",
-      fluency: "30초 이상 발화 (connector 도입)",
+      delivery: "의미 단위로 끊어 말하기",
+      structure: "이유와 예시 한 개씩 붙이기",
+      fluency: "한 문항당 40초 이상 발화",
     };
   }
-  if (lv <= 6) {
+  if (i <= 6) {
     return {
-      pronunciation: "자연스러운 연음(linking)·약화",
-      structure: "PREP/STAR 구조화된 답변",
-      fluency: "1분 길이 + 비즈니스 어휘 결합",
+      delivery: "연음(linking)과 문장 끝 억양",
+      structure: "묘사 → 습관 → 경험 콤보 3단 구성",
+      fluency: "한 문항당 60~90초 발화 유지",
     };
   }
   return {
-    pronunciation: "원어민 수준 — 감정·뉘앙스 표현",
-    structure: "복잡한 논리(반박/양보) 구조",
-    fluency: "비격식·격식 자유로운 전환",
+    delivery: "감정·강조 뉘앙스까지 살리기",
+    structure: "비교·인과 구조로 논지 전개",
+    fluency: "돌발 주제에도 90초 이상 즉답",
   };
 }
 
@@ -68,7 +64,7 @@ export default function ResultSheet({ data }: { data: ResultSheetData }) {
           WONPIC OFFICIAL REPORT
         </div>
         <h2 className="text-2xl md:text-3xl font-black text-brand-ink">
-          <span className="text-brand-blue">SPA</span> 진단 결과지
+          <span className="text-brand-blue">OPIc</span> 진단 결과지
         </h2>
         {data.date && (
           <div className="text-xs text-brand-gray-500 mt-1">발급일 {data.date}</div>
@@ -79,31 +75,31 @@ export default function ResultSheet({ data }: { data: ResultSheetData }) {
       <div className="grid md:grid-cols-2 gap-3 mb-6">
         <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-2xl p-5 text-center">
           <div className="text-[10px] font-bold text-brand-blue tracking-widest mb-2">응시자 정보</div>
-          <div className="text-4xl font-black text-brand-navy mb-1">Lv {data.level}</div>
+          <div className="text-4xl font-black text-brand-navy mb-1">{data.level}</div>
           <div className="text-sm font-bold text-brand-ink">{data.name}</div>
           {data.team && <div className="text-xs text-brand-gray-500 mt-0.5">{data.team}</div>}
         </div>
 
         <div className="bg-brand-blue/5 border border-brand-blue/20 rounded-2xl p-5 text-center flex flex-col justify-center">
-          <div className="text-[10px] font-bold text-brand-blue tracking-widest mb-1">SPA 종합 점수</div>
+          <div className="text-[10px] font-bold text-brand-blue tracking-widest mb-1">환산 점수</div>
           <div className="text-5xl font-black text-brand-blue leading-none">
             {data.totalScore}
-            <span className="text-lg text-brand-gray-400 font-bold"> / 96</span>
+            <span className="text-lg text-brand-gray-400 font-bold"> / 100</span>
           </div>
           <div className="w-full bg-brand-gray-100 rounded-full h-2 overflow-hidden mt-3">
             <div
               className="bg-gradient-to-r from-brand-blue to-brand-navy h-2"
-              style={{ width: `${(data.totalScore / 96) * 100}%` }}
+              style={{ width: `${data.totalScore}%` }}
             />
           </div>
         </div>
       </div>
 
-      {/* 영역별 점수 (SPA 96점 만점 분배) */}
+      {/* 영역별 점수 — 5개 영역 각 20점 */}
       <div className="mb-6">
-        <h3 className="font-black text-brand-ink text-base mb-1">📊 SPA 평가 영역별 점수</h3>
+        <h3 className="font-black text-brand-ink text-base mb-1">📊 평가 영역별 점수</h3>
         <p className="text-xs text-brand-gray-500 mb-4">
-          SPA 공식 채점 기준 · 영역별 만점이 다릅니다 (합계 96점)
+          과제수행 · 유창성 · 어휘력 · 문장구성 · 전달력 (각 20점, 합계 100점)
         </p>
         <div className="space-y-3">
           {areas.map((a) => {
@@ -149,15 +145,15 @@ export default function ResultSheet({ data }: { data: ResultSheetData }) {
       <div>
         <h3 className="font-black text-brand-ink text-base mb-3">📚 맞춤 학습 추천</h3>
         <div className="grid md:grid-cols-3 gap-3">
-          <RecCard color="blue" title="발음 강화" body={rec.pronunciation} />
-          <RecCard color="navy" title="구조 강화" body={rec.structure} />
+          <RecCard color="blue" title="전달력 강화" body={rec.delivery} />
+          <RecCard color="navy" title="답변 구조 강화" body={rec.structure} />
           <RecCard color="red" title="유창성 강화" body={rec.fluency} />
         </div>
       </div>
 
       <p className="text-[11px] text-brand-gray-500 leading-relaxed mt-5 pt-4 border-t border-brand-gray-100">
-        ※ 본 결과지는 SPA 채점 기준(발음 12 · 청취·답변 36 · 어휘 12 · 문법 24 · 유창성 12 = 96점)에
-        따른 AI 진단 결과입니다. 학습 방향 가이드 목적으로 제공됩니다.
+        ※ 실제 OPIc 은 총점을 매기지 않고 ACTFL 기준으로 등급을 판정합니다. 본 결과지는 학습 방향을
+        잡기 위해 5개 영역을 각 20점(합계 100점)으로 환산한 AI 진단 결과이며, 공식 점수가 아닙니다.
       </p>
     </div>
   );

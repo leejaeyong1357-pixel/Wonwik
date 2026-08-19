@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wonpic — 원익 SPA 학습",
-  description: "원익그룹 SPA 영어시험 AI 학습 플랫폼",
+  title: "Wonik OPIc Trainer",
+  description: "원익 임직원 OPIc 영어 말하기 AI 학습 플랫폼",
 };
 
 export const viewport = {

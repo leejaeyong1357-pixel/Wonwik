@@ -11,6 +11,14 @@
   ],
   "employees": [
     {
+      "no": 0,
+      "team": "Culture팀",
+      "position": "매니저",
+      "employeeId": "wonik",
+      "name": "이민경",
+      "grade": "G3"
+    },
+    {
       "no": 1,
       "team": "경영기획팀",
       "position": "부장",
@@ -90,5 +98,6 @@
       "name": "한소영",
       "grade": "G1"
     }
-  ]
+  ],
+  "_demo": "사번 wonik / 비밀번호 wonik 으로 로그인하면 Culture팀 이민경으로 접속됩니다 (시연용)."
 }

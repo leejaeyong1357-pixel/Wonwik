@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { storage } from "@/lib/storage";
 import { pushUserToServer } from "@/lib/userSync";
-import { LEVEL_RANGES, levelDescription } from "@/lib/scoring";
-import { DEFAULT_MODEL } from "@/lib/constants";
+import { GRADE_NAMES, levelDescription, levelUsage } from "@/lib/scoring";
+import { DEFAULT_MODEL, DEFAULT_TARGET_GRADE, SELECTABLE_GRADES } from "@/lib/constants";
 import type { Level } from "@/types";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -14,7 +14,7 @@ import Card from "@/components/ui/Card";
 export default function SetupPage() {
   const router = useRouter();
   const [examDate, setExamDate] = useState("");
-  const [targetLevel, setTargetLevel] = useState<Level>(6);
+  const [targetLevel, setTargetLevel] = useState<Level>(DEFAULT_TARGET_GRADE);
   const [step, setStep] = useState(1);
   const [loaded, setLoaded] = useState(false);
 
@@ -47,11 +47,11 @@ export default function SetupPage() {
         <div className="text-center mb-6">
           <Image
             src="/brand-logo.svg"
-            alt="WONIK"
-            width={160}
-            height={38}
+            alt="WONIK HOLDINGS"
+            width={220}
+            height={51}
             priority
-            className="h-9 w-auto mx-auto mb-2"
+            className="h-12 w-auto mx-auto mb-3"
           />
           <h1 className="text-2xl font-bold text-brand-gray-900">Wonpic 초기 설정</h1>
           <p className="text-sm text-brand-gray-600 mt-1">단계 {step} / 3</p>
@@ -62,7 +62,7 @@ export default function SetupPage() {
             <div>
               <h2 className="text-lg font-bold mb-1 text-brand-gray-900">시험 일정</h2>
               <p className="text-sm text-brand-gray-600 mb-4">
-                SPA 시험 예정일을 알려주세요. 남은 일수에 맞춰 학습량을 추천합니다.
+                OPIc 응시 예정일을 알려주세요. 남은 일수에 맞춰 학습량을 추천합니다.
               </p>
               <input
                 type="date"
@@ -83,37 +83,38 @@ export default function SetupPage() {
             <div>
               <h2 className="text-lg font-bold mb-1 text-brand-gray-900">목표 등급</h2>
               <p className="text-sm text-brand-gray-600 mb-4">
-                도달하고 싶은 SPA 등급을 선택하세요. 난이도와 모범답안 수준이 맞춰집니다.
+                도달하고 싶은 OPIc 등급을 선택하세요. 문항 난이도와 모범답안 수준이 맞춰집니다.
               </p>
               <div className="space-y-2">
-                {(Object.entries(LEVEL_RANGES) as [string, [number, number]][]).map(
-                  ([lv, [min, max]]) => {
-                    const level = Number(lv) as Level;
-                    return (
-                      <button
-                        key={lv}
-                        onClick={() => setTargetLevel(level)}
-                        className={`w-full text-left p-3 rounded-xl border-2 transition-colors ${
-                          targetLevel === level
-                            ? "border-brand-navy bg-brand-navy/5"
-                            : "border-brand-gray-200 hover:border-brand-gray-400"
-                        }`}
-                      >
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="font-bold text-brand-gray-900">
-                              Lv {lv} <span className="text-sm text-brand-gray-600">({min}~{max}점)</span>
-                            </div>
-                            <div className="text-xs text-brand-gray-600 mt-0.5">
-                              {levelDescription(level)}
-                            </div>
-                          </div>
-                          {targetLevel === level && <span className="text-brand-red">●</span>}
+                {SELECTABLE_GRADES.map((grade) => (
+                  <button
+                    key={grade}
+                    onClick={() => setTargetLevel(grade)}
+                    className={`w-full text-left p-3 rounded-xl border-2 transition-colors ${
+                      targetLevel === grade
+                        ? "border-brand-navy bg-brand-navy/5"
+                        : "border-brand-gray-200 hover:border-brand-gray-400"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between gap-3">
+                      <div>
+                        <div className="font-bold text-brand-gray-900">
+                          {grade}{" "}
+                          <span className="text-sm font-normal text-brand-gray-600">
+                            {GRADE_NAMES[grade]}
+                          </span>
                         </div>
-                      </button>
-                    );
-                  },
-                )}
+                        <div className="text-xs text-brand-gray-600 mt-0.5">
+                          {levelDescription(grade)}
+                        </div>
+                        <div className="text-[11px] text-brand-blue font-semibold mt-1">
+                          {levelUsage(grade)}
+                        </div>
+                      </div>
+                      {targetLevel === grade && <span className="text-brand-red shrink-0">●</span>}
+                    </div>
+                  </button>
+                ))}
               </div>
               <div className="flex justify-between mt-6">
                 <Button onClick={() => setStep(1)} variant="ghost">
@@ -146,7 +147,7 @@ export default function SetupPage() {
 
               <ul className="text-sm text-brand-gray-700 space-y-1.5 mb-2">
                 <li>✓ 시험일 <b>{examDate || "-"}</b></li>
-                <li>✓ 목표 등급 <b>Lv {targetLevel}</b></li>
+                <li>✓ 목표 등급 <b>{targetLevel}</b></li>
                 <li>✓ AI 채점 사용 가능</li>
               </ul>
 

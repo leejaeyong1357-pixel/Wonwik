@@ -2,8 +2,9 @@
 
 import { useMemo, useState } from "react";
 import type { AiFeedback, CriteriaKey, Level, SpeakingMetrics } from "@/types";
-import { LEVEL_RANGES } from "@/lib/scoring";
+import { GRADE_RANGES } from "@/lib/scoring";
 import { storage } from "@/lib/storage";
+import { DEFAULT_TARGET_GRADE } from "@/lib/constants";
 import Card from "@/components/ui/Card";
 
 interface Props {
@@ -16,11 +17,11 @@ interface Props {
 }
 
 const AREAS: { key: CriteriaKey; ko: string; en: string; max: number }[] = [
-  { key: "pronunciation", ko: "발음", en: "Pronunciation", max: 12 },
-  { key: "listening", ko: "청취·답변", en: "Listening & Response", max: 36 },
-  { key: "vocabulary", ko: "어휘", en: "Vocabulary", max: 12 },
-  { key: "grammar", ko: "문법", en: "Grammar", max: 24 },
-  { key: "fluency", ko: "유창성", en: "Fluency", max: 12 },
+  { key: "taskCompletion", ko: "과제 수행", en: "Task Completion", max: 20 },
+  { key: "fluency", ko: "유창성", en: "Fluency", max: 20 },
+  { key: "vocabulary", ko: "어휘력", en: "Vocabulary", max: 20 },
+  { key: "grammar", ko: "문장 구성", en: "Grammar", max: 20 },
+  { key: "delivery", ko: "전달력", en: "Delivery", max: 20 },
 ];
 
 const SLICE_COLORS = ["#2E5BFF", "#5B7FFF", "#8FA8FF", "#BCCBFF", "#DDE4F5"];
@@ -33,10 +34,10 @@ export default function FeedbackPanel({
   onRestart,
   metrics,
 }: Props) {
-  const [tab, setTab] = useState<CriteriaKey>("pronunciation");
+  const [tab, setTab] = useState<CriteriaKey>("taskCompletion");
 
   const settings = useMemo(() => storage.getSettings(), []);
-  const targetLevel = (settings.targetLevel || 6) as Level;
+  const targetLevel = (settings.targetLevel || DEFAULT_TARGET_GRADE) as Level;
 
   // 지난 학습 기록에서 영역별 내 평균(백분율) 산출 — 비교 막대용
   const myAverages = useMemo(() => {
@@ -92,10 +93,10 @@ export default function FeedbackPanel({
   if (!feedback) return null;
 
   const raw = feedback.scoreEstimate;
-  const total100 = Math.round((raw / 96) * 100);
+  const total100 = Math.max(0, Math.min(100, Math.round(raw)));
   const level = feedback.estimatedLevel;
-  const [lvMin, lvMax] = LEVEL_RANGES[level] || [0, 96];
-  const targetPct = Math.round((LEVEL_RANGES[targetLevel][0] / 96) * 100);
+  const [lvMin, lvMax] = GRADE_RANGES[level] || [0, 100];
+  const targetPct = GRADE_RANGES[targetLevel][0];
 
   const areaRows = AREAS.map((a) => {
     const rawScore = (feedback.criteria as any)?.[a.key] ?? 0;
@@ -125,12 +126,11 @@ export default function FeedbackPanel({
               </span>
               <span className="text-lg text-brand-gray-400 font-bold mb-1">/ 100</span>
               <span className="mb-1 px-3 py-1 bg-brand-blue/10 text-brand-blue rounded-full text-sm font-bold whitespace-nowrap">
-                Lv {level} ({Math.round((lvMin / 96) * 100)}~
-                {Math.round((lvMax / 96) * 100)}점)
+                {level} ({lvMin}~{lvMax})
               </span>
             </div>
             <div className="text-xs text-brand-gray-500 mb-4">
-              SPA 원점수 {raw} / 96점
+              5개 영역 합산 환산 점수 · 공식 OPIc 점수가 아닙니다
             </div>
             <div className="w-full bg-brand-gray-100 rounded-full h-2.5 overflow-hidden">
               <div
@@ -198,7 +198,7 @@ export default function FeedbackPanel({
                     <div className="font-bold text-brand-ink">{a.ko}</div>
                     <div className="text-[11px] text-brand-gray-500">{a.en}</div>
                     <div className="text-[10px] text-brand-gray-400 mt-0.5">
-                      SPA {a.raw}/{a.max}점
+                      {a.raw} / {a.max}점
                     </div>
                   </td>
                   <td className="py-4 px-2">

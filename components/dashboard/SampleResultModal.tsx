@@ -2,19 +2,20 @@
 
 import Link from "next/link";
 import ResultSheet from "./ResultSheet";
+import type { ResultSheetData } from "./ResultSheet";
 
-const SAMPLE = {
+const SAMPLE: ResultSheetData = {
   name: "홍길동 (예시)",
   team: "샘플팀",
   date: "2026-06-02",
-  totalScore: 68,
-  level: 6 as 6,
+  totalScore: 67,
+  level: "IM3",
   criteria: {
-    pronunciation: 9,
-    listening: 25,
-    vocabulary: 8,
-    grammar: 16,
-    fluency: 10,
+    taskCompletion: 15,
+    fluency: 13,
+    vocabulary: 12,
+    grammar: 14,
+    delivery: 13,
   },
 };
 
@@ -45,7 +46,7 @@ export default function SampleResultModal({ onClose }: { onClose: () => void }) 
               모의고사를 보면 <span className="text-brand-blue">이런 결과지</span>를 제공해드려요
             </h2>
             <p className="text-sm text-brand-gray-600 mt-2">
-              SPA 96점 만점 · 영역별 점수 분석 · 맞춤 학습 추천
+              OPIc 예상 등급 · 영역별 진단 · 맞춤 학습 추천
             </p>
           </div>
 

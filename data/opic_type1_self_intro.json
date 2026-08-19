@@ -1,0 +1,391 @@
+{
+  "type": 1,
+  "name": "자기소개",
+  "description": "OPIc 첫 문항. 본인·직장·거주지·가족에 대한 기본 소개와 후속 질문",
+  "total": 20,
+  "questions": [
+    {
+      "id": "t1_001",
+      "type": 1,
+      "category": "자기소개",
+      "difficulty": "easy",
+      "question": "Let's start the interview. Tell me about yourself.",
+      "combo": "묘사",
+      "follow_ups": [
+        "What do you like most about your daily routine?",
+        "Who do you spend the most time with?"
+      ],
+      "keywords": [
+        "My name is",
+        "I work as",
+        "I've been -ing for",
+        "In my free time",
+        "What I like most is"
+      ],
+      "sample_answer": "Sure. My name is Minkyung, and I'm in my early thirties. I work at Wonik Holdings, in the Culture team. I've been with the company for about five years now. On a typical day, I get up around six thirty, have a quick breakfast, and commute to the office by subway. Outside of work, I really enjoy watching movies and going for walks in the park near my apartment. I live with my family, and we usually have dinner together on weekends. I'd say I'm a pretty organized person, but I also like trying new things whenever I get the chance. That's a little bit about me."
+    },
+    {
+      "id": "t1_002",
+      "type": 1,
+      "category": "자기소개",
+      "difficulty": "easy",
+      "question": "Please introduce yourself in more detail. Where do you live, and who do you live with?",
+      "combo": "묘사",
+      "follow_ups": [
+        "How long have you lived there?",
+        "What is your neighborhood like?"
+      ],
+      "keywords": [
+        "I currently live in",
+        "along with",
+        "It's about ... away from",
+        "We've been living here since"
+      ],
+      "sample_answer": "I currently live in Seoul, in a neighborhood called Mapo. I live with my family, my parents and my younger brother. We've been living in the same apartment for almost ten years, so I know the area really well. It's a quiet neighborhood with a lot of small cafes and a big park nearby. My commute to work takes about forty minutes by subway, which isn't bad. What I like most about living there is that everything is within walking distance, the grocery store, the gym, even a movie theater. So it's really convenient for everyday life."
+    },
+    {
+      "id": "t1_003",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "easy",
+      "question": "You indicated that you are employed. Tell me about your company and what you do there.",
+      "combo": "묘사",
+      "follow_ups": [
+        "What does a typical workday look like for you?",
+        "What do you enjoy most about your job?"
+      ],
+      "keywords": [
+        "I work for",
+        "I'm in charge of",
+        "My main responsibility is",
+        "deal with",
+        "on a daily basis"
+      ],
+      "sample_answer": "I work for Wonik Holdings, which is a company in the semiconductor and display industry. I'm part of the Culture team, so my job is mostly about employee programs and internal communication. On a daily basis, I plan company events, put together internal newsletters, and work with other teams to make sure everyone knows what's going on. What I enjoy most is that I get to meet people from all different departments. It never feels repetitive. The busiest time is usually the end of the year, when we're preparing the year-end event, but honestly, that's also the most rewarding part."
+    },
+    {
+      "id": "t1_004",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "medium",
+      "question": "Describe your office. What does it look like, and what is the atmosphere like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Where do you usually have lunch?",
+        "How do you get along with your coworkers?"
+      ],
+      "keywords": [
+        "open-plan office",
+        "on the ... floor",
+        "There's a ... in the corner",
+        "The atmosphere is fairly"
+      ],
+      "sample_answer": "Our office is on the twelfth floor of a fairly modern building. It's an open-plan office, so there aren't many walls, just rows of desks with low partitions. There are big windows on one side, so we get a lot of natural light, which I really appreciate. In the corner, there's a small lounge with a coffee machine and a couple of couches, and that's where everyone takes a break. The atmosphere is fairly relaxed. People chat while they work, but when a deadline comes up, everyone gets serious pretty quickly. For lunch, most of us go to the restaurants right around the building."
+    },
+    {
+      "id": "t1_005",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "medium",
+      "question": "Tell me about the first day you started working at your company. What happened?",
+      "combo": "경험",
+      "follow_ups": [
+        "How did you feel that day?",
+        "What surprised you the most?"
+      ],
+      "keywords": [
+        "On my first day",
+        "I remember being",
+        "It turned out that",
+        "Looking back"
+      ],
+      "sample_answer": "On my first day, I remember being incredibly nervous. I got there almost forty minutes early because I was terrified of being late. My manager met me at the front desk and walked me around the office to introduce me to everyone. Honestly, there were so many names that I forgot most of them within an hour. In the afternoon, they gave me my laptop and a stack of documents to read, and I just sat there trying to look like I understood everything. What surprised me the most was how friendly everyone was. A few coworkers took me out for lunch and told me not to worry. Looking back, it was a good first day."
+    },
+    {
+      "id": "t1_006",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "medium",
+      "question": "How has your job changed since you first started? Tell me about the differences.",
+      "combo": "비교",
+      "follow_ups": [
+        "Which do you prefer, then or now?",
+        "What caused the biggest change?"
+      ],
+      "keywords": [
+        "When I first started",
+        "These days",
+        "compared to back then",
+        "has changed quite a lot"
+      ],
+      "sample_answer": "My job has changed quite a lot, actually. When I first started, I was mostly doing support work, things like booking meeting rooms, preparing materials, that kind of thing. I didn't really have any say in the planning. These days, I run entire projects on my own. I decide the budget, pick the vendors, and present the results to the executives. Another big difference is the way we work. Back then, everything happened in the office. Now, we have a hybrid system, so I work from home twice a week. I definitely prefer how things are now, because I have a lot more freedom, even though the responsibility is heavier."
+    },
+    {
+      "id": "t1_007",
+      "type": 1,
+      "category": "거주지",
+      "difficulty": "easy",
+      "question": "Tell me about your home. How many rooms does it have, and which room do you like best?",
+      "combo": "묘사",
+      "follow_ups": [
+        "What do you usually do in that room?",
+        "Is there anything you would like to change?"
+      ],
+      "keywords": [
+        "Our place has",
+        "My favorite room is",
+        "facing the",
+        "cozy",
+        "spacious"
+      ],
+      "sample_answer": "Our place is an apartment with three bedrooms, a living room, a kitchen, and two bathrooms. It's not huge, but it's comfortable for our family. My favorite room is definitely the living room, because it has a large window facing south, so it gets sunlight all afternoon. We have a big sofa there and a TV, and that's where the whole family gathers in the evening. I usually sit there with a cup of coffee and read or watch something. If I could change one thing, I'd probably want a bigger kitchen, because ours is a little cramped when more than one person is cooking."
+    },
+    {
+      "id": "t1_008",
+      "type": 1,
+      "category": "거주지",
+      "difficulty": "medium",
+      "question": "Describe the neighborhood you live in. What kind of places are around it?",
+      "combo": "묘사",
+      "follow_ups": [
+        "How has the neighborhood changed recently?",
+        "What is your favorite place there?"
+      ],
+      "keywords": [
+        "within walking distance",
+        "There used to be",
+        "a wide range of",
+        "just around the corner"
+      ],
+      "sample_answer": "My neighborhood is a mix of apartment buildings and small shops. Within walking distance, there's a supermarket, a few convenience stores, and a whole street full of restaurants and cafes. There's also a park about ten minutes away where a lot of people jog or walk their dogs in the evening. My favorite place is a small bakery just around the corner. They open at seven in the morning, and the smell of fresh bread is amazing. The neighborhood has changed a lot in the last few years. There used to be a lot of old houses, but many of them have been replaced by new buildings."
+    },
+    {
+      "id": "t1_009",
+      "type": 1,
+      "category": "거주지",
+      "difficulty": "medium",
+      "question": "Tell me about a time you moved to a new home. What was the experience like?",
+      "combo": "경험",
+      "follow_ups": [
+        "What was the hardest part?",
+        "How did you feel after moving in?"
+      ],
+      "keywords": [
+        "A few years ago",
+        "We ended up",
+        "It took us about",
+        "by the end of the day"
+      ],
+      "sample_answer": "A few years ago, my family moved from a small apartment to the place where we live now. The whole thing took about two weeks of preparation. The hardest part was definitely packing, because we had so much stuff we hadn't touched in years. We ended up throwing away almost half of it. On moving day, the movers arrived at eight in the morning, and by the end of the day everything was in the new apartment, though nothing was in the right place. It took us another week to really settle in. But once we finished, it felt great. The new place was much brighter, and I finally had my own room."
+    },
+    {
+      "id": "t1_010",
+      "type": 1,
+      "category": "가족·친구",
+      "difficulty": "easy",
+      "question": "Tell me about your family. How many people are in it, and what are they like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "Who are you closest to?",
+        "What do you usually do together?"
+      ],
+      "keywords": [
+        "There are ... of us",
+        "takes after",
+        "We get along well",
+        "tends to be"
+      ],
+      "sample_answer": "There are four of us in my family, my parents, my younger brother, and me. My father is retired now, and he spends most of his time hiking and gardening. My mother is very outgoing, she knows everyone in the neighborhood. My brother is six years younger than me, and he's still in graduate school. I'd say I'm closest to my mother, because we can talk about anything. We get along really well as a family. On weekends, we usually have dinner together, and sometimes we go for a short drive somewhere outside the city. I think I take after my father, because I'm pretty quiet."
+    },
+    {
+      "id": "t1_011",
+      "type": 1,
+      "category": "가족·친구",
+      "difficulty": "medium",
+      "question": "Describe one of your closest friends. How did you meet, and what is he or she like?",
+      "combo": "묘사",
+      "follow_ups": [
+        "What do you usually do together?",
+        "How often do you see each other?"
+      ],
+      "keywords": [
+        "We've known each other since",
+        "She's the kind of person who",
+        "have a lot in common"
+      ],
+      "sample_answer": "One of my closest friends is Jiyoung. We've known each other since university, so that's more than ten years now. We met in a class during our first semester and just started talking after one of the lectures. She's the kind of person who's always cheerful, even when things aren't going well, and that's probably why I like being around her. We have a lot in common, we both love movies and trying out new restaurants. These days we're both busy with work, so we meet maybe once a month, but when we do, we talk for hours as if no time has passed at all."
+    },
+    {
+      "id": "t1_012",
+      "type": 1,
+      "category": "가족·친구",
+      "difficulty": "medium",
+      "question": "Tell me about a memorable time you spent with your family or friends.",
+      "combo": "경험",
+      "follow_ups": [
+        "What made it so memorable?",
+        "Would you do it again?"
+      ],
+      "keywords": [
+        "I'll never forget",
+        "out of nowhere",
+        "We ended up -ing",
+        "to be honest"
+      ],
+      "sample_answer": "I'll never forget a trip I took with three friends to Jeju Island a couple of years ago. We planned it for months, but on the second day it started raining out of nowhere, and the weather forecast said it wouldn't stop. Instead of going to the beach like we planned, we ended up staying in the guesthouse, cooking together, and playing board games all afternoon. To be honest, that turned out to be the best part of the whole trip. We talked about things we'd never talked about before, and we laughed so much my stomach hurt. I'd absolutely do it again, though maybe with better weather."
+    },
+    {
+      "id": "t1_013",
+      "type": 1,
+      "category": "자기소개",
+      "difficulty": "medium",
+      "question": "What kind of person are you? Describe your personality.",
+      "combo": "묘사",
+      "follow_ups": [
+        "Has your personality changed over time?",
+        "How do your friends describe you?"
+      ],
+      "keywords": [
+        "I'd describe myself as",
+        "I tend to",
+        "on the other hand",
+        "people often say"
+      ],
+      "sample_answer": "I'd describe myself as fairly calm and organized. I like to plan things in advance, and I feel uncomfortable when everything is left until the last minute. At work, that's actually helpful, because my job involves managing a lot of details. On the other hand, I can be a little stubborn once I've made a decision. People often say I'm a good listener, and I think that's true. I'd rather listen for a while and then say something meaningful than talk the whole time. I think I've become more flexible over the years, though. When I was younger, I got stressed much more easily than I do now."
+    },
+    {
+      "id": "t1_014",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "hard",
+      "question": "Tell me about a project at work that did not go as planned. What happened and how did you handle it?",
+      "combo": "경험",
+      "follow_ups": [
+        "What did you learn from it?",
+        "Would you do anything differently?"
+      ],
+      "keywords": [
+        "ran into",
+        "fell through",
+        "managed to",
+        "in the end",
+        "looking back on it"
+      ],
+      "sample_answer": "Last year, I was in charge of an in-house event for about three hundred employees. Two days before the event, the venue called and said there was a problem with their facility, and the booking fell through. I completely panicked at first. I called every venue I could think of, and most of them were fully booked. In the end, I managed to find a hall in a nearby hotel, but it was smaller, so we had to change the seating plan and reprint all the materials overnight. The event itself went fine, and honestly, most people never knew what happened. Looking back on it, I learned to always have a backup plan, no matter how confident I feel."
+    },
+    {
+      "id": "t1_015",
+      "type": 1,
+      "category": "자기소개",
+      "difficulty": "medium",
+      "question": "What do you usually do on weekdays after work? Walk me through your evening.",
+      "combo": "습관",
+      "follow_ups": [
+        "Is your routine different on weekends?",
+        "What is your favorite part of the day?"
+      ],
+      "keywords": [
+        "Once I get home",
+        "I usually end up",
+        "before I go to bed",
+        "more often than not"
+      ],
+      "sample_answer": "Once I get home, which is usually around seven, the first thing I do is change into comfortable clothes and have dinner with my family. After that, it really depends on the day. More often than not, I watch something on Netflix for an hour or so, or I go for a walk around the neighborhood if the weather is nice. Twice a week I go to the gym near my apartment, though I have to admit I sometimes skip it. Before I go to bed, I like to read for twenty or thirty minutes, because it helps me fall asleep. My favorite part of the day is probably that quiet time right before bed."
+    },
+    {
+      "id": "t1_016",
+      "type": 1,
+      "category": "거주지",
+      "difficulty": "hard",
+      "question": "How is the place you live now different from where you lived as a child? Compare them.",
+      "combo": "비교",
+      "follow_ups": [
+        "Which one do you prefer?",
+        "What do you miss about the old place?"
+      ],
+      "keywords": [
+        "Back when I was a child",
+        "whereas",
+        "the biggest difference is",
+        "in contrast"
+      ],
+      "sample_answer": "Back when I was a child, my family lived in a small city about two hours from Seoul. We had a house with a yard, and I could ride my bike around the neighborhood without my parents worrying. It was very quiet, and everybody knew each other. Now I live in an apartment in Seoul, and the biggest difference is the pace. Everything here is fast, and there are always people around. In contrast, my hometown felt almost sleepy. I definitely prefer living in the city now because of the convenience, but I do miss the yard, and honestly, I miss how quiet the nights were."
+    },
+    {
+      "id": "t1_017",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "medium",
+      "question": "How do you usually get to work? Describe your commute.",
+      "combo": "습관",
+      "follow_ups": [
+        "What do you do during your commute?",
+        "Has your commute changed recently?"
+      ],
+      "keywords": [
+        "I take the",
+        "It takes me around",
+        "transfer at",
+        "during rush hour"
+      ],
+      "sample_answer": "I take the subway to work every morning. From my apartment, I walk about seven minutes to the station, take line six, and then transfer at Gongdeok station. The whole trip takes me around forty minutes door to door. During rush hour it's really crowded, so I usually can't get a seat, but I've gotten used to it. I spend most of that time listening to podcasts or music, and sometimes I review my schedule for the day on my phone. Since we started working from home twice a week, my commute has actually become much less stressful, because I only do it three days a week now."
+    },
+    {
+      "id": "t1_018",
+      "type": 1,
+      "category": "가족·친구",
+      "difficulty": "medium",
+      "question": "What do you and your family usually do on weekends? Tell me about a typical weekend.",
+      "combo": "습관",
+      "follow_ups": [
+        "Has that changed over the years?",
+        "What do you enjoy most about it?"
+      ],
+      "keywords": [
+        "On a typical weekend",
+        "we tend to",
+        "every now and then",
+        "without fail"
+      ],
+      "sample_answer": "On a typical weekend, we don't do anything dramatic, but we have a pretty set routine. On Saturday morning, my mother and I go to the market together to buy groceries for the week. In the afternoon, I usually meet a friend or just stay home and rest. Sunday is family day, more or less. We have lunch together without fail, and every now and then we go for a drive to somewhere outside the city, like a small cafe by the river. It's changed a bit over the years, because when my brother and I were younger we traveled more. Now we're all busy, so we value the quiet time."
+    },
+    {
+      "id": "t1_019",
+      "type": 1,
+      "category": "자기소개",
+      "difficulty": "hard",
+      "question": "Tell me about a goal you have set for yourself recently and why it matters to you.",
+      "combo": "경험",
+      "follow_ups": [
+        "What steps are you taking?",
+        "How will you know you have succeeded?"
+      ],
+      "keywords": [
+        "I've been meaning to",
+        "the main reason is",
+        "step by step",
+        "in the long run"
+      ],
+      "sample_answer": "Recently, I set a goal to improve my English speaking, mostly because of work. My company is expanding overseas, and more and more meetings are being held in English. I've been meaning to do something about it for years, but I always found an excuse. The main reason it matters to me now is that I don't want to miss opportunities just because I can't express myself well. So I'm taking it step by step. I practice speaking for about thirty minutes every day, and I try to write down new expressions I hear in meetings. In the long run, I'd like to be able to lead a presentation in English without reading from a script."
+    },
+    {
+      "id": "t1_020",
+      "type": 1,
+      "category": "직장",
+      "difficulty": "hard",
+      "question": "Compare working from home with working in the office. What are the advantages of each?",
+      "combo": "비교",
+      "follow_ups": [
+        "Which do you prefer?",
+        "How has your company adapted?"
+      ],
+      "keywords": [
+        "one of the biggest advantages",
+        "on the flip side",
+        "in terms of",
+        "when it comes to"
+      ],
+      "sample_answer": "One of the biggest advantages of working from home is the time I save. Without a commute, I get almost an hour and a half back every day, and I can concentrate much better on tasks that need deep focus, like writing reports. On the flip side, when it comes to teamwork, the office is clearly better. If I have a question, I can just turn around and ask someone instead of scheduling a call. I also think casual conversations in the office lead to better ideas. My company settled on a hybrid model, three days in the office and two days at home, and honestly, I think that's the right balance for most people."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { DEFAULT_MODEL } from "./constants";
+import { DEFAULT_MODEL, DEFAULT_TARGET_GRADE } from "./constants";
 import type {
   UserSettings,
   StudyRecord,
@@ -78,7 +78,7 @@ export const storage = {
   getSettings(): UserSettings {
     return safeGetLocal<UserSettings>(scopedKey("spa.settings"), {
       examDate: "",
-      targetLevel: 6,
+      targetLevel: DEFAULT_TARGET_GRADE,
       aiModel: DEFAULT_MODEL,
       setupCompleted: false,
     });
