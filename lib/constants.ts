@@ -1,33 +1,26 @@
 /**
- * ⚠️ 원익 환경 설정 — 운영 전 반드시 확인하세요.
+ * AI 설정 — Anthropic Claude API 를 직접 사용한다.
  *
- * AI 채점에 사용할 게이트웨이 주소입니다.
- * 아래 기본값은 이전 프로젝트(현대차그룹 사내 HChat)의 주소이며,
- * 원익에서는 접근할 수 없습니다. 반드시 아래 중 하나로 교체해야 합니다.
+ * API 키는 서버(Cloudflare Pages 환경변수 ANTHROPIC_API_KEY, Secret 타입)에만 두며
+ * 클라이언트로 내려보내지 않는다. 사용자가 개인 키를 발급받을 필요가 없다.
  *
- *   1) 사내 AI 게이트웨이가 있는 경우
- *      → AI_BASE_URL 을 해당 주소로 변경
- *
- *   2) 상용 API(Anthropic 등)를 직접 사용하는 경우
- *      → AI_BASE_URL = "https://api.anthropic.com/v1"
- *        (이 경우 Cloudflare Tunnel 자체가 필요 없습니다)
- *
- * Cloudflare 환경변수 HCHAT_TUNNEL_URL 을 설정하면
- * /api/hchat 이 그 주소로 프록시합니다 (사내망 경유가 필요할 때만 사용).
+ * 사내 게이트웨이를 경유하지 않으므로 Cloudflare Tunnel 및 24시간 상시 PC 가 필요 없다.
  */
-export const AI_BASE_URL = "https://CHANGE-ME.example.com/api/v3";
 
-/** 하위 호환용 별칭 */
-export const HCHAT_BASE_URL = AI_BASE_URL;
+/** 기본 채점 모델 */
+export const DEFAULT_MODEL = "claude-opus-5";
 
 export const AVAILABLE_MODELS = [
-  { value: "claude-sonnet-4-6", label: "claude-sonnet-4-6 (권장)", provider: "anthropic" },
-  { value: "claude-haiku-4-5", label: "claude-haiku-4-5 (빠름)", provider: "anthropic" },
+  { value: "claude-opus-5", label: "Claude Opus 5 (기본 · 가장 정확)" },
+  { value: "claude-sonnet-5", label: "Claude Sonnet 5 (빠르고 저렴)" },
+  { value: "claude-haiku-4-5", label: "Claude Haiku 4.5 (가장 저렴)" },
 ] as const;
 
-export function endpointForModel(model: string): string {
-  if (model.startsWith("claude")) return `${AI_BASE_URL}/claude`;
-  return AI_BASE_URL;
+const ALLOWED = new Set<string>(AVAILABLE_MODELS.map((m) => m.value));
+
+/** 클라이언트가 임의 모델을 지정해 비용을 키우지 못하도록 검증 */
+export function isAllowedModel(model?: string): boolean {
+  return !!model && ALLOWED.has(model);
 }
 
 export const APP_NAME = "SPEAKZEN";

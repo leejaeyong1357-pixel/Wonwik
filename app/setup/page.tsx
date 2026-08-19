@@ -48,7 +48,7 @@ export default function SetupPage() {
       examDate,
       targetLevel,
       hchatEndpoint: "",
-      hchatApiKey,
+      hchatApiKey: "",
       hchatModel,
       setupCompleted: true,
     });
@@ -144,91 +144,30 @@ export default function SetupPage() {
 
           {step === 3 && (
             <div>
-              <h2 className="text-lg font-bold mb-1 text-brand-gray-900">HChat API 연결</h2>
-              <p className="text-sm text-brand-gray-600 mb-3">
-                사내 HChat Platform에서 발급받은 <b>개인 API Key</b>만 입력하세요.
-                <br />
-                서버 주소는 사내 HChat 표준으로 미리 설정되어 있습니다.
+              <h2 className="text-lg font-bold mb-1 text-brand-gray-900">AI 채점 준비 완료</h2>
+              <p className="text-sm text-brand-gray-600 mb-4">
+                별도의 API 키 발급 없이 바로 사용할 수 있어요.
               </p>
-              <div className="bg-brand-blue/10 border-2 border-brand-blue rounded-xl p-4 mb-4 flex items-center justify-between gap-3 flex-wrap">
-                <div className="flex items-center gap-2 flex-1 min-w-0">
-                  <span className="text-2xl">📘</span>
-                  <span className="text-sm text-brand-ink font-semibold">
-                    <b>API 키 발급 방법</b>이 처음이라 어렵나요?
-                  </span>
-                </div>
-                <div className="flex gap-2">
-                  <a
-                    href="/api/assets?key=api-key-guide"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-brand-blue text-white text-sm font-bold rounded-lg hover:bg-blue-700 whitespace-nowrap shadow-sm"
-                  >
-                    📖 PDF 가이드 보기
-                  </a>
-                  <a
-                    href="/api/assets?key=api-key-guide&dl=1"
-                    className="px-4 py-2 bg-white border-2 border-brand-blue text-brand-blue text-sm font-bold rounded-lg hover:bg-brand-blue/5 whitespace-nowrap"
-                  >
-                    ⬇ 다운로드
-                  </a>
-                </div>
-              </div>
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 mb-4 text-xs text-amber-900">
-                💡 <b>혼자 하기 어려울 시</b> <b>운영 담당자</b>에게 연락 바랍니다.
-                <a href="tel:000-0000-0000" className="font-mono font-bold text-amber-900 underline ml-1">
-                  ☎ 000-0000-0000
-                </a>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <label className="block text-xs font-semibold text-brand-gray-700 mb-1">
-                    개인 API Key
-                  </label>
-                  <input
-                    type="password"
-                    value={hchatApiKey}
-                    onChange={(e) => {
-                      setHchatApiKey(e.target.value);
-                      setTestResult(null);
-                    }}
-                    placeholder="afd5cdc7f6..."
-                    className="w-full border border-brand-gray-300 rounded-xl px-4 py-2.5 text-sm font-mono focus:outline-none focus:border-brand-navy"
-                  />
-                  <p className="text-xs text-brand-gray-500 mt-1">
-                    HChat Platform → 개인 API 키 조회에서 발급
-                  </p>
-                </div>
 
-                <Button
-                  onClick={runTest}
-                  variant="outline"
-                  size="sm"
-                  disabled={testing || !hchatApiKey}
-                  fullWidth
-                >
-                  {testing ? "테스트 중..." : "🔌 연결 테스트"}
-                </Button>
-
-                {testResult && (
-                  <div
-                    className={`p-3 rounded-xl text-sm ${
-                      testResult.ok
-                        ? "bg-green-50 text-green-800 border border-green-200"
-                        : "bg-red-50 text-red-800 border border-red-200"
-                    }`}
-                  >
-                    <div className="font-semibold mb-1">
-                      {testResult.ok ? "✓ 연결 성공" : "✗ 연결 실패"}
-                    </div>
-                    <div>{testResult.message}</div>
+              <div className="bg-brand-blue/5 border border-brand-blue/30 rounded-xl p-4 mb-4">
+                <div className="flex items-start gap-2.5">
+                  <span className="text-2xl leading-none">🤖</span>
+                  <div className="text-sm text-brand-ink leading-relaxed">
+                    <b className="text-brand-blue">Claude AI</b> 가 답변을 채점합니다.
+                    <br />
+                    발음·청취·어휘·문법·유창성 5개 영역을 분석하고
+                    <br />
+                    목표 등급에 맞춘 모범답안을 제안해드려요.
                   </div>
-                )}
-
-                <p className="text-xs text-brand-gray-500">
-                  ※ API 키는 브라우저 로컬스토리지에만 저장되며 외부로 전송되지 않습니다.
-                </p>
+                </div>
               </div>
+
+              <ul className="text-sm text-brand-gray-700 space-y-1.5 mb-2">
+                <li>✓ 시험일 <b>{examDate || "-"}</b></li>
+                <li>✓ 목표 등급 <b>Lv {targetLevel}</b></li>
+                <li>✓ AI 채점 사용 가능</li>
+              </ul>
+
               <div className="flex justify-between mt-6">
                 <Button onClick={() => setStep(2)} variant="ghost">
                   ← 이전

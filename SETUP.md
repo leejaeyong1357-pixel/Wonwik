@@ -11,7 +11,7 @@ SPA 영어 말하기 학습 웹앱. 이 문서 순서대로 진행하면 처음�
 
 | # | 항목 | 파일 | 현재 값 |
 |---|---|---|---|
-| 1 | AI 게이트웨이 주소 | `lib/constants.ts` | `https://CHANGE-ME.example.com/api/v3` |
+| 1 | Anthropic API 키 | Cloudflare 환경변수 | `ANTHROPIC_API_KEY` 미설정 |
 | 2 | 관리자 계정 | `app/login/page.tsx` | `wonikadmin` / `wonik2026!` |
 | 3 | 임직원 명부 | `data/employees.json` | 빈 배열 |
 | 4 | 시험 일정 | `data/exam_schedules.json` | 빈 객체 |
@@ -19,34 +19,37 @@ SPA 영어 말하기 학습 웹앱. 이 문서 순서대로 진행하면 처음�
 
 ---
 
-## 1. AI 게이트웨이 설정
+## 1. Anthropic API 키 설정
 
-`lib/constants.ts` 의 `AI_BASE_URL` 을 교체합니다. **두 가지 방식 중 선택**하세요.
+AI 채점은 **Claude API** 를 직접 호출합니다. 사내 게이트웨이나 터널이 필요 없습니다.
 
-### 방식 A — 상용 API 직접 사용 (권장, 터널 불필요)
+1. [console.anthropic.com](https://console.anthropic.com) → **API Keys** → 키 발급
+2. Cloudflare Pages → 프로젝트 → **Settings** → **Variables and Secrets** → **Add**
+   - Variable name: **`ANTHROPIC_API_KEY`**
+   - Value: 발급받은 키
+   - Type: **Secret** ← 반드시 Secret 으로 (Plaintext 금지)
+3. Save → **Retry deployment**
 
-```ts
-export const AI_BASE_URL = "https://api.anthropic.com/v1";
-```
+> 🔐 키는 **서버에만** 존재하며 브라우저로 내려가지 않습니다.
+> 학습자는 개인 키를 발급받을 필요가 없고, 설정 화면에도 키 입력란이 없습니다.
 
-- 구조가 단순하고 24시간 PC가 필요 없습니다
-- 사용자별로 API 키를 발급받아 설정 화면에 입력합니다
-- 사내망 제약이 없다면 이 방식을 권장합니다
+### 비용 관리
 
-### 방식 B — 사내 AI 게이트웨이 사용 (터널 필요)
+전 사용자의 채점이 **이 키 하나로** 청구됩니다. 다음을 권장합니다.
 
-사내망에서만 접근 가능한 게이트웨이라면, 사내 PC를 경유하는 터널이 필요합니다.
+- Anthropic Console → **Limits** 에서 월 사용 한도를 설정
+- 이 앱 전용 키를 따로 발급 (다른 용도와 분리해 사용량 추적)
+- 채점 루브릭에 **프롬프트 캐싱**이 적용되어 있어 반복 채점 시 입력 비용이 크게 절감됩니다
 
-```ts
-export const AI_BASE_URL = "https://사내게이트웨이주소/api/v3";
-```
+### 모델 변경
 
-터널 구동 방법은 아래 **6. 터널 설정** 참고.
+`lib/constants.ts` 의 `DEFAULT_MODEL` 로 조정합니다.
 
-> ⚠️ 사내 API를 외부 클라우드로 연결하는 구조는 **보안 검토 대상**입니다.
-> 인원을 확대하기 전에 반드시 정보보안 부서 승인을 받으세요.
-
----
+| 모델 | 특징 |
+|---|---|
+| `claude-opus-5` | 기본값. 가장 정확한 채점 |
+| `claude-sonnet-5` | 빠르고 저렴 |
+| `claude-haiku-4-5` | 가장 저렴 |
 
 ## 2. 관리자 계정 변경
 
@@ -161,41 +164,16 @@ Settings → **Variables and Secrets**
 
 | 이름 | 값 | 용도 |
 |---|---|---|
+| `ANTHROPIC_API_KEY` | Claude API 키 | **필수** · Secret 타입 |
 | `GATE_USER` | 원하는 아이디 | 사이트 진입 1차 잠금 (선택) |
 | `GATE_PASS` | 원하는 비밀번호 | 〃 |
-| `HCHAT_TUNNEL_URL` | 터널 주소 | 방식 B 사용 시에만 |
 | `MAINTENANCE` | `0` 또는 `1` | `1`이면 전체 503 점검 화면 |
 
 > `GATE_USER`/`GATE_PASS` 를 설정하지 않으면 1차 잠금 없이 바로 로그인 화면이 나옵니다.
 
 ---
 
-## 6. 터널 설정 (방식 B 선택 시에만)
-
-24시간 켜둘 사내 PC에서 진행합니다.
-
-1. [cloudflared 다운로드](https://github.com/cloudflare/cloudflared/releases/latest) → `cloudflared-windows-amd64.exe`
-2. `C:\cloudflared\` 폴더를 만들고 `cloudflared.exe` 로 이름을 바꿔 넣습니다
-3. 같은 폴더에 `START_TUNNEL.bat` 생성 (주소는 사내 게이트웨이로 교체):
-
-```bat
-@echo off
-chcp 65001 > nul
-title AI Tunnel - 끄지 마세요!
-cd /d "%~dp0"
-cloudflared.exe tunnel --url https://사내게이트웨이주소 --http-host-header 사내게이트웨이주소 --origin-server-name 사내게이트웨이주소 --no-tls-verify
-```
-
-4. 더블클릭 → 검은 창의 `https://xxx.trycloudflare.com` 주소 복사
-5. Cloudflare 환경변수 `HCHAT_TUNNEL_URL` 에 붙여넣기 → Save → **Retry deployment**
-
-> ⚠️ **검은 창을 닫으면 AI 채점이 즉시 멈춥니다.**
-> ⚠️ 터널을 재시작하면 **주소가 매번 바뀝니다.** 4~5번을 다시 해야 합니다.
-> `Error 1016` 이 뜨면 대부분 터널 주소가 바뀐 것이 원인입니다.
-
----
-
-## 7. 배포 및 로컬 개발
+## 6. 배포 및 로컬 개발
 
 ### 코드 수정 후 배포
 
@@ -222,7 +200,7 @@ npx tsc --noEmit                   # 타입 검사
 
 ---
 
-## 8. 알아두면 좋은 것
+## 7. 알아두면 좋은 것
 
 ### 기능 요약
 
@@ -255,17 +233,16 @@ npx tsc --noEmit                   # 타입 검사
 | 증상 | 해결 |
 |---|---|
 | 503 점검 화면 | `MAINTENANCE` 환경변수를 `0` 으로 설정 |
-| `Error 1016` | 터널 주소 변경됨 → 6번의 4~5단계 재수행 |
-| AI 채점이 `Unauthorized` | API 키 불일치 → 마이페이지에서 재입력 후 저장 |
+| AI 채점이 인증 실패 | `ANTHROPIC_API_KEY` 값 확인 후 Retry deployment |
 | 기기 간 연동 안 됨 | `SPA_KV` 바인딩 확인 |
 | 배포 후 화면 그대로 | 브라우저 강제 새로고침 `Ctrl + Shift + R` |
 | `npm install` 실패 | `--legacy-peer-deps` 옵션 사용 |
 
 ---
 
-## 9. 세팅 체크리스트
+## 8. 세팅 체크리스트
 
-- [ ] `lib/constants.ts` — AI 게이트웨이 주소 교체
+- [ ] Cloudflare 환경변수 `ANTHROPIC_API_KEY` 등록 (Secret)
 - [ ] `app/login/page.tsx` — 관리자 계정 해시 교체
 - [ ] `data/employees.json` — 임직원 명부 입력
 - [ ] `data/exam_schedules.json` — 시험 일정 입력 (선택)
@@ -274,6 +251,5 @@ npx tsc --noEmit                   # 타입 검사
 - [ ] `nodejs_compat` 호환성 플래그 추가
 - [ ] `SPA_KV` KV 바인딩 연결
 - [ ] 환경변수 설정
-- [ ] (방식 B) 터널 구동 + `HCHAT_TUNNEL_URL` 설정
 - [ ] 배포 후 로그인 → 학습 → AI 채점 전체 흐름 확인
-- [ ] 정보보안 부서 검토 (인원 확대 전)
+- [ ] Anthropic Console 에서 월 사용 한도 설정

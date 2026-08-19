@@ -22,7 +22,14 @@ interface HchatConfig {
   model?: string;
 }
 
-const FEEDBACK_PROMPT = (req: FeedbackRequest) => `You are a STRICT English speaking exam evaluator for the Korean SPA (Speaking Proficiency Assessment) used by our group.
+/**
+ * 채점 시스템 프롬프트 — 요청마다 절대 변하지 않는 정적 영역.
+ *
+ * 프롬프트 캐싱은 접두사 일치 방식이라, 이 블록에 요청별 값(문제/답변 등)이 섞이면
+ * 매 요청 캐시가 깨진다. 그래서 루브릭과 출력 형식은 여기에 고정하고,
+ * 변동 값은 아래 buildFeedbackInput() 이 만드는 user 메시지로만 전달한다.
+ */
+export const GRADING_SYSTEM_PROMPT = `You are a STRICT English speaking exam evaluator for the Korean SPA (Speaking Proficiency Assessment) used by our group.
 
 # SPA OFFICIAL SCORING RUBRIC (총 96점)
 The total score MUST be the sum of these 5 criteria. Each criterion has its OWN max:
@@ -67,21 +74,6 @@ DO NOT inflate scores. A few words ≠ passing. Empty/trivial answers MUST score
 - Length alone is NOT fluency. Repetitive long answer ≠ high 유창성.
 - Few words MUST NOT get 40-50/96. That is incorrect scoring.
 - Off-topic answer → 청취 ≤ 10 regardless of length (response relevance)
-
-# INPUT
-Question Type ${req.type} (${
-  req.type === 1
-    ? "Business Casual — daily Q&A"
-    : req.type === 2
-    ? "Opinion — argumentative response"
-    : req.type === 3
-    ? "Visual Description — chart/photo"
-    : "Passage Summary — 60-sec summary"
-})
-Question: ${req.question}
-${req.context ? `Context: ${req.context}\n` : ""}
-User's Answer (${req.userAnswer.split(/\s+/).filter(Boolean).length} words): ${req.userAnswer}
-Target Level: Lv ${req.targetLevel}
 
 # OUTPUT FORMAT — return ONLY valid JSON (no markdown fences, no commentary)
 All Korean text must be in 한국어 (존댓말, ~요체). modelAnswer must be in English.
@@ -149,23 +141,51 @@ RULES:
 - contentBreakdown 의 percent 합은 100.
 - Be honest and strict. 점수를 부풀리지 말 것.`;
 
+/** 요청마다 달라지는 입력부 — 캐시 경계 뒤에 오는 user 메시지 */
+function buildFeedbackInput(req: FeedbackRequest): string {
+  return `# INPUT
+Question Type ${req.type} (${
+  req.type === 1
+    ? "Business Casual — daily Q&A"
+    : req.type === 2
+    ? "Opinion — argumentative response"
+    : req.type === 3
+    ? "Visual Description — chart/photo"
+    : "Passage Summary — 60-sec summary"
+})
+Question: ${req.question}
+${req.context ? `Context: ${req.context}\n` : ""}
+User's Answer (${req.userAnswer.split(/\s+/).filter(Boolean).length} words): ${req.userAnswer}
+Target Level: Lv ${req.targetLevel}
+
+`;
+}
+
 /**
- * 서버 프록시(/api/hchat) 호출. 그 안에서 Cloudflare Tunnel 을 통해 사내 HChat 으로 라우팅됨.
+ * 서버 프록시(/api/hchat) 호출.
+ *
+ * API 키는 서버(Cloudflare 환경변수)에만 존재하며 클라이언트로 내려오지 않는다.
+ * system 을 별도 필드로 보내는 이유: 서버에서 프롬프트 캐싱 경계를 걸기 위함.
  */
 async function callProxy(
-  config: HchatConfig,
-  messages: { role: string; content: string }[],
-  maxTokens = 1500,
+  opts: {
+    system?: string;
+    cacheSystem?: boolean;
+    messages: { role: string; content: string }[];
+    maxTokens?: number;
+    model?: string;
+  },
 ): Promise<{ ok: boolean; content?: string; error?: string }> {
   try {
     const res = await fetch("/api/hchat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        apiKey: config.apiKey,
-        model: config.model,
-        messages,
-        maxTokens,
+        system: opts.system,
+        cacheSystem: opts.cacheSystem,
+        messages: opts.messages,
+        maxTokens: opts.maxTokens ?? 2000,
+        model: opts.model,
       }),
     });
     const data = await res.json();
@@ -182,22 +202,13 @@ export async function getFeedback(
   req: FeedbackRequest,
   config: HchatConfig,
 ): Promise<AiFeedback> {
-  if (!config.apiKey) {
-    return strictMockFeedback(req);
-  }
-
-  const result = await callProxy(
-    config,
-    [
-      {
-        role: "system",
-        content:
-          "You are a strict SPA exam evaluator. Output only valid JSON. Be harsh in scoring - one sentence answers score under 25 points.",
-      },
-      { role: "user", content: FEEDBACK_PROMPT(req) },
-    ],
-    3200,
-  );
+  const result = await callProxy({
+    system: GRADING_SYSTEM_PROMPT,
+    cacheSystem: true, // 정적 루브릭은 캐시 — 반복 채점 시 입력 비용 대폭 절감
+    messages: [{ role: "user", content: buildFeedbackInput(req) }],
+    maxTokens: 3200,
+    model: config.model,
+  });
 
   if (!result.ok || !result.content) {
     console.error("HChat call failed:", result.error);
@@ -575,14 +586,12 @@ function strictMockFeedback(req: FeedbackRequest): AiFeedback {
 export async function testConnection(
   config: HchatConfig,
 ): Promise<{ ok: boolean; message: string; details?: string }> {
-  if (!config.apiKey) {
-    return { ok: false, message: "API 키를 입력해주세요" };
-  }
-  const result = await callProxy(
-    config,
-    [{ role: "user", content: "Reply with just OK" }],
-    30,
-  );
+
+  const result = await callProxy({
+    messages: [{ role: "user", content: "Reply with just OK" }],
+    maxTokens: 64,
+    model: config.model,
+  });
   if (!result.ok) {
     return {
       ok: false,
@@ -605,22 +614,15 @@ export async function translateWord(
     if (cache[word.toLowerCase()]) return cache[word.toLowerCase()];
   }
 
-  if (!config.apiKey) {
-    return "(API 키 설정 필요)";
-  }
 
-  const result = await callProxy(
-    config,
-    [
-      {
-        role: "system",
-        content:
-          "You are a Korean-English dictionary. Output only the most common Korean meaning of the given English word in 5 characters or fewer. No explanation, no punctuation.",
-      },
-      { role: "user", content: word },
-    ],
-    30,
-  );
+
+  const result = await callProxy({
+    system:
+      "You are a Korean-English dictionary. Output only the most common Korean meaning of the given English word in 5 characters or fewer. No explanation, no punctuation.",
+    messages: [{ role: "user", content: word }],
+    maxTokens: 64,
+    model: config.model,
+  });
 
   if (!result.ok || !result.content) return "—";
 
@@ -637,22 +639,15 @@ export async function translateText(
   text: string,
   config: HchatConfig,
 ): Promise<string> {
-  if (!config.apiKey) {
-    return "(API 키 설정 필요 — 마이페이지에서 등록)";
-  }
 
-  const result = await callProxy(
-    config,
-    [
-      {
-        role: "system",
-        content:
-          "You are a professional Korean translator. Translate the given English text to natural Korean. Output only the Korean translation, no explanations or quotation marks.",
-      },
-      { role: "user", content: text },
-    ],
-    500,
-  );
+
+  const result = await callProxy({
+    system:
+      "You are a professional Korean translator. Translate the given English text to natural Korean. Output only the Korean translation, no explanations or quotation marks.",
+    messages: [{ role: "user", content: text }],
+    maxTokens: 800,
+    model: config.model,
+  });
 
   if (!result.ok || !result.content) {
     return `(번역 실패: ${result.error || "응답 없음"})`;
