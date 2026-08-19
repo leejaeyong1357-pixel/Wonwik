@@ -7,13 +7,19 @@
  * 사내 게이트웨이를 경유하지 않으므로 Cloudflare Tunnel 및 24시간 상시 PC 가 필요 없다.
  */
 
-/** 기본 채점 모델 */
-export const DEFAULT_MODEL = "claude-opus-5";
+/**
+ * 기본 채점 모델.
+ *
+ * 채점은 루브릭이 고정된 작업이라 Sonnet 으로도 판정 품질이 충분하고,
+ * 학습자가 답변마다 기다리는 시간이 크게 줄어든다.
+ * 더 엄밀한 채점이 필요하면 마이페이지에서 Opus 로 바꿀 수 있다.
+ */
+export const DEFAULT_MODEL = "claude-sonnet-5";
 
 export const AVAILABLE_MODELS = [
-  { value: "claude-opus-5", label: "Claude Opus 5 (기본 · 가장 정확)" },
-  { value: "claude-sonnet-5", label: "Claude Sonnet 5 (빠르고 저렴)" },
-  { value: "claude-haiku-4-5", label: "Claude Haiku 4.5 (가장 저렴)" },
+  { value: "claude-sonnet-5", label: "Claude Sonnet 5 (기본 · 빠름)" },
+  { value: "claude-opus-5", label: "Claude Opus 5 (가장 정확 · 느림)" },
+  { value: "claude-haiku-4-5", label: "Claude Haiku 4.5 (가장 빠름)" },
 ] as const;
 
 const ALLOWED = new Set<string>(AVAILABLE_MODELS.map((m) => m.value));

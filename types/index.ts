@@ -32,6 +32,8 @@ export interface UserSettings {
   targetLevel: Level;
   currentLevel?: Level;
   aiModel?: string;
+  /** 마이페이지에서 모델을 직접 고른 경우 true. 기본값 변경이 덮어쓰지 않는다 */
+  aiModelPinned?: boolean;
   setupCompleted: boolean;
   onboardingSeen?: boolean;
   onboardingSkipForever?: boolean;

@@ -76,12 +76,18 @@ export const storage = {
   },
 
   getSettings(): UserSettings {
-    return safeGetLocal<UserSettings>(scopedKey("spa.settings"), {
+    const s = safeGetLocal<UserSettings>(scopedKey("spa.settings"), {
       examDate: "",
       targetLevel: DEFAULT_TARGET_GRADE,
       aiModel: DEFAULT_MODEL,
       setupCompleted: false,
     });
+    // 사용자가 직접 고르지 않은 모델은 현재 기본값을 따라간다.
+    // (예전 기본값이 저장돼 있어 기본 모델 교체가 반영되지 않는 것을 막는다)
+    if (!s.aiModelPinned && s.aiModel !== DEFAULT_MODEL) {
+      return { ...s, aiModel: DEFAULT_MODEL };
+    }
+    return s;
   },
 
   saveSettings(settings: UserSettings) {

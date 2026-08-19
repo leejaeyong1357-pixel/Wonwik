@@ -42,6 +42,7 @@ function mergeSettings(local: UserSettings, remote: UserSettings): UserSettings 
     examDate: remote.examDate || local.examDate,
     targetLevel: remote.targetLevel || local.targetLevel,
     aiModel: remote.aiModel || local.aiModel,
+    aiModelPinned: local.aiModelPinned || remote.aiModelPinned,
     // 진행 플래그 — 한 번 true 면 유지
     setupCompleted: local.setupCompleted || remote.setupCompleted || false,
     onboardingSeen: local.onboardingSeen || remote.onboardingSeen,

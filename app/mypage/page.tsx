@@ -64,6 +64,7 @@ export default function MyPage() {
       examDate,
       targetLevel,
       aiModel,
+      aiModelPinned: true,
     });
     pushUserToServer();
     setSaveMsg("✓ 저장되었습니다");
