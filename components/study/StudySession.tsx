@@ -5,7 +5,7 @@ import { useTTS, useSTT } from "@/lib/speech";
 import { storage } from "@/lib/storage";
 import { pushFlame } from "@/lib/flameSync";
 import { pushUserToServer } from "@/lib/userSync";
-import { getFeedback, translateText } from "@/lib/hchat";
+import { getFeedback, translateText } from "@/lib/ai";
 import type { AiFeedback, QuestionType, SpeakingMetrics } from "@/types";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -133,7 +133,7 @@ export default function StudySession({
     setTranslating(true);
     const settings = storage.getSettings();
     const text = type === 4 && passageText ? passageText : question;
-    const ko = await translateText(text, { apiKey: settings.hchatApiKey, model: settings.hchatModel });
+    const ko = await translateText(text, { model: settings.aiModel });
     setTranslation(ko);
     setShowKorean(true);
     setTranslating(false);
@@ -172,7 +172,7 @@ export default function StudySession({
         sampleAnswer,
         targetLevel: settings.targetLevel,
       },
-      { apiKey: settings.hchatApiKey, model: settings.hchatModel },
+      { model: settings.aiModel },
     );
     setFeedback(result);
     setLoadingFeedback(false);

@@ -4,7 +4,6 @@ const SKIP = [
   "/_next",
   "/favicon.ico",
   "/brand-logo.svg",
-  "/api-key-guide.pdf",
 ];
 
 /**

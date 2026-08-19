@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useCallback } from "react";
 import dictionary from "@/data/dictionary.json";
-import { translateWord } from "@/lib/hchat";
+import { translateWord } from "@/lib/ai";
 import { storage } from "@/lib/storage";
 
 const dict: Record<string, string> = dictionary as any;
@@ -44,8 +44,7 @@ export function WordHoverProvider({ children }: { children: React.ReactNode }) {
     setHover({ word, meaning: "...", loading: true });
     const settings = storage.getSettings();
     const meaning = await translateWord(word, {
-      apiKey: settings.hchatApiKey,
-      model: settings.hchatModel,
+      model: settings.aiModel,
     });
     setHover({ word, meaning, loading: false });
   }, []);

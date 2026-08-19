@@ -20,8 +20,7 @@ const { chromium } = require("playwright");
       JSON.stringify({
         examDate: "2026-08-15",
         targetLevel: 6,
-        hchatEndpoint: "",
-        hchatApiKey: "",
+        aiModel: "claude-opus-5",
         setupCompleted: true,
       }),
     );

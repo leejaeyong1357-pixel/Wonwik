@@ -1,5 +1,6 @@
 "use client";
 
+import { DEFAULT_MODEL } from "./constants";
 import type {
   UserSettings,
   StudyRecord,
@@ -78,9 +79,7 @@ export const storage = {
     return safeGetLocal<UserSettings>(scopedKey("spa.settings"), {
       examDate: "",
       targetLevel: 6,
-      hchatApiKey: "",
-      hchatEndpoint: "",
-      hchatModel: "claude-sonnet-4-6",
+      aiModel: DEFAULT_MODEL,
       setupCompleted: false,
     });
   },

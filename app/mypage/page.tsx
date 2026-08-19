@@ -7,7 +7,8 @@ import { storage } from "@/lib/storage";
 import { hashPassword, getStoredPwHash, setStoredPwHash } from "@/lib/passwordStore";
 import { pushUserToServer } from "@/lib/userSync";
 import { LEVEL_RANGES, getDaysUntil, levelLabel } from "@/lib/scoring";
-import { testConnection } from "@/lib/hchat";
+import { testConnection } from "@/lib/ai";
+import { AVAILABLE_MODELS, DEFAULT_MODEL } from "@/lib/constants";
 import type { Level, UserSession, UserSettings } from "@/types";
 import Header from "@/components/layout/Header";
 import Button from "@/components/ui/Button";
@@ -18,8 +19,7 @@ export default function MyPage() {
   const [settings, setSettings] = useState<UserSettings | null>(null);
   const [examDate, setExamDate] = useState("");
   const [targetLevel, setTargetLevel] = useState<Level>(6);
-  const [hchatApiKey, setHchatApiKey] = useState("");
-  const [hchatModel, setHchatModel] = useState("claude-sonnet-4-6");
+  const [aiModel, setAiModel] = useState<string>(DEFAULT_MODEL);
 
   const [currentPw, setCurrentPw] = useState("");
   const [newPw, setNewPw] = useState("");
@@ -33,10 +33,7 @@ export default function MyPage() {
   const runApiTest = async () => {
     setTesting(true);
     setTestResult(null);
-    const result = await testConnection({
-      apiKey: hchatApiKey,
-      model: hchatModel,
-    });
+    const result = await testConnection({ model: aiModel });
     setTestResult(result);
     setTesting(false);
   };
@@ -56,8 +53,7 @@ export default function MyPage() {
     setSettings(cfg);
     setExamDate(cfg.examDate);
     setTargetLevel(cfg.targetLevel);
-    setHchatApiKey(cfg.hchatApiKey);
-    if (cfg.hchatModel) setHchatModel(cfg.hchatModel);
+    if (cfg.aiModel) setAiModel(cfg.aiModel);
   }, [router]);
 
   if (!session || !settings) return null;
@@ -67,8 +63,7 @@ export default function MyPage() {
       ...settings,
       examDate,
       targetLevel,
-      hchatApiKey,
-      hchatModel,
+      aiModel,
     });
     pushUserToServer();
     setSaveMsg("✓ 저장되었습니다");
@@ -139,16 +134,16 @@ export default function MyPage() {
         <section className="bg-gradient-to-br from-brand-blue/5 to-white border border-brand-blue/30 rounded-3xl p-6 mb-4">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <h2 className="font-bold text-lg text-brand-ink mb-1">📘 HChat API 연동 방법</h2>
+              <h2 className="font-bold text-lg text-brand-ink mb-1">📘 이용 가이드</h2>
               <p className="text-sm text-brand-gray-600 mb-3">
-                개인 API 키 발급 방법을 PDF로 안내드려요. AI 채점·번역을 사용하려면 발급 필요.
+                학습 방법과 화면 사용법을 PDF로 안내드려요.
               </p>
             </div>
             <div className="text-3xl">📄</div>
           </div>
           <div className="flex gap-2">
             <a
-              href="/api/assets?key=api-key-guide"
+              href="/api/assets?key=user-guide"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 bg-brand-blue text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-colors"
@@ -156,7 +151,7 @@ export default function MyPage() {
               📖 PDF 보기
             </a>
             <a
-              href="/api/assets?key=api-key-guide&dl=1"
+              href="/api/assets?key=user-guide&dl=1"
               className="px-4 py-2 bg-white border-2 border-brand-blue text-brand-blue text-sm font-bold rounded-xl hover:bg-brand-blue/5 transition-colors"
             >
               ⬇ 다운로드
@@ -207,35 +202,21 @@ export default function MyPage() {
                 모델
               </label>
               <select
-                value={hchatModel}
+                value={aiModel}
                 onChange={(e) => {
-                  setHchatModel(e.target.value);
+                  setAiModel(e.target.value);
                   setTestResult(null);
                 }}
                 className="w-full border-2 border-brand-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy"
               >
-                <option value="claude-sonnet-4-6">Claude Sonnet 4-6 (권장 · 정확)</option>
-                <option value="claude-haiku-4-5">Claude Haiku 4-5 (빠름)</option>
+                {AVAILABLE_MODELS.map((m) => (
+                  <option key={m.value} value={m.value}>
+                    {m.label}
+                  </option>
+                ))}
               </select>
               <p className="text-xs text-brand-gray-500 mt-1">
-                채점 정확도는 Sonnet, 응답 속도는 Haiku
-              </p>
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-brand-gray-700 mb-1.5">개인 API Key</label>
-              <input
-                type="password"
-                value={hchatApiKey}
-                onChange={(e) => {
-                  setHchatApiKey(e.target.value);
-                  setTestResult(null);
-                }}
-                placeholder="afd5cdc7f6..."
-                className="w-full border-2 border-brand-gray-200 rounded-xl px-4 py-2.5 text-sm font-mono focus:outline-none focus:border-brand-navy"
-              />
-              <p className="text-xs text-brand-gray-500 mt-1">
-                HChat Platform → 개인 API 키 조회에서 발급
+                정확도가 높을수록 응답이 느립니다
               </p>
             </div>
 
@@ -243,7 +224,7 @@ export default function MyPage() {
               onClick={runApiTest}
               variant="outline"
               size="sm"
-              disabled={testing || !hchatApiKey}
+              disabled={testing}
               fullWidth
             >
               {testing ? "테스트 중..." : "🔌 API 연결 테스트"}

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { storage } from "@/lib/storage";
 import { pushUserToServer } from "@/lib/userSync";
 import { LEVEL_RANGES, levelDescription } from "@/lib/scoring";
-import { testConnection } from "@/lib/hchat";
+import { DEFAULT_MODEL } from "@/lib/constants";
 import type { Level } from "@/types";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
@@ -15,31 +15,15 @@ export default function SetupPage() {
   const router = useRouter();
   const [examDate, setExamDate] = useState("");
   const [targetLevel, setTargetLevel] = useState<Level>(6);
-  const [hchatApiKey, setHchatApiKey] = useState("");
-  const hchatModel = "claude-sonnet-4-6";
   const [step, setStep] = useState(1);
   const [loaded, setLoaded] = useState(false);
-  const [testing, setTesting] = useState(false);
-  const [testResult, setTestResult] = useState<{ ok: boolean; message: string } | null>(null);
 
   useEffect(() => {
     const s = storage.getSettings();
     if (s.examDate) setExamDate(s.examDate);
     if (s.targetLevel) setTargetLevel(s.targetLevel);
-    if (s.hchatApiKey) setHchatApiKey(s.hchatApiKey);
     setLoaded(true);
   }, []);
-
-  const runTest = async () => {
-    setTesting(true);
-    setTestResult(null);
-    const result = await testConnection({
-      apiKey: hchatApiKey,
-      model: hchatModel,
-    });
-    setTestResult(result);
-    setTesting(false);
-  };
 
   const save = () => {
     const existing = storage.getSettings();
@@ -47,9 +31,7 @@ export default function SetupPage() {
       ...existing,
       examDate,
       targetLevel,
-      hchatEndpoint: "",
-      hchatApiKey: "",
-      hchatModel,
+      aiModel: existing.aiModel || DEFAULT_MODEL,
       setupCompleted: true,
     });
     // 서버(KV)에도 백업 — 캐시 비워져도 다음 로그인 때 자동 복원

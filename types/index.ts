@@ -25,9 +25,7 @@ export interface UserSettings {
   examDate: string;
   targetLevel: Level;
   currentLevel?: Level;
-  hchatApiKey: string;
-  hchatEndpoint: string;
-  hchatModel?: string;
+  aiModel?: string;
   setupCompleted: boolean;
   onboardingSeen?: boolean;
   onboardingSkipForever?: boolean;

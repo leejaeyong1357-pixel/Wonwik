@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useTTS, useSTT } from "@/lib/speech";
 import { storage } from "@/lib/storage";
 import { pushUserToServer } from "@/lib/userSync";
-import { getFeedback } from "@/lib/hchat";
+import { getFeedback } from "@/lib/ai";
 import { scoreToLevel, levelLabel } from "@/lib/scoring";
 import type { AiFeedback, QuestionType } from "@/types";
 import Header from "@/components/layout/Header";
@@ -118,7 +118,7 @@ export default function MockExamPage() {
           sampleAnswer: sample,
           targetLevel: settings.targetLevel,
         },
-        { apiKey: settings.hchatApiKey, model: settings.hchatModel },
+        { model: settings.aiModel },
       ).then((fb) => {
         setFeedbacks((prev) => ({ ...prev, [currentType]: fb }));
       });

@@ -214,7 +214,7 @@ export default function LandingPage() {
               made by 운영 담당자
             </div>
           </div>
-          <div>SPEAKZEN v0.3 · powered by HChat</div>
+          <div>SPEAKZEN v0.3</div>
         </div>
       </footer>
     </main>

@@ -94,12 +94,12 @@ export default function DashboardPage() {
                 </h1>
                 <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
                   <a
-                    href="/api/assets?key=api-key-guide"
+                    href="/api/assets?key=user-guide"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2.5 bg-brand-blue text-white text-sm font-bold rounded-xl hover:bg-blue-700 transition-colors whitespace-nowrap shadow-sm text-center"
                   >
-                    📘 HChat 연동법
+                    📘 이용 가이드
                   </a>
                   <button
                     onClick={() => setShowSampleResult(true)}

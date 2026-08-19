@@ -17,8 +17,7 @@ interface FeedbackRequest {
   context?: string;
 }
 
-interface HchatConfig {
-  apiKey: string;
+interface AiConfig {
   model?: string;
 }
 
@@ -162,7 +161,7 @@ Target Level: Lv ${req.targetLevel}
 }
 
 /**
- * 서버 프록시(/api/hchat) 호출.
+ * 서버 프록시(/api/ai) 호출.
  *
  * API 키는 서버(Cloudflare 환경변수)에만 존재하며 클라이언트로 내려오지 않는다.
  * system 을 별도 필드로 보내는 이유: 서버에서 프롬프트 캐싱 경계를 걸기 위함.
@@ -177,7 +176,7 @@ async function callProxy(
   },
 ): Promise<{ ok: boolean; content?: string; error?: string }> {
   try {
-    const res = await fetch("/api/hchat", {
+    const res = await fetch("/api/ai", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -200,7 +199,7 @@ async function callProxy(
 
 export async function getFeedback(
   req: FeedbackRequest,
-  config: HchatConfig,
+  config: AiConfig,
 ): Promise<AiFeedback> {
   const result = await callProxy({
     system: GRADING_SYSTEM_PROMPT,
@@ -211,7 +210,7 @@ export async function getFeedback(
   });
 
   if (!result.ok || !result.content) {
-    console.error("HChat call failed:", result.error);
+    console.error("AI 채점 호출 실패:", result.error);
     const mock = strictMockFeedback(req);
     mock.improvements.unshift(`⚠ AI 채점 실패 — ${result.error || "응답 없음"}`);
     return mock;
@@ -559,7 +558,7 @@ function strictMockFeedback(req: FeedbackRequest): AiFeedback {
   const criteria = { pronunciation, listening, vocabulary, grammar, fluency };
 
   return withReportFallbacks({
-    grammarIssues: ["(Mock - HChat API 미연결) 문법 자동 검사를 위해 API 설정 필요"],
+    grammarIssues: ["(Mock - AI 미연결) 문법 자동 검사를 사용할 수 없습니다"],
     vocabularySuggestions: [
       `(Mock) 단어 수: ${wc}개 — ${wc < 50 ? "비즈니스 어휘 추가 필요" : "다양한 어휘 권장"}`,
     ],
@@ -569,7 +568,7 @@ function strictMockFeedback(req: FeedbackRequest): AiFeedback {
     ],
     modelAnswer: req.sampleAnswer
       ? `(목표 등급 Lv ${req.targetLevel} 기준)\n\n${req.sampleAnswer}`
-      : "(HChat API 연결 시 목표 등급 맞춤 모범답안 생성)",
+      : "(AI 연결 시 목표 등급 맞춤 모범답안 생성)",
     estimatedLevel: scoreToLevel(score),
     scoreEstimate: score,
     strengths: [
@@ -584,7 +583,7 @@ function strictMockFeedback(req: FeedbackRequest): AiFeedback {
 }
 
 export async function testConnection(
-  config: HchatConfig,
+  config: AiConfig = {},
 ): Promise<{ ok: boolean; message: string; details?: string }> {
 
   const result = await callProxy({
@@ -607,7 +606,7 @@ export async function testConnection(
 
 export async function translateWord(
   word: string,
-  config: HchatConfig,
+  config: AiConfig,
 ): Promise<string> {
   if (typeof window !== "undefined") {
     const cache = JSON.parse(localStorage.getItem("spa.wordCache") || "{}");
@@ -637,7 +636,7 @@ export async function translateWord(
 
 export async function translateText(
   text: string,
-  config: HchatConfig,
+  config: AiConfig,
 ): Promise<string> {
 
 
@@ -653,10 +652,6 @@ export async function translateText(
     return `(번역 실패: ${result.error || "응답 없음"})`;
   }
   return result.content.trim().replace(/^["']|["']$/g, "");
-}
-
-export function isHChatConfigured(apiKey: string): boolean {
-  return !!apiKey;
 }
 
 export async function transcribeAudio(

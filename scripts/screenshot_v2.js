@@ -44,8 +44,7 @@ const { chromium } = require("playwright");
       JSON.stringify({
         examDate: "2026-08-15",
         targetLevel: 7,
-        hchatEndpoint: "",
-        hchatApiKey: "",
+        aiModel: "claude-opus-5",
         setupCompleted: false,
       }),
     );
@@ -68,8 +67,7 @@ const { chromium } = require("playwright");
       JSON.stringify({
         examDate: "2026-08-15",
         targetLevel: 7,
-        hchatEndpoint: "",
-        hchatApiKey: "",
+        aiModel: "claude-opus-5",
         setupCompleted: true,
         onboardingSeen: true,
       }),

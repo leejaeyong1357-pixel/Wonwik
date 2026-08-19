@@ -33,14 +33,18 @@ const NOTICES = [
             </span>
           </li>
           <li>
-            HChat 연동을 통해 답변이 외부 클라우드로 새 나가지 않습니다 — 모두 현대차그룹 사내 게이트웨이로만 흐릅니다.
+            채점을 위해 <b>답변 텍스트만</b> 암호화된 통신으로 AI 채점 서버(Anthropic Claude API)에 전송됩니다.
+            <br />
+            <span className="text-xs text-brand-gray-600">
+              이름·사번 등 개인 식별정보는 함께 보내지 않으며, 채점이 끝난 답변은 회사 서버에 저장되지 않습니다.
+            </span>
           </li>
         </ul>
         <div className="mt-4 p-3 bg-brand-blue/10 border border-brand-blue/30 rounded-xl text-sm">
           <b className="text-brand-blue">걱정 없이 마음껏 사용</b>하셔도 됩니다.
         </div>
         <p className="text-[11px] text-brand-gray-500 mt-3 leading-relaxed">
-          ※ 본 서비스는 <b>ICT와 함께 보안 및 개인정보 보호 기준</b>에 따라 안전하게 운영 및
+          ※ 본 서비스는 <b>사내 보안 및 개인정보 보호 기준</b>에 따라 안전하게 운영 및
           관리됩니다.
         </p>
       </>

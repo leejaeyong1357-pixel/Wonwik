@@ -413,16 +413,16 @@ function StatusBadge({ status }: { status: AdminLearnerRow["status"] }) {
 function AssetsAdmin() {
   return (
     <div className="mt-10 bg-white rounded-3xl border border-brand-gray-200 p-6">
-      <h2 className="text-xl font-black text-brand-ink mb-1">📎 HChat API 가이드 업로드</h2>
+      <h2 className="text-xl font-black text-brand-ink mb-1">📎 이용 가이드 업로드</h2>
       <p className="text-sm text-brand-gray-600 mb-5">
         학습자가 설정·마이페이지·대시보드 상단에서 보고 다운받을 PDF를 업로드합니다.
       </p>
       <div className="max-w-md">
         <AssetUploader
-          assetKey="api-key-guide"
-          title="📘 HChat API 키 발급 가이드 (PDF)"
+          assetKey="user-guide"
+          title="📘 이용 가이드 (PDF)"
           accept="application/pdf"
-          desc="설정·마이페이지·대시보드 상단 'HChat 연동법' 버튼에 노출됨"
+          desc="마이페이지·대시보드 상단 '이용 가이드' 버튼에 노출됨"
         />
       </div>
     </div>

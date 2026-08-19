@@ -14,13 +14,12 @@ interface ServerUser {
  * 서버 설정과 로컬 설정을 필드별로 안전하게 병합.
  *
  * ⚠️ 단순 스프레드({...local, ...remote}) 는 쓰면 안 됨.
- *    remote 가 오래된 값(예: 예전 API 키)을 갖고 있으면 방금 이 기기에서 입력한
- *    값을 덮어써서 "인증은 되는데 실제 호출은 실패" 같은 증상이 남.
+ *    remote 가 오래된 값을 갖고 있으면 방금 이 기기에서 바꾼 값을 덮어써서
+ *    "저장은 됐는데 반영이 안 됨" 같은 증상이 남는다.
  *
  * 규칙:
- *  - hchatApiKey: 로컬에 값이 있으면 로컬 우선 (이 기기에서 직접 입력한 게 정답).
- *                 로컬이 비어있을 때만 서버 값으로 복원 (새 기기 최초 로그인).
- *  - examDate / targetLevel / hchatModel: 서버 값이 있으면 서버 우선 (기기 간 공유 대상).
+ *  - examDate / targetLevel / aiModel: 서버 값이 있으면 서버 우선 (기기 간 공유 대상).
+ *  - 새 필드를 추가할 때도 반드시 이 함수에 병합 규칙을 명시할 것.
  *  - 불린 플래그: 한 번 true 면 false 로 되돌리지 않음 (진행 상태 후퇴 방지).
  *  - flame: 더 최근에 학습한 쪽(lastStudyDay)을 채택. 같으면 레벨/연속일이 큰 쪽.
  */
@@ -42,10 +41,7 @@ function mergeSettings(local: UserSettings, remote: UserSettings): UserSettings 
     // 기기 간 공유 대상 — 서버 값이 있으면 서버 우선
     examDate: remote.examDate || local.examDate,
     targetLevel: remote.targetLevel || local.targetLevel,
-    hchatModel: remote.hchatModel || local.hchatModel,
-    hchatEndpoint: remote.hchatEndpoint || local.hchatEndpoint,
-    // API 키 — 로컬 우선. 로컬이 비었을 때만 서버에서 복원
-    hchatApiKey: local.hchatApiKey || remote.hchatApiKey || "",
+    aiModel: remote.aiModel || local.aiModel,
     // 진행 플래그 — 한 번 true 면 유지
     setupCompleted: local.setupCompleted || remote.setupCompleted || false,
     onboardingSeen: local.onboardingSeen || remote.onboardingSeen,

@@ -15,7 +15,7 @@ interface AssetMeta {
   updatedAt: number;
 }
 
-const ALLOWED_KEYS = new Set(["api-key-guide", "notice-image"]);
+const ALLOWED_KEYS = new Set(["user-guide", "notice-image"]);
 
 function decodeDataUrl(dataUrl: string): { contentType: string; bytes: Uint8Array } | null {
   const match = /^data:([^;,]+);base64,(.+)$/.exec(dataUrl);

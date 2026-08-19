@@ -103,7 +103,7 @@ export default function ResultSheet({ data }: { data: ResultSheetData }) {
       <div className="mb-6">
         <h3 className="font-black text-brand-ink text-base mb-1">📊 SPA 평가 영역별 점수</h3>
         <p className="text-xs text-brand-gray-500 mb-4">
-          현대차그룹 공식 SPA 채점 기준 · 영역별 만점이 다릅니다 (합계 96점)
+          SPA 공식 채점 기준 · 영역별 만점이 다릅니다 (합계 96점)
         </p>
         <div className="space-y-3">
           {areas.map((a) => {
