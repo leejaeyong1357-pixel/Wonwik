@@ -186,6 +186,13 @@ export interface AiFeedback {
   // ── 확장 리포트용 필드 (AI 응답에 없으면 로컬 폴백으로 채움) ──
   summaryComment?: string;
   overallComment?: string;
+  /**
+   * AI 채점이 아니라 로컬 추정치인 경우 true.
+   * 이때는 답변을 인용한 교정을 만들 수 없으므로 화면에서 반드시 구분해 알린다.
+   */
+  isFallback?: boolean;
+  /** 폴백으로 내려간 이유 (서버가 돌려준 오류 메시지) */
+  fallbackReason?: string;
   /** 이 등급으로 판정한 근거 (OPIc 레벨 기술서 기준) */
   gradeReason?: string;
   /** 다음 등급으로 올라가려면 무엇이 필요한지 */

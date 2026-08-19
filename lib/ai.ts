@@ -292,7 +292,8 @@ export async function getFeedback(
   if (!result.ok || !result.content) {
     console.error("AI 채점 호출 실패:", result.error);
     const mock = strictMockFeedback(req);
-    mock.improvements.unshift(`⚠ AI 채점 실패 — ${result.error || "응답 없음"}`);
+    mock.isFallback = true;
+    mock.fallbackReason = result.error || "AI 서버에서 응답이 오지 않았습니다";
     return mock;
   }
 
@@ -359,7 +360,10 @@ export async function getFeedback(
     );
   } catch (e) {
     console.error("Parse fail:", e);
-    return strictMockFeedback(req);
+    const mock = strictMockFeedback(req);
+    mock.isFallback = true;
+    mock.fallbackReason = "AI 응답 형식을 해석하지 못했습니다";
+    return mock;
   }
 }
 

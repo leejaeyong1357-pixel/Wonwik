@@ -95,6 +95,31 @@ export default function FeedbackPanel({
 
   return (
     <div className="space-y-4">
+      {feedback.isFallback && (
+        <div className="p-4 bg-amber-50 border-2 border-amber-300 rounded-2xl">
+          <div className="flex items-start gap-2.5">
+            <span className="text-xl leading-none">⚠️</span>
+            <div className="min-w-0">
+              <div className="font-bold text-amber-900 mb-1">
+                AI 채점이 아닌 임시 추정치입니다
+              </div>
+              <p className="text-sm text-amber-900/90 leading-relaxed">
+                아래 등급은 발화량과 문장 수만으로 계산한 값이라 실제 실력과 다를 수
+                있고, <b>답변을 인용한 문장별 교정도 만들 수 없습니다.</b>
+              </p>
+              {feedback.fallbackReason && (
+                <p className="text-xs text-amber-800 mt-2 font-mono break-words">
+                  {feedback.fallbackReason}
+                </p>
+              )}
+              <p className="text-xs text-amber-800 mt-2">
+                마이페이지의 <b>🔌 API 연결 테스트</b> 로 원인을 확인할 수 있어요.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* ── 등급 판정 ── */}
       <Card>
         <div className="flex items-start justify-between gap-4 flex-wrap">
@@ -172,13 +197,16 @@ export default function FeedbackPanel({
           {!hasQuoted && (
             <Card>
               <div className="py-6 text-center">
-                <div className="text-3xl mb-2">🔌</div>
+                <div className="text-3xl mb-2">{feedback.isFallback ? "🔌" : "✅"}</div>
                 <p className="text-sm font-semibold text-brand-ink mb-1">
-                  문장별 교정을 만들지 못했어요
+                  {feedback.isFallback
+                    ? "AI 채점이 연결되지 않아 교정을 만들지 못했어요"
+                    : "고칠 문장을 찾지 못했어요"}
                 </p>
-                <p className="text-xs text-brand-gray-500 leading-relaxed">
-                  AI 채점이 연결되지 않았거나 답변이 너무 짧으면 인용 교정이 나오지
-                  않습니다. 답변을 조금 더 길게 말한 뒤 다시 채점해보세요.
+                <p className="text-xs text-brand-gray-500 leading-relaxed max-w-sm mx-auto">
+                  {feedback.isFallback
+                    ? "문장별 교정은 AI 채점이 연결돼야 나옵니다. 위 안내를 확인해주세요."
+                    : "문법 오류가 없었거나 답변이 짧아 인용할 문장이 부족했어요. 조금 더 길게 답해보면 더 많은 피드백을 받을 수 있습니다."}
                 </p>
               </div>
             </Card>
