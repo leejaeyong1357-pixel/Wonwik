@@ -1,6 +1,6 @@
 # Wonpic
 
-원익 임직원 SPA(Speaking Proficiency Assessment) 영어 말하기 학습 웹앱.
+원익 임직원 OPIc(Oral Proficiency Interview - computer) 영어 말하기 학습 웹앱.
 
 - 유형별 학습 (질문 듣기 → 음성 답변 → AI 채점 → 상세 리포트)
 - 모의고사 및 종합 결과지
