@@ -70,7 +70,6 @@ export default function StudyPage() {
           type={type}
           questionId={current.id}
           question={current.question}
-          followUps={current.follow_ups}
           sampleAnswer={current.sample_answer}
         />
 

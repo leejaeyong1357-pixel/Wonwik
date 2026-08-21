@@ -11,24 +11,13 @@ import type {
 } from "@/types";
 import { scoreToLevel } from "./scoring";
 
-interface FeedbackTurn {
-  question: string;
-  answer: string;
-}
-
 interface FeedbackRequest {
   type: QuestionType;
   question: string;
-  /** 전체 턴을 합친 발화. 인용 검증과 발화량 산정의 기준 */
   userAnswer: string;
   sampleAnswer?: string;
   targetLevel: Level;
   context?: string;
-  /**
-   * 콤보 구성 — 본 질문과 팔로업을 순서대로 답한 기록.
-   * 실제 OPIc 은 한 주제를 여러 문항으로 이어 물으므로 묶어서 판정한다.
-   */
-  turns?: FeedbackTurn[];
 }
 
 interface AiConfig {
@@ -237,33 +226,14 @@ function sanitizeUpgrades(raw: unknown, answer: string): Upgrade[] | undefined {
 /** 요청마다 달라지는 입력부 — 캐시 경계 뒤에 오는 user 메시지 */
 function buildFeedbackInput(req: FeedbackRequest): string {
   const wordCount = req.userAnswer.split(/\s+/).filter(Boolean).length;
-  const turns = req.turns?.length ? req.turns : null;
-
-  const body = turns
-    ? turns
-        .map(
-          (t, i) =>
-            `[Turn ${i + 1}] ${i === 0 ? "Main question" : "Follow-up"}: ${t.question}\nAnswer: ${t.answer || "(no answer)"}`,
-        )
-        .join("\n\n")
-    : `Question: ${req.question}\nAnswer: ${req.userAnswer}`;
-
   return `# INPUT
 Question Type ${req.type} — ${TYPE_FOCUS[req.type] || "General OPIc question"}
-${req.context ? `Situation given to the speaker: ${req.context}\n` : ""}${
-    turns
-      ? `This topic was asked as a combo of ${turns.length} linked questions, exactly as OPIc does.
-Grade the whole set together — one grade for the topic, not per turn.
-Consistency across turns matters: dropping off sharply on the follow-ups lowers Function / Global Tasks.
+${req.context ? `Situation given to the speaker: ${req.context}\n` : ""}Question: ${req.question}
+Answer (${wordCount} words): ${req.userAnswer}
 
-`
-      : ""
-  }${body}
-
-Total speech across all turns: ${wordCount} words
 Target grade the learner is aiming for: ${req.targetLevel}
 
-Rate this now. Quote from any turn. Return only the JSON object.
+Rate this now. Quote the learner's own words. Return only the JSON object.
 `;
 }
 

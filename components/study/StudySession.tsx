@@ -25,7 +25,6 @@ interface Props {
   type: QuestionType;
   questionId: string;
   question: string;
-  followUps?: string[];
   sampleAnswer: string;
   visualContent?: React.ReactNode;
 }
@@ -34,7 +33,6 @@ export default function StudySession({
   type,
   questionId,
   question,
-  followUps = [],
   sampleAnswer,
   visualContent,
 }: Props) {
@@ -50,9 +48,6 @@ export default function StudySession({
   } = useSTT();
 
   const [step, setStep] = useState<"intro" | "answer" | "feedback">("intro");
-  // 콤보 진행 — 0 은 본 질문, 이후는 팔로업. 실제 OPIc 처럼 한 주제를 이어서 묻는다
-  const [turnIdx, setTurnIdx] = useState(0);
-  const [turns, setTurns] = useState<{ question: string; answer: string }[]>([]);
   const [editedAnswer, setEditedAnswer] = useState("");
   const [feedback, setFeedback] = useState<AiFeedback | null>(null);
   const [loadingFeedback, setLoadingFeedback] = useState(false);
@@ -71,11 +66,6 @@ export default function StudySession({
   const answerStartRef = useRef(0);
   const firstWordRef = useRef(0);
   const [metrics, setMetrics] = useState<SpeakingMetrics | undefined>();
-
-  // 이번 턴에 실제로 묻는 질문
-  const currentQuestion = turnIdx === 0 ? question : followUps[turnIdx - 1] || question;
-  const totalTurns = 1 + followUps.length;
-  const isLastTurn = turnIdx >= totalTurns - 1;
 
   const startAnswering = () => {
     baseAnswerRef.current = editedAnswer.trim();
@@ -129,7 +119,7 @@ export default function StudySession({
   }, [answering]);
 
   const playQuestion = () => {
-    speak(currentQuestion, { rate: 0.95 });
+    speak(question, { rate: 0.95 });
     setPlayCount((c) => c + 1);
   };
 
@@ -144,35 +134,16 @@ export default function StudySession({
     }
     setTranslating(true);
     const settings = storage.getSettings();
-    const ko = await translateText(currentQuestion, { model: settings.aiModel });
+    const ko = await translateText(question, { model: settings.aiModel });
     setTranslation(ko);
     setShowKorean(true);
     setTranslating(false);
-  };
-
-  /** 다음 팔로업으로 넘어간다 (채점하지 않음) */
-  const goToNextTurn = (answer: string) => {
-    setTurns((prev) => [...prev, { question: currentQuestion, answer }]);
-    setTurnIdx((i) => i + 1);
-    setEditedAnswer("");
-    setPlayCount(0);
-    setShowKorean(false);
-    setTranslation("");
-    setMetrics(undefined);
-    resetSTT();
-    stopTTS();
   };
 
   const submitAnswer = async () => {
     if (!editedAnswer.trim()) return;
     stopSTTRaw();
     setAnswering(false);
-
-    // 아직 팔로업이 남았으면 채점하지 않고 다음 질문으로
-    if (!isLastTurn) {
-      goToNextTurn(editedAnswer);
-      return;
-    }
 
     // 발화 지표 확정 (음성으로 답한 경우에만 시간 지표가 의미 있음)
     const words = editedAnswer.trim().split(/\s+/).filter(Boolean);
@@ -192,21 +163,14 @@ export default function StudySession({
     setLoadingFeedback(true);
     setStep("feedback");
 
-    const allTurns = [...turns, { question: currentQuestion, answer: editedAnswer }];
-    const combinedAnswer = allTurns
-      .map((t) => t.answer)
-      .filter(Boolean)
-      .join(" ");
-
     const settings = storage.getSettings();
     const result = await getFeedback(
       {
         type,
         question,
-        userAnswer: combinedAnswer,
+        userAnswer: editedAnswer,
         sampleAnswer,
         targetLevel: settings.targetLevel,
-        turns: allTurns,
       },
       { model: settings.aiModel },
     );
@@ -218,7 +182,7 @@ export default function StudySession({
       id: recordId,
       questionId,
       type,
-      userAnswer: combinedAnswer,
+      userAnswer: editedAnswer,
       feedback: result,
       score: result.scoreEstimate,
       bookmarked: false,
@@ -247,8 +211,6 @@ export default function StudySession({
 
   const restart = () => {
     setStep("answer");
-    setTurnIdx(0);
-    setTurns([]);
     setEditedAnswer("");
     setFeedback(null);
     setPlayCount(0);
@@ -275,31 +237,10 @@ export default function StudySession({
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between gap-2 mb-2 flex-wrap">
-            <div className="text-xs font-semibold text-brand-red">
-              {turnIdx === 0 ? "QUESTION" : "FOLLOW-UP"} (단어 위에 마우스 → 뜻)
-            </div>
-            {totalTurns > 1 && (
-              <div className="flex items-center gap-1.5">
-                {Array.from({ length: totalTurns }).map((_, i) => (
-                  <span
-                    key={i}
-                    className={`h-1.5 rounded-full transition-all ${
-                      i < turnIdx
-                        ? "w-5 bg-brand-navy"
-                        : i === turnIdx
-                        ? "w-8 bg-brand-blue"
-                        : "w-5 bg-brand-gray-200"
-                    }`}
-                  />
-                ))}
-                <span className="text-[11px] font-bold text-brand-gray-500 ml-1">
-                  {turnIdx + 1} / {totalTurns}
-                </span>
-              </div>
-            )}
+          <div className="text-xs font-semibold text-brand-red mb-2">
+            QUESTION (단어 위에 마우스 → 뜻)
           </div>
-          <HoverText text={currentQuestion} />
+          <HoverText text={question} />
 
           {showKorean && (
             <div className="mt-3 p-3 bg-blue-50 border-l-4 border-brand-blue rounded-r-lg">
@@ -308,32 +249,7 @@ export default function StudySession({
             </div>
           )}
 
-          {step === "intro" && totalTurns > 1 && (
-            <div className="mt-3 pt-3 border-t border-brand-gray-100">
-              <p className="text-xs text-brand-gray-600 leading-relaxed">
-                실제 OPIc 처럼 <b>{totalTurns}개 질문이 이어서</b> 나옵니다. 하나씩 답하면
-                마지막에 전체를 묶어 한 번에 채점해요.
-              </p>
-            </div>
-          )}
 
-          {turns.length > 0 && (
-            <div className="mt-3 pt-3 border-t border-brand-gray-100 space-y-2">
-              <div className="text-xs font-semibold text-brand-gray-500">
-                앞서 답한 내용
-              </div>
-              {turns.map((t, i) => (
-                <details key={i} className="group">
-                  <summary className="cursor-pointer text-xs text-brand-gray-600 hover:text-brand-navy list-none">
-                    <span className="font-bold text-brand-navy">{i + 1}.</span> {t.question}
-                  </summary>
-                  <p className="mt-1.5 text-sm text-brand-gray-700 leading-relaxed bg-brand-gray-50 p-3 rounded-xl whitespace-pre-wrap">
-                    {t.answer || "(답변 없음)"}
-                  </p>
-                </details>
-              ))}
-            </div>
-          )}
         </div>
 
         <div className="flex flex-wrap gap-2 items-center">
@@ -371,7 +287,7 @@ export default function StudySession({
               </Button>
               {answering && editedAnswer.trim() && (
                 <Button onClick={submitAnswer} variant="primary" size="sm">
-                  {isLastTurn ? "✓ 채점받기" : "✓ 답변 완료"}
+                  ✓ 채점받기
                 </Button>
               )}
             </div>
@@ -417,7 +333,7 @@ export default function StudySession({
                 <span className="text-brand-gray-400">{interimTranscript}</span>
                 {!transcript && !interimTranscript && (
                   <span className="text-brand-gray-400 text-base">
-                    영어로 말해주세요. 60초 안에 {isLastTurn ? "✓ 채점받기" : "✓ 답변 완료"} 를 눌러주세요.
+                    영어로 말해주세요. 60초 안에 ✓ 채점받기 를 눌러주세요.
                   </span>
                 )}
               </p>
@@ -444,9 +360,7 @@ export default function StudySession({
             <>
               <div className="flex gap-2 mt-3">
                 <Button onClick={submitAnswer} disabled={!editedAnswer.trim()}>
-                  {isLastTurn
-                    ? "AI 채점 받기 →"
-                    : `다음 질문 → (${turnIdx + 1}/${totalTurns})`}
+                  AI 채점 받기 →
                 </Button>
                 <Button
                   onClick={() => {
@@ -465,12 +379,6 @@ export default function StudySession({
                   칸에 직접 입력해주세요.
                 </p>
               )}
-              {editedAnswer.trim() && !isLastTurn && (
-                <p className="text-xs text-brand-gray-500 mt-2">
-                  팔로업 질문이 {totalTurns - turnIdx - 1}개 남았어요. 마지막 답변까지
-                  마치면 전체를 묶어 채점합니다.
-                </p>
-              )}
             </>
           )}
         </Card>
@@ -480,9 +388,7 @@ export default function StudySession({
         <FeedbackPanel
           loading={loadingFeedback}
           feedback={feedback}
-          userAnswer={[...turns.map((t) => t.answer), editedAnswer]
-            .filter(Boolean)
-            .join(" ")}
+          userAnswer={editedAnswer}
           sampleAnswer={sampleAnswer}
           onRestart={restart}
           metrics={metrics}
