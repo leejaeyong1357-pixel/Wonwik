@@ -441,14 +441,37 @@ export default function StudySession({
           )}
 
           {step === "answer" && (
-            <div className="flex gap-2 mt-3">
-              <Button onClick={submitAnswer} disabled={!editedAnswer.trim()}>
-                {isLastTurn ? "AI 채점 받기 →" : "다음 질문 →"}
-              </Button>
-              <Button onClick={() => { resetSTT(); setEditedAnswer(""); }} variant="ghost" size="sm">
-                전체 지우기
-              </Button>
-            </div>
+            <>
+              <div className="flex gap-2 mt-3">
+                <Button onClick={submitAnswer} disabled={!editedAnswer.trim()}>
+                  {isLastTurn
+                    ? "AI 채점 받기 →"
+                    : `다음 질문 → (${turnIdx + 1}/${totalTurns})`}
+                </Button>
+                <Button
+                  onClick={() => {
+                    resetSTT();
+                    setEditedAnswer("");
+                  }}
+                  variant="ghost"
+                  size="sm"
+                >
+                  전체 지우기
+                </Button>
+              </div>
+              {!editedAnswer.trim() && (
+                <p className="text-xs text-brand-gray-500 mt-2">
+                  답변이 비어 있어 버튼이 비활성 상태예요. 🎤 음성 답변을 누르거나 위
+                  칸에 직접 입력해주세요.
+                </p>
+              )}
+              {editedAnswer.trim() && !isLastTurn && (
+                <p className="text-xs text-brand-gray-500 mt-2">
+                  팔로업 질문이 {totalTurns - turnIdx - 1}개 남았어요. 마지막 답변까지
+                  마치면 전체를 묶어 채점합니다.
+                </p>
+              )}
+            </>
           )}
         </Card>
       )}

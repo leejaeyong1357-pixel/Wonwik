@@ -94,6 +94,9 @@ export default function LoginPage() {
           return;
         }
         const u = data.user;
+        // 시연 계정은 들어올 때마다 깨끗한 상태에서 시작한다.
+        // 이전 시연의 학습 기록·등급·설정이 남지 않도록 세션 저장 전에 비운다.
+        storage.resetAccount(String(u.employeeId));
         storage.saveSession({
           name: u.name,
           employeeId: String(u.employeeId),
@@ -103,7 +106,6 @@ export default function LoginPage() {
           loggedInAt: Date.now(),
           isAdmin: false,
         });
-        await pullUserFromServer(String(u.employeeId));
         setLoading(false);
         navigateAfterLogin();
       } catch (err: any) {

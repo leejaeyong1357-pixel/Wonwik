@@ -9,20 +9,20 @@
       "type": 1,
       "category": "자기소개",
       "difficulty": "easy",
-      "question": "Let's start the interview. Tell me about yourself.",
+      "question": "Let's start the interview. Tell me about yourself, your job, and your responsibilities.",
       "combo": "묘사",
       "follow_ups": [
-        "What do you like most about your daily routine?",
-        "Who do you spend the most time with?"
+        "What does a typical workday look like for you?",
+        "What do you enjoy most about your job?"
       ],
       "keywords": [
         "My name is",
         "I work as",
-        "I've been -ing for",
-        "In my free time",
-        "What I like most is"
+        "I'm in charge of",
+        "My main responsibility is",
+        "I've been with"
       ],
-      "sample_answer": "Sure. My name is Minkyung, and I'm in my early thirties. I work at Wonik Holdings, in the Culture team. I've been with the company for about five years now. On a typical day, I get up around six thirty, have a quick breakfast, and commute to the office by subway. Outside of work, I really enjoy watching movies and going for walks in the park near my apartment. I live with my family, and we usually have dinner together on weekends. I'd say I'm a pretty organized person, but I also like trying new things whenever I get the chance. That's a little bit about me."
+      "sample_answer": "Sure. My name is Minkyung, and I work at Wonik Holdings. I've been with the company for about five years now, and I'm part of the Culture team. My main job is planning employee programs and handling internal communication. On a typical day, I prepare materials for company events, write the internal newsletter, and work with other departments to make sure everyone knows what's going on. I'm also in charge of our year-end event, which is the busiest but most rewarding part of my year. What I enjoy most is that I get to meet people from all different teams, so the work never feels repetitive."
     },
     {
       "id": "t1_002",

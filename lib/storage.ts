@@ -158,4 +158,24 @@ export const storage = {
     );
     this.saveSettings(settings);
   },
+
+  /**
+   * 특정 사번의 로컬 데이터를 통째로 지운다 (설정·비밀번호 포함).
+   *
+   * 시연 계정이 로그인할 때마다 호출해, 이전 시연의 학습 기록과 등급이
+   * 남아 있지 않은 상태에서 시작하도록 한다.
+   */
+  resetAccount(employeeId: string) {
+    if (typeof window === "undefined" || !employeeId) return;
+    [
+      "spa.records",
+      "spa.vocab",
+      "spa.mockResults",
+      "spa.settings",
+      "spa.pw",
+    ].forEach((k) => localStorage.removeItem(`${k}.${employeeId}`));
+    try {
+      sessionStorage.removeItem(SESSION_KEY);
+    } catch {}
+  },
 };

@@ -30,7 +30,10 @@ export default function StudyPage() {
 
   const meta = TYPE_META[type];
   const target = storage.getSettings().targetLevel;
-  const items = filterByTargetLevel(getQuestions(type), target);
+  // 자기소개는 실제 시험에서 등급과 무관하게 모두에게 첫 문항으로 나온다.
+  // 난이도 필터를 태우면 목표 등급이 높을 때 자기소개가 빠지므로 제외한다.
+  const items =
+    type === 1 ? getQuestions(1) : filterByTargetLevel(getQuestions(type), target);
   const current = items[currentIdx % items.length];
 
   if (!current) return null;
